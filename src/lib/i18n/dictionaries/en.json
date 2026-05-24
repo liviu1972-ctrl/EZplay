@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "howItWorks": "How it Works",
+    "dashboard": "Dashboard",
+    "profile": "My Profile",
+    "settings": "Settings",
+    "admin": "Admin",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "landing": {
+    "hero": {
+      "tagline": "Entrepreneurial Educational Ecosystem",
+      "title": "Learn Entrepreneurship Through Games & Simulations",
+      "subtitle": "EZPlay transforms business concepts into interactive experiences. Make real decisions, manage resources, and develop your leadership skills.",
+      "ctaStart": "Get Started",
+      "ctaLearn": "Learn More"
+    },
+    "founderLoop": {
+      "title": "Founder Loop — Your Growth Cycle",
+      "subtitle": "How you learn and advance in the EZPlay ecosystem through clear developmental steps.",
+      "step1Title": "1. Business Run",
+      "step1Desc": "Participate in intense team-based business simulations. Make production, marketing, and financial decisions.",
+      "step2Title": "2. Founder Debrief",
+      "step2Desc": "Analyze the results of the round. Understand why you made a profit or loss together with mentors.",
+      "step3Title": "3. Business Challenge",
+      "step3Desc": "Solve real-world business cases proposed by community entrepreneurs to earn credits.",
+      "step4Title": "4. Level Up",
+      "step4Desc": "Develop your skills across 5 key perspectives and advance from Builder to Founder."
+    },
+    "skills": {
+      "title": "The 5 Entrepreneurial Perspectives",
+      "subtitle": "Every decision you make develops real-world business competencies.",
+      "market": "Market & Marketing (Market)",
+      "marketDesc": "Understanding customers, product promotion, and market positioning.",
+      "product": "Product & Innovation (Product)",
+      "productDesc": "Creating value, developing features, and design.",
+      "operations": "Operations & Processes (Operations)",
+      "operationsDesc": "Efficiency, internal processes, logistics, and team management.",
+      "finance": "Finance & Wealth (Finance)",
+      "financeDesc": "Cashflow, profitability, budgeting, and capitalization.",
+      "strategy": "Strategy & Vision (Strategy)",
+      "strategyDesc": "Long-term vision, competitive analysis, and decision-making under uncertainty."
+    },
+    "motherboard": {
+      "title": "Explore the Motherboard",
+      "subtitle": "Click on the motherboard components to discover the secrets of entrepreneurship.",
+      "cpuTitle": "Decision Processing (CPU)",
+      "cpuDesc": "Just like a processor, an entrepreneur must analyze hundreds of variables and make rapid decisions under uncertainty.",
+      "ramTitle": "Working Memory (RAM)",
+      "ramDesc": "Day-to-day operations require multitasking. Your RAM represents the capacity to manage resources in real time.",
+      "gpuTitle": "Strategic Vision (GPU)",
+      "gpuDesc": "The GPU handles rendering and vision. For a company, this means long-term strategy and anticipating competitive moves."
+    },
+    "cta": {
+      "title": "Are you ready to test your ideas?",
+      "subtitle": "Join hundreds of young people learning business through practice and real decisions.",
+      "button": "Create Your Free Account"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to EZPlay",
+      "subtitle": "Enter your details to access the platform",
+      "email": "Email Address",
+      "password": "Password",
+      "button": "Sign In",
+      "googleButton": "Sign in with Google",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register for free"
+    },
+    "register": {
+      "title": "Create Your Account",
+      "subtitle": "Join the EZPlay educational community",
+      "displayName": "Display Name",
+      "button": "Create Account",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Sign In"
+    },
+    "onboarding": {
+      "welcomeTitle": "Welcome to EZPlay!",
+      "welcomeSubtitle": "We are excited to have you. Let's set up your entrepreneur profile in 3 quick steps.",
+      "step1Title": "About You",
+      "step2Title": "Interests",
+      "step3Title": "Ready to Start",
+      "displayName": "How do you want us to call you in the platform?",
+      "bio": "Tell us a few words about yourself (optional)",
+      "interestsTitle": "What areas attract you the most?",
+      "interestsSubtitle": "Select the perspectives you want to prioritize developing in:",
+      "avatarTitle": "Profile Picture",
+      "avatarSubtitle": "Upload an image or leave your default colored initials.",
+      "uploadBtn": "Upload Image",
+      "next": "Next",
+      "back": "Back",
+      "finish": "Finish Setup",
+      "successTitle": "Profile configured!",
+      "successSubtitle": "You are ready to enter your Builder dashboard."
+    }
+  },
+  "dashboard": {
+    "welcome": "Hello, {name}!",
+    "statusRole": "Status: {role}",
+    "balance": "Token Balance",
+    "ezc": "Coins (EZC)",
+    "ezg": "Gems (EZG)",
+    "skillsOverview": "Your Skill Levels",
+    "recentActivity": "Recent Activity",
+    "noActivity": "No recent activity yet.",
+    "explore": "Explore",
+    "placeholderPhase2": "Section under development (Phase 2)"
+  },
+  "settings": {
+    "title": "Account Settings",
+    "subtitle": "Manage your profile details and usage preferences",
+    "profileInfo": "Profile Info",
+    "preferences": "Preferences",
+    "language": "Interface Language",
+    "theme": "Visual Theme",
+    "themeLight": "Light Mode",
+    "themeDark": "Dark Mode",
+    "save": "Save Changes",
+    "success": "Settings successfully saved!"
+  },
+  "admin": {
+    "title": "Administration Panel",
+    "subtitle": "User management and permissions in the EZPlay platform",
+    "usersList": "User List",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "created": "Created At",
+    "actions": "Actions",
+    "editRole": "Change role",
+    "saveRole": "Save role"
+  }
+}

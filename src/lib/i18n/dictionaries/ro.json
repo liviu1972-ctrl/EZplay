@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "howItWorks": "Cum funcționează",
+    "dashboard": "Panou de control",
+    "profile": "Profilul meu",
+    "settings": "Setări",
+    "admin": "Administrare",
+    "login": "Conectare",
+    "register": "Înregistrare",
+    "logout": "Deconectare"
+  },
+  "landing": {
+    "hero": {
+      "tagline": "Ecosistemul educațional antreprenorial",
+      "title": "Învață antreprenoriat prin joc și simulare",
+      "subtitle": "EZPlay transformă conceptele de afaceri în experiențe interactive. Fă decizii reale, gestionează resurse și dezvoltă-ți abilitățile de lider.",
+      "ctaStart": "Începe acum",
+      "ctaLearn": "Află mai multe"
+    },
+    "founderLoop": {
+      "title": "Founder Loop — Ciclul tău de creștere",
+      "subtitle": "Cum înveți și avansezi în ecosistemul EZPlay prin pași clari de dezvoltare.",
+      "step1Title": "1. Business Run",
+      "step1Desc": "Participă la simulări intense de business în echipe. Iei decizii de producție, marketing și financiare.",
+      "step2Title": "2. Founder Debrief",
+      "step2Desc": "Analizează rezultatele rundei. Înțelege de ce ai avut profit sau pierdere alături de mentori.",
+      "step3Title": "3. Business Challenge",
+      "step3Desc": "Rezolvă studii de caz reale propuse de antreprenori din comunitate pentru a strânge credite.",
+      "step4Title": "4. Level Up",
+      "step4Desc": "Dezvoltă-ți competențele pe cele 5 perspective cheie și avansează de la Builder la Founder."
+    },
+    "skills": {
+      "title": "Cele 5 perspective antreprenoriale",
+      "subtitle": "Fiecare decizie pe care o iei îți dezvoltă competențe din viața reală.",
+      "market": "Piață & MKT (Market)",
+      "marketDesc": "Înțelegerea clienților, promovarea produsului și poziționarea pe piață.",
+      "product": "Produs & Inovație (Product)",
+      "productDesc": "Crearea de valoare, dezvoltarea caracteristicilor și design.",
+      "operations": "Operațiuni (Operations)",
+      "operationsDesc": "Eficiență, procese interne, logistică și managementul echipei.",
+      "finance": "Finanțe (Finance)",
+      "financeDesc": "Cashflow, profitabilitate, bugete și capitalizare.",
+      "strategy": "Strategie (Strategy)",
+      "strategyDesc": "Viziune pe termen lung, analiză competitivă și luarea deciziilor sub incertitudine."
+    },
+    "motherboard": {
+      "title": "Explorează cipul de bază",
+      "subtitle": "Dă click pe componentele de pe placa de bază pentru a descoperi secretele antreprenoriatului.",
+      "cpuTitle": "Procesarea deciziilor (CPU)",
+      "cpuDesc": "La fel ca un procesor, antreprenorul trebuie să analizeze sute de variabile și să ia decizii rapide în condiții de incertitudine.",
+      "ramTitle": "Memoria de lucru (RAM)",
+      "ramDesc": "Operațiunile de zi cu zi cer atenție distributivă. RAM-ul tău reprezintă capacitatea de a gestiona resursele în timp real.",
+      "gpuTitle": "Viziunea strategică (GPU)",
+      "gpuDesc": "GPU-ul se ocupă de randare și viziune. Pentru o firmă, înseamnă strategia pe termen lung și anticiparea mișcărilor concurenței."
+    },
+    "cta": {
+      "title": "Ești pregătit să îți testezi ideile?",
+      "subtitle": "Alătură-te sutelor de tineri care învață business prin practică și decizii reale.",
+      "button": "Creează-ți contul gratuit"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Conectează-te la EZPlay",
+      "subtitle": "Introdu datele tale pentru a intra în platformă",
+      "email": "Adresă de email",
+      "password": "Parolă",
+      "button": "Conectare",
+      "googleButton": "Conectează-te cu Google",
+      "noAccount": "Nu ai un cont?",
+      "registerLink": "Înregistrează-te gratuit"
+    },
+    "register": {
+      "title": "Creează contul tău",
+      "subtitle": "Alătură-te comunității educaționale EZPlay",
+      "displayName": "Nume afișat",
+      "button": "Creează cont",
+      "haveAccount": "Ai deja un cont?",
+      "loginLink": "Conectează-te"
+    },
+    "onboarding": {
+      "welcomeTitle": "Bun venit în EZPlay!",
+      "welcomeSubtitle": "Suntem încântați să te avem alături. Să configurăm profilul tău de antreprenor în 3 pași rapizi.",
+      "step1Title": "Despre tine",
+      "step2Title": "Interese",
+      "step3Title": "Pregătit de start",
+      "displayName": "Cum dorești să te numim în platformă?",
+      "bio": "Spune-ne câteva cuvinte despre tine (opțional)",
+      "interestsTitle": "Ce domenii te atrag cel mai mult?",
+      "interestsSubtitle": "Selectează perspectivele în care dorești să te dezvolți cu prioritate:",
+      "avatarTitle": "Fotografie de profil",
+      "avatarSubtitle": "Încarcă o imagine sau lasă inițialele tale colorate implicite.",
+      "uploadBtn": "Încarcă imagine",
+      "next": "Înainte",
+      "back": "Înapoi",
+      "finish": "Finalizează setup-ul",
+      "successTitle": "Profilul a fost configurat!",
+      "successSubtitle": "Ești pregătit să intri în dashboard-ul tău de Builder."
+    }
+  },
+  "dashboard": {
+    "welcome": "Salut, {name}!",
+    "statusRole": "Statut: {role}",
+    "balance": "Balanță token-uri",
+    "ezc": "Coins (EZC)",
+    "ezg": "Gems (EZG)",
+    "skillsOverview": "Nivelul abilităților tale",
+    "recentActivity": "Activitate recentă",
+    "noActivity": "Nu există activitate recentă încă.",
+    "explore": "Explorează",
+    "placeholderPhase2": "Secțiune în curs de dezvoltare (Faza 2)"
+  },
+  "settings": {
+    "title": "Setările contului",
+    "subtitle": "Administrează setările profilului tău și preferințele de utilizare",
+    "profileInfo": "Informații profil",
+    "preferences": "Preferințe",
+    "language": "Limba interfeței",
+    "theme": "Tema vizuală",
+    "themeLight": "Mod Luminos",
+    "themeDark": "Mod Întunecat",
+    "save": "Salvează modificările",
+    "success": "Setările au fost salvate cu succes!"
+  },
+  "admin": {
+    "title": "Panou de Administrare",
+    "subtitle": "Gestionarea utilizatorilor și a permisiunilor în platforma EZPlay",
+    "usersList": "Listă Utilizatori",
+    "name": "Nume",
+    "email": "Email",
+    "role": "Rol",
+    "created": "Creat la",
+    "actions": "Acțiuni",
+    "editRole": "Modifică rol",
+    "saveRole": "Salvează rol"
+  }
+}
