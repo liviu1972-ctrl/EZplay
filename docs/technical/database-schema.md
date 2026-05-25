@@ -1,13 +1,13 @@
 ---
-[AI] This document details the database schema implemented in Supabase (PostgreSQL). It lists the tables (user_profiles, wallets, token_transactions, user_skills), columns, data types, foreign keys, triggers (such as handling new auth.users insertion), and Row Level Security (RLS) policies.
-[HUMAN] This document describes how the database is structured. It shows where we save user profiles, their token balances, transaction history, and skill progress, including the safety rules that prevent users from seeing each other's private data.
+[AI] This document details the database schema implemented in Supabase (PostgreSQL). It lists all tables, columns, data types, foreign keys, triggers (such as handling new auth.users insertion, updating updated_at timestamp, and automatically granting base card sets on user profile creation), and Row Level Security (RLS) policies.
+[HUMAN] This document describes how the database is structured. It shows where we save user profiles, their token balances, transaction history, skill progress, and the cards system data (games, sets, cards, owned sets), including the safety rules that prevent users from seeing each other's private data or bypassing game rules.
 ---
 
 # Database Schema & Security — EZPlay
 
 ## 1. Relational Diagram
 
-Here is how the Phase 1 database tables are structured and linked:
+Here is how the database tables are structured and linked:
 
 ```mermaid
 erDiagram
@@ -52,10 +52,98 @@ erDiagram
         integer xp
     }
 
+    %% Card System Tables
+    games {
+        integer id PK
+        string slug "UQ"
+        string name_ro
+        string name_en
+        string description_ro
+        string description_en
+        string version
+        boolean is_active
+        integer sort_order
+        timestamp created_at
+    }
+    card_sets {
+        integer id PK
+        string slug "UQ"
+        string name_ro
+        string name_en
+        string description_ro
+        string description_en
+        string version
+        numeric price
+        boolean is_base
+        boolean is_active
+        date released_at
+        integer sort_order
+        timestamp created_at
+    }
+    card_set_games {
+        integer card_set_id PK, FK "card_sets.id"
+        integer game_id PK, FK "games.id"
+    }
+    card_types {
+        integer id PK
+        string slug "UQ"
+        string name_ro
+        string name_en
+        integer sort_order
+    }
+    asset_types {
+        integer id PK
+        string slug "UQ"
+        string name_ro
+        string name_en
+    }
+    cards {
+        integer id PK
+        integer card_set_id FK "card_sets.id"
+        integer card_type_id FK "card_types.id"
+        integer asset_type_id FK "asset_types.id"
+        string external_id
+        string slug "UQ"
+        string name_ro
+        string name_en
+        string special_effect_ro
+        string special_effect_en
+        integer cost
+        integer production
+        integer marketing
+        integer expense
+        string calculation "additive|choice"
+        string format "portrait|landscape"
+        string image_micro
+        string image_thumb
+        string image_card
+        string image_full
+        boolean is_active
+        integer sort_order
+        timestamp created_at
+        timestamp updated_at
+    }
+    user_owned_sets {
+        integer id PK
+        uuid user_id FK "auth.users.id"
+        integer card_set_id FK "card_sets.id"
+        timestamp acquired_at
+        string source "base_included|purchase|gift|admin_grant"
+    }
+
     auth_users ||--|| user_profiles : "extends"
     user_profiles ||--|| wallets : "owns"
     user_profiles ||--o{ token_transactions : "performs"
     user_profiles ||--o{ user_skills : "develops"
+
+    %% Card Connections
+    games ||--o{ card_set_games : "contains"
+    card_sets ||--o{ card_set_games : "contains"
+    card_sets ||--o{ cards : "defines"
+    card_types ||--o{ cards : "categorizes"
+    asset_types ||--o{ cards : "classifies"
+    auth_users ||--o{ user_owned_sets : "owns"
+    card_sets ||--o{ user_owned_sets : "owned"
 ```
 
 ---
@@ -107,6 +195,85 @@ Tracks experience (XP) and level progress on the 5 entrepreneurship perspectives
 
 ---
 
+### `public.games`
+List of games on the EZPlay platform.
+*   `id` (SERIAL, Primary Key): Autoincremented identifier.
+*   `slug` (TEXT, Unique, NOT NULL): URL-safe name (e.g., `'ezplay-1'`).
+*   `name_ro` / `name_en` (TEXT, NOT NULL): Bilingual display name.
+*   `description_ro` / `description_en` (TEXT): Bilingual description.
+*   `version` (TEXT, DEFAULT '1.0'): Current game version.
+*   `is_active` (BOOLEAN, DEFAULT TRUE): Flag to toggle game visibility.
+*   `sort_order` (INTEGER, DEFAULT 0): Used for manual listing orders.
+*   `created_at` (TIMESTAMPTZ, DEFAULT NOW()).
+
+### `public.card_sets`
+Represents card decks/packs (e.g., base deck, expansions).
+*   `id` (SERIAL, Primary Key): Autoincremented identifier.
+*   `slug` (TEXT, Unique, NOT NULL): URL-safe name (e.g., `'base-game'`).
+*   `name_ro` / `name_en` (TEXT, NOT NULL): Bilingual display name.
+*   `description_ro` / `description_en` (TEXT): Bilingual description.
+*   `version` (TEXT, DEFAULT '1.0'): Version of the set.
+*   `price` (NUMERIC(10,2)): Sale price (NULL = free or included by default).
+*   `is_base` (BOOLEAN, DEFAULT FALSE): If TRUE, granted automatically to new users upon profile creation.
+*   `is_active` (BOOLEAN, DEFAULT TRUE): Flag to toggle set visibility.
+*   `released_at` (DATE): Release date of the set.
+*   `sort_order` (INTEGER, DEFAULT 0): Order of rendering.
+*   `created_at` (TIMESTAMPTZ, DEFAULT NOW()).
+
+### `public.card_set_games`
+Many-to-many relationship mapping card sets to one or multiple games.
+*   `card_set_id` (INTEGER, Foreign Key): References `card_sets(id)` with cascade deletion.
+*   `game_id` (INTEGER, Foreign Key): References `games(id)` with cascade deletion.
+*   *Composite Primary Key*: `(card_set_id, game_id)`.
+
+### `public.card_types`
+The structural type of a card (e.g., standard, event, entrepreneur).
+*   `id` (SERIAL, Primary Key).
+*   `slug` (TEXT, Unique, NOT NULL): URL-safe name (e.g., `'standard'`).
+*   `name_ro` / `name_en` (TEXT, NOT NULL): Bilingual name.
+*   `sort_order` (INTEGER, DEFAULT 0).
+
+### `public.asset_types`
+Classification of cards by entrepreneurship perspectives or actions.
+*   `id` (SERIAL, Primary Key).
+*   `slug` (TEXT, Unique, NOT NULL): (e.g., `'tangible-assets'`, `'human-resources'`).
+*   `name_ro` / `name_en` (TEXT, NOT NULL): Bilingual name.
+
+### `public.cards`
+The master catalog of all gameplay cards.
+*   `id` (SERIAL, Primary Key).
+*   `card_set_id` (INTEGER, Foreign Key): References `card_sets(id)`.
+*   `card_type_id` (INTEGER, Foreign Key): References `card_types(id)`.
+*   `asset_type_id` (INTEGER, Foreign Key): References `asset_types(id)`.
+*   `external_id` (TEXT, NOT NULL): CSV original identifier (e.g. `'101'`).
+*   `slug` (TEXT, Unique, NOT NULL): Unique card identifier (e.g. `'s101'`, `'e101'`).
+*   `name_ro` / `name_en` (TEXT, NOT NULL): Bilingual title.
+*   `special_effect_ro` / `special_effect_en` (TEXT): Bilingual description of the card effects.
+*   `cost` (INTEGER): Acquisition cost.
+*   `production` (INTEGER): Production point value.
+*   `marketing` (INTEGER): Marketing point value.
+*   `expense` (INTEGER): Turn-based maintenance cost.
+*   `calculation` (TEXT): Check constraint `in ('additive', 'choice')`.
+*   `format` (TEXT): Check constraint `in ('portrait', 'landscape')`.
+*   `image_micro` (TEXT): Path in `cards` bucket for micro variant (80px width).
+*   `image_thumb` (TEXT): Path in `cards` bucket for thumbnail variant (150px width).
+*   `image_card` (TEXT): Path in `cards` bucket for regular card variant (400px width).
+*   `image_full` (TEXT): Path in `cards` bucket for original/fullsize WebP image.
+*   `is_active` (BOOLEAN, DEFAULT TRUE): Toggle card active state.
+*   `sort_order` (INTEGER, DEFAULT 0).
+*   `created_at` / `updated_at` (TIMESTAMPTZ, DEFAULT NOW()).
+
+### `public.user_owned_sets`
+Keeps track of which card sets are unlocked/owned by each user.
+*   `id` (SERIAL, Primary Key).
+*   `user_id` (UUID, Foreign Key): References `auth.users(id)` with cascade deletion.
+*   `card_set_id` (INTEGER, Foreign Key): References `card_sets(id)`.
+*   `acquired_at` (TIMESTAMPTZ, DEFAULT NOW()).
+*   `source` (TEXT): Check constraint `in ('base_included', 'purchase', 'gift', 'admin_grant')`.
+*   *Composite Unique Constraint*: `(user_id, card_set_id)`.
+
+---
+
 ## 3. Automated Triggers & Functions
 
 ### `public.handle_new_user()`
@@ -120,6 +287,26 @@ Runs automatically whenever a row is inserted into `auth.users` (sign-up).
 CREATE OR REPLACE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+```
+
+### `public.update_updated_at()`
+Helper function that sets `updated_at = NOW()` before a row modification in the `cards` table.
+
+```sql
+CREATE TRIGGER cards_updated_at
+  BEFORE UPDATE ON cards
+  FOR EACH ROW EXECUTE PROCEDURE update_updated_at();
+```
+
+### `public.grant_base_sets_on_register()`
+Runs automatically when a new record is added to `public.user_profiles`.
+1. Queries the `card_sets` table for active sets flagged as `is_base = true` (e.g. the base deck).
+2. Inserts a record in `public.user_owned_sets` linking the user ID to those base card sets with `source = 'base_included'`.
+
+```sql
+CREATE TRIGGER on_user_profile_created_grant_base_sets
+  AFTER INSERT ON user_profiles
+  FOR EACH ROW EXECUTE PROCEDURE grant_base_sets_on_register();
 ```
 
 ---
@@ -138,3 +325,25 @@ All database access is secured by default. The following rules are active:
 *   **`user_skills`**:
     *   *Select*: Open to all authenticated users (Public read user skills).
     *   *Update*: Restricted to own skills (`auth.uid() = user_id`).
+*   **`games`**:
+    *   *Select*: Open to everyone if active (`is_active = true`).
+    *   *All operations*: Restricted to admins (checks if `user_profiles.role` for `auth.uid()` is `'admin'`).
+*   **`card_sets`**:
+    *   *Select*: Open to everyone if active (`is_active = true`).
+    *   *All operations*: Restricted to admins (checks if `user_profiles.role` for `auth.uid()` is `'admin'`).
+*   **`card_set_games`**:
+    *   *Select*: Open to everyone.
+    *   *All operations*: Restricted to admins.
+*   **`card_types`**:
+    *   *Select*: Open to everyone.
+    *   *All operations*: Restricted to admins.
+*   **`asset_types`**:
+    *   *Select*: Open to everyone.
+    *   *All operations*: Restricted to admins.
+*   **`cards`**:
+    *   *Select*: Open to everyone if active (`is_active = true`).
+    *   *All operations*: Restricted to admins.
+*   **`user_owned_sets`**:
+    *   *Select*: Restricted to own records (`user_id = auth.uid()`).
+    *   *Insert*: Restricted to own records (`user_id = auth.uid()`).
+    *   *All operations*: Restricted to admins.

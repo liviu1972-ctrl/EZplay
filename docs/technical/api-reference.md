@@ -1,6 +1,6 @@
 ---
-[AI] This document lists the backend endpoints and Supabase queries. It documents the OAuth callback route (/api/auth/callback), client-side Supabase updates (profile, settings, avatar storage upload), and custom database RPC functions.
-[HUMAN] This document lists the technical links and database commands our program uses to read and save data. It explains where the program sends login tokens and how it updates profile information.
+[AI] This document lists the backend endpoints and Supabase queries. It documents the OAuth callback route (/api/auth/callback), client-side Supabase updates (profile, settings, avatar storage upload), the image resizing API route (/api/cards/upload), and custom database RPC functions.
+[HUMAN] This document lists the technical links and database commands our program uses to read and save data. It explains where the program sends login tokens, how it uploads files, and how it updates profile information.
 ---
 
 # API & RPC Reference — EZPlay
@@ -18,9 +18,42 @@ The OAuth callback endpoint registered in Google Cloud Console. Supabase redirec
 
 ---
 
+### `POST /api/cards/upload`
+Used by the admin card management dashboard to resize and upload card images. It processes incoming images on the Node.js serverless runtime using `sharp` and saves them in WebP format.
+
+*   **Request Format**: `multipart/form-data`
+*   **Body Parameters**:
+    *   `file` (File, Required): The raw image to resize.
+    *   `slug` (string, Required): The unique identifier of the card (e.g. `'s101'`). Used as the output filename.
+    *   `folder` (string, Optional): Subfolder directory inside the bucket. Defaults to `'base-game'`.
+*   **Processing Rules (using `sharp`)**:
+    Generates 4 versions of the image in WebP format (90% quality):
+    1.  `micro`: Resized to 80px width (height adjusted proportionally).
+    2.  `thumb`: Resized to 150px width.
+    3.  `card`: Resized to 400px width.
+    4.  `full`: Kept at original dimensions.
+*   **Storage Location**: Supabase Storage bucket `'cards'`. The paths generated are: `${folder}/${sizeName}/${slug}.webp`.
+*   **Response Payload (JSON - 200 OK)**:
+    ```json
+    {
+      "success": true,
+      "paths": {
+        "micro": "base-game/micro/s101.webp",
+        "thumb": "base-game/thumb/s101.webp",
+        "card": "base-game/card/s101.webp",
+        "full": "base-game/full/s101.webp"
+      }
+    }
+    ```
+*   **Errors**:
+    *   `400 Bad Request` if file or slug is missing.
+    *   `500 Internal Server Error` if image processing or storage upload fails.
+
+---
+
 ## 2. Common Supabase Operations
 
-The following data-fetching operations are standardized across Phase 1:
+The following data-fetching operations are standardized across the project:
 
 ### Profile Fetch (Server Component)
 Used in Layouts and Dashboards to fetch the current user's profile role and display name.
@@ -48,10 +81,10 @@ const supabase = createClient();
 
 // 1. Upload to Storage bucket 'avatars'
 const { data, error } = await supabase.storage
-  .from("avatars")
-  .upload(`${userId}/avatar.png`, file, {
-    upsert: true,
-  });
+.from("avatars")
+.upload(`${userId}/avatar.png`, file, {
+  upsert: true,
+});
 
 if (data) {
   // 2. Get Public URL
