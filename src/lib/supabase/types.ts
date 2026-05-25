@@ -1,13 +1,3 @@
-/**
- * @file types.ts
- *
- * [AI] Auto-generated TypeScript types reflecting the Supabase database schema for Phase 1
- * tables: user_profiles, wallets, token_transactions, and user_skills.
- *
- * [HUMAN] This file contains the automatic database types generated from Supabase. It helps the developer
- * make sure the code matches the database tables exactly, avoiding bugs.
- */
-
 export type Json =
   | string
   | number
@@ -17,11 +7,278 @@ export type Json =
   | Json[]
 
 export type Database = {
+  // Allows to automatically instantiate createClient with right options
+  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
+      asset_types: {
+        Row: {
+          id: number
+          name_en: string
+          name_ro: string
+          slug: string
+        }
+        Insert: {
+          id?: number
+          name_en: string
+          name_ro: string
+          slug: string
+        }
+        Update: {
+          id?: number
+          name_en?: string
+          name_ro?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      card_set_games: {
+        Row: {
+          card_set_id: number
+          game_id: number
+        }
+        Insert: {
+          card_set_id: number
+          game_id: number
+        }
+        Update: {
+          card_set_id?: number
+          game_id?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "card_set_games_card_set_id_fkey"
+            columns: ["card_set_id"]
+            isOneToOne: false
+            referencedRelation: "card_sets"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "card_set_games_game_id_fkey"
+            columns: ["game_id"]
+            isOneToOne: false
+            referencedRelation: "games"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      card_sets: {
+        Row: {
+          created_at: string | null
+          description_en: string | null
+          description_ro: string | null
+          id: number
+          is_active: boolean | null
+          is_base: boolean | null
+          name_en: string
+          name_ro: string
+          price: number | null
+          released_at: string | null
+          slug: string
+          sort_order: number | null
+          version: string
+        }
+        Insert: {
+          created_at?: string | null
+          description_en?: string | null
+          description_ro?: string | null
+          id?: number
+          is_active?: boolean | null
+          is_base?: boolean | null
+          name_en: string
+          name_ro: string
+          price?: number | null
+          released_at?: string | null
+          slug: string
+          sort_order?: number | null
+          version?: string
+        }
+        Update: {
+          created_at?: string | null
+          description_en?: string | null
+          description_ro?: string | null
+          id?: number
+          is_active?: boolean | null
+          is_base?: boolean | null
+          name_en?: string
+          name_ro?: string
+          price?: number | null
+          released_at?: string | null
+          slug?: string
+          sort_order?: number | null
+          version?: string
+        }
+        Relationships: []
+      }
+      card_types: {
+        Row: {
+          id: number
+          name_en: string
+          name_ro: string
+          slug: string
+          sort_order: number | null
+        }
+        Insert: {
+          id?: number
+          name_en: string
+          name_ro: string
+          slug: string
+          sort_order?: number | null
+        }
+        Update: {
+          id?: number
+          name_en?: string
+          name_ro?: string
+          slug?: string
+          sort_order?: number | null
+        }
+        Relationships: []
+      }
+      cards: {
+        Row: {
+          asset_type_id: number | null
+          calculation: string | null
+          card_set_id: number | null
+          card_type_id: number | null
+          cost: number | null
+          created_at: string | null
+          expense: number | null
+          external_id: string
+          format: string | null
+          id: number
+          image_card: string | null
+          image_full: string | null
+          image_micro: string | null
+          image_thumb: string | null
+          is_active: boolean | null
+          marketing: number | null
+          name_en: string
+          name_ro: string
+          production: number | null
+          slug: string
+          sort_order: number | null
+          special_effect_en: string | null
+          special_effect_ro: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          asset_type_id?: number | null
+          calculation?: string | null
+          card_set_id?: number | null
+          card_type_id?: number | null
+          cost?: number | null
+          created_at?: string | null
+          expense?: number | null
+          external_id: string
+          format?: string | null
+          id?: number
+          image_card?: string | null
+          image_full?: string | null
+          image_micro?: string | null
+          image_thumb?: string | null
+          is_active?: boolean | null
+          marketing?: number | null
+          name_en: string
+          name_ro: string
+          production?: number | null
+          slug: string
+          sort_order?: number | null
+          special_effect_en?: string | null
+          special_effect_ro?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          asset_type_id?: number | null
+          calculation?: string | null
+          card_set_id?: number | null
+          card_type_id?: number | null
+          cost?: number | null
+          created_at?: string | null
+          expense?: number | null
+          external_id?: string
+          format?: string | null
+          id?: number
+          image_card?: string | null
+          image_full?: string | null
+          image_micro?: string | null
+          image_thumb?: string | null
+          is_active?: boolean | null
+          marketing?: number | null
+          name_en?: string
+          name_ro?: string
+          production?: number | null
+          slug?: string
+          sort_order?: number | null
+          special_effect_en?: string | null
+          special_effect_ro?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cards_asset_type_id_fkey"
+            columns: ["asset_type_id"]
+            isOneToOne: false
+            referencedRelation: "asset_types"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "cards_card_set_id_fkey"
+            columns: ["card_set_id"]
+            isOneToOne: false
+            referencedRelation: "card_sets"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "cards_card_type_id_fkey"
+            columns: ["card_type_id"]
+            isOneToOne: false
+            referencedRelation: "card_types"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      games: {
+        Row: {
+          created_at: string | null
+          description_en: string | null
+          description_ro: string | null
+          id: number
+          is_active: boolean | null
+          name_en: string
+          name_ro: string
+          slug: string
+          sort_order: number | null
+          version: string
+        }
+        Insert: {
+          created_at?: string | null
+          description_en?: string | null
+          description_ro?: string | null
+          id?: number
+          is_active?: boolean | null
+          name_en: string
+          name_ro: string
+          slug: string
+          sort_order?: number | null
+          version?: string
+        }
+        Update: {
+          created_at?: string | null
+          description_en?: string | null
+          description_ro?: string | null
+          id?: number
+          is_active?: boolean | null
+          name_en?: string
+          name_ro?: string
+          slug?: string
+          sort_order?: number | null
+          version?: string
+        }
+        Relationships: []
+      }
       token_transactions: {
         Row: {
           created_at: string | null
@@ -59,6 +316,38 @@ export type Database = {
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "user_profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_owned_sets: {
+        Row: {
+          acquired_at: string | null
+          card_set_id: number | null
+          id: number
+          source: string | null
+          user_id: string | null
+        }
+        Insert: {
+          acquired_at?: string | null
+          card_set_id?: number | null
+          id?: number
+          source?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          acquired_at?: string | null
+          card_set_id?: number | null
+          id?: number
+          source?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_owned_sets_card_set_id_fkey"
+            columns: ["card_set_id"]
+            isOneToOne: false
+            referencedRelation: "card_sets"
             referencedColumns: ["id"]
           },
         ]

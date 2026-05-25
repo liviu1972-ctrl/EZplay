@@ -9,7 +9,9 @@
     "admin": "Administrare",
     "login": "Conectare",
     "register": "Înregistrare",
-    "logout": "Deconectare"
+    "logout": "Deconectare",
+    "cards": "Cărți",
+    "adminCards": "Administrare Cărți"
   },
   "landing": {
     "hero": {
@@ -135,5 +137,32 @@
     "actions": "Acțiuni",
     "editRole": "Modifică rol",
     "saveRole": "Salvează rol"
+  },
+  "cards": {
+    "title": "Pachetul de Cărți",
+    "subtitle": "Descoperă toate cărțile din ecosistemul EZPlay și pregătește-ți strategia.",
+    "searchPlaceholder": "Caută după nume sau efect special...",
+    "filterType": "Tip Carte",
+    "filterAsset": "Tip Activ",
+    "filterAllTypes": "Toate Tipurile",
+    "filterAllAssets": "Toate Activele",
+    "cost": "Cost",
+    "production": "Producție",
+    "marketing": "Marketing",
+    "expense": "Cheltuială",
+    "specialEffect": "Efect Special",
+    "empty": "Nu s-au găsit cărți care să corespundă criteriilor.",
+    "backToDashboard": "Înapoi la Panou",
+    "format": "Format",
+    "calculation": "Tip Calcul",
+    "calcAdditive": "Aditiv (+)",
+    "calcChoice": "La alegere (SAU)",
+    "unlocked": "Deblocat",
+    "locked": "Blocat",
+    "buySet": "Cumpără Extensie",
+    "set": "Set",
+    "game": "Joc",
+    "details": "Detalii Carte",
+    "tapToFlip": "Apasă pe carte pentru a o întoarce"
   }
 }

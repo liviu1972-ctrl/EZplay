@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, User, Settings, ShieldAlert, LogOut, Menu } from "lucide-react"
+import { LayoutDashboard, User, Settings, ShieldAlert, LogOut, Menu, Layers } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -31,6 +31,11 @@ export function Sidebar({ dict, profile }: SidebarProps) {
       href: "/admin",
       label: dict.nav.admin,
       icon: <ShieldAlert className="w-5 h-5 text-destructive" />
+    })
+    navItems.push({
+      href: "/admin/cards",
+      label: dict.nav.adminCards || "Administrare Cărți",
+      icon: <Layers className="w-5 h-5 text-brand-orange" />
     })
   }
 

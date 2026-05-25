@@ -4,6 +4,8 @@ import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
 
+import { headers } from "next/headers"
+
 export async function login(formData: FormData) {
   const supabase = await createClient()
 
@@ -39,11 +41,15 @@ export async function login(formData: FormData) {
 
 export async function loginWithGoogle() {
   const supabase = await createClient()
+  const headersList = await headers()
+  const host = headersList.get("host")
+  const protocol = host?.includes("localhost") || host?.includes("127.0.0.1") ? "http" : "https"
+  const siteUrl = `${protocol}://${host}`
   
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
+      redirectTo: `${siteUrl}/auth/callback`,
     },
   })
 

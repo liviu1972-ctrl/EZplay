@@ -9,7 +9,9 @@
     "admin": "Admin",
     "login": "Login",
     "register": "Register",
-    "logout": "Logout"
+    "logout": "Logout",
+    "cards": "Cards",
+    "adminCards": "Cards Management"
   },
   "landing": {
     "hero": {
@@ -135,5 +137,32 @@
     "actions": "Actions",
     "editRole": "Change role",
     "saveRole": "Save role"
+  },
+  "cards": {
+    "title": "Cards Deck",
+    "subtitle": "Discover all the cards in the EZPlay ecosystem and prepare your strategy.",
+    "searchPlaceholder": "Search by name or special effect...",
+    "filterType": "Card Type",
+    "filterAsset": "Asset Type",
+    "filterAllTypes": "All Types",
+    "filterAllAssets": "All Assets",
+    "cost": "Cost",
+    "production": "Production",
+    "marketing": "Marketing",
+    "expense": "Expense",
+    "specialEffect": "Special Effect",
+    "empty": "No cards found matching the criteria.",
+    "backToDashboard": "Back to Dashboard",
+    "format": "Format",
+    "calculation": "Calculation",
+    "calcAdditive": "Additive (+)",
+    "calcChoice": "Choice (OR)",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "buySet": "Buy Expansion Set",
+    "set": "Set",
+    "game": "Game",
+    "details": "Card Details",
+    "tapToFlip": "Click to flip card"
   }
 }
