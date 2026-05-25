@@ -1,6 +1,6 @@
 ---
 [AI] This document lists all planned and implemented features of the EZPlay platform across the various phases, highlighting the Phase 1 Foundation features.
-[HUMAN] This document lists the features of the website. It shows what is already active (like user registration, light/dark mode, and profile settings) and what features will be added in future updates.
+[HUMAN] This document lists the features of the website. It shows what is already active (like user registration, light/dark mode, cards browser, admin management, and profile settings) and what features will be added in future updates.
 ---
 
 # Feature Roadmap — EZPlay
@@ -22,6 +22,10 @@ Here is the current state of features implemented in the EZPlay digital platform
     *   Interactive decorative elements (motherboard chips you can click to see info).
     *   **Light & Dark Mode** toggle.
     *   **Bilingual interface** (Romanian and English toggle).
+*   **Cards & Decks System**:
+    *   **Public Deck Browser (`/cards`)**: Search and filter cards by set, card type, and asset type. Features an interactive grid of cards with a 3D hover/flip effect that reveals stats (cost, production, marketing, expenses), bilingual effects, and card details.
+    *   **Admin Card Panel (`/admin/cards`)**: Complete interface for creating, editing, and toggling card active states.
+    *   **Responsive Image Processing API (`/api/cards/upload`)**: Automates card image upload, resizing, and WebP format conversion using the `sharp` library (outputting `micro`, `thumb`, `card`, and `full` dimensions) before storing in Supabase Storage.
 *   **Student Dashboard**:
     *   Welcome card showing user information.
     *   Token widget displaying Coins (EZC) and Gems (EZG) balances.
@@ -34,8 +38,6 @@ Here is the current state of features implemented in the EZPlay digital platform
 
 ## Phase 2: Game Library & Scenarios (Next Up)
 
-*   **Card Deck Management**:
-    *   Directory of game cards (Production, Marketing, Expenses, Sales, Profit, Cashflow).
 *   **Scenario Builder**:
     *   Tools for facilitators to pre-configure business game setups (initial capital, target years, market volatility cards).
 *   **Interactive Glossary**:

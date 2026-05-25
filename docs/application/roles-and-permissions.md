@@ -18,6 +18,7 @@ Every new user starts as a **Builder**. Builders are learners who participate in
     *   Access the student dashboard.
     *   View their own token balances (EZC / EZG) and skill radar chart.
     *   Edit their profile settings (display name, bio, language, theme).
+    *   **View and search public card decks (`/cards`)** to study card requirements and effects.
     *   Join active game sessions (Phase 2+).
 
 ### Founder (Advanced Level)
@@ -60,4 +61,5 @@ Admins manage the entire digital platform.
     *   Access the role-restricted **Admin Panel**.
     *   View all registered users and search by name/email.
     *   Change any user's role (e.g., promote a Builder to a Facilitator or Admin).
+    *   **Manage the cards database (`/admin/cards`)**: edit cards, create new cards, toggle active states, and upload images with automatic resizing.
     *   Monitor system health.
