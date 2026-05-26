@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 interface SidebarProps {
   dict: any
@@ -48,8 +49,15 @@ export function Sidebar({ dict, profile }: SidebarProps) {
   const SidebarContent = () => (
     <div className="flex h-full flex-col gap-4">
       <div className="flex h-[60px] items-center px-6">
-        <Link href="/" className="font-bold text-brand-green text-xl">
-          EZPlay
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo_ezplay.svg"
+            alt="EZPlay Logo"
+            width={115}
+            height={40}
+            className="h-8 w-auto dark:brightness-0 dark:invert"
+            priority
+          />
         </Link>
       </div>
       <div className="flex-1 overflow-auto py-2">
@@ -105,8 +113,15 @@ export function Sidebar({ dict, profile }: SidebarProps) {
             <SidebarContent />
           </SheetContent>
         </Sheet>
-        <Link href="/" className="ml-4 font-bold text-brand-green text-xl">
-          EZPlay
+        <Link href="/" className="ml-4 flex items-center">
+          <Image
+            src="/logo_ezplay.svg"
+            alt="EZPlay Logo"
+            width={115}
+            height={40}
+            className="h-8 w-auto dark:brightness-0 dark:invert"
+            priority
+          />
         </Link>
       </div>
     </>

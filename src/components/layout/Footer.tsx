@@ -1,5 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface FooterProps {
   dict: any
@@ -11,7 +12,13 @@ export function Footer({ dict }: FooterProps) {
       <div className="container py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4 md:col-span-2">
-            <h3 className="font-bold text-brand-green text-xl">EZPlay</h3>
+            <Image
+              src="/logo_ezplay.svg"
+              alt="EZPlay Logo"
+              width={115}
+              height={40}
+              className="h-8 w-auto dark:brightness-0 dark:invert"
+            />
             <p className="text-sm text-muted-foreground max-w-sm">
               {dict.landing?.hero?.tagline || "Ecosistemul educațional antreprenorial"}
             </p>

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, LogOut, LayoutDashboard } from "lucide-react"
 import { useRouter } from "next/navigation"
 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -34,8 +35,15 @@ export function Navbar({ dict, user }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex gap-6 md:gap-10">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold text-brand-green text-xl">EZPlay</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo_ezplay.svg"
+              alt="EZPlay Logo"
+              width={115}
+              height={40}
+              className="h-8 w-auto dark:brightness-0 dark:invert"
+              priority
+            />
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link
