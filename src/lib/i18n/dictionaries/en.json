@@ -163,6 +163,11 @@
     "set": "Set",
     "game": "Game",
     "details": "Card Details",
-    "tapToFlip": "Click to flip card"
+    "tapToFlip": "Click to flip card",
+    "viewMode": "View Mode",
+    "viewFaceDown": "Face Down",
+    "viewFaceUp": "Face Up",
+    "flipToFront": "Artwork",
+    "flipToBack": "Stats"
   }
 }

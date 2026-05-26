@@ -163,6 +163,11 @@
     "set": "Set",
     "game": "Joc",
     "details": "Detalii Carte",
-    "tapToFlip": "Apasă pe carte pentru a o întoarce"
+    "tapToFlip": "Apasă pe carte pentru a o întoarce",
+    "viewMode": "Mod Vizualizare",
+    "viewFaceDown": "Cu spatele",
+    "viewFaceUp": "Cu fața",
+    "flipToFront": "Imagine",
+    "flipToBack": "Detalii"
   }
 }

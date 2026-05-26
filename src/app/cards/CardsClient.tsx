@@ -47,6 +47,8 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
   const [selectedAsset, setSelectedAsset] = useState<string>("all")
   const [sortBy, setSortBy] = useState<string>("order")
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({})
+  const [isGlobalFaceDown, setIsGlobalFaceDown] = useState<boolean>(true)
+  const [showStats, setShowStats] = useState<Record<number, boolean>>({})
   const [selectedCardForModal, setSelectedCardForModal] = useState<any | null>(null)
 
   // Get image URL helper
@@ -55,15 +57,51 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
     return `${SUPABASE_URL}/storage/v1/object/public/cards/${path}`
   }
 
+  // Get card back image URL helper
+  const getCardBackUrl = (card: any) => {
+    const setSlug = card.card_sets?.slug || "base-game"
+    const typeSlug = card.card_types?.slug || "standard"
+    
+    // Configurable mapping of backs based on set and card type
+    const backsMap: Record<string, Record<string, string>> = {
+      "base-game": {
+        "event": "/images/cardbacks/base-game/cardback-event.webp",
+        "standard": "/images/cardbacks/base-game/cardback-standard.webp",
+        "default": "/images/cardbacks/base-game/cardback-standard.webp",
+      }
+    }
+    
+    const setBacks = backsMap[setSlug] || backsMap["base-game"]
+    return setBacks[typeSlug] || setBacks["default"]
+  }
+
   // Toggle card flip
   const toggleFlip = (cardId: number, e: React.MouseEvent) => {
-    // Prevent flip if clicking on expand button
-    if ((e.target as HTMLElement).closest(".expand-btn")) return
+    // Prevent flip if clicking on expand or info buttons
+    if ((e.target as HTMLElement).closest(".expand-btn") || (e.target as HTMLElement).closest(".info-btn")) return
     
-    setFlippedCards(prev => ({
+    setFlippedCards(prev => {
+      const current = prev[cardId] !== undefined ? prev[cardId] : !isGlobalFaceDown
+      return {
+        ...prev,
+        [cardId]: !current
+      }
+    })
+  }
+
+  // Toggle stats view for a specific card on the front face
+  const toggleStats = (cardId: number, e: React.MouseEvent) => {
+    e.stopPropagation() // Prevent flipping back to card back
+    setShowStats(prev => ({
       ...prev,
       [cardId]: !prev[cardId]
     }))
+  }
+
+  // Handle global flip toggle
+  const handleGlobalFlipToggle = () => {
+    setIsGlobalFaceDown(prev => !prev)
+    setFlippedCards({}) // Reset all individual overrides
   }
 
   // Reset filters
@@ -72,6 +110,9 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
     setSelectedType("all")
     setSelectedAsset("all")
     setSortBy("order")
+    setIsGlobalFaceDown(true)
+    setFlippedCards({})
+    setShowStats({})
   }
 
   // Filtered and sorted cards
@@ -220,8 +261,20 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             </SelectContent>
           </Select>
 
-          {(search || selectedType !== "all" || selectedAsset !== "all" || sortBy !== "order") && (
-            <Button variant="ghost" size="icon" onClick={resetFilters} className="h-11 w-11 shrink-0 text-muted-foreground hover:text-foreground">
+          {/* Global View Mode Toggle */}
+          <Button
+            variant="outline"
+            onClick={handleGlobalFlipToggle}
+            className="h-11 bg-background/50 border border-border/60 hover:text-brand-orange transition-colors flex items-center gap-2"
+          >
+            <Layers className="w-4 h-4 text-brand-orange" />
+            <span className="text-xs">
+              {isGlobalFaceDown ? dict.cards?.viewFaceUp || "Cu fața" : dict.cards?.viewFaceDown || "Cu spatele"}
+            </span>
+          </Button>
+
+          {(search || selectedType !== "all" || selectedAsset !== "all" || sortBy !== "order" || !isGlobalFaceDown) && (
+            <Button variant="ghost" size="icon" onClick={resetFilters} className="h-11 w-11 shrink-0 text-muted-foreground hover:text-foreground" title="Resetează filtrele">
               <Undo className="w-4 h-4" />
             </Button>
           )}
@@ -234,7 +287,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
           Au fost găsite <span className="font-semibold text-foreground">{filteredCards.length}</span> cărți
         </div>
         <div className="hidden sm:block text-xs italic">
-          {dict.cards?.tapToFlip || "Apasă pe o carte pentru a-i vedea detaliile"}
+          {dict.cards?.tapToFlip || "Apasă pe o carte pentru a o întoarce"}
         </div>
       </div>
 
@@ -252,7 +305,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredCards.map((card) => {
-            const isFlipped = flippedCards[card.id] || false
+            const isFlipped = flippedCards[card.id] !== undefined ? flippedCards[card.id] : !isGlobalFaceDown
             const isLandscape = card.format === "landscape"
 
             return (
@@ -262,9 +315,9 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                 style={{ perspective: "1000px" }}
                 onClick={(e) => toggleFlip(card.id, e)}
               >
-                {/* 3D Card Container */}
+                {/* 3D Card Container (purely handles rotation/perspective, no background/border to prevent flattening) */}
                 <div
-                  className={`relative w-full transition-all duration-500 ease-out shadow-md hover:shadow-xl hover:-translate-y-1 rounded-2xl border border-border/80 bg-card/60 backdrop-blur-sm overflow-hidden ${
+                  className={`relative w-full transition-transform duration-500 ease-out ${
                     isLandscape ? "aspect-[4/3]" : "aspect-[3/4]"
                   }`}
                   style={{
@@ -272,150 +325,200 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
                   }}
                 >
-                  {/* FRONT SIDE (Card Image) */}
+                  {/* SIDE A: CARD BACK (0deg, displayed by default) */}
                   <div
-                    className="absolute inset-0 w-full h-full flex flex-col justify-between"
-                    style={{ backfaceVisibility: "hidden" }}
+                    className={`absolute inset-0 w-full h-full flex flex-col justify-between rounded-2xl border border-border/80 bg-zinc-950 shadow-md overflow-hidden ${
+                      isFlipped ? "pointer-events-none" : "pointer-events-auto"
+                    }`}
+                    style={{ 
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden"
+                    }}
                   >
                     <div className="relative w-full h-full">
                       <Image
-                        src={getImageUrl(card.image_card)}
-                        alt={lang === "ro" ? card.name_ro : card.name_en}
+                        src={getCardBackUrl(card)}
+                        alt="Card Back"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                         className="object-cover"
                         priority={card.sort_order < 110}
                       />
                       
-                      {/* Interactive Expand button over front of card */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation()
-                          setSelectedCardForModal(card)
-                        }}
-                        className="expand-btn absolute bottom-3 right-3 p-2 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur-sm transition-all scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100 shadow-md"
-                        title={dict.cards?.details || "Detalii"}
-                      >
-                        <Maximize2 className="w-4 h-4" />
-                      </button>
+                      {/* Premium Semi-transparent Banner showing card ID and name */}
+                      <div className="absolute bottom-0 inset-x-0 p-3 bg-zinc-950/75 backdrop-blur-sm border-t border-white/10 text-center flex flex-col justify-center items-center">
+                        <span className="text-[10px] font-mono tracking-wider text-brand-orange uppercase font-semibold">
+                          {card.slug}
+                        </span>
+                        <h4 className="text-xs font-bold text-white line-clamp-1 mt-0.5">
+                          {lang === "ro" ? card.name_ro : card.name_en}
+                        </h4>
+                      </div>
                     </div>
                   </div>
 
-                  {/* BACK SIDE (Detailed Text Stats) */}
+                  {/* SIDE B: CARD FRONT (180deg, artwork or detailed stats) */}
                   <div
-                    className="absolute inset-0 w-full h-full p-4 flex flex-col justify-between bg-zinc-950 text-white select-none border-2 border-zinc-800 rounded-2xl"
+                    className={`absolute inset-0 w-full h-full rounded-2xl border border-border/80 bg-zinc-950 shadow-md overflow-hidden ${
+                      isFlipped ? "pointer-events-auto" : "pointer-events-none"
+                    }`}
                     style={{
                       backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
                     }}
                   >
-                    {/* Header */}
-                    <div className="flex flex-col space-y-1.5 border-b border-zinc-800 pb-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase">
-                          {card.slug}
-                        </span>
-                        <div className="flex gap-1.5">
-                          <Badge variant="outline" className="text-[9px] uppercase px-1.5 py-0 bg-zinc-900 border-zinc-700 text-zinc-300">
-                            {lang === "ro" ? card.card_types?.name_ro : card.card_types?.name_en}
-                          </Badge>
-                          {card.asset_types && (
-                            <Badge 
-                              className={`text-[9px] font-semibold border px-1.5 py-0 ${getAssetBadgeVariant(card.asset_types.slug)}`}
-                            >
-                              {lang === "ro" ? card.asset_types.name_ro : card.asset_types.name_en}
-                            </Badge>
+                    {!showStats[card.id] ? (
+                      /* Artwork View */
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={getImageUrl(card.image_card)}
+                          alt={lang === "ro" ? card.name_ro : card.name_en}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                          className="object-cover"
+                        />
+                        
+                        {/* Info/Stats button (Bottom Left) */}
+                        <button
+                          onClick={(e) => toggleStats(card.id, e)}
+                          className="info-btn absolute bottom-3 left-3 p-2 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur-sm transition-all scale-100 md:scale-90 md:opacity-0 md:group-hover:opacity-100 md:group-hover:scale-100 shadow-md z-10"
+                          title={dict.cards?.flipToBack || "Vezi detalii"}
+                        >
+                          <Sparkles className="w-4 h-4 text-brand-orange" />
+                        </button>
+                        
+                        {/* Interactive Expand button (Bottom Right) */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setSelectedCardForModal(card)
+                          }}
+                          className="expand-btn absolute bottom-3 right-3 p-2 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur-sm transition-all scale-100 md:scale-90 md:opacity-0 md:group-hover:opacity-100 md:group-hover:scale-100 shadow-md z-10"
+                          title={dict.cards?.details || "Mărește"}
+                        >
+                          <Maximize2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ) : (
+                      /* Detailed Text Stats View */
+                      <div className="absolute inset-0 w-full h-full p-4 flex flex-col justify-between bg-zinc-950 text-white select-none border-2 border-zinc-800 rounded-2xl">
+                        {/* Header */}
+                        <div className="flex flex-col space-y-1.5 border-b border-zinc-800 pb-2">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[10px] text-zinc-500 font-mono tracking-widest uppercase">
+                              {card.slug}
+                            </span>
+                            <div className="flex gap-1.5">
+                              <Badge variant="outline" className="text-[9px] uppercase px-1.5 py-0 bg-zinc-900 border-zinc-700 text-zinc-300">
+                                {lang === "ro" ? card.card_types?.name_ro : card.card_types?.name_en}
+                              </Badge>
+                              {card.asset_types && (
+                                <Badge 
+                                  className={`text-[9px] font-semibold border px-1.5 py-0 ${getAssetBadgeVariant(card.asset_types.slug)}`}
+                                >
+                                  {lang === "ro" ? card.asset_types.name_ro : card.asset_types.name_en}
+                                </Badge>
+                              )}
+                            </div>
+                          </div>
+                          
+                          <h3 className={`text-sm font-bold tracking-tight text-white line-clamp-1 ${getCardHeaderColor(card)} pl-2`}>
+                            {lang === "ro" ? card.name_ro : card.name_en}
+                          </h3>
+                          {lang === "ro" && card.name_en && (
+                            <p className="text-[10px] text-zinc-400 italic line-clamp-1 pl-2">
+                              EN: {card.name_en}
+                            </p>
                           )}
                         </div>
-                      </div>
-                      
-                      <h3 className={`text-sm font-bold tracking-tight text-white line-clamp-1 ${getCardHeaderColor(card)} pl-2`}>
-                        {lang === "ro" ? card.name_ro : card.name_en}
-                      </h3>
-                      {lang === "ro" && card.name_en && (
-                        <p className="text-[10px] text-zinc-400 italic line-clamp-1 pl-2">
-                          EN: {card.name_en}
-                        </p>
-                      )}
-                    </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-2 gap-2 my-2 flex-grow overflow-auto py-1">
-                      {card.cost !== null && (
-                        <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
-                          <Coins className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
-                          <div className="text-[10px] leading-tight">
-                            <div className="text-zinc-500 font-semibold">{dict.cards?.cost || "Cost"}</div>
-                            <div className="font-bold text-white text-xs">{card.cost}</div>
-                          </div>
+                        {/* Stats Grid */}
+                        <div className="grid grid-cols-2 gap-2 my-2 flex-grow overflow-auto py-1">
+                          {card.cost !== null && (
+                            <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
+                              <Coins className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
+                              <div className="text-[10px] leading-tight">
+                                <div className="text-zinc-500 font-semibold">{dict.cards?.cost || "Cost"}</div>
+                                <div className="font-bold text-white text-xs">{card.cost}</div>
+                              </div>
+                            </div>
+                          )}
+
+                          {card.production !== null && (
+                            <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
+                              <Wrench className="w-3.5 h-3.5 text-brand-green shrink-0" />
+                              <div className="text-[10px] leading-tight">
+                                <div className="text-zinc-500 font-semibold">{dict.cards?.production || "Producție"}</div>
+                                <div className="font-bold text-white text-xs">+{card.production}</div>
+                              </div>
+                            </div>
+                          )}
+
+                          {card.marketing !== null && (
+                            <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
+                              <Megaphone className="w-3.5 h-3.5 text-brand-orange shrink-0" />
+                              <div className="text-[10px] leading-tight">
+                                <div className="text-zinc-500 font-semibold">{dict.cards?.marketing || "Marketing"}</div>
+                                <div className="font-bold text-white text-xs">+{card.marketing}</div>
+                              </div>
+                            </div>
+                          )}
+
+                          {card.expense !== null && (
+                            <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
+                              <DollarSign className="w-3.5 h-3.5 text-brand-teal shrink-0" />
+                              <div className="text-[10px] leading-tight">
+                                <div className="text-zinc-500 font-semibold">{dict.cards?.expense || "Cheltuială"}</div>
+                                <div className="font-bold text-white text-xs">{card.expense}</div>
+                              </div>
+                            </div>
+                          )}
                         </div>
-                      )}
 
-                      {card.production !== null && (
-                        <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
-                          <Wrench className="w-3.5 h-3.5 text-brand-green shrink-0" />
-                          <div className="text-[10px] leading-tight">
-                            <div className="text-zinc-500 font-semibold">{dict.cards?.production || "Producție"}</div>
-                            <div className="font-bold text-white text-xs">+{card.production}</div>
-                          </div>
-                        </div>
-                      )}
-
-                      {card.marketing !== null && (
-                        <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
-                          <Megaphone className="w-3.5 h-3.5 text-brand-orange shrink-0" />
-                          <div className="text-[10px] leading-tight">
-                            <div className="text-zinc-500 font-semibold">{dict.cards?.marketing || "Marketing"}</div>
-                            <div className="font-bold text-white text-xs">+{card.marketing}</div>
-                          </div>
-                        </div>
-                      )}
-
-                      {card.expense !== null && (
-                        <div className="flex items-center gap-2 p-1.5 rounded bg-zinc-900 border border-zinc-800/80">
-                          <DollarSign className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-                          <div className="text-[10px] leading-tight">
-                            <div className="text-zinc-500 font-semibold">{dict.cards?.expense || "Cheltuială"}</div>
-                            <div className="font-bold text-white text-xs">{card.expense}</div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Special Effect */}
-                    <div className="flex flex-col space-y-1 bg-zinc-900 border border-zinc-800/50 rounded-lg p-2.5 flex-grow overflow-auto max-h-[90px]">
-                      <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-wider flex items-center gap-1">
-                        <Sparkles className="w-2.5 h-2.5 text-brand-orange" />
-                        {dict.cards?.specialEffect || "Efect Special"}
-                      </span>
-                      <p className="text-[11px] leading-snug text-zinc-200 line-clamp-3">
-                        {lang === "ro" ? card.special_effect_ro : card.special_effect_en}
-                      </p>
-                      {lang === "ro" && card.special_effect_en && card.special_effect_en !== card.special_effect_ro && (
-                        <p className="text-[9px] leading-snug text-zinc-400 italic line-clamp-2 border-t border-zinc-800/50 pt-1 mt-1">
-                          EN: {card.special_effect_en}
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Footer Stats / Click to Flip instruction */}
-                    <div className="border-t border-zinc-800 pt-2 mt-2 flex items-center justify-between text-[9px] text-zinc-500">
-                      <div className="flex items-center gap-2">
-                        {card.calculation && (
-                          <span className="flex items-center gap-0.5">
-                            <RotateCw className="w-2.5 h-2.5" />
-                            {card.calculation === "additive" ? "Aditiv" : "Alegere"}
+                        {/* Special Effect */}
+                        <div className="flex flex-col space-y-1 bg-zinc-900 border border-zinc-800/50 rounded-lg p-2.5 flex-grow overflow-auto max-h-[90px]">
+                          <span className="text-[9px] text-zinc-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                            <Sparkles className="w-2.5 h-2.5 text-brand-orange" />
+                            {dict.cards?.specialEffect || "Efect Special"}
                           </span>
-                        )}
-                        {card.format && (
-                          <span className="flex items-center gap-0.5 capitalize">
-                            <Layout className="w-2.5 h-2.5" />
-                            {card.format}
-                          </span>
-                        )}
+                          <p className="text-[11px] leading-snug text-zinc-200 line-clamp-3">
+                            {lang === "ro" ? card.special_effect_ro : card.special_effect_en}
+                          </p>
+                          {lang === "ro" && card.special_effect_en && card.special_effect_en !== card.special_effect_ro && (
+                            <p className="text-[9px] leading-snug text-zinc-400 italic line-clamp-2 border-t border-zinc-800/50 pt-1 mt-1">
+                              EN: {card.special_effect_en}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Footer Stats / Artwork & Expand Buttons */}
+                        <div className="border-t border-zinc-800 pt-2 mt-2 flex items-center justify-between text-[9px] text-zinc-500 z-10">
+                          {/* Back to image button */}
+                          <button
+                            onClick={(e) => toggleStats(card.id, e)}
+                            className="info-btn flex items-center gap-1 px-2 py-1 rounded bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 text-zinc-400 transition-colors"
+                            title={dict.cards?.flipToFront || "Vezi imaginea"}
+                          >
+                            <Layout className="w-3 h-3 text-brand-orange" />
+                            <span>{dict.cards?.flipToFront || "Imagine"}</span>
+                          </button>
+
+                          {/* Expand Button */}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setSelectedCardForModal(card)
+                            }}
+                            className="expand-btn flex items-center gap-1 px-2 py-1 rounded bg-zinc-900 border border-zinc-800 hover:text-white hover:bg-zinc-800 text-zinc-400 transition-colors"
+                            title={dict.cards?.details || "Mărește"}
+                          >
+                            <Maximize2 className="w-3 h-3" />
+                            <span>{dict.cards?.details || "Detalii"}</span>
+                          </button>
+                        </div>
                       </div>
-                      <span className="animate-pulse">Apasă pentru spate</span>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
