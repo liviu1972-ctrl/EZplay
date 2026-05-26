@@ -32,7 +32,8 @@ This file defines the workflow preferences and development guidelines agreed upo
 ---
 
 ## 5. User Asset Transfer Directory
-*   The folder `public/images/transfer images from user/` is designated for the user to copy/paste image files to be processed or integrated by the AI.
+*   The folder `public/transfer images from user/` is designated for the user to copy/paste image files to be processed or integrated by the AI.
 *   The AI may read, rename, move, optimize, or delete the **files** inside this directory.
 *   **CRITICAL: NEVER delete the `transfer images from user` folder itself.** Only clean up/delete the files inside it.
+
 

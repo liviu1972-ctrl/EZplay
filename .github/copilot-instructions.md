@@ -15,6 +15,7 @@ When assisting with code development in this project, you must adhere to the fol
    - Save all database schema changes under `supabase/migrations/` as migration files.
 
 4. **User Asset Transfer Directory**:
-   - The directory `public/images/transfer images from user/` is for the user to provide files to the AI.
+   - The directory `public/transfer images from user/` is for the user to provide files to the AI.
    - You can read, process, move, or delete **files** inside this folder, but **NEVER delete the folder itself**.
+
 

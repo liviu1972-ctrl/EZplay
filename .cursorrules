@@ -16,6 +16,7 @@ This workspace is configured with specific development workflows. Please follow 
 * Do not run remote database updates without confirmation.
 
 ## 4. User Asset Transfer Directory
-* The folder `public/images/transfer images from user/` is for the user to copy/paste image files to be processed/moved by the AI.
+* The folder `public/transfer images from user/` is for the user to copy/paste image files to be processed/moved by the AI.
 * You may read, rename, optimize, move, or delete **files** inside it, but **NEVER delete the folder itself**.
+
 
