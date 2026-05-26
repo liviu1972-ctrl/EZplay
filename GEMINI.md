@@ -28,3 +28,11 @@ This file defines the workflow preferences and development guidelines agreed upo
 ## 4. Documentation Integrity
 *   Keep technical and application documentation up to date inside the `docs/` folder whenever features or schemas change.
 *   Ensure RLS policies and triggers are properly documented.
+
+---
+
+## 5. User Asset Transfer Directory
+*   The folder `public/images/transfer images from user/` is designated for the user to copy/paste image files to be processed or integrated by the AI.
+*   The AI may read, rename, move, optimize, or delete the **files** inside this directory.
+*   **CRITICAL: NEVER delete the `transfer images from user` folder itself.** Only clean up/delete the files inside it.
+

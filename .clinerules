@@ -13,3 +13,8 @@ Follow these workflow rules for this repository:
 
 3. **Supabase Schemas**:
    - Write all DDL and database changes as migration files under `supabase/migrations/`.
+
+4. **User Asset Transfer Directory**:
+   - The directory `public/images/transfer images from user/` is for the user to provide files to the AI.
+   - You can read, process, move, or delete **files** inside this folder, but **NEVER delete the folder itself**.
+
