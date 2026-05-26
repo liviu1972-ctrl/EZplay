@@ -316,7 +316,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                 >
                   {/* SIDE A: CARD BACK (0deg, displayed by default) */}
                   <div
-                    className={`absolute inset-0 w-full h-full flex flex-col justify-between rounded-2xl border border-white/10 bg-zinc-950 shadow-[0_15px_35px_rgba(0,0,0,0.6)] overflow-hidden ${
+                    className={`absolute inset-0 w-full h-full flex flex-col justify-between rounded-2xl bg-zinc-950 shadow-[0_8px_16px_rgba(0,0,0,0.4)] overflow-hidden ${
                       isFlipped ? "pointer-events-none" : "pointer-events-auto"
                     }`}
                     style={{ 
@@ -348,7 +348,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
 
                   {/* SIDE B: CARD FRONT (180deg, artwork or detailed stats) */}
                   <div
-                    className={`absolute inset-0 w-full h-full rounded-2xl border border-white/10 bg-zinc-950 shadow-[0_15px_35px_rgba(0,0,0,0.6)] overflow-hidden ${
+                    className={`absolute inset-0 w-full h-full rounded-2xl bg-zinc-950 shadow-[0_8px_16px_rgba(0,0,0,0.4)] overflow-hidden ${
                       isFlipped ? "pointer-events-auto" : "pointer-events-none"
                     }`}
                     style={{
