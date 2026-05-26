@@ -129,10 +129,17 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
   // Handle stack click
   const handleStackClick = useCallback((slug: string) => {
     if (stacks[slug].length === 0) return
-    setActiveStack(slug)
-    setRevealedIndex(0)
+    if (activeStack === slug) {
+      // Same stack clicked — advance to next card (wrap to 0)
+      const maxIdx = stacks[slug].length - 1
+      setRevealedIndex(prev => prev >= maxIdx ? 0 : prev + 1)
+    } else {
+      // Different stack — open it from the first card
+      setActiveStack(slug)
+      setRevealedIndex(0)
+    }
     setIsFlipped(false)
-  }, [stacks])
+  }, [stacks, activeStack])
 
   // Navigate within the active stack
   const handlePrev = useCallback(() => {
@@ -148,10 +155,9 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
     setRevealedIndex(prev => Math.min(maxIdx, prev + 1))
   }, [activeStack, stacks])
 
-  // Close reveal zone
+  // Close reveal zone (keep index so next click advances)
   const handleCloseReveal = useCallback(() => {
     setActiveStack(null)
-    setRevealedIndex(0)
     setIsFlipped(false)
   }, [])
 
