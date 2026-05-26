@@ -11,6 +11,7 @@
     "register": "Register",
     "logout": "Logout",
     "cards": "Cards",
+    "cardTable": "Card Table",
     "adminCards": "Cards Management"
   },
   "landing": {
@@ -169,5 +170,13 @@
     "viewFaceUp": "Face Up",
     "flipToFront": "Artwork",
     "flipToBack": "Stats"
+  },
+  "cards2": {
+    "title": "Card Table",
+    "subtitle": "Pick a card stack and discover them one by one.",
+    "shuffle": "Shuffle",
+    "cardSingular": "card",
+    "cardPlural": "cards",
+    "clickToFlip": "Click the card to flip it"
   }
 }

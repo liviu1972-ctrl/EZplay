@@ -11,6 +11,7 @@
     "register": "Înregistrare",
     "logout": "Deconectare",
     "cards": "Cărți",
+    "cardTable": "Masa de Joc",
     "adminCards": "Administrare Cărți"
   },
   "landing": {
@@ -169,5 +170,13 @@
     "viewFaceUp": "Cu fața",
     "flipToFront": "Imagine",
     "flipToBack": "Detalii"
+  },
+  "cards2": {
+    "title": "Masa de Joc",
+    "subtitle": "Alege un teanc de cărți și descoperă-le una câte una.",
+    "shuffle": "Amestecă",
+    "cardSingular": "carte",
+    "cardPlural": "cărți",
+    "clickToFlip": "Click pe carte pentru a o întoarce"
   }
 }

@@ -64,6 +64,12 @@ export function Navbar({ dict, user }: NavbarProps) {
             >
               {dict.nav.cards}
             </Link>
+            <Link
+              href="/cards2"
+              className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {dict.nav.cardTable || "Masa de Joc"}
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-2">
@@ -125,6 +131,12 @@ export function Navbar({ dict, user }: NavbarProps) {
                   className="px-2 py-1 text-lg font-medium hover:text-brand-green transition-colors"
                 >
                   {dict.nav.cards}
+                </Link>
+                <Link
+                  href="/cards2"
+                  className="px-2 py-1 text-lg font-medium hover:text-brand-green transition-colors"
+                >
+                  {dict.nav.cardTable || "Masa de Joc"}
                 </Link>
               </div>
               <div className="mt-auto flex flex-col gap-2">
