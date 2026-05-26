@@ -300,7 +300,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             return (
               <div
                 key={card.id}
-                className="group relative cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01]"
+                className="group relative cursor-pointer"
                 style={{ perspective: "1000px" }}
                 onClick={(e) => toggleFlip(card.id, e)}
               >
