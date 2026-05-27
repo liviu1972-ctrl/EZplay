@@ -1,0 +1,1127 @@
+{
+  "standard": [
+    {
+      "id": "s101",
+      "name": "Depozit mic închis",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s101.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s102",
+      "name": "Depozit mic compartimentat",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s102.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s103",
+      "name": "Depozit mic deschis",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s103.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s104",
+      "name": "Depozit simplu accesibil",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s104.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s105",
+      "name": "Depozit cu etaj",
+      "type": "standard",
+      "cost": 0,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s105.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s106",
+      "name": "Depozit modular cu etaj",
+      "type": "standard",
+      "cost": 0,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s106.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s107",
+      "name": "Depozit cu dubiță logistică",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s107.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s108",
+      "name": "Depozit cu transport propriu",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s108.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s109",
+      "name": "Depozit cu mașină dedicată",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s109.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s110",
+      "name": "Depozit cu flotă mică",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s110.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s111",
+      "name": "Muncitor șantier",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s111.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s112",
+      "name": "Muncitor construcții",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s112.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s113",
+      "name": "Muncitoare secție",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s113.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s114",
+      "name": "Muncitor producție",
+      "type": "standard",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s114.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s115",
+      "name": "Supervizor fabrică",
+      "type": "standard",
+      "cost": 0,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s115.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s116",
+      "name": "Supervizor depozit",
+      "type": "standard",
+      "cost": 0,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s116.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s117",
+      "name": "Operator computer",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s117.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s118",
+      "name": "Operator date",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s118.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s119",
+      "name": "Operatoare calculatoare",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s119.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s120",
+      "name": "Operatoare date",
+      "type": "standard",
+      "cost": 0,
+      "production": 0,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s120.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s121",
+      "name": "Motostivuitor cu operator",
+      "type": "standard",
+      "cost": 1,
+      "production": 1,
+      "sales": 3,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s121.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_CORPORAL_BUY_1",
+        "description": "La achiziție, poți cumpăra încă un activ corporal cu cost maxim 1.",
+        "payload": {
+          "maxCost": 1,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s122",
+      "name": "Motostivuitor industrial",
+      "type": "standard",
+      "cost": 1,
+      "production": 3,
+      "sales": 1,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s122.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_CORPORAL_BUY_1",
+        "description": "La achiziție, poți cumpăra încă un activ corporal cu cost maxim 1.",
+        "payload": {
+          "maxCost": 1,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s123",
+      "name": "Fabrică medie",
+      "type": "standard",
+      "cost": 1,
+      "production": 4,
+      "sales": 0,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s123.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_CORPORAL_BUY_2",
+        "description": "La achiziție, poți cumpăra încă un activ corporal cu cost maxim 2.",
+        "payload": {
+          "maxCost": 2,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s124",
+      "name": "Depozit cu rampă vânzare",
+      "type": "standard",
+      "cost": 1,
+      "production": 0,
+      "sales": 4,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s124.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_CORPORAL_BUY_2",
+        "description": "La achiziție, poți cumpăra încă un activ corporal cu cost maxim 2.",
+        "payload": {
+          "maxCost": 2,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s135",
+      "name": "Echipă operatori comenzi",
+      "type": "standard",
+      "cost": 1,
+      "production": 1,
+      "sales": 3,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s135.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_UMAN_BUY_1",
+        "description": "La achizitie mai poti achizitiona o alta resursa umana de valoare maxim 1 (se plateste costul ei)",
+        "payload": {
+          "maxCost": 1,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s136",
+      "name": "Operator comenzi VR",
+      "type": "standard",
+      "cost": 1,
+      "production": 1,
+      "sales": 3,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s136.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_UMAN_BUY_1",
+        "description": "La achizitie mai poti achizitiona o alta resursa umana de valoare maxim 1 (se plateste costul ei)",
+        "payload": {
+          "maxCost": 1,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s137",
+      "name": "Echipă mixtă șantier",
+      "type": "standard",
+      "cost": 1,
+      "production": 4,
+      "sales": 0,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s137.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_UMAN_BUY_2",
+        "description": "La achizitie mai poti achizitiona o alta resursa umana de valoare maxim 2 (se plateste costul ei)",
+        "payload": {
+          "maxCost": 2,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s138",
+      "name": "Echipă vânzări integrată",
+      "type": "standard",
+      "cost": 1,
+      "production": 0,
+      "sales": 4,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s138.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "BONUS_UMAN_BUY_2",
+        "description": "La achizitie mai poti achizitiona o alta resursa umana de valoare maxim 2 (se plateste costul ei)",
+        "payload": {
+          "maxCost": 2,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s125",
+      "name": "Utilaj semiautomat",
+      "type": "standard",
+      "cost": 1,
+      "production": 2,
+      "sales": 2,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s125.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s126",
+      "name": "Automat de vânzare",
+      "type": "standard",
+      "cost": 2,
+      "production": 1,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s126.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s127",
+      "name": "Sistem VR interactiv",
+      "type": "standard",
+      "cost": 2,
+      "production": 2,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s127.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s128",
+      "name": "Utilaje de linie producție",
+      "type": "standard",
+      "cost": 2,
+      "production": 3,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s128.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "RETIRE_CORPORAL_FROM_HAND_PAY_1",
+        "description": "La achizitie poti renunta la o carte active corporale din mana platind 1 ban",
+        "payload": {
+          "retireCost": 1,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s129",
+      "name": "Utilaj industrial avansat",
+      "type": "standard",
+      "cost": 2,
+      "production": 3,
+      "sales": 2,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s129.webp",
+      "assetType": "corporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s130",
+      "name": "Utilaj cu flexibilitate ridicată",
+      "type": "standard",
+      "cost": 2,
+      "production": 4,
+      "sales": 1,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s130.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "RETIRE_CORPORAL_FROM_HAND_FREE",
+        "description": "La achizitie poti renunta la o carte active corporale din mana fara a mai plati 1 ban",
+        "payload": {
+          "retireCost": 0,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "s131",
+      "name": "Sistem de eliminare bariere",
+      "type": "standard",
+      "cost": 2,
+      "production": 5,
+      "sales": 0,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s131.webp",
+      "assetType": "corporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "RETIRE_ANY_FROM_HAND_FREE",
+        "description": "La achizitie poti renunta la o carte din mana de orice fel fara a mai plati 1 ban",
+        "payload": {
+          "retireCost": 0,
+          "assetType": "any"
+        }
+      }
+    },
+    {
+      "id": "s132",
+      "name": "Minirobot logistic",
+      "type": "standard",
+      "cost": 2,
+      "production": 2,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s132.webp",
+      "assetType": "corporal",
+      "calculationType": "choice"
+    },
+    {
+      "id": "s133",
+      "name": "Robot multifuncțional",
+      "type": "standard",
+      "cost": 3,
+      "production": 4,
+      "sales": 4,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s133.webp",
+      "assetType": "corporal",
+      "calculationType": "choice"
+    },
+    {
+      "id": "s134",
+      "name": "Robot versatil de producție",
+      "type": "standard",
+      "cost": 4,
+      "production": 3,
+      "sales": 3,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s134.webp",
+      "assetType": "corporal",
+      "calculationType": "choice"
+    },
+    {
+      "id": "s139",
+      "name": "Echipă mixtă producție-vânzare",
+      "type": "standard",
+      "cost": 1,
+      "production": 2,
+      "sales": 2,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s139.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s140",
+      "name": "Echipă mixtă vânzare-producție",
+      "type": "standard",
+      "cost": 2,
+      "production": 1,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s140.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s141",
+      "name": "Operator proiectare-vânzare",
+      "type": "standard",
+      "cost": 2,
+      "production": 2,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s141.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s142",
+      "name": "Manager vânzări",
+      "type": "standard",
+      "cost": 2,
+      "production": 0,
+      "sales": 3,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s142.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "RETIRE_UMAN_FROM_HAND_PAY_1",
+        "description": "La achizitie poti renunta la o carte resurse umane din mana platind 1 ban",
+        "payload": {
+          "retireCost": 1,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s143",
+      "name": "Echipă proiectare-vânzare automatizată",
+      "type": "standard",
+      "cost": 2,
+      "production": 2,
+      "sales": 3,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s143.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s144",
+      "name": "Echipă robo-proiectare marketing",
+      "type": "standard",
+      "cost": 2,
+      "production": 1,
+      "sales": 4,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s144.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_buy",
+        "id": "RETIRE_UMAN_FROM_HAND_FREE",
+        "description": "La achizitie poti renunta la o carte active umane din mana fara a plati 1 ban",
+        "payload": {
+          "retireCost": 0,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "s145",
+      "name": "Echipă vânzări performante",
+      "type": "standard",
+      "cost": 2,
+      "production": 0,
+      "sales": 5,
+      "expenses": 2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s145.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s146",
+      "name": "Operatoare multidisciplinară",
+      "type": "standard",
+      "cost": 2,
+      "production": 2,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s146.webp",
+      "assetType": "uman",
+      "calculationType": "choice"
+    },
+    {
+      "id": "s147",
+      "name": "Operatoare logistică",
+      "type": "standard",
+      "cost": 3,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s147.webp",
+      "assetType": "uman",
+      "calculationType": "choice",
+      "effect": {
+        "trigger": "on_play",
+        "id": "PURCHASE_DISCOUNT_1",
+        "description": "Achizițiile costă cu 1 mai puțin (minim 1).",
+        "payload": {
+          "discount": 1
+        }
+      }
+    },
+    {
+      "id": "s148",
+      "name": "Echipă achiziții optimizate",
+      "type": "standard",
+      "cost": 2,
+      "production": 0,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s148.webp",
+      "assetType": "uman",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_play",
+        "id": "PURCHASE_DISCOUNT_2",
+        "description": "Achizițiile costă cu 2 mai puțin (minim 1).",
+        "payload": {
+          "discount": 2
+        }
+      }
+    },
+    {
+      "id": "s149",
+      "name": "Optimizare producție",
+      "type": "standard",
+      "cost": 3,
+      "production": -1,
+      "sales": 0,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s149.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s150",
+      "name": "Control supraproducție",
+      "type": "standard",
+      "cost": 3,
+      "production": -1,
+      "sales": 0,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s150.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s151",
+      "name": "Optimizare marketing",
+      "type": "standard",
+      "cost": 3,
+      "production": 0,
+      "sales": -1,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s151.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s152",
+      "name": "Strategii vânzări",
+      "type": "standard",
+      "cost": 3,
+      "production": 0,
+      "sales": -1,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s152.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s153",
+      "name": "Integrare producție-vânzări",
+      "type": "standard",
+      "cost": 6,
+      "production": 0,
+      "sales": -1,
+      "expenses": -2,
+      "imageUrl": "https://ezplay.org/cards/base-game/s153.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s154",
+      "name": "Server centru date",
+      "type": "standard",
+      "cost": 4,
+      "production": 0,
+      "sales": 0,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s154.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s155",
+      "name": "AI centralizat",
+      "type": "standard",
+      "cost": 4,
+      "production": 0,
+      "sales": 0,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s155.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    },
+    {
+      "id": "s156",
+      "name": "Optimizare operațională",
+      "type": "standard",
+      "cost": 3,
+      "production": 0,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/s156.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_play",
+        "id": "MODIFY_EXPENSE_2_TO_1",
+        "description": "Toate cartile din mână cu cheltuiala 2 au cheltuiala 1.",
+        "payload": {
+          "targetExpense": 2,
+          "newExpense": 1
+        }
+      }
+    },
+    {
+      "id": "s157",
+      "name": "Automatizare operațională",
+      "type": "standard",
+      "cost": 5,
+      "production": 0,
+      "sales": 0,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/base-game/s157.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_play",
+        "id": "MODIFY_EXPENSE_2_TO_1",
+        "description": "Toate cartile din mână cu cheltuiala 2 au cheltuiala 1.",
+        "payload": {
+          "targetExpense": 2,
+          "newExpense": 1
+        }
+      }
+    },
+    {
+      "id": "s158",
+      "name": "Procese automatizate",
+      "type": "standard",
+      "cost": 4,
+      "production": 0,
+      "sales": 0,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/base-game/s158.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive",
+      "effect": {
+        "trigger": "on_play",
+        "id": "ACTIVATE_TO_COPY_CARD_FROM_HAND",
+        "description": "Copiază o altă carte din mână pentru această tură. Această carte devine o copie a cărții alese.",
+        "payload": {}
+      }
+    },
+    {
+      "id": "s201",
+      "name": "Lobbyist corporativ",
+      "type": "standard",
+      "cost": 4,
+      "production": 0,
+      "sales": 0,
+      "expenses": -2,
+      "imageUrl": "https://ezplay.org/cards/events/s201.webp",
+      "assetType": "necorporal",
+      "calculationType": "additive"
+    }
+  ],
+  "entrepreneur": [
+    {
+      "id": "a102",
+      "name": "Obsedat de munca (peste tot)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 2,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a102.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a101",
+      "name": "Obsedat de munca (productie)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 3,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a101.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a103",
+      "name": "Obsedata de munca (mkt si vanzari)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 1,
+      "sales": 3,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a103.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a104",
+      "name": "Dedicata si focalizata (mkt/vanzari)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 0,
+      "sales": 3,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a104.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a105",
+      "name": "Dedicat si focalizat (productie)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 3,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a105.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a106",
+      "name": "Dedicat (productie)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 2,
+      "sales": 0,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a106.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a107",
+      "name": "Obsedata de munca (tot ce misca)",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 2,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a107.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a108",
+      "name": "Dedicata si adaptabila",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 1,
+      "sales": 2,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a108.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    },
+    {
+      "id": "a109",
+      "name": "Dedicat si adaptabil",
+      "type": "entrepreneur",
+      "cost": 0,
+      "production": 2,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/base-game/a109.webp",
+      "assetType": "uman",
+      "calculationType": "additive"
+    }
+  ],
+  "event": [
+    {
+      "id": "e101",
+      "name": "Eficienta",
+      "type": "event",
+      "cost": 0,
+      "production": 0,
+      "sales": 0,
+      "expenses": -1,
+      "imageUrl": "https://ezplay.org/cards/events/e101.webp"
+    },
+    {
+      "id": "e102",
+      "name": "Criza supraproductie",
+      "type": "event",
+      "cost": 0,
+      "production": 1,
+      "sales": -2,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e102.webp"
+    },
+    {
+      "id": "e103",
+      "name": "Criza economica",
+      "type": "event",
+      "cost": 0,
+      "production": 0,
+      "sales": -1,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e103.webp"
+    },
+    {
+      "id": "e104",
+      "name": "Crestere economica",
+      "type": "event",
+      "cost": 0,
+      "production": 1,
+      "sales": 1,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e104.webp"
+    },
+    {
+      "id": "e105",
+      "name": "Criza materii prime",
+      "type": "event",
+      "cost": 0,
+      "production": -2,
+      "sales": 1,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e105.webp"
+    },
+    {
+      "id": "e106",
+      "name": "Concedieri masive",
+      "type": "event",
+      "cost": 0,
+      "production": 0,
+      "sales": 0,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e106.webp",
+      "effect": {
+        "trigger": "on_event_active",
+        "id": "RETIRE_UMAN_FROM_HAND_FREE",
+        "description": "Poti renunta la o carte resurse umane fara a plati 1 ban",
+        "payload": {
+          "retireCost": 0,
+          "assetType": "uman"
+        }
+      }
+    },
+    {
+      "id": "e107",
+      "name": "Vanzari active",
+      "type": "event",
+      "cost": 0,
+      "production": 0,
+      "sales": 0,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e107.webp",
+      "effect": {
+        "trigger": "on_event_active",
+        "id": "RETIRE_CORPORAL_FROM_HAND_FREE",
+        "description": "Poti renunta la o carte resurse corporale fara a plati 1 ban",
+        "payload": {
+          "retireCost": 0,
+          "assetType": "corporal"
+        }
+      }
+    },
+    {
+      "id": "e108",
+      "name": "Boom economic productie",
+      "type": "event",
+      "cost": 0,
+      "production": 2,
+      "sales": 1,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e108.webp"
+    },
+    {
+      "id": "e109",
+      "name": "Boom economic vanzari",
+      "type": "event",
+      "cost": 0,
+      "production": 1,
+      "sales": 2,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e109.webp"
+    },
+    {
+      "id": "e110",
+      "name": "Bani ieftini in piata",
+      "type": "event",
+      "cost": 0,
+      "production": 0,
+      "sales": 0,
+      "expenses": 0,
+      "imageUrl": "https://ezplay.org/cards/events/e110.webp",
+      "effect": {
+        "trigger": "on_event_active",
+        "id": "PURCHASE_DISCOUNT_1",
+        "description": "Orice achizitie costa cu 1 ban mai putin (minim 1)",
+        "payload": {
+          "discount": 1
+        }
+      }
+    }
+  ],
+  "consultant": [
+    {
+      "id": "c001",
+      "name": "Consultant Resurse Umane",
+      "type": "consultant",
+      "cost": 2,
+      "production": 1,
+      "sales": 1,
+      "expenses": 1,
+      "imageUrl": "https://ezplay.org/cards/consultants/c001.webp",
+      "assetType": "uman",
+      "contract": 4,
+      "effect": {
+        "trigger": "on_play",
+        "id": "DOUBLE_UMAN_SALES_IN_HAND",
+        "description": "Cât timp este activ, resursele umane din mână își dublează vânzările.",
+        "payload": {}
+      }
+    }
+  ]
+}
