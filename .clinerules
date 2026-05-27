@@ -1,0 +1,21 @@
+# Cline / Roo Code Rules of Engagement — EZPlay
+
+Follow these workflow rules for this repository:
+
+1. **Local Development First**:
+   - Keep all code changes on the local `dev` branch.
+   - Do NOT merge into `main`, checkout `main`, or push to `origin/main` unless the developer explicitly asks you to.
+
+2. **Verification**:
+   - Run the local server using `pnpm dev` to test your changes.
+   - Request the developer to verify the updates at `http://localhost:3000`.
+   - Confirm compilation passes by running `pnpm build` locally.
+
+3. **Supabase Schemas**:
+   - Write all DDL and database changes as migration files under `supabase/migrations/`.
+
+4. **User Asset Transfer Directory**:
+   - The directory `public/transfer images from user/` is for the user to provide files to the AI.
+   - You can read, process, move, or delete **files** inside this folder, but **NEVER delete the folder itself**.
+
+
