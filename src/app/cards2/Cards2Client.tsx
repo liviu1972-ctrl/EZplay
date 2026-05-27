@@ -210,46 +210,50 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
               key={slug}
               className="flex flex-col items-center gap-3"
             >
-              {/* Stack visual */}
-              <button
-                onClick={() => handleStackClick(slug)}
-                disabled={count === 0}
-                className={`
-                  relative w-full aspect-[3/4] max-w-[200px] mx-auto
-                  rounded-2xl cursor-pointer transition-all duration-300
-                  ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
-                  ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
-                `}
-                style={{ perspective: "600px" }}
-              >
-                {/* Stacked card layers (bottom to top) */}
-                {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`
-                      absolute inset-0 rounded-2xl overflow-hidden
-                      shadow-[0_4px_12px_rgba(0,0,0,0.5)]
-                      transition-transform duration-300
-                      ${isShuffling ? "animate-shuffle" : ""}
-                    `}
-                    style={{
-                      transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
-                      zIndex: i,
-                    }}
-                  >
-                    <Image
-                      src={config.cardBack}
-                      alt="Card back"
-                      fill
-                      sizes="200px"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
+              {/* Stack visual wrapper — relative container for button + overlay controls */}
+              <div className="relative w-full max-w-[200px] mx-auto">
+                {/* Main clickable stack button */}
+                <button
+                  onClick={() => handleStackClick(slug)}
+                  disabled={count === 0}
+                  className={`
+                    relative w-full aspect-[3/4]
+                    rounded-2xl cursor-pointer transition-all duration-300
+                    ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
+                    ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
+                  `}
+                  style={{ perspective: "600px" }}
+                >
+                  {/* Stacked card layers (bottom to top) */}
+                  {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
+                    <div
+                      key={i}
+                      className={`
+                        absolute inset-0 rounded-2xl overflow-hidden
+                        shadow-[0_4px_12px_rgba(0,0,0,0.5)]
+                        transition-transform duration-300
+                        ${isShuffling ? "animate-shuffle" : ""}
+                      `}
+                      style={{
+                        transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
+                        zIndex: i,
+                      }}
+                    >
+                      <Image
+                        src={config.cardBack}
+                        alt="Card back"
+                        fill
+                        sizes="200px"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </button>
 
-                {/* Count badge */}
+                {/* Count badge — outside main button, positioned over it */}
                 <div className={`
+                  pointer-events-none
                   absolute -top-2 -right-2 z-20
                   w-8 h-8 rounded-full flex items-center justify-center
                   bg-zinc-900 border-2 ${config.borderColor}
@@ -259,7 +263,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                   {count}
                 </div>
 
-                {/* Shuffle button */}
+                {/* Shuffle button — outside main button, positioned over it */}
                 {count > 1 && (
                   <button
                     onClick={(e) => handleShuffle(slug, e)}
@@ -275,7 +279,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                     <Shuffle className="w-3.5 h-3.5" />
                   </button>
                 )}
-              </button>
+              </div>
 
               {/* Stack label */}
               <div className="text-center space-y-1">
@@ -290,6 +294,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                 </span>
               </div>
             </div>
+
           )
         })}
       </div>
