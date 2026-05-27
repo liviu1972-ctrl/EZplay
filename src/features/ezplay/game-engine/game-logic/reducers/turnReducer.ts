@@ -148,7 +148,7 @@ export const turnReducer = (state: GameState, action: GameAction): GameState => 
                         nextState = { ...state, isGameOver: true, gameOverReason: 'NORMAL' };
                         return p;
                     }
-                    const initialChoices: Record<string, 'production' | 'sales'> = {};
+                    const initialChoices: Record<string, 'production' | 'marketing'> = {};
                     newHand.forEach(card => { if (card.calculationType === 'choice') initialChoices[card.uid] = 'production'; });
                     return { ...p, hand: newHand, deck: nextDeck, discard: nextDiscard, cardChoices: initialChoices, effectChainDepth: 0 };
                 }
@@ -176,7 +176,7 @@ export const turnReducer = (state: GameState, action: GameAction): GameState => 
                         nextState = { ...state, isGameOver: true, gameOverReason: 'NORMAL' };
                         return p;
                     }
-                    const initialChoices: Record<string, 'production' | 'sales'> = {};
+                    const initialChoices: Record<string, 'production' | 'marketing'> = {};
                     newHand.forEach(card => { if (card.calculationType === 'choice') initialChoices[card.uid] = 'production'; });
                     return { ...p, hand: newHand, deck: nextDeck, discard: nextDiscard, cardChoices: initialChoices, effectChainDepth: 0 };
                 }
@@ -226,7 +226,7 @@ export const turnReducer = (state: GameState, action: GameAction): GameState => 
                         nextState = { ...state, isGameOver: true, gameOverReason: 'NORMAL' };
                         return { ...p, history: updatedHistory };
                     }
-                    const initialChoices: Record<string, 'production' | 'sales'> = {};
+                    const initialChoices: Record<string, 'production' | 'marketing'> = {};
                     newHand.forEach(card => { if (card.calculationType === 'choice') initialChoices[card.uid] = 'production'; });
                     return { ...p, hand: newHand, deck: nextDeck, discard: nextDiscard, cardChoices: initialChoices, effectChainDepth: 0, history: updatedHistory };
                 }

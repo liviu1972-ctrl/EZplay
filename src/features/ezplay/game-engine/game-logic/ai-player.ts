@@ -15,9 +15,9 @@ export type AiDecision = GameAction | { type: 'END_TURN_SIGNAL' };
 
 interface DeckAnalysis {
     totalProduction: number;
-    totalSales: number;
+    totalMarketing: number;
     productionRatio: number;
-    salesRatio: number;
+    marketingRatio: number;
 }
 
 // NEW: Enum for financial assessment
@@ -43,28 +43,28 @@ function analyzeDeck(player: PlayerState): DeckAnalysis {
     if (player.entrepreneur) allCards.push(player.entrepreneur);
 
     let totalProduction = 0;
-    let totalSales = 0;
+    let totalMarketing = 0;
 
     for (const card of allCards) {
         if (card.calculationType === 'choice') {
             totalProduction += card.production / 2;
-            totalSales += card.sales / 2;
+            totalMarketing += card.marketing / 2;
         } else {
             totalProduction += card.production;
-            totalSales += card.sales;
+            totalMarketing += card.marketing;
         }
     }
     
-    const totalPower = totalProduction + totalSales;
+    const totalPower = totalProduction + totalMarketing;
     if (totalPower === 0) {
-        return { totalProduction, totalSales, productionRatio: 0.5, salesRatio: 0.5 };
+        return { totalProduction, totalMarketing, productionRatio: 0.5, marketingRatio: 0.5 };
     }
 
     return {
         totalProduction,
-        totalSales,
+        totalMarketing,
         productionRatio: totalProduction / totalPower,
-        salesRatio: totalSales / totalPower,
+        marketingRatio: totalMarketing / totalPower,
     };
 }
 
@@ -79,22 +79,22 @@ function getCardStrategicValue(
     let baseScore = 0;
     switch (strategy) {
         case 'aggressive':
-            baseScore = (card.cost * 2) + card.production + card.sales - (card.expenses * 1.5);
+            baseScore = (card.cost * 2) + card.production + card.marketing - (card.expenses * 1.5);
             break;
         case 'profit-focused':
-            baseScore = (card.production + card.sales) - (card.expenses * 2) - (card.cost * 0.5);
+            baseScore = (card.production + card.marketing) - (card.expenses * 2) - (card.cost * 0.5);
             break;
         case 'early-rusher':
-            baseScore = 5 - card.cost + card.production + card.sales - card.expenses;
+            baseScore = 5 - card.cost + card.production + card.marketing - card.expenses;
             break;
         case 'deck-thinner':
-            baseScore = card.production + card.sales - card.cost - card.expenses;
+            baseScore = card.production + card.marketing - card.cost - card.expenses;
             if (card.effect?.id.includes('RETIRE_')) baseScore += 5;
             break;
         case 'balanced':
         default:
             // MODIFIED: Make the balanced strategy more wary of high costs and expenses to prevent early bankruptcy.
-            baseScore = (card.production + card.sales) * 1.2 - (card.cost * 1.5) - card.expenses;
+            baseScore = (card.production + card.marketing) * 1.2 - (card.cost * 1.5) - card.expenses;
             break;
     }
 
@@ -107,11 +107,11 @@ function getCardStrategicValue(
     let contextScore = 0;
     const imbalanceFactor = 2;
     if (deckAnalysis.productionRatio > 0.65) {
-        contextScore += card.sales * imbalanceFactor;
+        contextScore += card.marketing * imbalanceFactor;
         contextScore -= card.production * imbalanceFactor;
-    } else if (deckAnalysis.salesRatio > 0.65) {
+    } else if (deckAnalysis.marketingRatio > 0.65) {
         contextScore += card.production * imbalanceFactor;
-        contextScore -= card.sales * imbalanceFactor;
+        contextScore -= card.marketing * imbalanceFactor;
     }
 
     // NEW: Financial Modifier based on cash situation
@@ -122,7 +122,7 @@ function getCardStrategicValue(
     } else if (financialStatus === 'Critical') {
         // In critical situations, the AI becomes desperate for survival.
         // It heavily penalizes any cost/expense and seeks any form of income.
-        financialModifier = -(card.cost * 3) - (card.expenses * 2) + (card.production + card.sales);
+        financialModifier = -(card.cost * 3) - (card.expenses * 2) + (card.production + card.marketing);
     }
 
 
@@ -156,7 +156,7 @@ function getCardStrategicValue(
                 synergyBonus = (umanCardsCount / 2) * (hint.synergyValue / 10);
                 break;
             case 'base-game:s158':
-                 const bestCardValue = Math.max(0, ...allPlayerCards.map(c => c.production + c.sales));
+                 const bestCardValue = Math.max(0, ...allPlayerCards.map(c => c.production + c.marketing));
                  synergyBonus = (bestCardValue / 3) * (hint.synergyValue / 10);
                  break;
             case 'base-game:s156':
@@ -230,7 +230,7 @@ export function makeAiMove(state: GameState, settings: { strategy: AiStrategy, s
         for (const card of choiceCardsInHand) {
             if (!cardChoices[card.uid]) {
                  const deckAnalysis = analyzeDeck(activePlayer);
-                 const desiredChoice = deckAnalysis.productionRatio > deckAnalysis.salesRatio ? 'sales' : 'production';
+                 const desiredChoice = deckAnalysis.productionRatio > deckAnalysis.marketingRatio ? 'marketing' : 'production';
                  return { type: 'SET_CARD_CHOICE', payload: { cardUid: card.uid, choice: desiredChoice } };
             }
         }

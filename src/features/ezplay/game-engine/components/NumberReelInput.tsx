@@ -12,12 +12,14 @@ interface NumberReelInputProps {
 
 const NumberReelInput: React.FC<NumberReelInputProps> = ({ label, value, onChange, imageUrl, textColor = 'text-white', size = 'default' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [triggerRect, setTriggerRect] = useState<DOMRect | null>(null);
 
   const containerClasses = size === 'mobile' ? 'w-14 h-16' : 'w-20 h-20';
   const labelClasses = size === 'mobile' ? 'h-4 text-xs' : 'h-5 text-sm';
   const imageClasses = 'w-12 h-12';
   
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    setTriggerRect(e.currentTarget.getBoundingClientRect());
     setIsModalOpen(true);
   };
   
@@ -54,6 +56,7 @@ const NumberReelInput: React.FC<NumberReelInputProps> = ({ label, value, onChang
             onClose={handleClose}
             onConfirm={handleConfirm}
             imageUrl={imageUrl}
+            triggerRect={triggerRect}
         />
       )}
     </>

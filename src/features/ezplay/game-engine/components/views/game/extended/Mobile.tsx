@@ -224,14 +224,14 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
                   {inputMethod === 'reel' ? (
                       <>
                           <NumberReelInput label="Prod." value={manualHudValues.production || ''} onChange={(v) => handleManualValueChange('production', v)} imageUrl={STAT_ICONS.production} size="mobile" />
-                          <NumberReelInput label="Vânz." value={manualHudValues.sales || ''} onChange={(v) => handleManualValueChange('sales', v)} imageUrl={STAT_ICONS.sales} textColor="text-black" size="mobile" />
+                          <NumberReelInput label="Mkt." value={manualHudValues.marketing || ''} onChange={(v) => handleManualValueChange('marketing', v)} imageUrl={STAT_ICONS.marketing} textColor="text-black" size="mobile" />
                           <NumberReelInput label="Venit" value={manualHudValues.income || ''} onChange={(v) => handleManualValueChange('income', v)} imageUrl={STAT_ICONS.income} size="mobile" />
                           <NumberReelInput label="Chelt." value={manualHudValues.expenses || ''} onChange={(v) => handleManualValueChange('expenses', v)} imageUrl={STAT_ICONS.expenses} size="mobile" />
                       </>
                   ) : (
                       <>
                           <NumpadInput label="Prod." value={manualHudValues.production || ''} onClick={() => setNumpadState({ isOpen: true, field: 'production', label: 'Producție' })} imageUrl={STAT_ICONS.production} size="mobile" />
-                          <NumpadInput label="Vânz." value={manualHudValues.sales || ''} onClick={() => setNumpadState({ isOpen: true, field: 'sales', label: 'Vânzări' })} imageUrl={STAT_ICONS.sales} textColor="text-black" size="mobile" />
+                          <NumpadInput label="Mkt." value={manualHudValues.marketing || ''} onClick={() => setNumpadState({ isOpen: true, field: 'marketing', label: 'Marketing' })} imageUrl={STAT_ICONS.marketing} textColor="text-black" size="mobile" />
                           <NumpadInput label="Venit" value={manualHudValues.income || ''} onClick={() => setNumpadState({ isOpen: true, field: 'income', label: 'Venituri' })} imageUrl={STAT_ICONS.income} size="mobile" />
                           <NumpadInput label="Chelt." value={manualHudValues.expenses || ''} onClick={() => setNumpadState({ isOpen: true, field: 'expenses', label: 'Cheltuieli' })} imageUrl={STAT_ICONS.expenses} size="mobile" />
                       </>
@@ -240,7 +240,7 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
             ) : (
               <>
                   <MobileStatDisplay label="Prod." value={turnTotals.production} imageUrl={STAT_ICONS.production} textColor="text-white" onClick={() => setActiveChartKeys(['production'])} />
-                  <MobileStatDisplay label="Vânz." value={turnTotals.sales} imageUrl={STAT_ICONS.sales} textColor="text-black" onClick={() => setActiveChartKeys(['sales'])} />
+                  <MobileStatDisplay label="Mkt." value={turnTotals.marketing} imageUrl={STAT_ICONS.marketing} textColor="text-black" onClick={() => setActiveChartKeys(['marketing'])} />
                   <MobileStatDisplay label="Venit" value={turnTotals.income} imageUrl={STAT_ICONS.income} textColor="text-white" onClick={() => setActiveChartKeys(['income'])} />
                   <MobileStatDisplay label="Chelt." value={turnTotals.expenses} imageUrl={STAT_ICONS.expenses} textColor="text-white" onClick={() => setActiveChartKeys(['expenses'])} />
               </>

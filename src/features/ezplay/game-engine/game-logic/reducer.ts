@@ -4,6 +4,7 @@ import { runEffects } from './effect-runner';
 import { playerReducer } from './reducers/playerReducer';
 import { turnReducer } from './reducers/turnReducer';
 import { gameInitReducer } from './reducers/gameInitReducer';
+import { migrateSavedState } from './state-utils';
 
 // Re-export initialState so we don't break App.tsx imports
 export { initialState } from './state-utils';
@@ -71,7 +72,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
   
   // NEW: Handle Game Loading
   if (action.type === 'LOAD_GAME') {
-      return action.payload;
+      return migrateSavedState(action.payload);
   }
   
   let nextState: GameState;

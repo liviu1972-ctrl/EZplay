@@ -38,7 +38,7 @@ const EventCardRow: React.FC<{
                 <div className="text-slate-400 font-mono text-lg">{index + 1}</div>
                 <div className="font-bold text-white">{card.name} ({card.id})</div>
                 <div className="text-center font-mono" title="Producție">{card.production}</div>
-                <div className="text-center font-mono" title="Vânzări">{card.sales}</div>
+                <div className="text-center font-mono" title="Marketing">{card.marketing}</div>
                 <div className="text-center font-mono" title="Cheltuieli">{card.expenses}</div>
                 <div className="text-sm text-slate-300 italic truncate" title={card.effect?.description}>{card.effect?.description || 'N/A'}</div>
                 <button
@@ -186,7 +186,7 @@ const EventsSetup: React.FC<EventsSetupProps> = ({ onBack, allAvailableEvents, g
             <div className="text-center">#</div>
             <div>Nume</div>
             <div className="text-center" title="Producție">P</div>
-            <div className="text-center" title="Vânzări">V</div>
+            <div className="text-center" title="Marketing">M</div>
             <div className="text-center" title="Cheltuieli">C</div>
             <div>Efect</div>
             <div className="text-center">Acțiuni</div>

@@ -54,7 +54,7 @@ export const getRetireCost = (card: Card, sharedState: GameState): number => {
 
 export interface TurnTotals {
     production: number;
-    sales: number;
+    marketing: number;
     expenses: number;
     income: number;
     profit: number;
@@ -77,7 +77,7 @@ export const processHandAndCalculateTotals = (
     if (!activePlayer) {
         return { 
             processedHand: [], 
-            turnTotals: { production: 0, sales: 0, expenses: 1, income: 0, profit: -1, capitalization: 0 } 
+            turnTotals: { production: 0, marketing: 0, expenses: 1, income: 0, profit: -1, capitalization: 0 } 
         };
     }
 
@@ -128,13 +128,13 @@ export const processHandAndCalculateTotals = (
         }
     }
 
-    // Apply sales multipliers from permanent cards
+    // Apply marketing multipliers from permanent cards
     for (const pCard of permanentCards) {
          const effect = pCard.effect;
          if (effect?.trigger === 'on_play' && effect.id === 'DOUBLE_UMAN_SALES_IN_HAND') {
             handAfterPermanentEffects = handAfterPermanentEffects.map(card => {
-                if (card.assetType === 'uman' && card.sales > 0) {
-                    return { ...card, sales: card.sales * 2, originalSales: card.originalSales ?? card.sales };
+                if (card.assetType === 'uman' && card.marketing > 0) {
+                    return { ...card, marketing: card.marketing * 2, originalMarketing: card.originalMarketing ?? card.marketing };
                 }
                 return card;
             });
@@ -163,7 +163,7 @@ export const processHandAndCalculateTotals = (
     // --- Step 2: Calculate Turn Totals (Profit, etc.) using the processed calculation-hand ---
 
     const { entrepreneur, activeConsultants, cardChoices, deck, discard, cash, accountant } = activePlayer;
-    const totals = { production: 0, sales: 0 };
+    const totals = { production: 0, marketing: 0 };
     let rawExpenses = 0;
 
     processedHandForCalculation.forEach(card => {
@@ -173,38 +173,38 @@ export const processHandAndCalculateTotals = (
             if (choice === 'production') {
                 totals.production += card.production;
             } else {
-                totals.sales += card.sales;
+                totals.marketing += card.marketing;
             }
         } else {
             totals.production += card.production;
-            totals.sales += card.sales;
+            totals.marketing += card.marketing;
         }
     });
       
     if (entrepreneur) { 
         totals.production += entrepreneur.production; 
-        totals.sales += entrepreneur.sales; 
+        totals.marketing += entrepreneur.marketing; 
         rawExpenses += entrepreneur.expenses; 
     }
     if (accountant) {
         totals.production += accountant.production;
-        totals.sales += accountant.sales;
+        totals.marketing += accountant.marketing;
         rawExpenses += accountant.expenses;
     }
     // Recalculate expenses from active consultants here, because their own stats might be modified by other effects.
     activeConsultants.forEach(c => { 
         totals.production += c.production; 
-        totals.sales += c.sales; 
+        totals.marketing += c.marketing; 
         rawExpenses += c.expenses; 
     });
     if (activeEvent) { 
         totals.production += activeEvent.production; 
-        totals.sales += activeEvent.sales; 
+        totals.marketing += activeEvent.marketing; 
         rawExpenses += activeEvent.expenses; 
     }
 
     const expenses = Math.max(1, rawExpenses);
-    const income = Math.min(totals.production, totals.sales);
+    const income = Math.min(totals.production, totals.marketing);
     const profit = income - expenses;
 
     // --- Step 3: Prepare the final hand for display and calculate capitalization ---
@@ -227,7 +227,7 @@ export const processHandAndCalculateTotals = (
 
     const turnTotals: TurnTotals = { 
         production: totals.production, 
-        sales: totals.sales, 
+        marketing: totals.marketing, 
         expenses, 
         income, 
         profit, 

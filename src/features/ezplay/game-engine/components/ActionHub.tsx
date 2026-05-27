@@ -10,7 +10,7 @@ interface ActionHubProps {
   onConfirmRetire: () => void;
   onConfirmRetireBonus: () => void;
   onCancel: () => void;
-  onCardChoice: (cardUid: string, choice: 'production' | 'sales') => void;
+  onCardChoice: (cardUid: string, choice: 'production' | 'marketing') => void;
   onActivateCopy: (sourceCardUid: string) => void;
 }
 
@@ -101,8 +101,8 @@ const ActionHub: React.FC<ActionHubProps> = ({
                     <button onClick={() => onCardChoice(card.uid, 'production')} disabled={isAnimating} className={`px-4 py-2 text-sm font-bold rounded-full transition-colors w-1/2 disabled:opacity-50 ${currentChoice === 'production' ? 'bg-blue-600 text-white shadow-md' : 'text-slate-300 hover:bg-slate-600'}`}>
                         Prod: {card.production}
                     </button>
-                    <button onClick={() => onCardChoice(card.uid, 'sales')} disabled={isAnimating} className={`px-4 py-2 text-sm font-bold rounded-full transition-colors w-1/2 disabled:opacity-50 ${currentChoice === 'sales' ? 'bg-yellow-500 text-black shadow-md' : 'text-slate-300 hover:bg-slate-600'}`}>
-                        Vânz: {card.sales}
+                    <button onClick={() => onCardChoice(card.uid, 'marketing')} disabled={isAnimating} className={`px-4 py-2 text-sm font-bold rounded-full transition-colors w-1/2 disabled:opacity-50 ${currentChoice === 'marketing' ? 'bg-yellow-500 text-black shadow-md' : 'text-slate-300 hover:bg-slate-600'}`}>
+                        Mkt: {card.marketing}
                     </button>
                 </div>
             )}
