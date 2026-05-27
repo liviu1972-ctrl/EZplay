@@ -81,7 +81,7 @@ export const gameInitReducer = (state: GameState, action: GameAction): GameState
                 currentSeed = nextSeed;
                 const { newHand, nextDeck, nextSeed: seedAfterDraw } = drawCards(shuffledArray, [], 5, currentSeed);
                 currentSeed = seedAfterDraw;
-                const initialChoices: Record<string, 'production' | 'sales'> = {};
+                const initialChoices: Record<string, 'production' | 'marketing'> = {};
                 newHand.forEach(card => { if (card.calculationType === 'choice') initialChoices[card.uid] = 'production'; });
                 
                 newPlayers.push({
@@ -139,7 +139,7 @@ export const gameInitReducer = (state: GameState, action: GameAction): GameState
             const { newHand, nextDeck, nextSeed: seedAfterDraw } = drawCards(shuffledArray, [], 5, currentSeed);
             currentSeed = seedAfterDraw;
             
-            const initialChoices: Record<string, 'production' | 'sales'> = {};
+            const initialChoices: Record<string, 'production' | 'marketing'> = {};
             newHand.forEach(card => { if (card.calculationType === 'choice') initialChoices[card.uid] = 'production'; });
             
             const newPlayers = state.players.map((player, index) => {

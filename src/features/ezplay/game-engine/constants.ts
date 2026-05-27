@@ -7,7 +7,7 @@ export const EVENT_CARD_BACK_URL = `${STORAGE_BASE}/cards/backs/event.webp`;
 export const STAT_ICONS = {
   cash: '/images/game-icons/cash.webp',
   production: '/images/game-icons/production.webp',
-  sales: '/images/game-icons/sales.webp',
+  marketing: '/images/game-icons/sales.webp',
   income: '/images/game-icons/income.webp',
   expenses: '/images/game-icons/expenses.webp',
   capitalization: '/images/game-icons/capitalization.webp',

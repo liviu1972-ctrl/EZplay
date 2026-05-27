@@ -54,11 +54,11 @@ const MobileStartingDeckSetup: React.FC<MobileStartingDeckSetupProps> = ({
     return selectedCards.reduce(
       (totals, card) => {
         totals.production += card.production;
-        totals.sales += card.sales;
+        totals.marketing += card.marketing;
         totals.expenses += card.expenses;
         return totals;
       },
-      { production: 0, sales: 0, expenses: 0 }
+      { production: 0, marketing: 0, expenses: 0 }
     );
   }, [selectedCards]);
   
@@ -126,9 +126,9 @@ const MobileStartingDeckSetup: React.FC<MobileStartingDeckSetupProps> = ({
                   textColor="text-white"
               />
               <MobileStat 
-                  label="Vânz." 
-                  value={selectionTotals.sales} 
-                  imageUrl={STAT_ICONS.sales}
+                  label="Mkt." 
+                  value={selectionTotals.marketing} 
+                  imageUrl={STAT_ICONS.marketing}
                   textColor="text-black"
               />
               <MobileStat 

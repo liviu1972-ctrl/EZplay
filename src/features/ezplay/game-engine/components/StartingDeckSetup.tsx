@@ -68,11 +68,11 @@ const StartingDeckSetup: React.FC<StartingDeckSetupProps> = ({
     return currentDeck.reduce(
       (totals, card) => {
         totals.production += card.production;
-        totals.sales += card.sales;
+        totals.marketing += card.marketing;
         totals.expenses += card.expenses;
         return totals;
       },
-      { production: 0, sales: 0, expenses: 0 }
+      { production: 0, marketing: 0, expenses: 0 }
     );
   }, [currentDeck]);
 
@@ -214,7 +214,7 @@ const StartingDeckSetup: React.FC<StartingDeckSetupProps> = ({
                 <div className="flex items-center space-x-1">
                     <StatDisplay label="Cash" value={currentCash} imageUrl={STAT_ICONS.cash} textColor="text-black" />
                     <StatDisplay label="Productie" value={deckTotals.production} imageUrl={STAT_ICONS.production} />
-                    <StatDisplay label="Vanzari" value={deckTotals.sales} imageUrl={STAT_ICONS.sales} textColor="text-black" />
+                    <StatDisplay label="Marketing" value={deckTotals.marketing} imageUrl={STAT_ICONS.marketing} textColor="text-black" />
                     <StatDisplay label="Cheltuieli" value={deckTotals.expenses} imageUrl={STAT_ICONS.expenses} />
                 </div>
                 

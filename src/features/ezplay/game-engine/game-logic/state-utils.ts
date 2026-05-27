@@ -79,3 +79,136 @@ export const initialState: GameState = {
   objective: null,
   winnerPlayerIndex: null,
 };
+
+/**
+ * Migrates a saved game state from the old 'sales' naming to the new 'marketing' naming.
+ * This ensures backwards-compatibility for existing local storage or cloud game saves.
+ */
+export const migrateSavedState = (state: any): any => {
+    if (!state) return state;
+
+    const migrateCard = (card: any): any => {
+        if (!card) return card;
+        
+        let originalCard = card.originalCard;
+        if (originalCard) {
+            originalCard = migrateCard(originalCard);
+        }
+
+        const marketing = card.marketing !== undefined 
+            ? card.marketing 
+            : (card.sales !== undefined ? card.sales : 0);
+
+        const originalMarketing = card.originalMarketing !== undefined 
+            ? card.originalMarketing 
+            : (card.originalSales !== undefined ? card.originalSales : undefined);
+
+        const newCard = {
+            ...card,
+            marketing,
+        };
+
+        if (originalCard) {
+            newCard.originalCard = originalCard;
+        }
+
+        if (originalMarketing !== undefined) {
+            newCard.originalMarketing = originalMarketing;
+        }
+
+        delete newCard.sales;
+        delete newCard.originalSales;
+
+        return newCard;
+    };
+
+    const migratePlayer = (player: any): any => {
+        if (!player) return player;
+
+        const quarterlyHistory = (player.history?.quarterly || []).map((q: any) => {
+            if (!q) return q;
+            const marketing = q.marketing !== undefined 
+                ? q.marketing 
+                : (q.sales !== undefined ? q.sales : 0);
+            
+            const newQ = {
+                ...q,
+                marketing,
+            };
+            delete newQ.sales;
+            return newQ;
+        });
+
+        const cardChoices = { ...player.cardChoices };
+        for (const uid in cardChoices) {
+            if (cardChoices[uid] === 'sales') {
+                cardChoices[uid] = 'marketing';
+            }
+        }
+
+        let lastAction = player.lastAction;
+        if (lastAction && lastAction.card) {
+            lastAction = {
+                ...lastAction,
+                card: migrateCard(lastAction.card)
+            };
+        }
+
+        return {
+            ...player,
+            deck: (player.deck || []).map(migrateCard),
+            hand: (player.hand || []).map(migrateCard),
+            discard: (player.discard || []).map(migrateCard),
+            retiredCards: (player.retiredCards || []).map(migrateCard),
+            activeConsultants: (player.activeConsultants || []).map(migrateCard),
+            entrepreneur: migrateCard(player.entrepreneur),
+            accountant: migrateCard(player.accountant),
+            lastAction,
+            cardChoices,
+            history: player.history ? {
+                ...player.history,
+                quarterly: quarterlyHistory,
+            } : player.history,
+        };
+    };
+
+    const migrateAction = (action: any): any => {
+        if (!action) return action;
+        const newPayload = { ...action.payload };
+        if (newPayload.card) {
+            newPayload.card = migrateCard(newPayload.card);
+        }
+        if (newPayload.cards) {
+            newPayload.cards = (newPayload.cards || []).map(migrateCard);
+        }
+        if (newPayload.setup) {
+            const setup = newPayload.setup;
+            newPayload.setup = {
+                ...setup,
+                selectedEntrepreneur: migrateCard(setup.selectedEntrepreneur),
+                selectedAccountant: migrateCard(setup.selectedAccountant),
+                finalDeck: (setup.finalDeck || []).map(migrateCard),
+            };
+        }
+        return { ...action, payload: newPayload };
+    };
+
+    const actionLog = (state.actionLog || []).map((entry: any) => {
+        if (!entry) return entry;
+        return {
+            ...entry,
+            action: migrateAction(entry.action),
+        };
+    });
+
+    return {
+        ...state,
+        marketPiles: (state.marketPiles || []).map((pile: any[]) => (pile || []).map(migrateCard)),
+        eventDeck: (state.eventDeck || []).map(migrateCard),
+        discardedEvents: (state.discardedEvents || []).map(migrateCard),
+        activeEvent: migrateCard(state.activeEvent),
+        players: (state.players || []).map(migratePlayer),
+        actionLog,
+    };
+};
+

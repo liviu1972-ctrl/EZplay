@@ -3,10 +3,10 @@ import type { Card } from '../types';
 import { STANDARD_CARD_BACK_URL, STANDARD_CARD_FLIP_BACK_URL, EVENT_CARD_BACK_URL } from '../constants';
 
 interface CardUIProps {
-  card?: Card | (Card & { originalExpenses?: number; originalSales?: number });
+  card?: Card | (Card & { originalExpenses?: number; originalMarketing?: number });
   source?: 'market' | 'hand' | 'board' | string; // ADDED: Context for where the card is displayed
   isFaceUp?: boolean;
-  choice?: 'production' | 'sales';
+  choice?: 'production' | 'marketing';
   effectiveCost?: number;
   isBankrupt?: boolean;
   isFlipping?: boolean;
@@ -18,7 +18,7 @@ interface CardUIProps {
   expenseOverlayClass?: string;
 }
 
-const GeneratedCardFace: React.FC<{ card: Card | (Card & { originalExpenses?: number; originalSales?: number }); choice?: 'production' | 'sales', effectiveCost?: number, isBankrupt?: boolean, hasDiscount: boolean }> = ({ card, choice, effectiveCost, isBankrupt, hasDiscount }) => {
+const GeneratedCardFace: React.FC<{ card: Card | (Card & { originalExpenses?: number; originalMarketing?: number }); choice?: 'production' | 'marketing', effectiveCost?: number, isBankrupt?: boolean, hasDiscount: boolean }> = ({ card, choice, effectiveCost, isBankrupt, hasDiscount }) => {
     const cardStyles = card.assetType
       ? {
           corporal: 'border-teal-500 bg-teal-900/40',
@@ -30,14 +30,14 @@ const GeneratedCardFace: React.FC<{ card: Card | (Card & { originalExpenses?: nu
     const isChoice = card.calculationType === 'choice';
     
     const showProduction = isChoice || card.production !== 0;
-    const showSales = isChoice || card.sales !== 0;
+    const showMarketing = isChoice || card.marketing !== 0;
 
     const originalExpenses = ('originalExpenses' in card && card.originalExpenses !== undefined) ? card.originalExpenses : undefined;
     const isExpenseModified = originalExpenses !== undefined;
     const showExpenses = card.expenses !== 0 || isExpenseModified;
     
-    const originalSales = ('originalSales' in card && card.originalSales !== undefined) ? card.originalSales : undefined;
-    const isSalesModified = originalSales !== undefined;
+    const originalMarketing = ('originalMarketing' in card && card.originalMarketing !== undefined) ? card.originalMarketing : undefined;
+    const isMarketingModified = originalMarketing !== undefined;
 
     const assetTypeLabel = card.assetType 
         ? {
@@ -75,10 +75,10 @@ const GeneratedCardFace: React.FC<{ card: Card | (Card & { originalExpenses?: nu
             {/* Stats - flex-grow to push effect to bottom */}
             <div className="flex-grow flex items-center">
                 <div className="w-full flex justify-between items-center px-1">
-                    {/* Left Stats (Prod/Sales) */}
+                    {/* Left Stats (Prod/Marketing) */}
                     <div className="flex items-center">
                          {showProduction && (
-                            <div className={`relative z-0 flex items-center justify-center transition-opacity duration-300 ${isChoice && choice === 'sales' ? 'opacity-40' : 'opacity-100'}`}>
+                            <div className={`relative z-0 flex items-center justify-center transition-opacity duration-300 ${isChoice && choice === 'marketing' ? 'opacity-40' : 'opacity-100'}`}>
                                 <svg viewBox="0 0 54 51" className="w-12 h-12" style={{ filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.5))' }}>
                                     <path d="M27 0L53.9526 19.5L43.6408 51.15H10.3592L0.047441 19.5L27 0Z" fill="#2563EB"/>
                                 </svg>
@@ -92,19 +92,19 @@ const GeneratedCardFace: React.FC<{ card: Card | (Card & { originalExpenses?: nu
                             </div>
                         )}
 
-                        {showSales && (
+                        {showMarketing && (
                             <div className={`relative z-0 flex items-center justify-center transition-opacity duration-300 ${isChoice && choice === 'production' ? 'opacity-40' : 'opacity-100'}`}>
                                 <svg viewBox="0 0 100 100" className="w-12 h-12" style={{ filter: 'drop-shadow(0 2px 3px rgba(0,0,0,0.5))' }}>
-                                    <circle cx="50" cy="50" r="48" fill={isSalesModified ? "#4ADE80" : "#FACC15"} stroke={isSalesModified ? "#A7F3D0" : "#FDE68A"} strokeWidth="4" />
+                                    <circle cx="50" cy="50" r="48" fill={isMarketingModified ? "#4ADE80" : "#FACC15"} stroke={isMarketingModified ? "#A7F3D0" : "#FDE68A"} strokeWidth="4" />
                                 </svg>
                                 <div className="absolute text-black font-bold text-center leading-tight">
-                                    {isSalesModified ? (
+                                    {isMarketingModified ? (
                                         <>
-                                            <span className="text-sm line-through opacity-70">{originalSales}</span>
-                                            <span className="block text-xl">{card.sales}</span>
+                                            <span className="text-sm line-through opacity-70">{originalMarketing}</span>
+                                            <span className="block text-xl">{card.marketing}</span>
                                         </>
                                     ) : (
-                                        <span className="text-xl">{card.sales}</span>
+                                        <span className="text-xl">{card.marketing}</span>
                                     )}
                                 </div>
                             </div>
@@ -248,7 +248,7 @@ const CardUI: React.FC<CardUIProps> = ({ card, source = 'board', isFaceUp = fals
         <div className={`absolute bottom-1 right-1 px-1.5 py-0.5 rounded text-white text-xs font-bold shadow-lg 
           ${choice === 'production' ? 'bg-blue-600' : 'bg-yellow-500'}
         `}>
-          {choice === 'production' ? `P+${card.production}` : `V+${card.sales}`}
+          {choice === 'production' ? `P+${card.production}` : `V+${card.marketing}`}
         </div>
       )}
     </div>

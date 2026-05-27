@@ -66,12 +66,12 @@ export const useGameViewLogic = (props: GameViewChildProps, storageKeyPrefix: 'd
             if (activePlayer.accountant) {
                 setManualHudValues({
                     production: String(turnTotals.production),
-                    sales: String(turnTotals.sales),
+                    marketing: String(turnTotals.marketing),
                     income: String(turnTotals.income),
                     expenses: String(turnTotals.expenses),
                 });
             } else {
-                setManualHudValues({ production: '', sales: '', income: '', expenses: '' });
+                setManualHudValues({ production: '', marketing: '', income: '', expenses: '' });
             }
         }
         setEndTurnError(false);
@@ -115,7 +115,7 @@ export const useGameViewLogic = (props: GameViewChildProps, storageKeyPrefix: 'd
     const quarterlyChartConfig = {
         cash: { title: 'Cash ($)', color: '#facc15' },
         production: { title: 'Producție (unități)', color: '#3b82f6' },
-        sales: { title: 'Vânzări (unități)', color: '#fde047' },
+        marketing: { title: 'Marketing (unități)', color: '#fde047' },
         income: { title: 'Venituri ($)', color: '#22c55e' },
         expenses: { title: 'Cheltuieli ($)', color: '#f97316' },
         capitalization: { title: 'Capitalizare ($)', color: '#38bdf8' },
@@ -132,7 +132,7 @@ export const useGameViewLogic = (props: GameViewChildProps, storageKeyPrefix: 'd
         if (config.hudCalculationMode === 'manual') {
             const valuesMatch =
                 Number(manualHudValues.production) === turnTotals.production &&
-                Number(manualHudValues.sales) === turnTotals.sales &&
+                Number(manualHudValues.marketing) === turnTotals.marketing &&
                 Number(manualHudValues.income) === turnTotals.income &&
                 Number(manualHudValues.expenses) === turnTotals.expenses;
             
@@ -168,7 +168,7 @@ export const useGameViewLogic = (props: GameViewChildProps, storageKeyPrefix: 'd
     const isManualInputIncomplete = 
         isManualMode &&
         (!manualHudValues.production ||
-        !manualHudValues.sales ||
+        !manualHudValues.marketing ||
         !manualHudValues.income ||
         !manualHudValues.expenses);
 

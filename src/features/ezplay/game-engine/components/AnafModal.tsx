@@ -58,7 +58,7 @@ const AnafModal: React.FC<AnafModalProps> = ({ onClose, dispatch, correctValues,
   };
 
   const penaltyMessage = getPenaltyMessage();
-  const fields = ['production', 'sales', 'income', 'expenses'];
+  const fields = ['production', 'marketing', 'income', 'expenses'];
 
   return (
     <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-fade-in">

@@ -49,7 +49,7 @@ export default async function EZPlayPage() {
       type: mapCardType(c.card_types?.slug),
       cost: c.cost || 0,
       production: c.production || 0,
-      sales: c.marketing || 0,
+      marketing: c.marketing || 0,
       expenses: c.expense || 0,
       imageUrl: c.image_card ? (c.image_card.startsWith('http') ? c.image_card : `${STORAGE_BASE}/cards/${c.image_card}`) : '',
       assetType: mapAssetType(c.asset_types?.slug),

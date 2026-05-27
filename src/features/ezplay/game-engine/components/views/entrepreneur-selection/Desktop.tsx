@@ -20,7 +20,7 @@ const DesktopEntrepreneurSelection: React.FC<DesktopEntrepreneurSelectionProps> 
         <h1 className="text-4xl font-bold text-yellow-300">
           {playerContextText ? `${playerContextText}, alege antreprenorul` : 'Alege Antreprenorul'}
         </h1>
-        <p className="text-slate-400 mt-2">Profilul antreprenorului tău va oferi bonusuri de producție, vânzări și va avea cheltuieli fixe în fiecare tură.</p>
+        <p className="text-slate-400 mt-2">Profilul antreprenorului tău va oferi bonusuri de producție, marketing și va avea cheltuieli fixe în fiecare tură.</p>
       </div>
 
       <div className="flex-grow overflow-y-auto pr-2">
@@ -46,7 +46,7 @@ const DesktopEntrepreneurSelection: React.FC<DesktopEntrepreneurSelectionProps> 
             <h2 className="text-xl font-bold">{selectedEnt.name}</h2>
             <p className="text-slate-300">
               Producție: <span className="font-bold text-blue-400">{selectedEnt.production}</span>, 
-              Vânzări: <span className="font-bold text-yellow-400">{selectedEnt.sales}</span>, 
+              Marketing: <span className="font-bold text-yellow-400">{selectedEnt.marketing}</span>, 
               Cheltuieli: <span className="font-bold text-orange-400">{selectedEnt.expenses}</span>
             </p>
           </div>

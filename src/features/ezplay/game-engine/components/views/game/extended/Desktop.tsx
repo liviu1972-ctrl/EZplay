@@ -177,14 +177,14 @@ const DesktopGameViewExtended: React.FC<GameViewChildProps> = (props) => {
                                 {inputMethod === 'reel' ? (
                                     <>
                                         <NumberReelInput label="Productie" value={manualHudValues.production || ''} onChange={(v) => handleManualValueChange('production', v)} imageUrl={STAT_ICONS.production} />
-                                        <NumberReelInput label="Vanzari" value={manualHudValues.sales || ''} onChange={(v) => handleManualValueChange('sales', v)} imageUrl={STAT_ICONS.sales} textColor="text-black" />
+                                        <NumberReelInput label="Marketing" value={manualHudValues.marketing || ''} onChange={(v) => handleManualValueChange('marketing', v)} imageUrl={STAT_ICONS.marketing} textColor="text-black" />
                                         <NumberReelInput label="Venituri" value={manualHudValues.income || ''} onChange={(v) => handleManualValueChange('income', v)} imageUrl={STAT_ICONS.income} />
                                         <NumberReelInput label="Cheltuieli" value={manualHudValues.expenses || ''} onChange={(v) => handleManualValueChange('expenses', v)} imageUrl={STAT_ICONS.expenses} />
                                     </>
                                 ) : (
                                     <>
                                         <NumpadInput label="Productie" value={manualHudValues.production || ''} onClick={() => setNumpadState({ isOpen: true, field: 'production', label: 'Producție' })} imageUrl={STAT_ICONS.production} />
-                                        <NumpadInput label="Vanzari" value={manualHudValues.sales || ''} onClick={() => setNumpadState({ isOpen: true, field: 'sales', label: 'Vânzări' })} imageUrl={STAT_ICONS.sales} textColor="text-black" />
+                                        <NumpadInput label="Marketing" value={manualHudValues.marketing || ''} onClick={() => setNumpadState({ isOpen: true, field: 'marketing', label: 'Marketing' })} imageUrl={STAT_ICONS.marketing} textColor="text-black" />
                                         <NumpadInput label="Venituri" value={manualHudValues.income || ''} onClick={() => setNumpadState({ isOpen: true, field: 'income', label: 'Venituri' })} imageUrl={STAT_ICONS.income} />
                                         <NumpadInput label="Cheltuieli" value={manualHudValues.expenses || ''} onClick={() => setNumpadState({ isOpen: true, field: 'expenses', label: 'Cheltuieli' })} imageUrl={STAT_ICONS.expenses} />
                                     </>
@@ -193,7 +193,7 @@ const DesktopGameViewExtended: React.FC<GameViewChildProps> = (props) => {
                         ) : (
                             <>
                                 <StatDisplay label="Productie" value={turnTotals.production} imageUrl={STAT_ICONS.production} onClick={() => setActiveChartKeys(['production'])} />
-                                <StatDisplay label="Vanzari" value={turnTotals.sales} imageUrl={STAT_ICONS.sales} textColor="text-black" onClick={() => setActiveChartKeys(['sales'])} />
+                                <StatDisplay label="Marketing" value={turnTotals.marketing} imageUrl={STAT_ICONS.marketing} textColor="text-black" onClick={() => setActiveChartKeys(['marketing'])} />
                                 <StatDisplay label="Venituri" value={turnTotals.income} imageUrl={STAT_ICONS.income} onClick={() => setActiveChartKeys(['income'])} />
                                 <StatDisplay label="Cheltuieli" value={turnTotals.expenses} imageUrl={STAT_ICONS.expenses} onClick={() => setActiveChartKeys(['expenses'])} />
                             </>
@@ -224,7 +224,7 @@ const DesktopGameViewExtended: React.FC<GameViewChildProps> = (props) => {
                                 <div className="mt-3 flex flex-col items-center space-y-2 w-44">
                                     {isOriginalCopier && !isCopiedVersion && !endTurnButtonDisabled && !isInteractionDisabled && ( isThisTheCopySource ? ( <button onClick={() => dispatch({ type: 'CANCEL_COPY' })} className="w-full px-3 py-1 text-sm font-bold rounded-full transition-colors bg-rose-600 text-white shadow-md hover:bg-rose-500 animate-pulse">Anulează</button> ) : ( <button onClick={() => dispatch({ type: 'ACTIVATE_COPY', payload: { sourceCardUid: card.uid } })} disabled={copyCardState.isSelectingTarget} className="w-full px-3 py-1 text-sm font-bold rounded-full transition-colors bg-teal-600 text-white shadow-md hover:bg-teal-500 disabled:opacity-50">Copiază</button> ) )}
                                     {isCopiedVersion && !endTurnButtonDisabled && !isInteractionDisabled && ( <button onClick={() => dispatch({ type: 'RESET_COPY', payload: { sourceCardUid: card.uid } })} className="w-full px-3 py-1 text-sm font-bold rounded-full transition-colors bg-rose-600 text-white shadow-md hover:bg-rose-500">Anulează</button> )}
-                                    {card.calculationType === 'choice' && !endTurnButtonDisabled && !isInteractionDisabled && ( <div className="w-full flex justify-center bg-slate-800/90 p-1 rounded-full shadow-lg"> <button onClick={() => dispatch({ type: 'SET_CARD_CHOICE', payload: { cardUid: card.uid, choice: 'production' } })} className={`px-3 py-1 text-sm font-bold rounded-full transition-colors w-1/2 ${currentChoice === 'production' ? 'bg-blue-600 text-white shadow-md' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>Prod: {card.production}</button><button onClick={() => dispatch({ type: 'SET_CARD_CHOICE', payload: { cardUid: card.uid, choice: 'sales' } })} className={`px-3 py-1 text-sm font-bold rounded-full transition-colors w-1/2 ${currentChoice === 'sales' ? 'bg-yellow-500 text-white shadow-md' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>Vânz: {card.sales}</button></div> )}
+                                    {card.calculationType === 'choice' && !endTurnButtonDisabled && !isInteractionDisabled && ( <div className="w-full flex justify-center bg-slate-800/90 p-1 rounded-full shadow-lg"> <button onClick={() => dispatch({ type: 'SET_CARD_CHOICE', payload: { cardUid: card.uid, choice: 'production' } })} className={`px-3 py-1 text-sm font-bold rounded-full transition-colors w-1/2 ${currentChoice === 'production' ? 'bg-blue-600 text-white shadow-md' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>Prod: {card.production}</button><button onClick={() => dispatch({ type: 'SET_CARD_CHOICE', payload: { cardUid: card.uid, choice: 'marketing' } })} className={`px-3 py-1 text-sm font-bold rounded-full transition-colors w-1/2 ${currentChoice === 'marketing' ? 'bg-yellow-500 text-white shadow-md' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>Mkt: {card.marketing}</button></div> )}
                                 </div>
                             </div>
                         )

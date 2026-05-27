@@ -2,6 +2,7 @@
 import { useReducer, useEffect, useRef, useCallback, useState } from 'react';
 import type { GameState, View, AnnualReportData, CompanyHistory, GameAction, AnafModalData } from '../types';
 import { gameReducer, initialState } from '../game-logic/reducer';
+import { migrateSavedState } from '../game-logic/state-utils';
 import { runEffects } from '../game-logic/effect-runner';
 import { makeAiMove } from '../game-logic/ai-player';
 import { processHandAndCalculateTotals } from '../game-logic/selectors';
@@ -26,7 +27,8 @@ const getInitialState = (): { initialGameState: GameState; initialView: View } =
         if (savedStateJSON) {
             const savedState = JSON.parse(savedStateJSON);
             if (savedState.players && savedState.players.length > 0 && !savedState.isGameOver) {
-                return { initialGameState: savedState, initialView: 'game' };
+                const migrated = migrateSavedState(savedState);
+                return { initialGameState: migrated, initialView: 'game' };
             }
         }
     } catch (error) {
@@ -124,14 +126,14 @@ export const useGameEngine = ({
             
             const parsedManualValues = {
                 production: Number(manualValues.production) || 0,
-                sales: Number(manualValues.sales) || 0,
+                marketing: Number(manualValues.marketing) || 0,
                 income: Number(manualValues.income) || 0,
                 expenses: Number(manualValues.expenses) || 0,
             };
     
             const valuesMatch =
                 parsedManualValues.production === correctTotals.production &&
-                parsedManualValues.sales === correctTotals.sales &&
+                parsedManualValues.marketing === correctTotals.marketing &&
                 parsedManualValues.income === correctTotals.income &&
                 parsedManualValues.expenses === correctTotals.expenses;
     
@@ -139,7 +141,7 @@ export const useGameEngine = ({
                 setAnafModalData({
                     correctValues: {
                         production: correctTotals.production,
-                        sales: correctTotals.sales,
+                        marketing: correctTotals.marketing,
                         income: correctTotals.income,
                         expenses: correctTotals.expenses,
                     },

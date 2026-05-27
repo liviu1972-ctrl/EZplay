@@ -74,7 +74,7 @@ export const CardSchema = z.object({
   type: CardTypeSchema,
   cost: z.number().int().min(0),
   production: z.number().int(),
-  sales: z.number().int(),
+  marketing: z.number().int(),
   expenses: z.number().int(),
   imageUrl: z.string().url({ message: "Invalid URL format for imageUrl." }),
   assetType: AssetTypeSchema.optional(),
@@ -103,11 +103,11 @@ export const CardSchema = z.object({
         });
     }
 
-    // Rule 3: 'choice' cards must have both production and sales greater than 0.
-    if (card.calculationType === 'choice' && (card.production <= 0 || card.sales <= 0)) {
+    // Rule 3: 'choice' cards must have both production and marketing greater than 0.
+    if (card.calculationType === 'choice' && (card.production <= 0 || card.marketing <= 0)) {
         ctx.addIssue({
             code: z.ZodIssueCode.custom,
-            message: "Cards with 'calculationType: choice' must have positive values for both 'production' and 'sales'.",
+            message: "Cards with 'calculationType: choice' must have positive values for both 'production' and 'marketing'.",
             path: ['calculationType'],
         });
     }

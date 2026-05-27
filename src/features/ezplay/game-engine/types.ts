@@ -75,7 +75,7 @@ export interface Card {
   type: CardType;
   cost: number;
   production: number;
-  sales: number;
+  marketing: number;
   expenses: number;
   imageUrl: string;
   assetType?: AssetType;
@@ -88,7 +88,7 @@ export interface Card {
 export interface ProcessedCard extends Card {
   originalCard?: Card;
   originalExpenses?: number;
-  originalSales?: number;
+  originalMarketing?: number;
   turnsLeft?: number; // For consultants
 }
 
@@ -174,7 +174,7 @@ export interface PlayerState {
   bonusBuy: BonusBuyState | null;
   retireFromHandBonus: RetireFromHandEffectPayload | null;
   
-  cardChoices: Record<string, 'production' | 'sales'>;
+  cardChoices: Record<string, 'production' | 'marketing'>;
   
   copyCardState: {
     isSelectingTarget: boolean;
@@ -258,7 +258,7 @@ export type GameAction =
   | { type: 'START_NEXT_QUARTER' }
   | { type: 'START_NEXT_YEAR'; payload: { reports: Record<number, AnnualReportData> } }
   | { type: 'UNDO_LAST_ACTION' }
-  | { type: 'SET_CARD_CHOICE'; payload: { cardUid: string, choice: 'production' | 'sales' } }
+  | { type: 'SET_CARD_CHOICE'; payload: { cardUid: string, choice: 'production' | 'marketing' } }
   | { type: 'ACTIVATE_COPY'; payload: { sourceCardUid: string } }
   | { type: 'CANCEL_COPY' }
   | { type: 'SELECT_COPY_TARGET'; payload: { targetCard: Card } }

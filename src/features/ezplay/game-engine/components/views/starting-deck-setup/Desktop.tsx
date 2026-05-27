@@ -34,10 +34,10 @@ const DesktopStartingDeckSetup: React.FC<DesktopStartingDeckSetupProps> = ({
 
   const deckTotals = useMemo(() => currentDeck.reduce((totals, card) => {
         totals.production += card.production;
-        totals.sales += card.sales;
+        totals.marketing += card.marketing;
         totals.expenses += card.expenses;
         return totals;
-      }, { production: 0, sales: 0, expenses: 0 }), [currentDeck]);
+      }, { production: 0, marketing: 0, expenses: 0 }), [currentDeck]);
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, card: Card, source: 'pool' | 'deck') => {
     e.dataTransfer.setData('application/json', JSON.stringify({ card, source }));
@@ -102,7 +102,7 @@ const DesktopStartingDeckSetup: React.FC<DesktopStartingDeckSetupProps> = ({
                 <div className="flex items-center space-x-1">
                     <StatDisplay label="Cash" value={currentCash} imageUrl={STAT_ICONS.cash} textColor="text-black" />
                     <StatDisplay label="Productie" value={deckTotals.production} imageUrl={STAT_ICONS.production} />
-                    <StatDisplay label="Vanzari" value={deckTotals.sales} imageUrl={STAT_ICONS.sales} textColor="text-black" />
+                    <StatDisplay label="Marketing" value={deckTotals.marketing} imageUrl={STAT_ICONS.marketing} textColor="text-black" />
                     <StatDisplay label="Cheltuieli" value={deckTotals.expenses} imageUrl={STAT_ICONS.expenses} />
                 </div>
                 <div className="flex items-center space-x-4">
