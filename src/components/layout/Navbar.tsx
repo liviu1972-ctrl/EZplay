@@ -76,6 +76,12 @@ export function Navbar({ dict, user }: NavbarProps) {
             >
               {dict.nav.gameSimulation || "Simulare Joc"}
             </Link>
+            <Link
+              href="/ezplay"
+              className="flex items-center text-sm font-medium text-brand-orange hover:text-brand-orange/80 transition-colors"
+            >
+              Joaca EZplay
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-2">
@@ -149,6 +155,12 @@ export function Navbar({ dict, user }: NavbarProps) {
                   className="px-2 py-1 text-lg font-medium hover:text-brand-green transition-colors"
                 >
                   {dict.nav.gameSimulation || "Simulare Joc"}
+                </Link>
+                <Link
+                  href="/ezplay"
+                  className="px-2 py-1 text-lg font-medium text-brand-orange hover:text-brand-orange/80 transition-colors"
+                >
+                  Joaca EZplay
                 </Link>
               </div>
               <div className="mt-auto flex flex-col gap-2">

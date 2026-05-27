@@ -150,7 +150,7 @@ export const processHandAndCalculateTotals = (
             // Don't apply the effect to the card that generates it
             if (handExpenseModifiers.some(mod => mod.uid === card.uid)) return card;
             
-            const modifierPayload = handExpenseModifiers[0].effect.payload as ModifyHandCardExpensePayload;
+            const modifierPayload = handExpenseModifiers[0].effect!.payload as ModifyHandCardExpensePayload;
             if (card.expenses === modifierPayload.targetExpense) {
                 return { ...card, expenses: modifierPayload.newExpense, originalExpenses: card.originalExpenses ?? card.expenses };
             }

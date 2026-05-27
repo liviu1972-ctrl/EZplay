@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/client';
-import { UserProfile } from './types';
+import { UserProfile, UserRole } from './types';
 
 export const getUserProfile = async (uid: string): Promise<UserProfile | null> => {
   const supabase = createClient();
@@ -14,7 +14,7 @@ export const getUserProfile = async (uid: string): Promise<UserProfile | null> =
     nickname: profile.display_name, // Map display name to nickname for now
     companyName: 'Start-up SRL', 
     avatarUrl: profile.avatar_url || 'https://ezplay.org/cards/base-game/a102.webp',
-    role: profile.role || 'standard',
+    role: (profile.role as UserRole) || 'standard',
     ezc: wallet?.ezc_balance || 0,
     ezg: wallet?.ezg_balance || 0,
   };
@@ -54,8 +54,8 @@ export const getAllUsers = async (): Promise<UserProfile[]> => {
     displayName: p.display_name,
     nickname: p.display_name,
     companyName: 'Start-up SRL',
-    avatarUrl: p.avatar_url,
-    role: p.role,
+    avatarUrl: p.avatar_url || 'https://ezplay.org/cards/base-game/a102.webp',
+    role: (p.role as UserRole) || 'standard',
     ezc: 0,
     ezg: 0
   }));

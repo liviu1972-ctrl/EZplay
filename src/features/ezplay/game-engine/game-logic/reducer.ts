@@ -19,7 +19,9 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
     if (activePlayer.lastAction.type === 'buy') {
         const { card, fromMarketPileIndex, costPaid } = activePlayer.lastAction;
         const newMarketPiles = [...state.marketPiles];
-        newMarketPiles[fromMarketPileIndex] = [card, ...newMarketPiles[fromMarketPileIndex]];
+        if (fromMarketPileIndex !== undefined) {
+            newMarketPiles[fromMarketPileIndex] = [card, ...newMarketPiles[fromMarketPileIndex]];
+        }
         
         const playerChanges: Partial<PlayerState> = {
             cash: activePlayer.cash + costPaid,

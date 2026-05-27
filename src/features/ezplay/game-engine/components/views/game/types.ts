@@ -1,6 +1,6 @@
 
 import type { Card, AnnualReportData } from '../../../types';
-import type { UserProfile } from '../../../platform/user/types';
+import type { UserProfile } from '../../../../platform/user/types';
 
 export interface GameViewProps {
     isViewingAnnualReport: boolean;

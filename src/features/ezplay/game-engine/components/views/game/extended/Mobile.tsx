@@ -188,7 +188,7 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
             const effectiveCost = getEffectiveCost(topCard.cost, gameState, activePlayer);
             const canAfford = cash >= effectiveCost;
             const canBuyNormally = actionsRemainingThisTurn > 0 && canAfford;
-            const isBonusTarget = bonusBuy && canAfford && topCard.cost <= bonusBuy.maxCost && topCard.assetType === bonusBuy.assetType;
+            const isBonusTarget = !!(bonusBuy && canAfford && topCard.cost <= bonusBuy.maxCost && topCard.assetType === bonusBuy.assetType);
             return (
               <div key={pileIndex} className="relative flex-shrink-0" onClick={() => (canBuyNormally || isBonusTarget) && handleSelectCard(topCard, 'market', pileIndex)}>
                 <CardUI card={topCard} isFaceUp={true} size="small" effectiveCost={effectiveCost} hasBonusHighlight={isBonusTarget} expenseOverlayClass="bottom-10" source="market" />
@@ -262,7 +262,7 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
         <div className={`flex-1 flex items-center space-x-2 p-2 h-full ${isSweeping ? 'overflow-hidden' : 'overflow-x-auto'}`}>
           {processedHand.map((card, index) => {
             const canRetireNormally = actionsRemainingThisTurn > 0 && cash >= getRetireCost(card, gameState);
-            const canBonusRetire = retireFromHandBonus && cash >= retireFromHandBonus.retireCost && (retireFromHandBonus.assetType === 'any' || card.assetType === retireFromHandBonus.assetType);
+            const canBonusRetire = !!(retireFromHandBonus && cash >= retireFromHandBonus.retireCost && (retireFromHandBonus.assetType === 'any' || card.assetType === retireFromHandBonus.assetType));
             const hasAnyAction = canRetireNormally || canBonusRetire || card.calculationType === 'choice' || card.effect?.id === 'ACTIVATE_TO_COPY_CARD_FROM_HAND' || copyCardState.isSelectingTarget;
             return (
               <div key={card.uid} className={`relative flex-shrink-0 transition-all duration-1000 ease-in-out ${isSweeping ? 'opacity-0 translate-x-[100vw] rotate-12 scale-75' : ''}`} style={{ transitionDelay: `${index * 150}ms`, perspective: '1000px' }} onClick={() => hasAnyAction && !isSweeping && !isInteractionDisabled && handleSelectCard(card, 'hand')}>

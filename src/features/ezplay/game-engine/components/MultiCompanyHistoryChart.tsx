@@ -28,7 +28,7 @@ const MultiCompanyHistoryChart: React.FC<MultiCompanyHistoryChartProps> = ({ his
     const maxYear = Math.max(...allReports.map(r => r.year), 1);
     const years = Array.from({ length: maxYear }, (_, i) => i + 1);
 
-    const allValues = allReports.map(r => r[activeSeriesKey] ?? 0);
+    const allValues = allReports.map(r => (r as any)[activeSeriesKey] ?? 0);
     if (allValues.length === 0) allValues.push(0);
 
     const maxValue = Math.max(...allValues, 0);
@@ -76,7 +76,7 @@ const MultiCompanyHistoryChart: React.FC<MultiCompanyHistoryChartProps> = ({ his
         if (company.reports.length === 0) return null;
         
         const linePath = company.reports.map((d, i) => {
-            const { x, y } = getCoords(d[activeSeriesKey] ?? 0, d.year);
+            const { x, y } = getCoords((d as any)[activeSeriesKey] ?? 0, d.year);
             return `${i === 0 ? 'M' : 'L'} ${x},${y}`;
         }).join(' ');
 
@@ -84,7 +84,7 @@ const MultiCompanyHistoryChart: React.FC<MultiCompanyHistoryChartProps> = ({ his
             <g key={`series-${company.id}`}>
                 {company.reports.length > 1 && <path d={linePath} fill="none" stroke={color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />}
                 {company.reports.map((d, i) => {
-                    const { x, y } = getCoords(d[activeSeriesKey] ?? 0, d.year);
+                    const { x, y } = getCoords((d as any)[activeSeriesKey] ?? 0, d.year);
                     return <circle key={`dot-${company.id}-${i}`} cx={x} cy={y} r="4" fill={color} stroke="rgba(255,255,255,0.8)" strokeWidth="2" />;
                 })}
             </g>
