@@ -110,7 +110,7 @@ const DesktopGameViewClassic: React.FC<GameViewChildProps> = (props) => {
                     if (topCard) {
                         const isAffordable = cash >= effectiveCost;
                         const canBuyNormally = !hasPerformedActionThisTurn && isAffordable;
-                        const canBuyWithBonus = bonusBuy && isAffordable && topCard.cost <= bonusBuy.maxCost && topCard.assetType === bonusBuy.assetType;
+                        const canBuyWithBonus = !!(bonusBuy && isAffordable && topCard.cost <= bonusBuy.maxCost && topCard.assetType === bonusBuy.assetType);
                         canDrag = !isInteractionDisabled && (canBuyNormally || canBuyWithBonus) && !(topCard.type === 'consultant' && consultantLimitReached);
                         isBonusOnly = canBuyWithBonus && !canBuyNormally;
                     }

@@ -1,3 +1,5 @@
+export type UserRole = 'standard' | 'admin' | 'premium';
+
 export interface UserProfile {
   uid: string;
   email?: string | null;
@@ -5,7 +7,7 @@ export interface UserProfile {
   nickname: string;
   companyName: string;
   avatarUrl: string;
-  role: string;
+  role: UserRole;
   ezc: number;
   ezg: number;
   createdAt?: number;

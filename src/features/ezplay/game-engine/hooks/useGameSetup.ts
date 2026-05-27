@@ -337,7 +337,7 @@ export const useGameSetup = ({ dispatch, setCurrentView, dbCards = [] }: UseGame
     setCurrentView('game');
   }, [dispatch, setCurrentView, gameData]);
 
-const findNextSetupStep = useCallback((scenario: Scenario, setups: ScenarioSetupState['setups']): { nextView: SetupView, nextPlayerIndex: number } | null => {
+const findNextSetupStep = useCallback((scenario: Scenario, setups: NonNullable<ScenarioSetupState>['setups']): { nextView: SetupView, nextPlayerIndex: number } | null => {
   for (let i = 0; i < scenario.players.length; i++) {
     const pConfig = scenario.players[i];
     const pSetup = setups[i];
@@ -350,7 +350,7 @@ const findNextSetupStep = useCallback((scenario: Scenario, setups: ScenarioSetup
   return null;
 }, []);
 
-const finalizeAndStartScenario = useCallback((scenario: Scenario, setups: ScenarioSetupState['setups']) => {
+const finalizeAndStartScenario = useCallback((scenario: Scenario, setups: NonNullable<ScenarioSetupState>['setups']) => {
     const allCardsMap = new Map<string, Card>();
     [...gameData.standard, ...gameData.entrepreneur, ...gameData.event, ...gameData.accountant].forEach(card => allCardsMap.set(card.globalId, card));
 

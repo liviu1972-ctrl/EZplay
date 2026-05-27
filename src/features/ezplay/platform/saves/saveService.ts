@@ -61,7 +61,7 @@ export const saveGameToCloud = async (uid: string, gameState: GameState): Promis
             version: CURRENT_SCHEMA_VERSION
         };
 
-        const { error } = await supabase.from('ezplay_saves').upsert({
+        const { error } = await (supabase as any).from('ezplay_saves').upsert({
             user_id: uid,
             game_state: serializedState,
             metadata: metadata,
@@ -80,7 +80,7 @@ export const saveGameToCloud = async (uid: string, gameState: GameState): Promis
 export const loadGameFromCloud = async (uid: string): Promise<CloudSaveData | null> => {
     try {
         const supabase = createClient();
-        const { data, error } = await supabase
+        const { data, error } = await (supabase as any)
             .from('ezplay_saves')
             .select('game_state, metadata')
             .eq('user_id', uid)
