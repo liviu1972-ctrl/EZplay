@@ -5,9 +5,10 @@ interface NumberReelModalProps {
   imageUrl: string;
   onClose: () => void;
   onConfirm: (value: string) => void;
+  triggerRect?: DOMRect | null;
 }
 
-const NumberReelModal: React.FC<NumberReelModalProps> = ({ initialValue, imageUrl, onClose, onConfirm }) => {
+const NumberReelModal: React.FC<NumberReelModalProps> = ({ initialValue, imageUrl, onClose, onConfirm, triggerRect }) => {
   const parsedInitial = parseInt(initialValue, 10);
   const [currentValue, setCurrentValue] = useState(isNaN(parsedInitial) ? 9 : parsedInitial);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -57,11 +58,24 @@ const NumberReelModal: React.FC<NumberReelModalProps> = ({ initialValue, imageUr
     };
   }, [currentValue, onConfirm, onClose]); // Added currentValue to dependencies to ensure handleConfirm has the latest value
 
+  const modalStyle: React.CSSProperties = triggerRect ? {
+    position: 'fixed',
+    left: `${triggerRect.left + triggerRect.width / 2}px`,
+    top: `${triggerRect.top + triggerRect.height / 2}px`,
+    transform: 'translate(-50%, -50%)',
+  } : {
+    position: 'fixed',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+  };
+
   return (
-    <div className="fixed inset-0 bg-black/10 z-[60] flex justify-center items-center animate-fade-in pl-[34rem] md:pl-0" onWheel={handleWheel}>
+    <div className="fixed inset-0 bg-black/10 z-[60] animate-fade-in" onWheel={handleWheel}>
       <div 
         ref={modalRef}
         className="flex flex-col items-center space-y-3"
+        style={modalStyle}
       >
         <button onClick={() => handleValueChange(1)} className="p-3 bg-slate-700/80 rounded-full hover:bg-slate-600/80 transition-colors" aria-label="Crește valoarea">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" /></svg>
