@@ -91,12 +91,14 @@ const STACK_ORDER = ["tangible-assets", "human-resources", "intangible-assets", 
 export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }: Cards2ClientProps) {
   // Active stack slug (null = no stack selected)
   const [activeStack, setActiveStack] = useState<string | null>(null)
-  // Index of the currently revealed card within the active stack
-  const [revealedIndex, setRevealedIndex] = useState(0)
+  // Per-stack card index tracking (persists across close/reopen)
+  const [stackIndices, setStackIndices] = useState<Record<string, number>>({})
   // Flip state for the revealed card
   const [isFlipped, setIsFlipped] = useState(false)
   // Shuffle animation trigger
   const [shufflingStack, setShufflingStack] = useState<string | null>(null)
+  // Shuffled card orders (overrides base grouping when shuffled)
+  const [shuffledStacks, setShuffledStacks] = useState<Record<string, any[]>>({})
 
   // Get image URL helper
   const getImageUrl = (path: string | null) => {
@@ -104,8 +106,8 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
     return `${SUPABASE_URL}/storage/v1/object/public/cards/${path}`
   }
 
-  // Group cards by asset_types.slug
-  const stacks = useMemo(() => {
+  // Group cards by asset_types.slug (base ordering)
+  const baseStacks = useMemo(() => {
     const grouped: Record<string, any[]> = {}
     for (const slug of STACK_ORDER) {
       grouped[slug] = []
@@ -119,6 +121,15 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
     return grouped
   }, [initialCards])
 
+  // Effective stacks: use shuffled version if available, otherwise base
+  const stacks = useMemo(() => {
+    const result: Record<string, any[]> = {}
+    for (const slug of STACK_ORDER) {
+      result[slug] = shuffledStacks[slug] || baseStacks[slug] || []
+    }
+    return result
+  }, [baseStacks, shuffledStacks])
+
   // Get stack display name
   const getStackName = useCallback((slug: string) => {
     const asset = assetTypes.find((a: any) => a.slug === slug)
@@ -126,49 +137,59 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
     return lang === "ro" ? asset.name_ro : asset.name_en
   }, [assetTypes, lang])
 
-  // Handle stack click
+  // Handle stack click — always advances to next card
   const handleStackClick = useCallback((slug: string) => {
     if (stacks[slug].length === 0) return
-    if (activeStack === slug) {
-      // Same stack clicked — advance to next card (wrap to 0)
-      const maxIdx = stacks[slug].length - 1
-      setRevealedIndex(prev => prev >= maxIdx ? 0 : prev + 1)
-    } else {
-      // Different stack — open it from the first card
-      setActiveStack(slug)
-      setRevealedIndex(0)
-    }
+    const currentIdx = stackIndices[slug] ?? -1
+    const maxIdx = stacks[slug].length - 1
+    const nextIdx = currentIdx >= maxIdx ? 0 : currentIdx + 1
+    setStackIndices(prev => ({ ...prev, [slug]: nextIdx }))
+    setActiveStack(slug)
     setIsFlipped(false)
-  }, [stacks, activeStack])
+  }, [stacks, stackIndices])
 
   // Navigate within the active stack
   const handlePrev = useCallback(() => {
     if (!activeStack) return
     setIsFlipped(false)
-    setRevealedIndex(prev => Math.max(0, prev - 1))
+    setStackIndices(prev => ({
+      ...prev,
+      [activeStack]: Math.max(0, (prev[activeStack] ?? 0) - 1)
+    }))
   }, [activeStack])
 
   const handleNext = useCallback(() => {
     if (!activeStack) return
     const maxIdx = stacks[activeStack].length - 1
     setIsFlipped(false)
-    setRevealedIndex(prev => Math.min(maxIdx, prev + 1))
+    setStackIndices(prev => ({
+      ...prev,
+      [activeStack]: Math.min(maxIdx, (prev[activeStack] ?? 0) + 1)
+    }))
   }, [activeStack, stacks])
 
-  // Close reveal zone (keep index so next click advances)
+  // Close reveal zone (index persists for next click)
   const handleCloseReveal = useCallback(() => {
     setActiveStack(null)
     setIsFlipped(false)
   }, [])
 
-  // Shuffle animation
+  // Shuffle — Fisher-Yates shuffle that actually reorders the cards
   const handleShuffle = useCallback((slug: string, e: React.MouseEvent) => {
     e.stopPropagation()
+    const arr = [...(baseStacks[slug] || [])]
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]]
+    }
+    setShuffledStacks(prev => ({ ...prev, [slug]: arr }))
+    setStackIndices(prev => ({ ...prev, [slug]: -1 })) // reset so next click shows first shuffled card
     setShufflingStack(slug)
     setTimeout(() => setShufflingStack(null), 600)
-  }, [])
+  }, [baseStacks])
 
-  // Currently revealed card
+  // Currently revealed card (derived from per-stack index)
+  const revealedIndex = activeStack ? (stackIndices[activeStack] ?? 0) : 0
   const revealedCard = activeStack ? stacks[activeStack]?.[revealedIndex] : null
   const totalInStack = activeStack ? stacks[activeStack]?.length : 0
 
