@@ -12,6 +12,7 @@
     "logout": "Logout",
     "cards": "Cards",
     "cardTable": "Card Table",
+    "gameSimulation": "Game Simulation",
     "adminCards": "Cards Management"
   },
   "landing": {
@@ -178,5 +179,33 @@
     "cardSingular": "card",
     "cardPlural": "cards",
     "clickToFlip": "Click the card to flip it"
+  },
+  "cards3": {
+    "title": "Game Simulation",
+    "subtitle": "Play a full solo game of EZPlay and learn the game mechanics.",
+    "setup": "Game Setup",
+    "startGame": "Start Game",
+    "newGame": "New Game",
+    "continue": "Continue",
+    "year": "Year",
+    "quarter": "Quarter",
+    "confirm": "Confirm Result",
+    "buyCard": "Buy a card",
+    "eliminateCard": "Eliminate a card",
+    "skip": "Skip",
+    "endTurn": "End Turn",
+    "deck": "Deck",
+    "discard": "Discard Pile",
+    "eliminated": "Eliminated",
+    "market": "Free Market",
+    "hand": "Played Cards",
+    "scoresheet": "Scoresheet",
+    "yearReport": "Annual Report",
+    "revenue": "Revenue",
+    "equity": "Equity",
+    "winTarget": "Win Target",
+    "victory": "Victory!",
+    "bankrupt": "Bankrupt!",
+    "gameOver": "Game Over!"
   }
 }

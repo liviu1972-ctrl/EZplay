@@ -12,6 +12,7 @@
     "logout": "Deconectare",
     "cards": "Cărți",
     "cardTable": "Masa de Joc",
+    "gameSimulation": "Simulare Joc",
     "adminCards": "Administrare Cărți"
   },
   "landing": {
@@ -178,5 +179,33 @@
     "cardSingular": "carte",
     "cardPlural": "cărți",
     "clickToFlip": "Click pe carte pentru a o întoarce"
+  },
+  "cards3": {
+    "title": "Simulare Joc",
+    "subtitle": "Joacă o partidă completă de EZPlay solo și învață mecanicile jocului.",
+    "setup": "Configurare Joc",
+    "startGame": "Porneşte Jocul",
+    "newGame": "Joc Nou",
+    "continue": "Continuă",
+    "year": "An",
+    "quarter": "Trimestru",
+    "confirm": "Confirmă Rezultatul",
+    "buyCard": "Cumpără o carte",
+    "eliminateCard": "Elimină o carte",
+    "skip": "Skip",
+    "endTurn": "Încheie Tura",
+    "deck": "Deck",
+    "discard": "Discard Pile",
+    "eliminated": "Eliminate",
+    "market": "Piața Liberă",
+    "hand": "Cărți Jucate",
+    "scoresheet": "Fişa de Joc",
+    "yearReport": "Raport Anual",
+    "revenue": "Cifra de Afaceri",
+    "equity": "Capitalizare",
+    "winTarget": "Ţintă Câştig",
+    "victory": "Victorie!",
+    "bankrupt": "Faliment!",
+    "gameOver": "Joc Terminat!"
   }
 }
