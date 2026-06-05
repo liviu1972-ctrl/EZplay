@@ -17,7 +17,7 @@ import type { GameViewChildProps } from '../types';
 import { useGameViewLogic } from '../../../../hooks/useGameViewLogic';
 
 const OrientationOverlay = () => (
-    <div className="orientation-overlay fixed inset-0 bg-slate-900/95 z-[9999] flex-col items-center justify-center text-white text-center p-4">
+    <div className="orientation-overlay fixed inset-0 bg-slate-900/95 z-[9999] portrait:flex landscape:hidden flex-col items-center justify-center text-white text-center p-4">
         <div className="relative mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-28 w-28 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
