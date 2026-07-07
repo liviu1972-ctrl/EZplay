@@ -13,12 +13,9 @@ import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 
+import { AuthProvider } from "@/features/ezplay/platform/auth/AuthContext";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config";
-import { createClient } from "@/lib/supabase/server";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -37,10 +34,6 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const lang = (cookieStore.get(LANGUAGE_COOKIE)?.value as Locale) || "ro";
-  const dict = await getDictionary(lang);
-
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
 
   return (
     <html
@@ -55,11 +48,9 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar dict={dict} user={user} />
-          <main className="flex-1">
+          <AuthProvider>
             {children}
-          </main>
-          <Footer dict={dict} />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
