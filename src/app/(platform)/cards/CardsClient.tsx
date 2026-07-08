@@ -34,7 +34,7 @@ interface CardsClientProps {
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://omxcrlghlusgapkkrtgd.supabase.co"
 
-// Stack category configuration
+// Stack category configuration — single source of truth for colors, icons and card backs
 const STACK_CONFIG: Record<string, {
   icon: React.ElementType
   color: string
@@ -42,6 +42,7 @@ const STACK_CONFIG: Record<string, {
   borderColor: string
   glowColor: string
   cardBack: string
+  badgeVariant: string
 }> = {
   "tangible-assets": {
     icon: Factory,
@@ -50,6 +51,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-emerald-500/30",
     glowColor: "shadow-emerald-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
   },
   "human-resources": {
     icon: Users,
@@ -58,6 +60,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-orange-500/30",
     glowColor: "shadow-orange-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-orange-500/20 text-orange-400 border-orange-500/30",
   },
   "intangible-assets": {
     icon: Lightbulb,
@@ -66,6 +69,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-blue-500/30",
     glowColor: "shadow-blue-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-blue-500/20 text-blue-400 border-blue-500/30",
   },
   "event": {
     icon: Zap,
@@ -74,6 +78,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-yellow-500/30",
     glowColor: "shadow-yellow-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-event.webp",
+    badgeVariant: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
   },
   "entrepreneur": {
     icon: Crown,
@@ -82,6 +87,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-teal-500/30",
     glowColor: "shadow-teal-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-teal-500/20 text-teal-400 border-teal-500/30",
   },
 }
 
@@ -100,11 +106,11 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
   // Shuffled card orders (overrides base grouping when shuffled)
   const [shuffledStacks, setShuffledStacks] = useState<Record<string, any[]>>({})
 
-  // Get image URL helper
-  const getImageUrl = (path: string | null) => {
+  // Build a public Supabase Storage URL for a card image path
+  const getImageUrl = useCallback((path: string | null) => {
     if (!path) return "/placeholder-card.png"
     return `${SUPABASE_URL}/storage/v1/object/public/cards/${path}`
-  }
+  }, [])
 
   // Group cards by asset_types.slug (base ordering)
   const baseStacks = useMemo(() => {
@@ -193,7 +199,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
   const revealedCard = activeStack ? stacks[activeStack]?.[revealedIndex] : null
   const totalInStack = activeStack ? stacks[activeStack]?.length : 0
 
-  const renderStack = (slug: string) => {
+  const renderStack = useCallback((slug: string) => {
     const config = STACK_CONFIG[slug]
     const Icon = config.icon
     const cards = stacks[slug]
@@ -297,28 +303,26 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         </div>
       </div>
     )
-  }
+  }, [stacks, activeStack, shufflingStack, revealedCard, handleStackClick, handleShuffle, getImageUrl, getStackName, dict])
 
   return (
     <div className="space-y-10">
       {/* ── CARD STACKS ── */}
       <div className="space-y-10 md:space-y-14">
-        {/* Rândul 1: Cărțile Portrait (4 teancuri) */}
+        {/* Row 1: Portrait stacks (4 decks) */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
           {STACK_ORDER.filter(slug => slug !== "entrepreneur").map(renderStack)}
         </div>
 
-        {/* Rândul 2: Cărțile Landscape (Antreprenor) */}
+        {/* Row 2: Landscape cards (Entrepreneur) — centered, natural width */}
         <div className="flex justify-center items-center w-full">
-          <div className="w-full max-w-[300px]">
-            {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
-          </div>
+          {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
         </div>
       </div>
 
       {/* ── REVEAL ZONE ── */}
       {activeStack && revealedCard && (
-        <div id="reveal-zone" className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-fade-in">
+        <div id="reveal-zone" className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-card-fade-in">
           {/* Close button */}
           <button
             onClick={handleCloseReveal}
@@ -440,7 +444,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                   {lang === "ro" ? revealedCard.card_types?.name_ro : revealedCard.card_types?.name_en}
                 </Badge>
                 {revealedCard.asset_types && (
-                  <Badge className={`text-[10px] font-semibold border px-2 py-0.5 ${getAssetBadgeVariant(revealedCard.asset_types.slug)}`}>
+                  <Badge className={`text-[10px] font-semibold border px-2 py-0.5 ${STACK_CONFIG[revealedCard.asset_types.slug]?.badgeVariant ?? "bg-zinc-500/20 text-zinc-400 border-zinc-500/30"}`}>
                     {lang === "ro" ? revealedCard.asset_types.name_ro : revealedCard.asset_types.name_en}
                   </Badge>
                 )}
@@ -540,9 +544,9 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         </div>
       )}
 
-      {/* ── GRID ZONE (COMBINED FROM CARDS 1) ── */}
+      {/* ── GRID ZONE: all cards in the active stack ── */}
       {activeStack && stacks[activeStack] && (
-        <div className="mt-12 space-y-4 animate-fade-in border-t border-zinc-800/50 pt-10">
+        <div className="mt-12 space-y-4 animate-card-fade-in border-t border-zinc-800/50 pt-10">
           <div className="flex flex-col gap-1 mb-6">
             <h3 className="text-xl font-bold text-white flex items-center gap-2">
               {dict.cards2?.allCards || "Toate Cărțile din Set"} ({stacks[activeStack].length})
@@ -588,44 +592,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         </div>
       )}
 
-      {/* Custom animations */}
-      <style jsx global>{`
-        @keyframes shuffle {
-          0% { transform: translateY(0) rotate(0deg); }
-          25% { transform: translateY(-10px) rotate(-3deg); }
-          50% { transform: translateY(5px) rotate(2deg); }
-          75% { transform: translateY(-5px) rotate(-1deg); }
-          100% { transform: translateY(0) rotate(0deg); }
-        }
-        .animate-shuffle {
-          animation: shuffle 0.5s ease-in-out;
-        }
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(16px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.4s ease-out;
-        }
-      `}</style>
     </div>
   )
 }
 
-// Helper for asset badge color variants
-function getAssetBadgeVariant(slug: string): string {
-  switch (slug) {
-    case "tangible-assets":
-      return "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
-    case "human-resources":
-      return "bg-orange-500/20 text-orange-400 border-orange-500/30"
-    case "intangible-assets":
-      return "bg-blue-500/20 text-blue-400 border-blue-500/30"
-    case "event":
-      return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-    case "entrepreneur":
-      return "bg-teal-500/20 text-teal-400 border-teal-500/30"
-    default:
-      return "bg-zinc-500/20 text-zinc-400 border-zinc-500/30"
-  }
-}
