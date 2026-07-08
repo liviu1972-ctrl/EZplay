@@ -360,7 +360,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             <div
               className={`w-full cursor-pointer shrink-0 ${
                 revealedCard.format === "landscape"
-                  ? "max-w-[340px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[540px]"
+                  ? "max-w-[320px] sm:max-w-[400px] md:max-w-[440px] lg:max-w-[500px]"
                   : "max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
               }`}
               style={{ perspective: "1000px" }}
