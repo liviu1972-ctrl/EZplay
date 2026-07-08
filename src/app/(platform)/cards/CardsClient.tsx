@@ -358,7 +358,11 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start justify-center">
             {/* Card Image with flip */}
             <div
-              className="w-full max-w-[280px] md:max-w-[300px] cursor-pointer shrink-0"
+              className={`w-full cursor-pointer shrink-0 ${
+                revealedCard.format === "landscape"
+                  ? "max-w-[340px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[540px]"
+                  : "max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+              }`}
               style={{ perspective: "1000px" }}
               onClick={() => setIsFlipped(f => !f)}
             >
