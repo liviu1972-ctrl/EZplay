@@ -14,12 +14,14 @@ import { getUserProfile } from '../platform/user/userService';
 import type { UserProfile } from '../platform/user/types';
 import { loadGameFromCloud } from '../platform/saves/saveService';
 import Wallet from './components/Wallet';
+import { useImmersiveGameMode } from './hooks/useImmersiveGameMode';
 
 interface GameRunnerProps {
   dbCards?: Card[];
 }
 
 const GameRunner: React.FC<GameRunnerProps> = ({ dbCards = [] }) => {
+  const { enterGameMode, exitGameMode } = useImmersiveGameMode();
   const [currentView, setCurrentView] = useState<View>('mainMenu');
   
   const [isViewingAnnualReport, setIsViewingAnnualReport] = useState(false);
@@ -163,7 +165,7 @@ const GameRunner: React.FC<GameRunnerProps> = ({ dbCards = [] }) => {
 
   return (
     <GameContext.Provider value={{ gameState, dispatch }}>
-      <div className={`${backgroundClass} text-white min-h-screen flex flex-col font-sans relative`}>
+      <div className={`${backgroundClass} text-white min-h-screen flex flex-col font-sans relative ${currentView !== 'mainMenu' ? 'game-shell' : ''}`}>
         {/* User Status / Navigation Bar */}
         {currentView !== 'mainMenu' && (
           <div className="absolute top-2 right-2 z-50 flex items-center space-x-2 md:space-x-3 bg-slate-900/70 backdrop-blur-sm p-1.5 rounded-lg border border-slate-700 shadow-lg">
@@ -247,6 +249,7 @@ const GameRunner: React.FC<GameRunnerProps> = ({ dbCards = [] }) => {
                     onBackToMenu={handleQuitRequest}
                     onLogout={logout} 
                     userProfile={userProfile} 
+                    onEnterGameMode={enterGameMode}
                 />
             </React.Suspense>
         </main>

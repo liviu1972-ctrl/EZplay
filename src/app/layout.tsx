@@ -25,6 +25,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "EZPlay — Învață antreprenoriat prin joc și simulare",
   description: "Un ecosistem educațional digital unde tinerii experimentează decizii de business reale.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "EZPlay",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 import type { Viewport } from 'next';
@@ -33,6 +41,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  viewportFit: 'cover',
+  themeColor: "#000000",
 };
 
 export default async function RootLayout({

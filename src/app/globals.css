@@ -262,3 +262,29 @@
   padding: 0 !important;
   background: #0f172a !important; 
 }
+
+/* --- PWA Immersive Experience --- */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.game-shell {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  height: var(--app-height, 100dvh);
+  overflow: hidden;
+  background: #000;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.game-shell:fullscreen,
+.game-shell:-webkit-full-screen {
+  width: 100vw;
+  height: 100dvh;
+  height: var(--app-height, 100dvh);
+  background: #000;
+}
