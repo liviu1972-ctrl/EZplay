@@ -193,110 +193,121 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
   const revealedCard = activeStack ? stacks[activeStack]?.[revealedIndex] : null
   const totalInStack = activeStack ? stacks[activeStack]?.length : 0
 
+  const renderStack = (slug: string) => {
+    const config = STACK_CONFIG[slug]
+    const Icon = config.icon
+    const cards = stacks[slug]
+    const count = cards.length
+    const isActive = activeStack === slug
+    const isShuffling = shufflingStack === slug
+
+    return (
+      <div
+        key={slug}
+        className="flex flex-col items-center gap-3"
+      >
+        {/* Stack visual wrapper — relative container for button + overlay controls */}
+        <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[300px]" : "max-w-[150px]"}`}>
+          {/* Main clickable stack button */}
+          <button
+            onClick={() => handleStackClick(slug)}
+            disabled={count === 0}
+            className={`
+              relative w-full ${slug === "entrepreneur" ? "aspect-[4/3]" : "aspect-[3/4]"}
+              rounded-2xl cursor-pointer transition-all duration-300
+              ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
+              ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
+            `}
+            style={{ perspective: "600px" }}
+          >
+            {/* Stacked card layers (bottom to top) */}
+            {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
+              <div
+                key={i}
+                className={`
+                  absolute inset-0 rounded-2xl overflow-hidden
+                  shadow-[0_4px_12px_rgba(0,0,0,0.5)]
+                  transition-transform duration-300
+                  ${isShuffling ? "animate-shuffle" : ""}
+                `}
+                style={{
+                  transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
+                  zIndex: i,
+                }}
+              >
+                <Image
+                  src={config.cardBack}
+                  alt="Card back"
+                  fill
+                  sizes="200px"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </button>
+
+          {/* Count badge — outside main button, positioned over it */}
+          <div className={`
+            pointer-events-none
+            absolute -top-2 -right-2 z-20
+            w-8 h-8 rounded-full flex items-center justify-center
+            bg-zinc-900 border-2 ${config.borderColor}
+            text-xs font-bold ${config.color}
+            shadow-lg ${config.glowColor}
+          `}>
+            {count}
+          </div>
+
+          {/* Shuffle button — outside main button, positioned over it */}
+          {count > 1 && (
+            <button
+              onClick={(e) => handleShuffle(slug, e)}
+              className={`
+                absolute -bottom-1 -left-1 z-20
+                w-7 h-7 rounded-full flex items-center justify-center
+                bg-zinc-900/90 border border-zinc-700/60
+                text-zinc-400 hover:text-white hover:bg-zinc-800
+                transition-all shadow-md
+              `}
+              title={dict.cards2?.shuffle || "Amestecă"}
+            >
+              <Shuffle className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        {/* Stack label */}
+        <div className="text-center space-y-1">
+          <div className={`flex items-center justify-center gap-1.5 ${config.color}`}>
+            <Icon className="w-4 h-4" />
+            <span className="text-sm font-bold">{getStackName(slug)}</span>
+          </div>
+          <span className="text-[11px] text-zinc-500">
+            {count} {count === 1
+              ? (dict.cards2?.cardSingular || "carte")
+              : (dict.cards2?.cardPlural || "cărți")}
+          </span>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="space-y-10">
       {/* ── CARD STACKS ── */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_1.77fr] gap-6 md:gap-8">
-        {STACK_ORDER.map((slug) => {
-          const config = STACK_CONFIG[slug]
-          const Icon = config.icon
-          const cards = stacks[slug]
-          const count = cards.length
-          const isActive = activeStack === slug
-          const isShuffling = shufflingStack === slug
+      <div className="space-y-10 md:space-y-14">
+        {/* Rândul 1: Cărțile Portrait (4 teancuri) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
+          {STACK_ORDER.filter(slug => slug !== "entrepreneur").map(renderStack)}
+        </div>
 
-          return (
-            <div
-              key={slug}
-              className="flex flex-col items-center gap-3"
-            >
-              {/* Stack visual wrapper — relative container for button + overlay controls */}
-              <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[266px]" : "max-w-[150px]"}`}>
-                {/* Main clickable stack button */}
-                <button
-                  onClick={() => handleStackClick(slug)}
-                  disabled={count === 0}
-                  className={`
-                    relative w-full ${slug === "entrepreneur" ? "aspect-[4/3]" : "aspect-[3/4]"}
-                    rounded-2xl cursor-pointer transition-all duration-300
-                    ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
-                    ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
-                  `}
-                  style={{ perspective: "600px" }}
-                >
-                  {/* Stacked card layers (bottom to top) */}
-                  {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={`
-                        absolute inset-0 rounded-2xl overflow-hidden
-                        shadow-[0_4px_12px_rgba(0,0,0,0.5)]
-                        transition-transform duration-300
-                        ${isShuffling ? "animate-shuffle" : ""}
-                      `}
-                      style={{
-                        transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
-                        zIndex: i,
-                      }}
-                    >
-                      <Image
-                        src={config.cardBack}
-                        alt="Card back"
-                        fill
-                        sizes="200px"
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </button>
-
-                {/* Count badge — outside main button, positioned over it */}
-                <div className={`
-                  pointer-events-none
-                  absolute -top-2 -right-2 z-20
-                  w-8 h-8 rounded-full flex items-center justify-center
-                  bg-zinc-900 border-2 ${config.borderColor}
-                  text-xs font-bold ${config.color}
-                  shadow-lg ${config.glowColor}
-                `}>
-                  {count}
-                </div>
-
-                {/* Shuffle button — outside main button, positioned over it */}
-                {count > 1 && (
-                  <button
-                    onClick={(e) => handleShuffle(slug, e)}
-                    className={`
-                      absolute -bottom-1 -left-1 z-20
-                      w-7 h-7 rounded-full flex items-center justify-center
-                      bg-zinc-900/90 border border-zinc-700/60
-                      text-zinc-400 hover:text-white hover:bg-zinc-800
-                      transition-all shadow-md
-                    `}
-                    title={dict.cards2?.shuffle || "Amestecă"}
-                  >
-                    <Shuffle className="w-3.5 h-3.5" />
-                  </button>
-                )}
-              </div>
-
-              {/* Stack label */}
-              <div className="text-center space-y-1">
-                <div className={`flex items-center justify-center gap-1.5 ${config.color}`}>
-                  <Icon className="w-4 h-4" />
-                  <span className="text-sm font-bold">{getStackName(slug)}</span>
-                </div>
-                <span className="text-[11px] text-zinc-500">
-                  {count} {count === 1
-                    ? (dict.cards2?.cardSingular || "carte")
-                    : (dict.cards2?.cardPlural || "cărți")}
-                </span>
-              </div>
-            </div>
-
-          )
-        })}
+        {/* Rândul 2: Cărțile Landscape (Antreprenor) */}
+        <div className="flex justify-center items-center w-full">
+          <div className="w-full max-w-[300px]">
+            {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
+          </div>
+        </div>
       </div>
 
       {/* ── REVEAL ZONE ── */}
