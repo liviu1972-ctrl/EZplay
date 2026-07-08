@@ -31,12 +31,6 @@ const OrientationOverlay = () => (
         <h2 className="text-3xl font-bold">Te rugăm rotește dispozitivul</h2>
         <p className="text-slate-400 mt-2 max-w-sm">Acest joc este optimizat pentru modul landscape (orizontal).</p>
 
-        <div className="mt-10 border-t border-slate-700 w-full max-w-sm pt-6 flex flex-col items-center">
-            <p className="text-slate-300">Pentru o imersiune totală, apasă butonul de Full Screen:</p>
-            <div className="mt-4 p-3 bg-slate-700/50 rounded-md inline-flex items-center space-x-2 border border-slate-600">
-                <EnterFullscreenIcon />
-            </div>
-        </div>
     </div>
 );
 
@@ -269,9 +263,6 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
             <MobileStatDisplay label="Profit" value={manualTotals.profit} imageUrl={STAT_ICONS.profit} textColor={manualTotals.profit >= 0 ? 'text-white' : 'text-red-400'} onClick={() => !isManualMode && setActiveChartKeys(['profit'])} />
         </div>
         <div className="flex items-center space-x-2 pr-2">
-          <button onClick={toggleFullscreen} className="p-3 bg-slate-600/50 text-white rounded-md hover:bg-slate-500/50" aria-label="Toggle Fullscreen">
-            {isFullscreen ? <ExitFullscreenIcon /> : <EnterFullscreenIcon />}
-          </button>
           <button onClick={() => dispatch({ type: 'UNDO_LAST_ACTION' })} disabled={!activePlayer.lastAction || endTurnButtonDisabled || isInteractionDisabled} className="px-3 py-2 bg-yellow-500 text-white font-bold rounded-md disabled:opacity-50">Undo</button>
           <button onClick={handleEndTurn} disabled={endTurnButtonDisabled || isManualInputIncomplete || isInteractionDisabled} className={`px-4 py-3 text-white font-bold rounded-lg transition-colors ${endTurnError ? 'bg-red-600' : 'bg-blue-600'} disabled:opacity-50`}>End Turn</button>
         </div>
