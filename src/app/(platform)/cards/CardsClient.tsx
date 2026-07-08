@@ -217,7 +217,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                   onClick={() => handleStackClick(slug)}
                   disabled={count === 0}
                   className={`
-                    relative w-full aspect-[3/4]
+                    relative w-full ${slug === "entrepreneur" ? "aspect-[4/3]" : "aspect-[3/4]"}
                     rounded-2xl cursor-pointer transition-all duration-300
                     ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
                     ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
