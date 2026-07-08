@@ -222,29 +222,35 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             style={{ perspective: "600px" }}
           >
             {/* Stacked card layers (bottom to top) */}
-            {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
-              <div
-                key={i}
-                className={`
-                  absolute inset-0 rounded-2xl overflow-hidden
-                  shadow-[0_4px_12px_rgba(0,0,0,0.5)]
-                  transition-transform duration-300
-                  ${isShuffling ? "animate-shuffle" : ""}
-                `}
-                style={{
-                  transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
-                  zIndex: i,
-                }}
-              >
-                <Image
-                  src={config.cardBack}
-                  alt="Card back"
-                  fill
-                  sizes="200px"
-                  className="object-cover"
-                />
-              </div>
-            ))}
+            {Array.from({ length: Math.min(count, 5) }).map((_, i) => {
+              const isTopCard = i === Math.min(count, 5) - 1;
+              const showFace = isActive && isTopCard && revealedCard;
+              const imgSrc = showFace ? getImageUrl(revealedCard.image_card) : config.cardBack;
+
+              return (
+                <div
+                  key={i}
+                  className={`
+                    absolute inset-0 rounded-2xl overflow-hidden
+                    shadow-[0_4px_12px_rgba(0,0,0,0.5)]
+                    transition-transform duration-300
+                    ${isShuffling ? "animate-shuffle" : ""}
+                  `}
+                  style={{
+                    transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
+                    zIndex: i,
+                  }}
+                >
+                  <Image
+                    src={imgSrc}
+                    alt={showFace ? "Card face" : "Card back"}
+                    fill
+                    sizes="200px"
+                    className="object-cover"
+                  />
+                </div>
+              );
+            })}
           </button>
 
           {/* Count badge — outside main button, positioned over it */}
