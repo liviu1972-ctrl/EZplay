@@ -312,7 +312,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
 
       {/* ── REVEAL ZONE ── */}
       {activeStack && revealedCard && (
-        <div className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-fade-in">
+        <div id="reveal-zone" className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-fade-in">
           {/* Close button */}
           <button
             onClick={handleCloseReveal}
@@ -360,7 +360,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             <div
               className={`w-full cursor-pointer shrink-0 ${
                 revealedCard.format === "landscape"
-                  ? "max-w-[320px] sm:max-w-[380px] md:max-w-[400px] lg:max-w-[440px]"
+                  ? "max-w-[320px] sm:max-w-[380px] md:max-w-[400px] lg:max-w-[450px]"
                   : "max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
               }`}
               style={{ perspective: "1000px" }}
@@ -562,8 +562,8 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                   onClick={() => {
                     setStackIndices(prev => ({ ...prev, [activeStack]: index }));
                     setIsFlipped(false);
-                    // Smooth scroll back to reveal area
-                    window.scrollTo({ top: 300, behavior: 'smooth' });
+                    // Smooth scroll back to reveal area, centered
+                    document.getElementById('reveal-zone')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                   }}
                 >
                   <div className={`relative w-full ${isLandscape ? "aspect-[4/3]" : "aspect-[3/4]"} rounded-2xl overflow-hidden shadow-xl`}>
