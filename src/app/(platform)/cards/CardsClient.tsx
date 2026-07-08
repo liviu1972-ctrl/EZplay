@@ -246,7 +246,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     alt={showFace ? "Card face" : "Card back"}
                     fill
                     sizes="200px"
-                    className="object-cover"
+                    className={slug === "entrepreneur" ? "object-fill" : "object-cover"}
                   />
                 </div>
               );
@@ -392,7 +392,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     alt={lang === "ro" ? revealedCard.name_ro : revealedCard.name_en}
                     fill
                     sizes="300px"
-                    className="object-cover"
+                    className={revealedCard.format === "landscape" ? "object-fill" : "object-cover"}
                     priority
                   />
                 </div>
@@ -411,7 +411,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     alt="Card Back"
                     fill
                     sizes="300px"
-                    className="object-cover"
+                    className={revealedCard.format === "landscape" ? "object-fill" : "object-cover"}
                   />
                   <div className="absolute bottom-0 inset-x-0 p-3 bg-zinc-950/75 backdrop-blur-sm border-t border-white/10 text-center">
                     <span className="text-[10px] font-mono tracking-wider text-brand-orange uppercase font-semibold">
@@ -578,7 +578,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                       alt={lang === "ro" ? card.name_ro : card.name_en}
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
-                      className="object-cover"
+                      className={isLandscape ? "object-fill" : "object-cover"}
                     />
                   </div>
                 </div>
