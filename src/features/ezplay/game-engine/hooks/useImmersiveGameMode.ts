@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 export function useImmersiveGameMode() {
   const isGameModeActive = useRef(false);
@@ -41,16 +41,16 @@ export function useImmersiveGameMode() {
     };
   }, []);
 
-  const enterGameMode = async (container?: HTMLElement) => {
+  const enterGameMode = useCallback(async (container?: HTMLElement) => {
     isGameModeActive.current = true;
     // We intentionally removed the requestFullscreen API call here because 
     // Samsung Internet and some other browsers handle it poorly and break the layout.
     // The PWA "display: fullscreen" from manifest is sufficient.
-  };
+  }, []);
 
-  const exitGameMode = async () => {
+  const exitGameMode = useCallback(async () => {
     isGameModeActive.current = false;
-  };
+  }, []);
 
   return { enterGameMode, exitGameMode };
 }

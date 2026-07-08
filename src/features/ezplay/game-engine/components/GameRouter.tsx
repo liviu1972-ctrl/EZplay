@@ -37,7 +37,6 @@ interface GameRouterProps {
     onBackToMenu: () => void;
     onLogout: () => void;
     userProfile: UserProfile | null;
-    onEnterGameMode?: () => void;
 }
 
 const GameRouter: React.FC<GameRouterProps> = ({
@@ -57,8 +56,7 @@ const GameRouter: React.FC<GameRouterProps> = ({
     onSetRevealedMarketPile,
     onBackToMenu,
     onLogout,
-    userProfile,
-    onEnterGameMode
+    userProfile
 }) => {
     const { players, activePlayerIndex, isGameOver } = gameState;
     const activePlayer = players[activePlayerIndex];
@@ -95,13 +93,13 @@ const GameRouter: React.FC<GameRouterProps> = ({
     switch(currentView) {
       case 'mainMenu':
         return <MainMenu 
-            onNewGame={() => { onEnterGameMode?.(); handleNewGame(); }} 
-            onContinue={() => { onEnterGameMode?.(); setCurrentView('game'); }} 
+            onNewGame={handleNewGame} 
+            onContinue={() => setCurrentView('game')} 
             onShowHistory={() => setCurrentView('companyHistory')} 
             onShowSettings={() => setCurrentView('settings')} 
             onShowGameSetup={() => setCurrentView('gameSetup')} 
             onShowDocumentation={() => setCurrentView('documentation')} 
-            onLoadScenario={() => { onEnterGameMode?.(); setCurrentView('scenarioLoader'); }} 
+            onLoadScenario={() => setCurrentView('scenarioLoader')} 
             onShowProfile={() => setCurrentView('userProfile')}
             onShowAdmin={() => setCurrentView('admin')} // NEW
             onLogout={onLogout}
