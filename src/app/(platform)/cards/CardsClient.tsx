@@ -146,11 +146,6 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
     setStackIndices(prev => ({ ...prev, [slug]: nextIdx }))
     setActiveStack(slug)
     setIsFlipped(false)
-    
-    // Smooth scroll to reveal area after DOM updates
-    setTimeout(() => {
-      document.getElementById('reveal-zone')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
   }, [stacks, stackIndices])
 
   // Navigate within the active stack
