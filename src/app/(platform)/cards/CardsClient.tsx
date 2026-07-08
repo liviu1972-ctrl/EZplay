@@ -316,7 +316,9 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
 
         {/* Row 2: Landscape cards (Entrepreneur) — centered, natural width */}
         <div className="flex justify-center items-center w-full">
-          {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
+          <div className="w-[220px]">
+            {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
+          </div>
         </div>
       </div>
 
