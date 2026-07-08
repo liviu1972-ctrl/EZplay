@@ -35,5 +35,12 @@ This file defines the workflow preferences and development guidelines agreed upo
 *   The folder `public/transfer images from user/` is designated for the user to copy/paste image files to be processed or integrated by the AI.
 *   The AI may read, rename, move, optimize, or delete the **files** inside this directory.
 *   **CRITICAL: NEVER delete the `transfer images from user` folder itself.** Only clean up/delete the files inside it.
+## 6. Coding Standards & Language
+*   **All code must be written in English.** This includes variable names, function names, and inline code comments.
+*   Romanian language is strictly reserved for the UI (user-facing text) or translation dictionaries.
 
+---
 
+## 7. File Headers
+*   Every file must have a comment at the top explaining its role, what it does, and how it fits into the overall project.
+*   Example: `// This component renders the main 3D card layout and handles shuffle logic.`

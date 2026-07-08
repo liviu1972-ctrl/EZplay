@@ -24,7 +24,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-interface Cards2ClientProps {
+interface CardsClientProps {
   initialCards: any[]
   cardTypes: any[]
   assetTypes: any[]
@@ -34,7 +34,7 @@ interface Cards2ClientProps {
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://omxcrlghlusgapkkrtgd.supabase.co"
 
-// Stack category configuration
+// Stack category configuration — single source of truth for colors, icons and card backs
 const STACK_CONFIG: Record<string, {
   icon: React.ElementType
   color: string
@@ -42,6 +42,7 @@ const STACK_CONFIG: Record<string, {
   borderColor: string
   glowColor: string
   cardBack: string
+  badgeVariant: string
 }> = {
   "tangible-assets": {
     icon: Factory,
@@ -50,6 +51,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-emerald-500/30",
     glowColor: "shadow-emerald-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
   },
   "human-resources": {
     icon: Users,
@@ -58,6 +60,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-orange-500/30",
     glowColor: "shadow-orange-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-orange-500/20 text-orange-400 border-orange-500/30",
   },
   "intangible-assets": {
     icon: Lightbulb,
@@ -66,6 +69,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-blue-500/30",
     glowColor: "shadow-blue-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-blue-500/20 text-blue-400 border-blue-500/30",
   },
   "event": {
     icon: Zap,
@@ -74,6 +78,7 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-yellow-500/30",
     glowColor: "shadow-yellow-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-event.webp",
+    badgeVariant: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
   },
   "entrepreneur": {
     icon: Crown,
@@ -82,13 +87,14 @@ const STACK_CONFIG: Record<string, {
     borderColor: "border-teal-500/30",
     glowColor: "shadow-teal-500/20",
     cardBack: "/images/cardbacks/base-game/cardback-standard.webp",
+    badgeVariant: "bg-teal-500/20 text-teal-400 border-teal-500/30",
   },
 }
 
 // Stable ordering for stacks
 const STACK_ORDER = ["tangible-assets", "human-resources", "intangible-assets", "event", "entrepreneur"]
 
-export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }: Cards2ClientProps) {
+export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }: CardsClientProps) {
   // Active stack slug (null = no stack selected)
   const [activeStack, setActiveStack] = useState<string | null>(null)
   // Per-stack card index tracking (persists across close/reopen)
@@ -100,11 +106,11 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
   // Shuffled card orders (overrides base grouping when shuffled)
   const [shuffledStacks, setShuffledStacks] = useState<Record<string, any[]>>({})
 
-  // Get image URL helper
-  const getImageUrl = (path: string | null) => {
+  // Build a public Supabase Storage URL for a card image path
+  const getImageUrl = useCallback((path: string | null) => {
     if (!path) return "/placeholder-card.png"
     return `${SUPABASE_URL}/storage/v1/object/public/cards/${path}`
-  }
+  }, [])
 
   // Group cards by asset_types.slug (base ordering)
   const baseStacks = useMemo(() => {
@@ -193,115 +199,132 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
   const revealedCard = activeStack ? stacks[activeStack]?.[revealedIndex] : null
   const totalInStack = activeStack ? stacks[activeStack]?.length : 0
 
+  const renderStack = useCallback((slug: string) => {
+    const config = STACK_CONFIG[slug]
+    const Icon = config.icon
+    const cards = stacks[slug]
+    const count = cards.length
+    const isActive = activeStack === slug
+    const isShuffling = shufflingStack === slug
+
+    return (
+      <div
+        key={slug}
+        className="flex flex-col items-center gap-3"
+      >
+        {/* Stack visual wrapper — relative container for button + overlay controls */}
+        <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[220px]" : "max-w-[150px]"}`}>
+          {/* Main clickable stack button */}
+          <button
+            onClick={() => handleStackClick(slug)}
+            disabled={count === 0}
+            className={`
+              relative w-full ${slug === "entrepreneur" ? "aspect-[220/150]" : "aspect-[3/4]"}
+              rounded-2xl cursor-pointer transition-all duration-300
+              ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
+              ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
+              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
+            `}
+            style={{ perspective: "600px" }}
+          >
+            {/* Stacked card layers (bottom to top) */}
+            {Array.from({ length: Math.min(count, 5) }).map((_, i) => {
+              const isTopCard = i === Math.min(count, 5) - 1;
+              const showFace = isActive && isTopCard && revealedCard;
+              const imgSrc = showFace ? getImageUrl(revealedCard.image_card) : config.cardBack;
+
+              return (
+                <div
+                  key={i}
+                  className={`
+                    absolute inset-0 rounded-2xl overflow-hidden
+                    shadow-[0_4px_12px_rgba(0,0,0,0.5)]
+                    transition-transform duration-300
+                    ${isShuffling ? "animate-shuffle" : ""}
+                  `}
+                  style={{
+                    transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
+                    zIndex: i,
+                  }}
+                >
+                  <Image
+                    src={imgSrc}
+                    alt={showFace ? "Card face" : "Card back"}
+                    fill
+                    sizes="200px"
+                    className={slug === "entrepreneur" ? "object-fill" : "object-cover"}
+                  />
+                </div>
+              );
+            })}
+          </button>
+
+          {/* Count badge — outside main button, positioned over it */}
+          <div className={`
+            pointer-events-none
+            absolute -top-2 -right-2 z-20
+            w-8 h-8 rounded-full flex items-center justify-center
+            bg-zinc-900 border-2 ${config.borderColor}
+            text-xs font-bold ${config.color}
+            shadow-lg ${config.glowColor}
+          `}>
+            {count}
+          </div>
+
+          {/* Shuffle button — outside main button, positioned over it */}
+          {count > 1 && (
+            <button
+              onClick={(e) => handleShuffle(slug, e)}
+              className={`
+                absolute -bottom-1 -left-1 z-20
+                w-7 h-7 rounded-full flex items-center justify-center
+                bg-zinc-900/90 border border-zinc-700/60
+                text-zinc-400 hover:text-white hover:bg-zinc-800
+                transition-all shadow-md
+              `}
+              title={dict.cards2?.shuffle || "Amestecă"}
+            >
+              <Shuffle className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
+        {/* Stack label */}
+        <div className="text-center space-y-1">
+          <div className={`flex items-center justify-center gap-1.5 ${config.color}`}>
+            <Icon className="w-4 h-4" />
+            <span className="text-sm font-bold">{getStackName(slug)}</span>
+          </div>
+          <span className="text-[11px] text-zinc-500">
+            {count} {count === 1
+              ? (dict.cards2?.cardSingular || "carte")
+              : (dict.cards2?.cardPlural || "cărți")}
+          </span>
+        </div>
+      </div>
+    )
+  }, [stacks, activeStack, shufflingStack, revealedCard, handleStackClick, handleShuffle, getImageUrl, getStackName, dict])
+
   return (
     <div className="space-y-10">
       {/* ── CARD STACKS ── */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-        {STACK_ORDER.map((slug) => {
-          const config = STACK_CONFIG[slug]
-          const Icon = config.icon
-          const cards = stacks[slug]
-          const count = cards.length
-          const isActive = activeStack === slug
-          const isShuffling = shufflingStack === slug
+      <div className="space-y-10 md:space-y-14">
+        {/* Row 1: Portrait stacks (4 decks) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
+          {STACK_ORDER.filter(slug => slug !== "entrepreneur").map(renderStack)}
+        </div>
 
-          return (
-            <div
-              key={slug}
-              className="flex flex-col items-center gap-3"
-            >
-              {/* Stack visual wrapper — relative container for button + overlay controls */}
-              <div className="relative w-full max-w-[200px] mx-auto">
-                {/* Main clickable stack button */}
-                <button
-                  onClick={() => handleStackClick(slug)}
-                  disabled={count === 0}
-                  className={`
-                    relative w-full aspect-[3/4]
-                    rounded-2xl cursor-pointer transition-all duration-300
-                    ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
-                    ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange
-                  `}
-                  style={{ perspective: "600px" }}
-                >
-                  {/* Stacked card layers (bottom to top) */}
-                  {Array.from({ length: Math.min(count, 5) }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={`
-                        absolute inset-0 rounded-2xl overflow-hidden
-                        shadow-[0_4px_12px_rgba(0,0,0,0.5)]
-                        transition-transform duration-300
-                        ${isShuffling ? "animate-shuffle" : ""}
-                      `}
-                      style={{
-                        transform: `translateY(${-i * 3}px) translateX(${i * 1}px) rotate(${(i - 2) * 0.8}deg)`,
-                        zIndex: i,
-                      }}
-                    >
-                      <Image
-                        src={config.cardBack}
-                        alt="Card back"
-                        fill
-                        sizes="200px"
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </button>
-
-                {/* Count badge — outside main button, positioned over it */}
-                <div className={`
-                  pointer-events-none
-                  absolute -top-2 -right-2 z-20
-                  w-8 h-8 rounded-full flex items-center justify-center
-                  bg-zinc-900 border-2 ${config.borderColor}
-                  text-xs font-bold ${config.color}
-                  shadow-lg ${config.glowColor}
-                `}>
-                  {count}
-                </div>
-
-                {/* Shuffle button — outside main button, positioned over it */}
-                {count > 1 && (
-                  <button
-                    onClick={(e) => handleShuffle(slug, e)}
-                    className={`
-                      absolute -bottom-1 -left-1 z-20
-                      w-7 h-7 rounded-full flex items-center justify-center
-                      bg-zinc-900/90 border border-zinc-700/60
-                      text-zinc-400 hover:text-white hover:bg-zinc-800
-                      transition-all shadow-md
-                    `}
-                    title={dict.cards2?.shuffle || "Amestecă"}
-                  >
-                    <Shuffle className="w-3.5 h-3.5" />
-                  </button>
-                )}
-              </div>
-
-              {/* Stack label */}
-              <div className="text-center space-y-1">
-                <div className={`flex items-center justify-center gap-1.5 ${config.color}`}>
-                  <Icon className="w-4 h-4" />
-                  <span className="text-sm font-bold">{getStackName(slug)}</span>
-                </div>
-                <span className="text-[11px] text-zinc-500">
-                  {count} {count === 1
-                    ? (dict.cards2?.cardSingular || "carte")
-                    : (dict.cards2?.cardPlural || "cărți")}
-                </span>
-              </div>
-            </div>
-
-          )
-        })}
+        {/* Row 2: Landscape cards (Entrepreneur) — centered, natural width */}
+        <div className="flex justify-center items-center w-full">
+          <div className="w-[220px]">
+            {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
+          </div>
+        </div>
       </div>
 
       {/* ── REVEAL ZONE ── */}
       {activeStack && revealedCard && (
-        <div className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-fade-in">
+        <div id="reveal-zone" className="relative bg-gradient-to-b from-zinc-900/60 to-zinc-950/80 backdrop-blur-md border border-zinc-800/60 rounded-3xl p-6 md:p-10 shadow-2xl animate-card-fade-in">
           {/* Close button */}
           <button
             onClick={handleCloseReveal}
@@ -347,7 +370,11 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start justify-center">
             {/* Card Image with flip */}
             <div
-              className="w-full max-w-[280px] md:max-w-[300px] cursor-pointer shrink-0"
+              className={`w-full cursor-pointer shrink-0 ${
+                revealedCard.format === "landscape"
+                  ? "max-w-[320px] sm:max-w-[380px] md:max-w-[400px] lg:max-w-[450px]"
+                  : "max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+              }`}
               style={{ perspective: "1000px" }}
               onClick={() => setIsFlipped(f => !f)}
             >
@@ -371,7 +398,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                     alt={lang === "ro" ? revealedCard.name_ro : revealedCard.name_en}
                     fill
                     sizes="300px"
-                    className="object-cover"
+                    className={revealedCard.format === "landscape" ? "object-fill" : "object-cover"}
                     priority
                   />
                 </div>
@@ -390,7 +417,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                     alt="Card Back"
                     fill
                     sizes="300px"
-                    className="object-cover"
+                    className={revealedCard.format === "landscape" ? "object-fill" : "object-cover"}
                   />
                   <div className="absolute bottom-0 inset-x-0 p-3 bg-zinc-950/75 backdrop-blur-sm border-t border-white/10 text-center">
                     <span className="text-[10px] font-mono tracking-wider text-brand-orange uppercase font-semibold">
@@ -419,7 +446,7 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                   {lang === "ro" ? revealedCard.card_types?.name_ro : revealedCard.card_types?.name_en}
                 </Badge>
                 {revealedCard.asset_types && (
-                  <Badge className={`text-[10px] font-semibold border px-2 py-0.5 ${getAssetBadgeVariant(revealedCard.asset_types.slug)}`}>
+                  <Badge className={`text-[10px] font-semibold border px-2 py-0.5 ${STACK_CONFIG[revealedCard.asset_types.slug]?.badgeVariant ?? "bg-zinc-500/20 text-zinc-400 border-zinc-500/30"}`}>
                     {lang === "ro" ? revealedCard.asset_types.name_ro : revealedCard.asset_types.name_en}
                   </Badge>
                 )}
@@ -519,44 +546,55 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
         </div>
       )}
 
-      {/* Custom animations */}
-      <style jsx global>{`
-        @keyframes shuffle {
-          0% { transform: translateY(0) rotate(0deg); }
-          25% { transform: translateY(-10px) rotate(-3deg); }
-          50% { transform: translateY(5px) rotate(2deg); }
-          75% { transform: translateY(-5px) rotate(-1deg); }
-          100% { transform: translateY(0) rotate(0deg); }
-        }
-        .animate-shuffle {
-          animation: shuffle 0.5s ease-in-out;
-        }
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(16px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.4s ease-out;
-        }
-      `}</style>
+      {/* ── GRID ZONE: all cards in the active stack ── */}
+      {activeStack && stacks[activeStack] && (
+        <div className="mt-12 space-y-4 animate-card-fade-in border-t border-zinc-800/50 pt-10">
+          <div className="flex flex-col gap-1 mb-6">
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              {dict.cards2?.allCards || "Toate Cărțile din Set"} ({stacks[activeStack].length})
+            </h3>
+            <p className="text-sm text-zinc-400">
+              {dict.cards2?.clickToReveal || "Apasă pe o carte pentru a o vizualiza detaliat mai sus."}
+            </p>
+          </div>
+          
+          <div className={`grid grid-cols-2 sm:grid-cols-3 ${stacks[activeStack][0]?.format === 'landscape' ? 'md:grid-cols-4' : 'lg:grid-cols-5'} gap-4 md:gap-6`}>
+            {stacks[activeStack].map((card: any, index: number) => {
+              const isLandscape = card.format === "landscape";
+              const isSelected = index === revealedIndex;
+              
+              return (
+                <div
+                  key={card.id || index}
+                  className={`group relative cursor-pointer transition-all duration-300 rounded-2xl ${
+                    isSelected 
+                      ? 'opacity-100 scale-105 z-10 shadow-2xl' 
+                      : 'opacity-40 hover:opacity-100 hover:scale-[1.03] hover:z-10'
+                  }`}
+                  onClick={() => {
+                    setStackIndices(prev => ({ ...prev, [activeStack]: index }));
+                    setIsFlipped(false);
+                    // Smooth scroll back to reveal area, centered
+                    document.getElementById('reveal-zone')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }}
+                >
+                  <div className={`relative w-full ${isLandscape ? "aspect-[4/3]" : "aspect-[3/4]"} rounded-2xl overflow-hidden shadow-xl`}>
+                    <Image
+                      src={getImageUrl(card.image_card)}
+                      alt={lang === "ro" ? card.name_ro : card.name_en}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                      className={isLandscape ? "object-fill" : "object-cover"}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
 
-// Helper for asset badge color variants
-function getAssetBadgeVariant(slug: string): string {
-  switch (slug) {
-    case "tangible-assets":
-      return "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
-    case "human-resources":
-      return "bg-orange-500/20 text-orange-400 border-orange-500/30"
-    case "intangible-assets":
-      return "bg-blue-500/20 text-blue-400 border-blue-500/30"
-    case "event":
-      return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-    case "entrepreneur":
-      return "bg-teal-500/20 text-teal-400 border-teal-500/30"
-    default:
-      return "bg-zinc-500/20 text-zinc-400 border-zinc-500/30"
-  }
-}

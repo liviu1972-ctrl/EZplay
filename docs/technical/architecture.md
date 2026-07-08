@@ -67,18 +67,24 @@ sequenceDiagram
 
 ## 4. Key Directory Structure
 
-*   `src/app/`: Contains the App Router routing structure.
-    *   `(public)`: Public pages (Landing, About, How it Works).
-    *   `cards`: Public deck browser page (search, filters, interactive flip cards).
-    *   `(auth)`: Authorization pages (Login, Register, Onboarding).
-    *   `(dashboard)`: Logged-in experience (Sidebar, Home, Profile, Settings).
-    *   `admin/cards`: Protected dashboard for admins to manage, edit, and upload cards.
-    *   `api/auth/callback`: OAuth callback route for Google login.
-    *   `api/cards/upload`: Image processing API route utilizing `sharp` to scale card images.
+*   `src/app/`: Contains the App Router routing structure mapped through logical Route Groups.
+    *   `(platform)`: Core platform routes, including the cards browser (`/cards`) and global settings.
+    *   `(ezplay)`: Dedicated space for the core game logic and future game environments.
+    *   `(auth)`: Authorization pages (Login, Register).
+    *   `api/`: API routes (`auth/callback` for OAuth, `cards/upload` for server-side `sharp` image scaling).
 *   `src/components/`: Reusable components.
     *   `ui/`: Base components installed via shadcn/ui.
     *   `layout/`: Global layouts (Navbar, Sidebar, Theme/Language toggles).
     *   `landing/`, `auth/`, `profile/`, `admin/`: Component groups mapped to page features.
 *   `src/lib/`: Custom business logic, helpers, and configurations.
-    *   `supabase/`: DB Clients (`client.ts`, `server.ts`, `middleware.ts`, `admin.ts`) and database Types (`types.ts`).
+    *   `supabase/`: DB Clients (`client.ts`, `server.ts`) and database Types (`types.ts`).
     *   `i18n/`: Internationalization setups (`config.ts`, `get-dictionary.ts`) and dictionaries (`ro.json`, `en.json`).
+
+---
+
+## 5. UI & Presentation Logic (Cards Engine)
+
+The rendering engine for cards (e.g., `CardsClient.tsx`) utilizes strict frontend separation of concerns:
+*   **Format Layouts**: Differentiates between `portrait` and `landscape` cards via Tailwind `aspect-ratio` (`aspect-[3/4]` vs `w-[220px] aspect-[220/150]`).
+*   **State configuration**: Uses external constant objects (`STACK_CONFIG`) to act as a single source of truth for UI colors, gradients, and icons, avoiding logic clutter in the components.
+*   **Animations**: Complex CSS animations (`@keyframes shuffle`, `card-fade-in`) are offloaded to `globals.css` instead of inline styles, ensuring they are globally reusable across the platform (e.g., between the Deck Browser and actual Game pages).
