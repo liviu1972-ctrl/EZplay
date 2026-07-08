@@ -196,7 +196,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
   return (
     <div className="space-y-10">
       {/* ── CARD STACKS ── */}
-      <div className="flex flex-wrap items-end justify-center gap-6 md:gap-10">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_1fr_1.77fr] gap-6 md:gap-8">
         {STACK_ORDER.map((slug) => {
           const config = STACK_CONFIG[slug]
           const Icon = config.icon
@@ -208,16 +208,16 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
           return (
             <div
               key={slug}
-              className="flex flex-col items-center gap-3 shrink-0"
+              className="flex flex-col items-center gap-3"
             >
               {/* Stack visual wrapper — relative container for button + overlay controls */}
-              <div className={`relative h-36 sm:h-40 md:h-48 ${slug === "entrepreneur" ? "aspect-[4/3]" : "aspect-[3/4]"}`}>
+              <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[266px]" : "max-w-[150px]"}`}>
                 {/* Main clickable stack button */}
                 <button
                   onClick={() => handleStackClick(slug)}
                   disabled={count === 0}
                   className={`
-                    relative w-full h-full
+                    relative w-full ${slug === "entrepreneur" ? "aspect-[4/3]" : "aspect-[3/4]"}
                     rounded-2xl cursor-pointer transition-all duration-300
                     ${isActive ? `ring-2 ring-offset-2 ring-offset-background ${config.borderColor.replace('border-', 'ring-')} scale-[0.97]` : "hover:scale-[1.03]"}
                     ${count === 0 ? "opacity-30 cursor-not-allowed" : ""}
