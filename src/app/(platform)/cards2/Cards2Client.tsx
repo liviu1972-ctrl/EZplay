@@ -519,6 +519,62 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
         </div>
       )}
 
+      {/* ── GRID ZONE (COMBINED FROM CARDS 1) ── */}
+      {activeStack && stacks[activeStack] && (
+        <div className="mt-12 space-y-4 animate-fade-in border-t border-zinc-800/50 pt-10">
+          <div className="flex flex-col gap-1 mb-6">
+            <h3 className="text-xl font-bold text-white flex items-center gap-2">
+              {dict.cards2?.allCards || "Toate Cărțile din Set"} ({stacks[activeStack].length})
+            </h3>
+            <p className="text-sm text-zinc-400">
+              {dict.cards2?.clickToReveal || "Apasă pe o carte pentru a o vizualiza detaliat mai sus."}
+            </p>
+          </div>
+          
+          <div className={`grid grid-cols-2 sm:grid-cols-3 ${stacks[activeStack][0]?.format === 'landscape' ? 'md:grid-cols-4' : 'lg:grid-cols-5'} gap-4 md:gap-6`}>
+            {stacks[activeStack].map((card: any, index: number) => {
+              const isLandscape = card.format === "landscape";
+              const isSelected = index === revealedIndex;
+              
+              return (
+                <div
+                  key={card.id || index}
+                  className={`relative cursor-pointer transition-all duration-300 rounded-2xl ${
+                    isSelected 
+                      ? 'ring-2 ring-brand-orange ring-offset-4 ring-offset-zinc-950 scale-105 z-10' 
+                      : 'hover:scale-[1.03] opacity-60 hover:opacity-100 hover:z-10'
+                  }`}
+                  onClick={() => {
+                    setStackIndices(prev => ({ ...prev, [activeStack]: index }));
+                    setIsFlipped(false);
+                    // Smooth scroll back to reveal area
+                    window.scrollTo({ top: 300, behavior: 'smooth' });
+                  }}
+                >
+                  <div className={`relative w-full ${isLandscape ? "aspect-[4/3]" : "aspect-[3/4]"} rounded-2xl overflow-hidden shadow-xl border ${isSelected ? 'border-brand-orange/50' : 'border-zinc-800'}`}>
+                    <Image
+                      src={getImageUrl(card.image_card)}
+                      alt={lang === "ro" ? card.name_ro : card.name_en}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute bottom-0 inset-x-0 p-2.5 bg-zinc-950/85 backdrop-blur-sm border-t border-white/10 text-center flex flex-col items-center justify-center">
+                      <span className="text-[9px] font-mono tracking-wider text-brand-orange uppercase font-semibold mb-0.5">
+                        {card.slug}
+                      </span>
+                      <h4 className="text-[11px] font-bold text-white line-clamp-1 leading-tight">
+                        {lang === "ro" ? card.name_ro : card.name_en}
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Custom animations */}
       <style jsx global>{`
         @keyframes shuffle {
