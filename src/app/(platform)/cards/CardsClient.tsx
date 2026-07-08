@@ -207,7 +207,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         className="flex flex-col items-center gap-3"
       >
         {/* Stack visual wrapper — relative container for button + overlay controls */}
-        <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[300px]" : "max-w-[150px]"}`}>
+        <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[200px]" : "max-w-[150px]"}`}>
           {/* Main clickable stack button */}
           <button
             onClick={() => handleStackClick(slug)}
