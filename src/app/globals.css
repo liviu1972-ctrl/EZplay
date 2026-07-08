@@ -227,3 +227,26 @@
 .animate-fly-to-trash {
   animation: flyToTrash 0.3s ease-in forwards;
 }
+
+/* ── Mobile game fullscreen fix ── */
+.game-view-mobile {
+  height: 100dvh;
+}
+
+:fullscreen .game-view-mobile,
+:-webkit-full-screen .game-view-mobile,
+:-moz-full-screen .game-view-mobile {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+:fullscreen,
+:-webkit-full-screen,
+:-moz-full-screen {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #0f172a !important; 
+}

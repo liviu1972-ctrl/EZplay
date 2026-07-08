@@ -174,7 +174,7 @@ const MobileGameViewExtended: React.FC<GameViewChildProps> = (props) => {
     : activePlayer.name;
 
   return (
-    <div className="game-view-mobile w-full h-screen flex flex-col overflow-hidden bg-slate-900 font-sans text-white">
+    <div className="game-view-mobile w-full h-dvh flex flex-col overflow-hidden bg-slate-900 font-sans text-white">
       <OrientationOverlay />
       {copyCardState.isSelectingTarget && ( <div className="absolute top-0 left-0 right-0 p-2 bg-yellow-600 text-black text-center font-bold z-30 animate-pulse"> Alege o carte din mână pentru a o copia.</div> )}
       {bonusBuy && !copyCardState.isSelectingTarget && ( <div className="absolute top-0 left-0 right-0 p-2 bg-green-600 text-white text-center font-bold z-30"> BONUS: Cumpără un '{bonusBuy.assetType}' de cost ≤ {bonusBuy.maxCost}</div> )}
