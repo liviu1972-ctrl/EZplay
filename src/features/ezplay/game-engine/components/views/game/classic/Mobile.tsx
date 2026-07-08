@@ -1,5 +1,5 @@
 
-import React, { useState, useContext, useMemo, useEffect } from 'react';
+import React, { useState, useContext, useMemo, useEffect, useRef } from 'react';
 import type { Card } from '../../../../types';
 import { createBuyCardAction, createRetireCardAction, createRetireCardBonusAction } from '../../../../game-logic/actions';
 import { getEffectiveCost, getRetireCost } from '../../../../game-logic/selectors';
@@ -68,24 +68,44 @@ const MobileGameViewClassic: React.FC<GameViewChildProps> = (props) => {
 
   // Local state specific to mobile interaction/layout
   const [selection, setSelection] = useState<{ card: Card; source: 'market' | 'hand'; pileIndex?: number } | null>(null);
-  const [isFullscreen, setIsFullscreen] = useState(!!document.fullscreenElement);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isFullscreen, setIsFullscreen] = useState(
+    !!(document.fullscreenElement || (document as any).webkitFullscreenElement)
+  );
 
   React.useEffect(() => {
     const onFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
+      setIsFullscreen(
+        !!(document.fullscreenElement || (document as any).webkitFullscreenElement)
+      );
     };
     document.addEventListener('fullscreenchange', onFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', onFullscreenChange);
+    };
   }, []);
 
+  // Fullscreen direct pe containerul jocului (nu pe document.documentElement)
+  // Samsung Internet necesita webkit prefix si fullscreen pe element, nu pe html
   const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch((err) => {
-        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-      });
+    const el = containerRef.current;
+    if (!el) return;
+    const isFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
+    if (!isFs) {
+      if (el.requestFullscreen) {
+        el.requestFullscreen().catch((err) => {
+          console.error(`Fullscreen error: ${err.message}`);
+        });
+      } else if ((el as any).webkitRequestFullscreen) {
+        (el as any).webkitRequestFullscreen();
+      }
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
+      } else if ((document as any).webkitExitFullscreen) {
+        (document as any).webkitExitFullscreen();
       }
     }
   };
@@ -174,7 +194,7 @@ const MobileGameViewClassic: React.FC<GameViewChildProps> = (props) => {
     : activePlayer.name;
 
   return (
-    <div className="game-view-mobile w-full h-dvh flex flex-col overflow-hidden bg-slate-900 font-sans text-white">
+    <div ref={containerRef} className="game-view-mobile w-full h-dvh flex flex-col overflow-hidden bg-slate-900 font-sans text-white">
       <OrientationOverlay />
       {copyCardState.isSelectingTarget && ( <div className="absolute top-0 left-0 right-0 p-2 bg-yellow-600 text-black text-center font-bold z-30 animate-pulse"> Alege o carte din mână pentru a o copia.</div> )}
       {bonusBuy && !copyCardState.isSelectingTarget && ( <div className="absolute top-0 left-0 right-0 p-2 bg-green-600 text-white text-center font-bold z-30"> BONUS: Cumpără un '{bonusBuy.assetType}' de cost ≤ {bonusBuy.maxCost}</div> )}
