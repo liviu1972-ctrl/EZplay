@@ -5,8 +5,8 @@ import { createClient } from "@/lib/supabase/server"
 import { CardsClient } from "./CardsClient"
 
 export const metadata = {
-  title: "Cards Deck — EZPlay",
-  description: "Browse the full set of entrepreneurial game cards and strategize your next business run.",
+  title: "Cărți — EZPlay",
+  description: "Explorează pachetele de cărți EZPlay.",
 }
 
 export default async function CardsPage() {
@@ -16,7 +16,7 @@ export default async function CardsPage() {
 
   const supabase = await createClient()
 
-  // Fetch data
+  // Fetch all active cards with joins
   const { data: cards } = await supabase
     .from("cards")
     .select(`
@@ -40,12 +40,12 @@ export default async function CardsPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="flex flex-col space-y-4 mb-8 text-center md:text-left">
+        <div className="flex flex-col space-y-4 mb-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-brand-orange to-brand-yellow bg-clip-text text-transparent">
-            {dict.cards?.title || "Pachetul de Cărți"}
+            {dict.cards?.title || "Cărți"}
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            {dict.cards?.subtitle || "Descoperă toate cărțile din ecosistemul EZPlay și pregătește-ți strategia."}
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {dict.cards?.subtitle || "Alege un teanc de cărți și descoperă-le una câte una."}
           </p>
         </div>
 
