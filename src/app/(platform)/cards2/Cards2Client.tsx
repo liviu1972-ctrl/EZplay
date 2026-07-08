@@ -374,19 +374,6 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                     className="object-cover"
                     priority
                   />
-                  {/* Dynamic Text in White Box */}
-                  <div className={`absolute flex flex-col items-center justify-center text-center px-2 py-1 pointer-events-none ${
-                    revealedCard.format === "landscape" 
-                      ? "top-[6%] bottom-[18%] left-[59%] right-[3%]" 
-                      : "bottom-[7.5%] h-[23%] left-[8%] right-[8%]"
-                  }`}>
-                    <span className="text-[10px] md:text-xs font-mono font-bold text-zinc-400 mb-0.5">
-                      {revealedCard.slug}
-                    </span>
-                    <h4 className="text-sm md:text-base font-bold text-zinc-900 leading-tight">
-                      {lang === "ro" ? revealedCard.name_ro : revealedCard.name_en}
-                    </h4>
-                  </div>
                 </div>
 
                 {/* Back (card back image) */}
@@ -572,20 +559,6 @@ export function Cards2Client({ initialCards, cardTypes, assetTypes, lang, dict }
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                       className="object-cover"
                     />
-                    
-                    {/* Dynamic Text in White Box (Permanent) */}
-                    <div className={`absolute flex flex-col items-center justify-center text-center px-1 md:px-2 py-0.5 pointer-events-none ${
-                      isLandscape 
-                        ? "top-[6%] bottom-[18%] left-[59%] right-[3%]" 
-                        : "bottom-[7.5%] h-[23%] left-[8%] right-[8%]"
-                    }`}>
-                      <span className="text-[8px] sm:text-[9px] font-mono font-bold text-zinc-400 mb-0.5">
-                        {card.slug}
-                      </span>
-                      <h4 className="text-[10px] sm:text-[11px] font-bold text-zinc-900 leading-tight">
-                        {lang === "ro" ? card.name_ro : card.name_en}
-                      </h4>
-                    </div>
                   </div>
                 </div>
               );
