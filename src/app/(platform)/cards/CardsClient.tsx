@@ -401,6 +401,72 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     className={revealedCard.format === "landscape" ? "object-fill" : "object-cover"}
                     priority
                   />
+                  
+                  {/* DEBUG ZONES FOR POSITIONING */}
+                  {!isFlipped && (
+                    <div className="absolute inset-0 z-20 pointer-events-none hidden md:block">
+                      {revealedCard.format === "portrait" ? (
+                        <>
+                          {revealedCard.cost !== null && (
+                            <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '4%', left: '6%' }}>
+                              <div className="absolute top-full mt-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                                <Coins className="w-4 h-4 text-brand-yellow" />
+                                <span className="text-xs font-bold">{dict.cards?.cost || "Cost"}: {revealedCard.cost}</span>
+                              </div>
+                            </div>
+                          )}
+                          {revealedCard.production !== null && (
+                            <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '58%', left: '6%' }}>
+                              <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                                <Wrench className="w-4 h-4 text-brand-green" />
+                                <span className="text-xs font-bold">{dict.cards?.production || "Producție"}: +{revealedCard.production}</span>
+                              </div>
+                            </div>
+                          )}
+                          {revealedCard.marketing !== null && (
+                            <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '58%', left: revealedCard.production !== null ? '28%' : '6%' }}>
+                              <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                                <Megaphone className="w-4 h-4 text-brand-orange" />
+                                <span className="text-xs font-bold">{dict.cards?.marketing || "Marketing"}: +{revealedCard.marketing}</span>
+                              </div>
+                            </div>
+                          )}
+                          {revealedCard.expense !== null && (
+                            <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '58%', right: '6%' }}>
+                              <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                                <DollarSign className="w-4 h-4 text-brand-teal" />
+                                <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuială"}: {revealedCard.expense}</span>
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          {/* La antreprenor (landscape) afișăm mereu Producție, MKT și Cheltuială */}
+                          <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '5%' }}>
+                            <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                              <Wrench className="w-4 h-4 text-brand-green" />
+                              <span className="text-xs font-bold">{dict.cards?.production || "Producție"}: +{revealedCard.production ?? 0}</span>
+                            </div>
+                          </div>
+                          
+                          <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '16%' }}>
+                            <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                              <Megaphone className="w-4 h-4 text-brand-orange" />
+                              <span className="text-xs font-bold">{dict.cards?.marketing || "Marketing"}: +{revealedCard.marketing ?? 0}</span>
+                            </div>
+                          </div>
+
+                          <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '48%' }}>
+                            <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
+                              <DollarSign className="w-4 h-4 text-brand-teal" />
+                              <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuială"}: {revealedCard.expense ?? 0}</span>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Back (card back image) */}
@@ -475,30 +541,30 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                     </div>
                   </div>
                 )}
-                {revealedCard.production !== null && (
+                {(revealedCard.production !== null || revealedCard.format === "landscape") && (
                   <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800/60">
                     <Wrench className="w-5 h-5 text-brand-green shrink-0" />
                     <div>
                       <div className="text-xs text-zinc-500 font-medium">{dict.cards?.production || "Producție"}</div>
-                      <div className="font-bold text-white text-base">+{revealedCard.production}</div>
+                      <div className="font-bold text-white text-base">+{revealedCard.production ?? 0}</div>
                     </div>
                   </div>
                 )}
-                {revealedCard.marketing !== null && (
+                {(revealedCard.marketing !== null || revealedCard.format === "landscape") && (
                   <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800/60">
                     <Megaphone className="w-5 h-5 text-brand-orange shrink-0" />
                     <div>
                       <div className="text-xs text-zinc-500 font-medium">{dict.cards?.marketing || "Marketing"}</div>
-                      <div className="font-bold text-white text-base">+{revealedCard.marketing}</div>
+                      <div className="font-bold text-white text-base">+{revealedCard.marketing ?? 0}</div>
                     </div>
                   </div>
                 )}
-                {revealedCard.expense !== null && (
+                {(revealedCard.expense !== null || revealedCard.format === "landscape") && (
                   <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800/60">
                     <DollarSign className="w-5 h-5 text-brand-teal shrink-0" />
                     <div>
                       <div className="text-xs text-zinc-500 font-medium">{dict.cards?.expense || "Cheltuială"}</div>
-                      <div className="font-bold text-white text-base">{revealedCard.expense}</div>
+                      <div className="font-bold text-white text-base">{revealedCard.expense ?? 0}</div>
                     </div>
                   </div>
                 )}

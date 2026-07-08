@@ -167,40 +167,40 @@ export const processHandAndCalculateTotals = (
     let rawExpenses = 0;
 
     processedHandForCalculation.forEach(card => {
-        rawExpenses += card.expenses;
+        rawExpenses += (card.expenses || 0);
         if (card.calculationType === 'choice') {
             const choice = cardChoices[card.uid] || 'production';
             if (choice === 'production') {
-                totals.production += card.production;
+                totals.production += (card.production || 0);
             } else {
-                totals.marketing += card.marketing;
+                totals.marketing += (card.marketing || 0);
             }
         } else {
-            totals.production += card.production;
-            totals.marketing += card.marketing;
+            totals.production += (card.production || 0);
+            totals.marketing += (card.marketing || 0);
         }
     });
       
     if (entrepreneur) { 
-        totals.production += entrepreneur.production; 
-        totals.marketing += entrepreneur.marketing; 
-        rawExpenses += entrepreneur.expenses; 
+        totals.production += (entrepreneur.production || 0); 
+        totals.marketing += (entrepreneur.marketing || 0); 
+        rawExpenses += (entrepreneur.expenses || 0); 
     }
     if (accountant) {
-        totals.production += accountant.production;
-        totals.marketing += accountant.marketing;
-        rawExpenses += accountant.expenses;
+        totals.production += (accountant.production || 0);
+        totals.marketing += (accountant.marketing || 0);
+        rawExpenses += (accountant.expenses || 0);
     }
     // Recalculate expenses from active consultants here, because their own stats might be modified by other effects.
     activeConsultants.forEach(c => { 
-        totals.production += c.production; 
-        totals.marketing += c.marketing; 
-        rawExpenses += c.expenses; 
+        totals.production += (c.production || 0); 
+        totals.marketing += (c.marketing || 0); 
+        rawExpenses += (c.expenses || 0); 
     });
     if (activeEvent) { 
-        totals.production += activeEvent.production; 
-        totals.marketing += activeEvent.marketing; 
-        rawExpenses += activeEvent.expenses; 
+        totals.production += (activeEvent.production || 0); 
+        totals.marketing += (activeEvent.marketing || 0); 
+        rawExpenses += (activeEvent.expenses || 0); 
     }
 
     const expenses = Math.max(1, rawExpenses);
