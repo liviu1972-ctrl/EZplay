@@ -1,5 +1,7 @@
 "use client"
 
+// This component renders the global navigation bar including page links, theme and language toggles, and the current app version.
+
 import * as React from "react"
 import Link from "next/link"
 import { Menu, LogOut, LayoutDashboard } from "lucide-react"
@@ -80,6 +82,9 @@ export function Navbar({ dict, user }: NavbarProps) {
         </div>
         <div className="flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
+            <span className="text-[10px] md:text-xs text-muted-foreground/50 font-mono select-none mr-1" title="Version">
+              v{process.env.NEXT_PUBLIC_APP_VERSION}
+            </span>
             <LanguageToggle />
             <ThemeToggle />
             <div className="h-6 w-px bg-border mx-2" />
@@ -153,6 +158,9 @@ export function Navbar({ dict, user }: NavbarProps) {
               </div>
               <div className="mt-auto flex flex-col gap-2">
                 <div className="flex items-center gap-2 mb-4">
+                  <span className="text-[10px] text-muted-foreground/50 font-mono select-none mr-2">
+                    v{process.env.NEXT_PUBLIC_APP_VERSION}
+                  </span>
                   <LanguageToggle />
                   <ThemeToggle />
                 </div>

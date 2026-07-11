@@ -1,3 +1,5 @@
+// This component renders the global website footer including navigation links, legal information, and the current app version.
+
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -55,7 +57,12 @@ export function Footer({ dict }: FooterProps) {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} EZPlay. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} EZPlay. All rights reserved.
+            <span className="ml-2 text-xs text-muted-foreground/45 font-mono select-none">
+              v{process.env.NEXT_PUBLIC_APP_VERSION}
+            </span>
+          </p>
         </div>
       </div>
     </footer>
