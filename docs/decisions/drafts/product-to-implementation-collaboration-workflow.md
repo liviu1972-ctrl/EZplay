@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 lifecycle: active
 ---
 
@@ -78,9 +78,9 @@ Utilizatorul alege traseul în funcție de complexitate:
 
 Utilizatorul lucrează direct cu Gemini în Antigravity. În timpul implementării pot apărea soluții mai bune, limite tehnice, simplificări sau idei noi. Utilizatorul poate decide aceste schimbări cu Gemini fără să revină la Codex după fiecare detaliu.
 
-Pentru a păstra continuitatea, Gemini notează numai schimbările care afectează produsul sau comportamentul utilizatorului, nu fiecare detaliu tehnic.
+Git este evidența implicită a implementării. Commiturile, diferențele și raportul de încheiere din taskul Gemini sunt suficiente pentru schimbările obișnuite și nu se copiază automat în documentație.
 
-Documentul de lucru rezervă două secțiuni:
+Dacă există deja un document de lucru pentru o inițiativă complexă, Gemini poate nota numai deciziile importante sau motivele care nu pot fi deduse din cod. Secțiunile sunt opționale:
 
 ```markdown
 ## Decizii luate în timpul implementării
@@ -97,20 +97,22 @@ Documentul de lucru rezervă două secțiuni:
 - întrebările sau riscurile rămase.
 ```
 
-Gemini poate completa aceste secțiuni pe parcurs sau la încheierea taskului. Scopul este evitarea dependenței de memoria conversației, nu controlarea implementării de către Codex.
+Scopul notelor este păstrarea intenției care nu există în Git, nu raportarea fiecărui detaliu și nu controlarea implementării de către Codex.
 
 ### 5. Checkpoint-urile Git
 
-Pentru o comparație exactă, documentul de lucru notează:
+Pentru o funcționalitate individuală, documentul de lucru poate nota:
 
 - commitul de bază înaintea implementării;
 - commitul final al etapei reconciliate.
 
-Gemini poate face oricâte commituri intermediare și push-uri sunt utile. Codex compară întregul interval dintre cele două checkpoint-uri, nu numai ultimul commit. Dacă punctul de început nu a fost notat, istoricul și data pot fi folosite pentru reconstrucție, dar sunt mai puțin precise.
+Gemini poate face oricâte commituri intermediare și push-uri sunt utile. Codex compară întregul interval dintre cele două checkpoint-uri, nu numai ultimul commit.
 
-### 6. Reconcilierea finală
+Pentru promovarea unei versiuni, `main` este checkpoint-ul reconciliat anterior, iar `dev` este rezultatul curent. Intervalul `main..dev` oferă implicit comparația exactă, fără ca utilizatorul sau Gemini să păstreze un registru separat.
 
-După terminarea implementării, utilizatorul revine o singură dată la Codex. Codex compară:
+### 6. Reconcilierea și promovarea pe `main`
+
+După una sau mai multe etape de implementare, utilizatorul poate cere direct Codex să facă push pe `main`. Această cerere reprezintă acceptarea stării curente din `dev` și pornește automat reconcilierea. Codex compară:
 
 - intenția inițială;
 - deciziile luate în timpul implementării;
@@ -118,9 +120,13 @@ După terminarea implementării, utilizatorul revine o singură dată la Codex. 
 - documentele canonice existente;
 - codul sau aplicația, inspectate read-only când verificarea este necesară.
 
-Codex nu tratează automat diferențele ca erori și nu cere revenirea la soluția inițială. Dacă utilizatorul confirmă că ajustările făcute cu Gemini sunt bune, acestea devin noua decizie de produs.
+Codex nu tratează automat diferențele ca erori și nu cere revenirea la soluția inițială. Schimbările acceptate de utilizator în timpul lucrului cu Gemini sunt considerate valide. Codex cere clarificare numai dacă descoperă o decizie majoră neclară, un conflict canonic sau un risc de produs care nu poate fi rezolvat prin documentele și rezultatul existente.
 
-Codex actualizează documentația canonică relevantă, deciziile, roadmap-ul și starea implementării. Documentul de lucru păstrează traseul funcționalității, apoi trece în `docs/work/archive/`; documentele canonice descriu adevărul actual.
+Codex actualizează numai documentația canonică realmente afectată. Schimbările pur tehnice sau vizuale nu produc documente noi. Dacă reconcilierea cere modificări documentare, Codex le comite pe `dev`, publică `dev`, apoi face fast-forward și push pe `main`. Verificarea funcționalității codului rămâne responsabilitatea agentului de implementare.
+
+Pragul este consecința durabilă, nu numărul de fișiere sau linii schimbate. Ajustările de pixeli, lățime sau prezentare rămân de regulă în Git, dacă nu stabilesc un principiu UX/UI canonic. O schimbare precum introducerea autentificării printr-un furnizor extern necesită reconciliere deoarece afectează accesul, datele, securitatea, integrarea și comportamentul produsului.
+
+Dacă există un document de lucru, acesta trece în `docs/work/archive/` după reconciliere. Documentele canonice descriu adevărul actual, iar Git păstrează istoricul implementării.
 
 ## Unitatea surselor de adevăr
 
@@ -146,14 +152,14 @@ Pentru un proiect tehnic complex:
 
 > Claude, citește documentul și transformă-l într-un plan tehnic. Nu schimba deciziile de produs.
 
-La revenirea în Codex:
+Pentru reconciliere și publicarea versiunii acceptate:
 
-> Implementarea este gata. Citește documentul, deciziile notate în timpul implementării și rezultatul actual. Hai să reconciliem documentația.
+> Fă push pe main.
 
 ## Întrebări de verificat în practică
 
 - Este suficient un singur document de lucru pentru fiecare funcționalitate?
-- Cât de detaliate trebuie să fie notele lăsate de Gemini?
+- În ce situații motivația unei schimbări trebuie notată separat de Git?
 - Unde se păstrează cel mai bine documentele de lucru pentru funcționalități diferite?
 - Când merită implicat Claude și când documentul poate merge direct la Gemini?
 - Ce informații trebuie mutate în documentele canonice și ce rămâne numai ca istoric?
