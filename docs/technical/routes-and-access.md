@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-17
 canonical_for: technical routes and access rules
 ---
@@ -22,7 +22,7 @@ Observat din output-ul generat de compilare (`pnpm build`) și analizat static �
 ### 2. Rute de Autentificare
 - `/login`
 - `/register`
-- `/auth/callback` (pentru logarea OAuth și confirmarea emailului)
+- `/auth/callback` (schimbul codului OAuth este observat în handler; fluxul complet OAuth și confirmarea emailului nu au fost validate end-to-end)
 
 ### 3. Rute Protejate (Necesită Autentificare Supabase)
 Aceste rute sunt blocate la nivel de rețea prin `middleware.ts`. Fără o sesiune validă, utilizatorul este redirecționat spre `/login`.
@@ -30,9 +30,9 @@ Aceste rute sunt blocate la nivel de rețea prin `middleware.ts`. Fără o sesiu
 - `/onboarding`
 - `/ezplay` (EZPLAY Deckbuilder, jocul de bază)
 
-### 4. Rute Administrative (Necesită rol de 'admin')
+### 4. Rute Administrative
 - `/admin`, `/admin/cards`, `/admin/users`
-Accesul se face prin interogarea `user_profiles.role` în interiorul `middleware.ts`. Fără rolul `"admin"`, utilizatorul este deviat către `/dashboard`.
+Middleware-ul interoghează `user_profiles.role` și acceptă numai rolul `"admin"`; fără acesta, utilizatorul este deviat către `/dashboard`. Layout-ul administrativ acceptă și `"superadmin"`, iar această diferență reprezintă o nealiniere observată, nu un model de roluri confirmat.
 
 ### 5. Rute API
 - `/api/cards/upload` (Punct terminal pentru acțiuni din panoul de admin / operații backend).
@@ -44,4 +44,4 @@ Accesul se face prin interogarea `user_profiles.role` în interiorul `middleware
 - **Internaționalizare (i18n)**: Rutele sunt deservite ținând cont de un cookie de limbă (`LANGUAGE_COOKIE` = `NEXT_LOCALE`), setat implicit pe `ro` din `middleware.ts` cu o valabilitate de 1 an.
 
 > [!NOTE]
-> Protecția la nivel de rute este complet delegată middleware-ului, ceea ce înseamnă că protecția intervine înainte ca pagina să fie redată de React. Verificările de autorizare pe nivel de acces de date sunt acoperite de RLS (Supabase Row Level Security).
+> Accesul este stratificat, nu delegat complet middleware-ului: middleware-ul filtrează cererile care îi corespund, iar unele layout-uri și acțiuni server-side fac verificări suplimentare. Autorizarea datelor prin RLS și politicile Storage este o responsabilitate separată și nu este demonstrată complet de repository.

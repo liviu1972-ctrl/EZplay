@@ -44,7 +44,7 @@ Pentru ambele roluri, ordinea de citire este:
 1. taskul, decizia și handoff-ul aprobate;
 2. `/AGENTS.md` și cel mai apropiat `AGENTS.md` de zona afectată;
 3. codul, configurația, Supabase și testele relevante;
-4. documentele canonice strict necesare: `docs/decisions/`, `docs/roadmap/`, `docs/platform/website/`, `docs/products/` și `docs/methods/economic-model.md`;
+4. documentele canonice strict necesare: `docs/decisions/`, `docs/roadmap/`, `docs/technical/`, `docs/platform/website/`, `docs/products/` și `docs/methods/economic-model.md`;
 5. `docs/context/` numai pentru limitele de produs deja aprobate, nu pentru reinterpretarea viziunii sau strategiei.
 
 `docs/archive/legacy-application/application/`, `docs/archive/legacy-application/ezplay/` și `docs/archive/legacy-application/technical/` nu sunt autoritate pentru implementarea curentă; orice afirmație din ele trebuie verificată direct în cod.
@@ -90,6 +90,7 @@ Sursele răspund la întrebări diferite:
 - stare și priorități → `docs/roadmap/`;
 - decizii → `docs/decisions/`;
 - drepturi și permisiuni → `docs/licensing/`;
+- arhitectură și stare tehnică auditată → `docs/technical/`;
 - comportament efectiv → `src/`, `supabase/` și testele rulate;
 - active runtime → `public/` și Supabase Storage;
 - active sursă → `assets/`;

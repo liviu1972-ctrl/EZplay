@@ -2,7 +2,7 @@
 
 Acest fișier este punctul de intrare în documentație. Nu este necesară citirea integrală a directorului `docs/` pentru fiecare task.
 
-Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și prin verificările tehnice rulate. Documentația descrie intenția, deciziile, cercetarea și starea cunoscută a proiectului.
+Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și prin verificările tehnice rulate. Documentația descrie intenția, deciziile, cercetarea și starea cunoscută a proiectului; referința tehnică auditată rămâne `Working` până la validarea funcțională.
 
 ## Începe aici
 
@@ -21,9 +21,10 @@ Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și p
 - [`community/`](community/) — participare și guvernanță;
 - [`research/`](research/) — surse, analiză și dovezi;
 - [`roadmap/`](roadmap/) — starea curentă și prioritățile;
-- [`licensing/`](licensing/) — proveniență, drepturi și permisiuni.
+- [`licensing/`](licensing/) — proveniență, drepturi și permisiuni;
+- [`technical/`](technical/) — arhitectura, accesul, datele, motorul și rezultatele tehnice observate la checkpoint-ul auditat.
 
-Documentația tehnică a implementării Next.js/Supabase nu are încă un director canonic curent. Reconstruirea ei este urmărită în [`work/active/technical-documentation-rebuild.md`](work/active/technical-documentation-rebuild.md); până la reconcilierea acelui task, comportamentul efectiv se verifică în cod și prin verificările tehnice rulate.
+Documentația din `technical/` este referința tehnică de lucru, nu un certificat că toate fluxurile funcționează. Dacă diferă de cod, migrații sau verificările executate ulterior, realitatea implementată are prioritate și documentația se reconciliază.
 
 ## Decizii și lucru curent
 

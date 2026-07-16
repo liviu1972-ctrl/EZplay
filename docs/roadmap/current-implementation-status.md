@@ -1,35 +1,47 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 canonical_for: audited implementation baseline
 ---
 
 # Starea implementării curente
 
-Această pagină fixează baza tehnică observată la unificarea repository-ului. Nu înlocuiește testarea funcțională și nu declară automat toate funcțiile drept validate.
+Această pagină rezumă baza tehnică observată după unificarea repository-ului și auditul documentar-tehnic din 2026-07-17. Nu înlocuiește testarea funcțională și nu declară automat funcțiile drept validate.
 
 ## Baza auditată
 
 - repository: `https://github.com/liviu1972-ctrl/EZplay`;
-- commit de implementare: `9ac8a88b5b5224da250c7ef4ad7b2bbc6912c87d`;
-- mesaj: `feat: complete ezplay.org public website transformation and redesign`;
-- branch-uri observate la audit: `main` și `dev` la același commit;
-- branch de migrare: `codex/unify-repository`;
-- checkpoint reguli: `793a58d55552c13a84261bca4630d3d39ff1bb40`.
+- bază istorică a unificării: `9ac8a88b5b5224da250c7ef4ad7b2bbc6912c87d`;
+- checkpoint auditat tehnic pe `dev`: `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`;
+- referință tehnică rezultată: [`docs/technical/`](../technical/);
+- auditul a fost executat fără modificări ale codului aplicației.
 
 ## Structura observată
 
 - Next.js 16 cu App Router în `src/app/`;
 - Supabase pentru integrarea de autentificare și date, cu migrații în `supabase/migrations/`;
-- Deckbuilder și simulator integrate în `src/features/ezplay/`;
+- prototipul EZPLAY Deckbuilder importat din React/AI Studio și integrat hibrid în `src/features/ezplay/`;
 - rute publice pentru homepage, program, experiențe, cercetare, platformă, instrumente și contact;
 - rută separată `/ezplay` pentru experiența jocului.
 
-## Documentație care necesită refacere
+## Starea Documentației Tehnice
 
-`docs/archive/legacy-application/` păstrează documentele `application`, `ezplay` și `technical` din versiuni anterioare sau nevalidate după reconstrucția aplicației. Ele nu sunt surse curente de adevăr. Documentația tehnică actuală va fi refăcută într-un task separat prin auditul codului, rutelor, autentificării, Supabase și Deckbuilder-ului.
+`docs/technical/` este referința `Working` pentru arhitectura, rutele, autentificarea, datele, salvările și verificările observate la checkpoint-ul auditat. `docs/archive/legacy-application/` rămâne material istoric și nevalidat, nu sursă pentru aplicația curentă.
 
-## Limită de verificare
+## Verificări și Limite
 
-În faza de unificare au fost verificate repository-ul, structura și commiturile. Nu au fost rerulate încă toate scenariile funcționale pentru login, OAuth, sesiuni, RLS, încărcarea cărților, salvări, simulator și responsive. Rezultatele acestor verificări se vor consemna numai după rularea lor efectivă.
+- `pnpm build` a reușit la checkpoint-ul auditat;
+- `pnpm lint` a eșuat cu 213 erori și 116 avertismente; 239 dintre cele 329 de constatări sunt în motorul prototip `game-engine`;
+- repository-ul nu conține suite de teste automate;
+- login-ul, OAuth, sesiunile, onboarding-ul, rolurile, RLS, Storage, salvările și jocul nu au fost validate end-to-end;
+- migrațiile versionate nu reconstruiesc întreaga schemă sugerată de tipurile și serviciile aplicației.
+
+## Riscuri Cunoscute
+
+- `POST /api/cards/upload` nu verifică sesiunea sau rolul în handler, dar folosește un client Supabase `service_role` pentru scriere în bucket-ul `cards`; acesta este un risc critic de securitate care necesită un task tehnic separat;
+- login-ul și callback-ul deduc onboarding-ul din `display_name`, în timp ce middleware-ul verifică `onboarding_completed`;
+- rolurile acceptate diferă între tipuri, middleware și layout-ul administrativ;
+- tipurile Supabase sunt desincronizate parțial față de migrațiile pentru cărți și salvări.
+
+EZPLAY Deckbuilder rămâne intenționat relativ izolat și nu este prioritate curentă pentru refactorizare generală sau perfecționare. Această limită nu amână riscurile critice de securitate, integritate a datelor ori pierdere a salvărilor.

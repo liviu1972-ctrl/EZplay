@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-17
 canonical_for: technical authentication and user lifecycle
 ---
@@ -17,8 +17,8 @@ canonical_for: technical authentication and user lifecycle
 ## Stadiile Ciclului de Viață
 
 ### 1. Înregistrare și Login (`/register`, `/login`)
-- Verificat static în cod: Exista un înlocuitor pentru login simulat care a fost suprimat. În prezent formularele reale din UI comunică cu backend-ul Supabase.
-- Suportă funcționalitățile obișnuite bazate pe adrese de email / parole, iar un endpoint de callback `/auth/callback` a fost observat în build pentru soluționarea sesiunilor OAuth.
+- Verificat static în cod: exista un înlocuitor pentru login simulat care a fost eliminat. În prezent, formularele reale din UI comunică cu backend-ul Supabase.
+- Formularele observate apelează operațiile Supabase pentru email și parolă. Ruta `/auth/callback` schimbă un cod de autentificare pentru sesiune; funcționarea completă a acestor fluxuri nu a fost testată.
 
 ### 2. Onboarding (`/onboarding`)
 - Utilizatorii nou înregistrați sunt deviați automat de `middleware.ts` către `/onboarding` până ce un update confirmă `onboarding_completed = true` în tabela de profil de utilizator (`user_profiles`).
@@ -30,7 +30,7 @@ canonical_for: technical authentication and user lifecycle
 ## Roluri și Permisiuni
 - Se definesc roluri explicit pe nivel de bază de date în coloana `role` din tabela `user_profiles`. 
 - **Nealiniere observată la roluri**: Nu există o demonstrație a rolului de "participant" în sursele versionate. Fișierul `types.ts` acceptă doar `standard`, `admin` și `premium`. Mai mult, deși layout-ul administrativ permite și rolul de `superadmin`, `middleware.ts` permite exclusiv rolul `admin` să acceseze rutele protejate administrative `/admin/*`.
-- Acest atribut de acces se verifică înaintea fiecărei tranziții de pagină server-side (în `middleware.ts`).
+- Middleware-ul verifică rolul pentru cererile administrative care îi corespund; layout-ul și unele acțiuni server-side aplică verificări separate. Aceste controale de rută nu înlocuiesc autorizarea datelor prin RLS.
 
 ## Limitări și Lucruri Neconfirmate
-- **Planificat/Neconfirmat**: Funcționalitatea absolută end-to-end (resetare de parolă, finalizare onboarding, propagarea rolului) nu a putut fi verificată funcțional deoarece lipsește o instanță de test accesibilă local și o baterie de teste E2E sau scenarii de test. Totul a fost documentat doar ca `observat în cod`.
+- **Neconfirmat**: funcționarea end-to-end pentru resetarea parolei, finalizarea onboarding-ului, OAuth, sesiuni și propagarea rolului nu a putut fi verificată deoarece lipsește o instanță de test accesibilă local și o suită de teste E2E. Aceste fluxuri sunt documentate numai ca `observate în cod`.

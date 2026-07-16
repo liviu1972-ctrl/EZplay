@@ -1,7 +1,7 @@
 ---
 status: Current
-version: "1.0"
-updated: 2026-07-16
+version: "1.1"
+updated: 2026-07-17
 lifecycle: active
 canonical_for: repository structure and source hierarchy
 ---
@@ -30,7 +30,7 @@ Structura și autoritatea sunt separate prin directoare și fișiere `AGENTS.md`
 
 - toate taskurile noi pornesc din rădăcina repository-ului unificat;
 - `docs/research/` și `docs/licensing/` sunt destinațiile canonice pentru cercetare și drepturi;
-- `apps/` nu este recreat; comportamentul aplicației se verifică în `src/`, iar refacerea documentației tehnice curente este un task separat;
+- `apps/` nu este recreat; comportamentul aplicației se verifică în `src/`, iar `docs/technical/` păstrează referința tehnică `Working` reconstruită prin audit;
 - regulile globale sunt în `/AGENTS.md`, cu reguli locale pentru documentație, cod și Deckbuilder;
 - vechiul repository de documentație rămâne istoric până la arhivarea aprobată separat;
 - copia `docs/new site/` a fost eliminată după verificarea completă a migrării și aprobarea explicită a utilizatorului.

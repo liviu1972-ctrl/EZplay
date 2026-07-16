@@ -6,7 +6,7 @@ Aceste reguli se aplică tuturor fișierelor din `docs/` și completează reguli
 
 - `docs/archive/legacy-application/` păstrează documentația veche `application`, `ezplay` și `technical`, nevalidată față de implementarea Next.js/Supabase curentă.
 - Nu cita arhiva ca dovadă a comportamentului actual fără verificarea codului și nu o include în lectura implicită a unui task.
-- Refacerea documentației tehnice actuale este un task separat; nu rescrie materialele istorice pentru a simula actualizarea lor.
+- `docs/technical/` este referința tehnică `Working` reconstruită prin auditul implementării curente. Codul, migrațiile și verificările executate au prioritate pentru comportamentul efectiv; arhiva nu se rescrie pentru a simula actualizarea ei.
 - `docs/decisions/` separă deciziile `active`, propunerile `drafts` și istoricul `archive`.
 - `docs/work/active/` păstrează documentele de lucru curente; după reconciliere, acestea trec în `docs/work/archive/`.
 - Sursele canonice sunt directoarele curente enumerate în `docs/README.md`. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.

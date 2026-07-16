@@ -1,8 +1,8 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
-lifecycle: active
+lifecycle: archived
 ---
 
 # Reconstruirea documentației tehnice curente EZPLAY
@@ -160,12 +160,13 @@ Documentația din `archive/legacy-application` descria vechiul sistem și nu are
 ## Checkpoint final Gemini
 
 - Branch auditat inițial: `dev` (commit `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`)
-- Commit documentar rezultat: `f8b24438a0d90208202b4ed78c9e928c4a518871`
-- Git status după commit: `## dev...origin/dev [ahead 2]`, working tree complet curat. Acum au fost adăugate și corecțiile de reconciliere, care trebuie comise.
+- Primul commit documentar Gemini: `f8b24438a0d90208202b4ed78c9e928c4a518871`
+- Commitul corecțiilor Gemini: `6488e6e5adc4efab5d91b110d7b3f92f7d296d94`
+- Stare observată de Codex după al doilea commit: `dev` era cu patru commituri înaintea `origin/dev`; în working tree rămăsese fișierul temporar neversionat `eslint_report.json`, deși raportul Gemini îl declarase curat.
 
 ## Controlul de reconciliere Codex
 
-> **Stare:** este necesară o corecție tehnică Gemini înainte ca documentele din `docs/technical/` să fie integrate în navigarea canonică și înaintea arhivării acestui document.
+> **Stare finală:** punctele materiale au fost corectate prin commitul Gemini `6488e6e` și prin reconcilierea editorială limitată Codex. Lista de mai jos rămâne ca evidență a controlului.
 
 Inspecția read-only a surselor a identificat următoarele diferențe materiale:
 
@@ -183,23 +184,17 @@ Inspecția read-only a surselor a identificat următoarele diferențe materiale:
 12. Secțiunea `Checkpoint final Gemini` trebuie să indice commitul documentar rezultat `f8b24438a0d90208202b4ed78c9e928c4a518871` și starea Git de după commit, nu numai commitul de cod auditat.
 13. Izolarea relativă a prototipului `/ezplay` este intenționată, iar perfecționarea, refactorizarea generală și redesign-ul nu sunt priorități curente. Documentația tehnică trebuie să descrie această limită fără să transforme datoria tehnică observată într-o autorizație de rescriere; riscurile critice de securitate și date se tratează separat.
 
-Corecțiile de produs și terminologie au fost aplicate separat de Codex. Corectarea afirmațiilor tehnice rămâne responsabilitatea Gemini și nu autorizează modificări de cod.
+Corecțiile de produs și terminologie au fost aplicate separat de Codex. Reconcilierea finală nu a modificat codul și nu transformă constatările tehnice în autorizație de implementare.
 
 ## Reconcilierea finală Codex
 
-După revenirea utilizatorului, Codex va:
+- `docs/technical/` a fost integrat în navigarea și ierarhia surselor ca referință tehnică `Working`, nu ca substitut pentru cod și verificări;
+- documentele tehnice disting acum observația statică, comenzile rulate și fluxurile end-to-end neconfirmate;
+- au fost consemnate integrarea hibridă și izolarea intenționată a EZPLAY Deckbuilder, fără autorizarea unei rescrieri;
+- au fost corectate afirmațiile prea puternice despre middleware, roluri, RLS, Storage și salvări;
+- riscul critic al endpoint-ului `POST /api/cards/upload` rămâne deschis pentru un task tehnic separat;
+- starea curentă și lecțiile primului pilot au fost transferate în roadmap și în draftul fluxului de colaborare;
+- raportul temporar `eslint_report.json` a fost eliminat înaintea checkpoint-ului final;
+- Quick Start-ul și imaginea `EZ-CORE v3.0` rămân materiale nevalidate și nu au fost incluse în scope-ul auditului tehnic.
 
-1. compara checkpoint-ul inițial cu rezultatul Gemini;
-2. verifica dacă documentele tehnice respectă sursele și limitele taskului;
-3. actualiza numai documentele canonice de produs, roadmap și navigare afectate de constatări;
-4. clasifica sau păstra separat materialele Quick Start numai după clarificarea versiunii și provenienței;
-5. decide împreună cu utilizatorul dacă documentația tehnică poate rămâne `Working` sau dacă anumite părți pot deveni `Current`;
-6. arhiva acest document după transferul adevărului curent;
-7. evalua pilotul și actualiza fluxul de colaborare dacă este necesar.
-
-## Întrebări care rămân pentru reconciliere
-
-- Care variantă fizică reprezintă sursa de adevăr pentru Quick Start și pentru imaginea `EZ-CORE v3.0`?
-- Ce verificări funcționale pot fi executate local fără acces la proiectul Supabase remote?
-- Ce afirmații tehnice din `current-assets.md` și `existing-platform-continuity.md` trebuie corectate după audit?
-- Cât de granulară trebuie să rămână documentația tehnică pentru a fi întreținută după schimbările viitoare?
+Documentația tehnică rămâne `Working` până când există teste și validări funcționale suficiente pentru domeniile sensibile. Documentul de lucru a fost arhivat după transferul rezultatului în sursele curente.

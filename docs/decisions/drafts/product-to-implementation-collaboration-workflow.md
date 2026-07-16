@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.3"
+version: "0.4"
 updated: 2026-07-17
 lifecycle: active
 ---
@@ -156,7 +156,7 @@ Pentru reconciliere și publicarea versiunii acceptate:
 
 > Fă push pe main.
 
-## Întrebări de verificat în practică
+## Întrebări pentru următorul pilot
 
 - Este suficient un singur document de lucru pentru fiecare funcționalitate?
 - În ce situații motivația unei schimbări trebuie notată separat de Git?
@@ -164,9 +164,9 @@ Pentru reconciliere și publicarea versiunii acceptate:
 - Când merită implicat Claude și când documentul poate merge direct la Gemini?
 - Ce informații trebuie mutate în documentele canonice și ce rămâne numai ca istoric?
 
-## Primul pilot activ
+## Primul pilot încheiat
 
-Fluxul este testat pentru prima dată prin [`../../work/active/technical-documentation-rebuild.md`](../../work/active/technical-documentation-rebuild.md).
+Fluxul a fost testat prin reconstruirea documentației tehnice, consemnată în [arhiva lucrării](../../work/archive/technical-documentation-rebuild.md).
 
 Pilotul folosește o separare explicită:
 
@@ -175,8 +175,28 @@ Pilotul folosește o separare explicită:
 - Codex reconciliază rezultatul tehnic cu documentele canonice și închide documentul de lucru;
 - agenții lucrează secvențial în același working tree și modifică numai fișierele alocate etapei lor.
 
-După încheierea pilotului se vor consemna fricțiunile, informațiile pierdute și modificările necesare fluxului.
+### Ce a funcționat
+
+- separarea secvențială a responsabilităților a permis auditarea tehnică fără ca agentul tehnic să schimbe produsul sau codul;
+- documentul de lucru și commiturile locale au oferit checkpoint-uri clare;
+- utilizatorul a putut adăuga în timpul pilotului context esențial despre numele jocurilor și originea prototipului;
+- reconcilierea finală a separat afirmațiile observate în cod de cele validate prin comenzi sau rămase neconfirmate.
+
+### Fricțiuni observate
+
+- primul rezultat tehnic a necesitat o rundă explicită de corecții pentru rute, onboarding, roluri, migrații, RLS și integrarea hibridă a jocului;
+- a doua rundă a corectat majoritatea problemelor, dar a lăsat câteva formulări prea puternice și un raport temporar de lint în working tree;
+- agentul tehnic nu își poate consemna în același commit propriul hash final; checkpoint-ul trebuie raportat după commit sau completat la reconciliere;
+- un prompt foarte lung reduce probabilitatea unui control final uniform asupra tuturor documentelor.
+
+### Ajustări propuse
+
+- handoff-ul tehnic va include un tabel scurt „afirmație → sursă → nivel de verificare”, concentrat pe punctele cu risc;
+- agentul tehnic va face un control post-commit al `git status --short --branch` și va raporta orice artefact generat;
+- constatările critice de securitate vor fi scoase separat în raport, chiar dacă taskul nu autorizează remedierea;
+- Codex poate face la reconciliere corecții editoriale limitate, bazate pe cod verificat read-only, fără să preia implementarea;
+- este acceptată o singură rundă de corecții tehnice; dacă rămân diferențe editoriale restrânse, acestea se închid în reconcilierea finală.
 
 ## Următorul pas
 
-Pilotul pentru reconstruirea documentației tehnice este în desfășurare. După reconcilierea lui, utilizatorul și Codex vor evalua fricțiunea, informațiile pierdute și nivelul de documentare. Abia apoi se va decide dacă metoda devine `Working` sau `Current` și dacă trebuie rezumată în `AGENTS.md`.
+Metoda rămâne `Draft`. Ajustările vor fi testate pe încă o funcționalitate reală înainte de a decide dacă fluxul devine `Working`, `Current` sau trebuie simplificat.
