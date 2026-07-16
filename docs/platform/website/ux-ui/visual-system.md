@@ -253,9 +253,9 @@ Nu se micșorează fontul pentru a forța copywriting-ul într-o componentă pre
 
 Pe paginile stabilite în `navigation-system.md`, gridul funcționează în interiorul unui shell cu două axe de navigare:
 
-- header orizontal fix în partea de sus, cu autohide la scroll în jos și revenire la scroll în sus;
+- header orizontal global, conform [sistemului de navigare](navigation-system.md);
 - `ExplorerRail` vertical în stânga, sub header și în afara canvasului boxed;
-- canvas editorial centrat, de maximum `1440px`, într-o zonă echivalentă cu `SidebarInset`;
+- canvas editorial boxed definit în secțiunea `Container`, într-o zonă echivalentă cu `SidebarInset`;
 - rail colapsat aproximativ `72–88px`;
 - rail extins aproximativ `288–320px`;
 - extinderea reconfigurează canvasul pe desktop larg și devine floating/offcanvas înainte ca textul să fie comprimat;

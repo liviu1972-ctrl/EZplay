@@ -1,8 +1,9 @@
-"use client"
-
-import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { cookies } from "next/headers"
+import { getDictionary } from "@/lib/i18n/get-dictionary"
+import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config"
+import { LoginForm } from "../login/LoginForm"
 import { 
   MonitorSmartphone, 
   Lock, 
@@ -16,22 +17,10 @@ import {
   ArrowRight
 } from "lucide-react"
 
-export default function PlatformPage() {
-  const [authEmail, setAuthEmail] = useState("")
-  const [authPassword, setAuthPassword] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [authError, setAuthError] = useState("")
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setAuthError("")
-    // Simulăm o eroare generică pentru moment (în lipsa Supabase Auth activ)
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setAuthError("Datele de autentificare nu sunt corecte. Verifică adresa și parola sau solicită un link nou.")
-    }, 1000)
-  }
+export default async function PlatformPage() {
+  const cookieStore = await cookies()
+  const lang = (cookieStore.get(LANGUAGE_COOKIE)?.value as Locale) || "ro"
+  const dict = await getDictionary(lang)
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-canvas">
@@ -50,7 +39,7 @@ export default function PlatformPage() {
             Platforma EZPLAY va conecta jocurile și experiențele fizice cu resursele de învățare, progresul participantului și contribuția la comunitate. Este în dezvoltare, iar funcțiile vor deveni publice numai atunci când au un rol clar și pot fi folosite responsabil.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-teal text-white hover:bg-brand-teal/90 text-base h-14 px-8" onClick={() => document.getElementById('login')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-teal text-white hover:bg-brand-teal/90 text-base h-14 px-8" render={<Link href="#login" />}>
               Intră în cont
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-line-strong text-ink hover:bg-surface-soft" render={<Link href="/contact" />}>
@@ -80,52 +69,7 @@ export default function PlatformPage() {
                 <p>Accesul este încă limitat. Dacă ai primit o invitație, autentifică-te cu adresa folosită la înscriere. Altfel, ne poți lăsa datele pentru a afla când se deschide un flux potrivit.</p>
               </div>
 
-              <form onSubmit={handleLogin} className="space-y-5">
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-bold text-ink">E-mail</label>
-                  <input 
-                    id="email" 
-                    type="email" 
-                    required 
-                    value={authEmail}
-                    onChange={(e) => setAuthEmail(e.target.value)}
-                    className="w-full p-3 rounded-lg border border-line bg-canvas focus:border-brand-teal focus:ring-1 focus:ring-brand-teal outline-none transition-colors" 
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="password" className="text-sm font-bold text-ink">Parolă</label>
-                  <input 
-                    id="password" 
-                    type="password" 
-                    required 
-                    value={authPassword}
-                    onChange={(e) => setAuthPassword(e.target.value)}
-                    className="w-full p-3 rounded-lg border border-line bg-canvas focus:border-brand-teal focus:ring-1 focus:ring-brand-teal outline-none transition-colors" 
-                  />
-                  <div className="flex justify-end mt-1">
-                    <Link href="#" className="text-xs font-bold text-brand-teal hover:underline">Ai uitat parola?</Link>
-                  </div>
-                </div>
-
-                {authError && (
-                  <div className="p-3 bg-red-50 text-red-600 border border-red-100 rounded-lg text-sm">
-                    {authError}
-                  </div>
-                )}
-
-                <Button type="submit" disabled={isSubmitting} className="w-full h-12 bg-brand-charcoal text-white hover:bg-brand-charcoal/90 rounded-lg">
-                  {isSubmitting ? "Se autentifică..." : "Intră în cont"}
-                </Button>
-
-                <div className="relative py-4 flex items-center justify-center">
-                  <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-line"></div></div>
-                  <div className="relative bg-surface px-4 text-xs font-bold text-ink-muted uppercase">sau</div>
-                </div>
-
-                <Button type="button" variant="outline" className="w-full h-12 border-line-strong text-ink hover:bg-canvas rounded-lg">
-                  Primește un link de acces
-                </Button>
-              </form>
+              <LoginForm dict={dict} />
 
               <div className="mt-8 pt-6 border-t border-line text-center">
                 <p className="text-sm text-ink-muted mb-2">Nu ai acces încă?</p>
@@ -305,9 +249,7 @@ export default function PlatformPage() {
             <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-teal text-white hover:bg-brand-teal/90 text-base h-14 px-10" render={<Link href="/program" />}>
               Descoperă programul
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-10 border-line-strong text-ink hover:bg-surface" onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }}>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-10 border-line-strong text-ink hover:bg-surface" render={<Link href="#login" />}>
               Înapoi sus la Autentificare
             </Button>
           </div>

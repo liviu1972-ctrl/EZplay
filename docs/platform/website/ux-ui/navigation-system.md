@@ -49,7 +49,7 @@ EZPLAY interpretează acest principiu printr-un header orizontal și un rail ext
 
 ## 4. Header-ul orizontal
 
-Header-ul este disponibil pe toate paginile publice, cu excepția suprafețelor care au propriul app shell aprobat. În shell-ul public curent, el rămâne fixat în partea de sus, se ascunde la scroll deliberat în jos după zona inițială și reapare la scroll în sus. Clickurile pe linkuri sau butoane care pot declanșa o deplasare programatică îl păstrează vizibil pe durata deplasării.
+Header-ul este disponibil pe toate paginile publice, cu excepția suprafețelor care au propriul app shell aprobat.
 
 Conține:
 

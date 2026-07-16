@@ -197,11 +197,9 @@ Meniul nu pornește cu autentificarea.
 
 ### Comportament la scroll
 
-- header-ul este fixat și rămâne vizibil în zona inițială a paginii;
-- la scroll deliberat în jos se retrage după primii aproximativ 100 px, iar la scroll în sus reapare;
-- clickurile pe linkuri sau butoane care pot produce scroll programatic îl mențin vizibil pe durata deplasării;
-- păstrează permanent suprafața ușor opacă, border-ul și efectul discret de backdrop blur;
-- nu își schimbă violent dimensiunea;
+Vizibilitatea și relația header-ului cu scroll-ul sunt definite în [sistemul de navigare](navigation-system.md).
+
+- schimbarea stării header-ului nu afectează accesul la conținut;
 - focusul și navigarea cu tastatura nu sunt afectate;
 - nu se folosește smooth-scroll global sau scroll hijacking.
 
