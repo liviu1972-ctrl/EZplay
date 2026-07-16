@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-13
+version: "0.2"
+updated: 2026-07-17
 canonical_for:
   - economic model
   - economic formulas
@@ -20,7 +20,7 @@ El definește:
 
 - formula economică generală;
 - cele cinci perspective ale companiei;
-- relația dintre Deckbuilder și Tableau Builder;
+- relația dintre EZPLAY Deckbuilder și EZPLAY Tableau Builder;
 - Learn Language și Business Language;
 - formulele și regulile principale de terminologie.
 
@@ -129,7 +129,7 @@ Finance influențează deciziile și sustenabilitatea, dar nu intră direct în 
 
 ## Relația dintre jocuri
 
-### Deckbuilder
+### EZPLAY Deckbuilder
 
 În Deckbuilder:
 
@@ -145,7 +145,7 @@ Prin urmare:
 
 Deckbuilder face vizibile în principal Operations și Market. Product rămâne implicit, iar Strategy și Finance sunt învățate prin decizii și rezultate.
 
-### Tableau Builder
+### EZPLAY Tableau Builder
 
 În Tableau Builder, Product devine o variabilă explicită.
 
@@ -274,18 +274,22 @@ Modelul presupune momentan că firma nu are datorii. Dacă sunt introduse datori
 
 ## Reguli de terminologie
 
-1. Jocul de bază se numește **EZPLAY** sau **Deckbuilder**, în funcție de context.
-2. Jocul avansat se numește **Tableau Builder**, nu `EZPLAY2`.
-3. Regulamentul Deckbuilder folosește Learn Language în limba română.
-4. În Deckbuilder, Product are valoarea implicită 1.
-5. În Deckbuilder, rezultatul pe tură este numit **Vânzări**.
-6. În Tableau Builder, rezultatul după aplicarea Product este numit **Venituri**.
-7. `Product` nu trebuie confundat cu `Producție / Operations`.
-8. `Clienți` reprezintă capacitatea de a câștiga clienți într-o tură, nu baza totală de clienți.
-9. `Equity` se folosește numai pentru valoarea economică a companiei.
-10. Contribuția comunitară se numește **Prestige**, nu Community Equity.
-11. Simbolurile pot rămâne constante între publicuri; legenda și limbajul se pot adapta.
-12. Definițiile detaliate ale variabilelor unui joc apar în documentul acelui joc, nu se repetă aici.
+1. `EZPLAY` desemnează proiectul și ecosistemul.
+2. Jocul de bază se numește **EZPLAY Deckbuilder**, iar jocul avansat se numește **EZPLAY Tableau Builder**.
+3. După prima mențiune clară se pot folosi formele scurte **Deckbuilder** și **Tableau Builder**.
+4. `EZPLAY1` / `EZPLAY 1` și `EZPLAY2` / `EZPLAY 2` sunt aliasuri istorice acceptate numai pentru interpretarea prompturilor creatorului. Ele se normalizează la numele canonice în documentație, copy și interfață.
+5. `EZPLAY` folosit singur poate desemna istoric jocul de bază, dar în documentația curentă înseamnă implicit proiectul sau ecosistemul.
+6. Identificatorii tehnici istorici se documentează ca atare și nu se redenumesc fără un task tehnic separat.
+7. Regulamentul Deckbuilder folosește Learn Language în limba română.
+8. În Deckbuilder, Product are valoarea implicită 1.
+9. În Deckbuilder, rezultatul pe tură este numit **Vânzări**.
+10. În Tableau Builder, rezultatul după aplicarea Product este numit **Venituri**.
+11. `Product` nu trebuie confundat cu `Producție / Operations`.
+12. `Clienți` reprezintă capacitatea de a câștiga clienți într-o tură, nu baza totală de clienți.
+13. `Equity` se folosește numai pentru valoarea economică a companiei.
+14. Contribuția comunitară se numește **Prestige**, nu Community Equity.
+15. Simbolurile pot rămâne constante între publicuri; legenda și limbajul se pot adapta.
+16. Definițiile detaliate ale variabilelor unui joc apar în documentul acelui joc, nu se repetă aici.
 
 ## Surse derivate
 

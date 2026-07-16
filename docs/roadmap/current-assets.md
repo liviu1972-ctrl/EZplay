@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 ---
 
 # Inventarul actual al activelor EZPLAY
@@ -707,7 +707,7 @@ Succesul platformei nu va fi măsurat doar prin numărul de conturi, ci prin num
 
 
 
-## Jocul fizic EZPLAY — Deckbuilder
+## Jocul fizic EZPLAY Deckbuilder
 
 **Categorie:** joc fizic / instrument de educație antreprenorială
 **Stare generală:** Beta
@@ -829,10 +829,10 @@ Trebuie definit formatul minim al unei experiențe educaționale EZPLAY care poa
 Această experiență va arăta ce trebuie să conțină produsul complet dincolo de jocul fizic.
 
 
-## Jocul digital EZPLAY — Deckbuilder
+## Jocul digital EZPLAY Deckbuilder
 
 **Categorie:** joc digital / simulator / instrument educațional / componentă a platformei
-**Stare generală:** Beta funcțional
+**Stare generală:** prototip funcțional integrat, insuficient validat
 **Format:** aplicație web responsive, integrată în ezplay.org
 **Tehnologie:** Next.js, Supabase, Vercel
 
@@ -844,7 +844,22 @@ Aplicația funcționează atât pe desktop, cât și pe dispozitive mobile.
 
 Jocul a fost construit inițial ca o modalitate mai rapidă pentru creator de a testa și juca EZPLAY fără să folosească permanent cărțile fizice.
 
-Pe măsură ce a fost dezvoltat cu ajutorul AI, jocul digital a devenit o implementare aproape completă a regulilor și extensiilor EZPLAY.
+Conform istoricului confirmat de creator, implementarea inițială a fost realizată mai demult ca prototip React în AI Studio. Deoarece prototipul conținea deja multă muncă utilă, codul a fost preluat aproape integral și adaptat limitat pentru integrarea în aplicația Next.js actuală.
+
+Prototipul acoperă multe reguli și extensii EZPLAY, dar această amploare nu îl transformă într-un produs complet validat.
+
+### Izolarea și prioritatea actuală
+
+Ruta `/ezplay` este ținută intenționat relativ izolată de website și de restul platformei. Jocul digital ar fi trebuit dezvoltat mai târziu în roadmap; disponibilitatea codului existent a permis integrarea lui anticipată, fără ca dezvoltarea completă a produsului să devină prioritatea etapei curente.
+
+În prezent se urmărește:
+
+- păstrarea muncii existente și a posibilității de a folosi prototipul;
+- limitarea cuplării cu website-ul și celelalte suprafețe ale platformei;
+- compatibilitatea minimă necesară cu autentificarea, datele și build-ul curent;
+- tratarea separată a riscurilor critice de securitate sau pierdere de date.
+
+Nu sunt priorități curente perfecționarea completă, rescrierea arhitecturii React, eliminarea generală a datoriei tehnice, redesign-ul integral sau transformarea prototipului într-un produs final. Acestea necesită o etapă de produs și un plan tehnic aprobate ulterior.
 
 ### Ce funcționează deja
 
@@ -1016,10 +1031,10 @@ Jocul digital trebuie analizat ca infrastructură pentru mai multe tipuri de exp
 * care funcții sunt pentru participanți și care sunt pentru creatori sau facilitatori.
 
 
-## Tableau Builder
+## EZPLAY Tableau Builder
 
-**Nume public:** încă nestabilit
-**Denumire de lucru:** Tableau Builder
+**Nume canonic:** EZPLAY Tableau Builder
+**Denumire scurtă:** Tableau Builder
 **Categorie:** joc de tip tableau builder / engine builder / simulare economică
 **Stare generală:** Concept avansat — documentat, dar complet netestat
 **Format intenționat:** joc fizic; posibilă implementare digitală ulterioară

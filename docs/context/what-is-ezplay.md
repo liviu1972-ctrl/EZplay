@@ -1,7 +1,7 @@
 ---
 status: Current
-version: "1.0"
-updated: 2026-07-13
+version: "1.1"
+updated: 2026-07-17
 canonical_for:
   - project definition
   - project scope
@@ -61,6 +61,15 @@ EZPLAY poate crea și dezvolta:
 - sisteme de progres și participare comunitară.
 
 Jocurile, platforma și materialele sunt componente ale aceluiași proiect, dar nu sunt același lucru.
+
+## Numele jocurilor
+
+`EZPLAY` desemnează proiectul și ecosistemul. Jocurile au nume distincte:
+
+- **EZPLAY Deckbuilder** — jocul de bază, fizic și digital;
+- **EZPLAY Tableau Builder** — jocul avansat, aflat în prezent la nivel de concept.
+
+După prima mențiune clară pot fi folosite formele scurte `Deckbuilder` și `Tableau Builder`. Formele istorice `EZPLAY1` și `EZPLAY2` pot apărea în prompturile creatorului și sunt interpretate ca aliasuri, dar nu sunt nume de produs și nu se folosesc în documentația canonică, copy sau interfață.
 
 ## Principiul central
 

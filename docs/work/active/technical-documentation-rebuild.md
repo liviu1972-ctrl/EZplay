@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-17
 lifecycle: active
 ---
@@ -151,6 +151,28 @@ Datoria tehnică vizibilă din lipsa testelor unitare/E2E și erorile de linter 
 - Branch auditat: `dev`
 - Commit auditat: `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`
 - Git status raportat la pre-commit: Curat pentru documentația non-tehnică. Au fost introduse doar fișiere noi din `docs/technical/` și acest document updatat.
+
+## Controlul de reconciliere Codex
+
+> **Stare:** este necesară o corecție tehnică Gemini înainte ca documentele din `docs/technical/` să fie integrate în navigarea canonică și înaintea arhivării acestui document.
+
+Inspecția read-only a surselor a identificat următoarele diferențe materiale:
+
+1. `architecture.md` menționează route group-ul `(auth)`, dar structura actuală folosește `(platform)` și `(ezplay)`, iar `auth/` și `api/` sunt directoare de rută în afara acestor grupuri.
+2. Ruta `/ezplay` găzduiește **EZPLAY Deckbuilder**, jocul de bază, nu „motorul de joc avansat”. Numele canonice aprobate sunt `EZPLAY Deckbuilder` și `EZPLAY Tableau Builder`; `EZPLAY1` și `EZPLAY2` rămân numai aliasuri istorice de prompt.
+3. Motorul provine dintr-un prototip React construit anterior în AI Studio, preluat aproape integral și adaptat limitat în aplicația actuală. Pagina `/ezplay` citește însă cărțile server-side din Supabase înainte să predea datele motorului client-side; documentația trebuie să distingă originea client-side de integrarea curentă hibridă.
+4. Middleware-ul aplică verificarea `onboarding_completed` și unor rute publice care nu se află în lista sa restrânsă de excepții. Lista include `/how-it-works`, deși ruta curentă este `/how-we-learn`.
+5. Login-ul și callback-ul decid onboarding-ul prin existența `display_name`, în timp ce middleware-ul verifică `onboarding_completed`; această diferență trebuie documentată ca nealiniere observată, nu ca flux unic confirmat.
+6. Rolul implicit „participant” nu este demonstrat de sursele versionate. Tipurile aplicației menționează `standard`, `admin` și `premium`; layout-ul administrativ acceptă și `superadmin`, dar middleware-ul acceptă numai `admin`.
+7. Migrațiile versionate nu reconstruiesc integral schema descrisă de `types.ts`: lipsesc DDL-ul și politicile pentru `user_profiles`, `wallets`, `token_transactions` și `user_skills`.
+8. `types.ts` nu include `effect_config` și `ezplay_saves`, deși acestea apar în migrații și cod; serviciul de salvare folosește cast-uri `any`. Afirmația că tipurile sunt sincronizate direct cu schema este prea puternică.
+9. Politicile RLS pot fi descrise precis pentru tabelele și politicile prezente în migrații, dar RLS-ul întregii scheme și al Storage nu este demonstrat de repository.
+10. `POST /api/cards/upload` nu verifică sesiunea sau rolul în handler și nu este inclus între rutele private din middleware, dar folosește clientul cu `service_role` pentru upload în bucket-ul `cards`. Aceasta este o constatare de securitate cu prioritate ridicată și trebuie documentată explicit, fără remediere în acest task.
+11. `public/transfer images from user/` este un director protejat de transfer/sursă, nu dovadă a unui flux runtime pentru imaginile de profil.
+12. Secțiunea `Checkpoint final Gemini` trebuie să indice commitul documentar rezultat `f8b24438a0d90208202b4ed78c9e928c4a518871` și starea Git de după commit, nu numai commitul de cod auditat.
+13. Izolarea relativă a prototipului `/ezplay` este intenționată, iar perfecționarea, refactorizarea generală și redesign-ul nu sunt priorități curente. Documentația tehnică trebuie să descrie această limită fără să transforme datoria tehnică observată într-o autorizație de rescriere; riscurile critice de securitate și date se tratează separat.
+
+Corecțiile de produs și terminologie au fost aplicate separat de Codex. Corectarea afirmațiilor tehnice rămâne responsabilitatea Gemini și nu autorizează modificări de cod.
 
 ## Reconcilierea finală Codex
 

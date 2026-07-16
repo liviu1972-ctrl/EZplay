@@ -1,7 +1,7 @@
 ---
 title: "EZPLAY.org — continuitatea cu platforma existentă"
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 scope:
   - ezplay.org
@@ -154,6 +154,10 @@ Deckbuilder-ul este activ protejat. Înaintea oricărei schimbări, agentul inve
 - testele existente sau, în lipsa lor, un scenariu reproductibil de verificare.
 
 Construirea website-ului public nu autorizează rescrierea jocului. Jocul poate primi ulterior noul app shell și noii tokeni, dar numai după ce comportamentul său este protejat prin verificări de regresie.
+
+Conform istoricului confirmat de creator, implementarea de la `/ezplay` provine dintr-un prototip React construit anterior în AI Studio, preluat aproape integral și adaptat limitat pentru aplicația Next.js. Izolarea sa relativă este intenționată. Jocul digital a fost integrat mai devreme decât etapa lui firească de roadmap pentru a păstra și valorifica munca existentă; nu devine prin aceasta prioritatea curentă de perfecționare tehnică sau vizuală.
+
+Înaintea etapei dedicate jocului, intervențiile se limitează la continuitate, compatibilitate, protecția datelor și riscuri critice de securitate. Refactorizarea amplă, eliminarea generală a datoriei tehnice, redesign-ul și integrarea mai profundă se planifică separat.
 
 ### 5.4. Contractul de deployment
 

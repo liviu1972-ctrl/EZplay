@@ -105,8 +105,11 @@ Dacă documentația tehnică și codul diferă, codul descrie realitatea curent�
 
 - Documentația internă și validarea curentă se fac în română.
 - Codul, identificatorii și comentariile tehnice se scriu în engleză, dacă fișierul nu stabilește altceva.
-- Folosește `EZPLAY` pentru proiect și numele public al jocului de bază.
-- Folosește `Deckbuilder` pentru mecanica jocului de bază și `Tableau Builder` pentru jocul avansat; nu folosi `EZPLAY2`.
+- Folosește `EZPLAY` pentru proiect și ecosistem.
+- Numele canonice ale jocurilor sunt `EZPLAY Deckbuilder` pentru jocul de bază și `EZPLAY Tableau Builder` pentru jocul avansat. După prima mențiune clară se pot folosi formele scurte `Deckbuilder` și `Tableau Builder`.
+- Dacă utilizatorul scrie `EZPLAY1` sau `EZPLAY 1`, interpretează aliasul istoric drept `EZPLAY Deckbuilder`. Dacă scrie `EZPLAY2` sau `EZPLAY 2`, interpretează aliasul istoric drept `EZPLAY Tableau Builder`. Normalizează documentația, copy-ul și interfața la numele canonice fără să corectezi inutil conversația.
+- `EZPLAY` folosit singur poate desemna istoric jocul de bază, dar în documentația curentă desemnează implicit proiectul sau ecosistemul. Cere clarificare numai dacă sensul schimbă material decizia.
+- Identificatorii tehnici istorici pot fi documentați ca atare, dar nu se redenumesc incidental și nu devin nume publice.
 - Termenii canonici includ `Founder Round`, `Founder Loop`, `Prestige`, `Equity` și `Founder Skills / Skill XP` conform documentației dedicate.
 - Nu inventa copy, oferte, rezultate, cercetări, funcții existente sau promisiuni publice.
 
