@@ -9,7 +9,7 @@
  */
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Source_Sans_3 } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 
@@ -17,14 +17,19 @@ import { AuthProvider } from "@/features/ezplay/platform/auth/AuthContext";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "latin-ext"],
+});
+
+const sourceSans3 = Source_Sans_3({
+  variable: "--font-source-sans-3",
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
-  title: "EZPlay — Învață antreprenoriat prin joc și simulare",
-  description: "Un ecosistem educațional digital unde tinerii experimentează decizii de business reale.",
+  title: "EZPLAY — Educație antreprenorială prin experiență",
+  description: "EZPLAY dezvoltă programe de educație antreprenorială în care tinerii iau decizii, observă consecințele, învață din greșeli și încearcă din nou.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -56,7 +61,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${inter.variable} h-full antialiased`}
+      className={`${sourceSans3.variable} ${manrope.variable} font-sans h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">

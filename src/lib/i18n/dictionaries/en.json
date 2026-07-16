@@ -13,7 +13,14 @@
     "cards": "Cards",
     "cardTable": "Card Table",
     "gameSimulation": "Game Simulation",
-    "adminCards": "Cards Management"
+    "adminCards": "Manage Cards",
+    "program": "The Program",
+    "howWeLearn": "How We Learn",
+    "experiences": "Experiences",
+    "forOrganizations": "For Organizations",
+    "research": "Research",
+    "aboutEzplay": "About EZPLAY",
+    "enterPlatform": "Enter Platform"
   },
   "landing": {
     "hero": {

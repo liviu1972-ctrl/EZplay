@@ -1,5 +1,6 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ExplorerRail } from "@/components/layout/ExplorerRail";
+import { SiteFooter } from "@/components/layout/SiteFooter";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config";
 import { cookies } from "next/headers";
@@ -18,12 +19,17 @@ export default async function PlatformLayout({
   const { data: { user } } = await supabase.auth.getUser();
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar dict={dict} user={user} />
-      <main className="flex-1">
-        {children}
-      </main>
-      <Footer dict={dict} />
+    <div className="min-h-screen flex flex-col bg-canvas text-ink">
+      <SiteHeader dict={dict} user={user} />
+      <div className="flex flex-1 w-full relative">
+        <ExplorerRail dict={dict} />
+        <div className="flex-1 flex flex-col min-w-0">
+          <main className="flex-1 w-full">
+            {children}
+          </main>
+          <SiteFooter dict={dict} />
+        </div>
+      </div>
     </div>
   );
 }

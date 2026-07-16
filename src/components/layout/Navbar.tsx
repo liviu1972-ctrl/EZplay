@@ -66,12 +66,7 @@ export function Navbar({ dict, user }: NavbarProps) {
             >
               {dict.nav.cards}
             </Link>
-            <Link
-              href="/cards3"
-              className="flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {dict.nav.gameSimulation || "Simulare Joc"}
-            </Link>
+
             <Link
               href="/ezplay"
               className="flex items-center text-sm font-medium text-brand-orange hover:text-brand-orange/80 transition-colors"
@@ -143,12 +138,7 @@ export function Navbar({ dict, user }: NavbarProps) {
                 >
                   {dict.nav.cards}
                 </Link>
-                <Link
-                  href="/cards3"
-                  className="px-2 py-1 text-lg font-medium hover:text-brand-green transition-colors"
-                >
-                  {dict.nav.gameSimulation || "Simulare Joc"}
-                </Link>
+
                 <Link
                   href="/ezplay"
                   className="px-2 py-1 text-lg font-medium text-brand-orange hover:text-brand-orange/80 transition-colors"

@@ -76,6 +76,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/how-it-works',
+        destination: '/how-we-learn',
+        permanent: true,
+      },
+      {
+        source: '/cards',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/cards3',
+        destination: '/tools',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;
