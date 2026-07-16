@@ -10,23 +10,23 @@ export function PageHero() {
       <div className="container relative z-10 flex flex-col items-center text-center max-w-[900px] mx-auto px-4 md:px-8">
         
         {/* Label */}
-        <div className="inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/10 px-3 py-1 text-sm font-medium text-brand-orange mb-8 animate-fade-in">
+        <div className="inline-flex items-center rounded-full border border-brand-orange/30 bg-brand-orange/10 px-3 py-1 text-sm font-medium text-brand-orange mb-8">
           Program de educație antreprenorială pentru tineri
         </div>
         
         {/* H1 */}
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-ink tracking-tight mb-6 animate-scale-up" style={{ animationDelay: "100ms" }}>
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-ink tracking-tight mb-6">
           Descoperă antreprenoriatul. <br className="hidden md:inline" />
           <span className="text-brand-orange">Prin experiență.</span>
         </h1>
         
         {/* Intro */}
-        <p className="text-lg md:text-xl text-ink-muted leading-relaxed mb-10 max-w-[72ch] animate-fade-in" style={{ animationDelay: "200ms" }}>
+        <p className="text-lg md:text-xl text-ink-muted leading-relaxed mb-10 max-w-[72ch]">
           EZPLAY dezvoltă programe în care tinerii iau decizii, observă consecințele, învață din greșeli și încearcă din nou. Jocurile, simulările și provocările creează un mediu sigur în care ideile despre business devin experiențe pe care le poți analiza, înțelege și folosi.
         </p>
         
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16 animate-fade-in" style={{ animationDelay: "300ms" }}>
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
           <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-orange text-white hover:bg-brand-orange/90 text-base h-14 px-8" render={<Link href="/program" />}>
             Descoperă programul
           </Button>
@@ -36,7 +36,7 @@ export function PageHero() {
         </div>
 
         {/* Signature */}
-        <div className="flex flex-col items-center gap-2 animate-fade-in" style={{ animationDelay: "400ms" }}>
+        <div className="flex flex-col items-center gap-2">
           <div className="font-mono text-xs md:text-sm font-bold tracking-widest text-ink/40 uppercase">
             Where future founders start
           </div>
