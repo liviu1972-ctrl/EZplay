@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 canonical_for: audited implementation baseline
 ---
@@ -43,5 +43,7 @@ Această pagină rezumă baza tehnică observată după unificarea repository-ul
 - login-ul și callback-ul deduc onboarding-ul din `display_name`, în timp ce middleware-ul verifică `onboarding_completed`;
 - rolurile acceptate diferă între tipuri, middleware și layout-ul administrativ;
 - tipurile Supabase sunt desincronizate parțial față de migrațiile pentru cărți și salvări.
+
+Site-ul nu este promovat activ în etapa curentă, astfel că remedierea endpoint-ului nu întrerupe lucrul imediat. Ea trebuie însă finalizată înainte de promovarea activă a platformei sau de folosirea în producție a fluxului administrativ de upload.
 
 EZPLAY Deckbuilder rămâne intenționat relativ izolat și nu este prioritate curentă pentru refactorizare generală sau perfecționare. Această limită nu amână riscurile critice de securitate, integritate a datelor ori pierdere a salvărilor.
