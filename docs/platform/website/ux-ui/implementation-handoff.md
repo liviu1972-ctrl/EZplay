@@ -2,7 +2,8 @@
 title: "EZPLAY.org — handoff UX/UI pentru implementare"
 status: Draft
 version: "0.2"
-last_updated: 2026-07-16
+updated: 2026-07-17
+lifecycle: active
 owners:
   - EZPLAY
 scope:

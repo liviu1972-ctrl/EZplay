@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 lifecycle: active
 ---
@@ -164,6 +164,19 @@ Pentru reconciliere și publicarea versiunii acceptate:
 - Când merită implicat Claude și când documentul poate merge direct la Gemini?
 - Ce informații trebuie mutate în documentele canonice și ce rămâne numai ca istoric?
 
+## Primul pilot activ
+
+Fluxul este testat pentru prima dată prin [`../../work/active/technical-documentation-rebuild.md`](../../work/active/technical-documentation-rebuild.md).
+
+Pilotul folosește o separare explicită:
+
+- Codex auditează sistemul documentar, delimitează sursele de produs și pregătește handoff-ul;
+- Gemini auditează codul, rulează verificările autorizate și reconstruiește documentația tehnică;
+- Codex reconciliază rezultatul tehnic cu documentele canonice și închide documentul de lucru;
+- agenții lucrează secvențial în același working tree și modifică numai fișierele alocate etapei lor.
+
+După încheierea pilotului se vor consemna fricțiunile, informațiile pierdute și modificările necesare fluxului.
+
 ## Următorul pas
 
-Fluxul va fi testat pe prima funcționalitate reală. După reconcilierea acelei implementări, utilizatorul și Codex vor evalua fricțiunea, informațiile pierdute și nivelul de documentare. Abia apoi se va decide dacă metoda devine `Working` sau `Current` și dacă trebuie rezumată în `AGENTS.md`.
+Pilotul pentru reconstruirea documentației tehnice este în desfășurare. După reconcilierea lui, utilizatorul și Codex vor evalua fricțiunea, informațiile pierdute și nivelul de documentare. Abia apoi se va decide dacă metoda devine `Working` sau `Current` și dacă trebuie rezumată în `AGENTS.md`.

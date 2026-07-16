@@ -1,12 +1,18 @@
-\---
+---
+status: Draft
+version: "0.1"
+updated: 2026-07-17
+---
 
 # EZPLAY – Quick Start
+
+> **Stare:** material sursă nevalidat. Regulile, valorile și configurațiile de mai jos nu sunt încă regulamentul canonic al Deckbuilder-ului. Documentul trebuie comparat cu jocul fizic, implementarea digitală și deciziile de produs înainte de mutarea în `docs/products/games/deckbuilder/`.
 
 ## 1\. Ce este EZPLAY
 
 EZPLAY este un joc educațional prin care înveți cum să construiești și să dezvolți o firmă: cum să folosești resursele, cum să crești **Producția**, cum să atragi clienți prin **Marketing**, cum să transformi aceste două componente în **Vânzări**, cum să controlezi **Cheltuielile** și cum să iei decizii bune pentru ca firma ta să crească în timp.
 
-\---
+---
 
 ## 2\. Scopul jocului
 
@@ -19,7 +25,7 @@ Poți câștiga în 2 moduri:
 
 **Capitalizarea** arată cât valorează firma ta la final: banii disponibili plus valoarea resurselor cumpărate și păstrate în companie.
 
-\---
+---
 
 ## 3\. Pregătirea jocului
 
@@ -163,7 +169,7 @@ Dacă trebuie să tragi cărți și deckul se termină:
 * acesta devine noul deck;
 * apoi tragi restul de cărți necesare.
 
-\---
+---
 
 ## 5\. Ce se calculează trimestrial și anual
 
@@ -198,7 +204,7 @@ Capitalizarea se calculează ca:
 * banii disponibili ai firmei;
 * plus valoarea resurselor cumpărate și păstrate în companie.
 
-\---
+---
 
 ## 6\. Evenimente
 
@@ -216,7 +222,7 @@ La începutul anului următor:
 * vechiul Eveniment se anulează;
 * se trage un Eveniment nou, care îl înlocuiește.
 
-\---
+---
 
 ## 7\. Faliment și restart
 
@@ -247,7 +253,7 @@ Astfel:
 * 2 falimente → câștigi la **40 bani**
 * 3 falimente → câștigi la **50 bani**
 
-\---
+---
 
 ## 8\. Finalul jocului
 

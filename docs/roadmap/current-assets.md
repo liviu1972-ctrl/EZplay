@@ -1019,7 +1019,7 @@ Jocul digital trebuie analizat ca infrastructură pentru mai multe tipuri de exp
 ## Tableau Builder
 
 **Nume public:** încă nestabilit
-**Denumire de lucru:** Tableau Builder / EZPLAY2
+**Denumire de lucru:** Tableau Builder
 **Categorie:** joc de tip tableau builder / engine builder / simulare economică
 **Stare generală:** Concept avansat — documentat, dar complet netestat
 **Format intenționat:** joc fizic; posibilă implementare digitală ulterioară

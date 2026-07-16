@@ -23,6 +23,8 @@ Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și p
 - [`roadmap/`](roadmap/) — starea curentă și prioritățile;
 - [`licensing/`](licensing/) — proveniență, drepturi și permisiuni.
 
+Documentația tehnică a implementării Next.js/Supabase nu are încă un director canonic curent. Reconstruirea ei este urmărită în [`work/active/technical-documentation-rebuild.md`](work/active/technical-documentation-rebuild.md); până la reconcilierea acelui task, comportamentul efectiv se verifică în cod și prin verificările tehnice rulate.
+
 ## Decizii și lucru curent
 
 - [`decisions/active/`](decisions/active/) — decizii care guvernează proiectul acum;
@@ -38,12 +40,12 @@ Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și p
 
 Arhiva nu se citește implicit și nu este dovadă a comportamentului curent.
 
-## Materiale încă neclasificate
+## Materiale inspectate, încă nevalidate
 
-- `regulament-quick-start-EZPLAY.md`;
-- `cum se joaca.jpg`.
+- [`regulament-quick-start-EZPLAY.md`](regulament-quick-start-EZPLAY.md) — candidat `Draft` pentru Quick Start-ul Deckbuilder-ului; regulile și valorile nu au fost încă reconciliate cu jocul fizic și implementarea digitală;
+- [`cum se joaca.jpg`](<cum se joaca.jpg>) — imagine de referință a unei configurații marcate `EZ-CORE v3.0`; include și afirmații de licențiere care nu sunt confirmate de registrele actuale.
 
-Aceste două fișiere rămân temporar la rădăcina `docs/` până când conținutul, proveniența și rolul lor sunt verificate. Nu sunt declarate automat canonice.
+Fișierele rămân temporar la rădăcina `docs/` până la verificarea versiunii, provenienței și rolului. Nu sunt surse canonice și nu trebuie publicate automat.
 
 ## Când se creează un document nou
 
