@@ -61,7 +61,9 @@ Pentru ambele roluri, ordinea de citire este:
 - Repository canonic: `https://github.com/liviu1972-ctrl/EZplay`.
 - `main` reprezintă versiunea acceptată și publicabilă.
 - `dev` reprezintă integrarea curentă.
-- Schimbările ample se fac pe branch separat, pornit din baza confirmată de utilizator.
+- `dev` este branch-ul comun și implicit de lucru în folderul local `C:\Antigravity projects\EZplay`. Codex și agenții din Antigravity lucrează pe rând în același working tree.
+- Nu crea branch-uri denumite după agent sau instrument (`codex/...`, `gemini/...`, `claude/...`) decât dacă utilizatorul cere explicit un branch separat.
+- Când utilizatorul spune „push pe GitHub”, fă commit numai pentru fișierele taskului și publică branch-ul de lucru curent, în mod normal `dev`; nu crea automat alt branch sau Pull Request.
 - Înainte și după lucru, confirmă calea, branch-ul și `git status --short --branch`.
 - Nu schimba remote-uri, nu rescrie istoricul, nu folosi force-push și nu șterge branch-uri fără aprobare explicită.
 - Nu face checkout pe `main`, merge în `main` sau push fără cererea explicită a utilizatorului.
