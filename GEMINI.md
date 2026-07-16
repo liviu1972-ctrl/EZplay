@@ -1,46 +1,10 @@
-# Rules of Engagement & Workflow Guidelines for AI Agent (Gemini)
+# Instrucțiuni pentru Gemini
 
-This file defines the workflow preferences and development guidelines agreed upon with the developer. **Every AI agent session must read this file upon startup and strictly follow these rules.**
+Regulile proiectului sunt definite în `/AGENTS.md` și în fișierul `AGENTS.md` cel mai apropiat de zona modificată. Citește-le înainte de lucru și nu crea reguli concurente în acest fișier.
 
----
-
-## 1. Local Development First (Strict Rule)
-*   **All development modifications must be done locally.**
-*   Work must be kept on the local **`dev`** branch (or appropriate local feature branches).
-*   **NEVER** switch to the `main` branch, merge changes into `main`, or push to `origin/main` unless the user **explicitly** instructs you to do so.
-
----
-
-## 2. Local Verification
-*   After making any code changes, **always** run the local Next.js development server:
-    *   Command: `pnpm dev`
-*   Ask the user to verify the changes locally at `http://localhost:3000` before proceeding.
-*   Optionally run `pnpm build` locally to verify that there are no static analysis, TypeScript, or Next.js build errors.
-
----
-
-## 3. Supabase & Database Schema Workflow
-*   DDL changes or database schema modifications must be written as migration files first under `supabase/migrations/`.
-*   Verify connections locally or run checks before proposing schema changes to the remote Supabase project.
-
----
-
-## 4. Documentation Integrity
-*   Keep technical and application documentation up to date inside the `docs/` folder whenever features or schemas change.
-*   Ensure RLS policies and triggers are properly documented.
-
----
-
-## 5. User Asset Transfer Directory
-*   The folder `public/transfer images from user/` is designated for the user to copy/paste image files to be processed or integrated by the AI.
-*   The AI may read, rename, move, optimize, or delete the **files** inside this directory.
-*   **CRITICAL: NEVER delete the `transfer images from user` folder itself.** Only clean up/delete the files inside it.
-## 6. Coding Standards & Language
-*   **All code must be written in English.** This includes variable names, function names, and inline code comments.
-*   Romanian language is strictly reserved for the UI (user-facing text) or translation dictionaries.
-
----
-
-## 7. File Headers
-*   Every file must have a comment at the top explaining its role, what it does, and how it fits into the overall project.
-*   Example: `// This component renders the main 3D card layout and handles shuffle logic.`
+- Lucrează pe branch-ul indicat de utilizator; nu face checkout, merge sau push în `main` fără aprobare explicită.
+- Verifică modificările proporțional cu riscul și raportează exact comenzile rulate.
+- Pentru cod folosește identificatori și comentarii tehnice în engleză; documentația internă și copy-ul urmează regulile proiectului.
+- Nu expune secrete, nu slăbi RLS sau autentificarea și nu aplica schimbări remote Supabase fără aprobare.
+- Nu șterge directorul `public/transfer images from user/`.
+- Nu impune antete repetitive în fiecare fișier; documentează numai când informația aduce valoare reală.
