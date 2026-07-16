@@ -19,7 +19,7 @@ Observat în `package.json`:
 
 ## Organizarea modulelor (`src/`)
 Structura principală observată:
-- `src/app/`: Conține organizarea rutelor Next.js (App Router), folosind *Route Groups* (ex: `(platform)`, `(auth)`) pentru layout-uri specifice, izolate.
+- `src/app/`: Conține organizarea rutelor Next.js (App Router), folosind *Route Groups* (ex: `(platform)`, `(ezplay)`) pentru layout-uri specifice izolate. Directoarele `auth/` și `api/` se află în afara acestor grupuri.
 - `src/components/`: Componente vizuale specifice secțiunilor (dashboard, home, landing, layout, program) și primitive UI.
 - `src/features/ezplay/`: Conține nucleul logic al aplicației și jocului:
   - `game-engine/`: Componente, logica de reducere (state machine), cârlige (hooks) și date pentru jocul Deckbuilder.
@@ -30,5 +30,5 @@ Structura principală observată:
 
 ## Granițe Server/Client
 - Autentificarea și protejarea rutelor (middleware, layout-uri de bază) utilizează capabilități server-side Next.js, combinate cu `@supabase/ssr`.
-- Jocul de sine stătător (`src/features/ezplay/game-engine`) operează integral client-side ca o mașină de stare complexă, integrată cu o pagină destinație (`/ezplay`).
+- Motorul jocului (`src/features/ezplay/game-engine`) provine dintr-un prototip React construit anterior în AI Studio. Pagina destinație `/ezplay` integrează hibrid acest modul: încarcă setul de date (cărți) server-side din Supabase, apoi predă datele motorului client-side care operează starea izolat.
 - Layout-urile boxed la 1440px și componenta de navigare `ExplorerRail` sunt implementate pentru a delimita spațiul "editorial" de platforma administrativă.

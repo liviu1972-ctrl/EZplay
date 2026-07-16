@@ -131,26 +131,37 @@ Au fost create documentele tehnice în `docs/technical/`:
 - `deckbuilder-engine-and-saves.md`
 - `verification.md`
 
-**Realitatea observată:**
-Arhitectura Next.js App Router este coerent structurată, separând responsabilitățile de UI, Platform (Supabase auth/saves), și Game Engine (reduceri, simulări). Middleware-ul Next.js gestionează protecția rutelor server-side.
+**Puncte forte observate:**
+- Arhitectura folosește Next.js App Router cu separare clară a modulelor prin route groups (`(platform)`, `(ezplay)`).
+- Organizare modulară (`src/features/`, `src/components/`, `src/lib/`).
+- Integrare Supabase SSR prezentă pentru autentificare.
+- Verificări server-side pentru anumite rute în `middleware.ts`.
+- Build de producție reușit (dovedește strict compilarea corectă la checkpoint-ul auditat).
 
-**Verificări Rulate:**
-- `pnpm lint`: Executat, 329 probleme raportate (lipsă tipizări, hooks incorecte), status EȘUAT.
-- `pnpm build`: Executat, compilare curată a rutelor statice și dinamice, status SUCCES.
-- Teste Automate: Nu au fost găsite în cod (`*.test.ts`, `*.spec.ts`). Nu se confirmă E2E scenariile.
+**Limitări și riscuri:**
+- Lipsa testelor automate și E2E.
+- Lint eșuat. Distribuția erorilor/avertismentelor:
+  - `src/features/ezplay/game-engine/**`: 160 erori, 79 avertismente
+  - restul `src/features/ezplay/**`: 11 erori, 4 avertismente
+  - `src/app/**`: 21 erori, 29 avertismente
+  - `src/components/**`: 18 erori, 2 avertismente
+  - `src/lib/**`: 0 erori, 0 avertismente
+  - alte directoare: 3 erori, 2 avertismente
+- Schema locală incomplet reconstructibilă din migrații.
+- Tipuri Supabase parțial desincronizate.
+- Nealinieri auth/onboarding/roluri.
+- RLS și Storage neverificate complet.
+- Endpoint-ul neprotejat `/api/cards/upload` (risc ridicat de securitate).
 
 **Diferențe față de documentația existentă:**
-Documentația din `archive/legacy-application` descria vechiul sistem și nu are corespondent direct în actuala arhitectură bazată pe reduceri React și integrare de profil Supabase (auth/salvări) client/server.
-
-**Riscuri:**
-Datoria tehnică vizibilă din lipsa testelor unitare/E2E și erorile de linter pe codebase. Imposibilitatea probării locale a fluxului de date prin Supabase fără o instanță activă.
+Documentația din `archive/legacy-application` descria vechiul sistem și nu are corespondent direct în actuala arhitectură hibridă.
 
 
 ## Checkpoint final Gemini
 
-- Branch auditat: `dev`
-- Commit auditat: `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`
-- Git status raportat la pre-commit: Curat pentru documentația non-tehnică. Au fost introduse doar fișiere noi din `docs/technical/` și acest document updatat.
+- Branch auditat inițial: `dev` (commit `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`)
+- Commit documentar rezultat: `f8b24438a0d90208202b4ed78c9e928c4a518871`
+- Git status după commit: `## dev...origin/dev [ahead 2]`, working tree complet curat. Acum au fost adăugate și corecțiile de reconciliere, care trebuie comise.
 
 ## Controlul de reconciliere Codex
 

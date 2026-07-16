@@ -22,13 +22,14 @@ canonical_for: technical authentication and user lifecycle
 
 ### 2. Onboarding (`/onboarding`)
 - Utilizatorii nou înregistrați sunt deviați automat de `middleware.ts` către `/onboarding` până ce un update confirmă `onboarding_completed = true` în tabela de profil de utilizator (`user_profiles`).
+- **Nealiniere observată**: Deși middleware-ul verifică starea `onboarding_completed`, formularele de login și callback-ul OAuth decid statusul de onboarding pur pe baza existenței câmpului `display_name`. Această decuplare a surselor de adevăr reprezintă un risc de consistență a datelor.
 
 ### 3. Profilul Utilizatorului (`/dashboard/profile`)
 - Datele non-autentificare ale utilizatorului, rolurile și progresul sunt agregate prin componenta `UserProfile.tsx` din secțiunea de `platform/user/`.
 
 ## Roluri și Permisiuni
 - Se definesc roluri explicit pe nivel de bază de date în coloana `role` din tabela `user_profiles`. 
-- Implicit rolul este de participant, iar utilizatorii cu rolul `admin` primesc trecere prin rutele administrative `/admin/*`.
+- **Nealiniere observată la roluri**: Nu există o demonstrație a rolului de "participant" în sursele versionate. Fișierul `types.ts` acceptă doar `standard`, `admin` și `premium`. Mai mult, deși layout-ul administrativ permite și rolul de `superadmin`, `middleware.ts` permite exclusiv rolul `admin` să acceseze rutele protejate administrative `/admin/*`.
 - Acest atribut de acces se verifică înaintea fiecărei tranziții de pagină server-side (în `middleware.ts`).
 
 ## Limitări și Lucruri Neconfirmate
