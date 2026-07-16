@@ -122,11 +122,35 @@ La final creează un commit local numai cu fișierele permise, fără push, și 
 
 ## Rezultatul auditului Gemini
 
-> De completat de Gemini. Include documentele create, realitatea observată, verificările rulate, diferențele față de documentația curentă, riscurile și lucrurile neconfirmate.
+Au fost create documentele tehnice în `docs/technical/`:
+- `README.md`
+- `architecture.md`
+- `routes-and-access.md`
+- `authentication-and-user-lifecycle.md`
+- `data-supabase-and-storage.md`
+- `deckbuilder-engine-and-saves.md`
+- `verification.md`
+
+**Realitatea observată:**
+Arhitectura Next.js App Router este coerent structurată, separând responsabilitățile de UI, Platform (Supabase auth/saves), și Game Engine (reduceri, simulări). Middleware-ul Next.js gestionează protecția rutelor server-side.
+
+**Verificări Rulate:**
+- `pnpm lint`: Executat, 329 probleme raportate (lipsă tipizări, hooks incorecte), status EȘUAT.
+- `pnpm build`: Executat, compilare curată a rutelor statice și dinamice, status SUCCES.
+- Teste Automate: Nu au fost găsite în cod (`*.test.ts`, `*.spec.ts`). Nu se confirmă E2E scenariile.
+
+**Diferențe față de documentația existentă:**
+Documentația din `archive/legacy-application` descria vechiul sistem și nu are corespondent direct în actuala arhitectură bazată pe reduceri React și integrare de profil Supabase (auth/salvări) client/server.
+
+**Riscuri:**
+Datoria tehnică vizibilă din lipsa testelor unitare/E2E și erorile de linter pe codebase. Imposibilitatea probării locale a fluxului de date prin Supabase fără o instanță activă.
+
 
 ## Checkpoint final Gemini
 
-> De completat de Gemini cu branch-ul, commitul final și `git status --short --branch`.
+- Branch auditat: `dev`
+- Commit auditat: `338dab3c07fe45248f5bb73c9f99ad42aa6dbdf9`
+- Git status raportat la pre-commit: Curat pentru documentația non-tehnică. Au fost introduse doar fișiere noi din `docs/technical/` și acest document updatat.
 
 ## Reconcilierea finală Codex
 
