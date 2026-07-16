@@ -32,10 +32,10 @@ Structura și autoritatea sunt separate prin directoare și fișiere `AGENTS.md`
 - `apps/` nu este recreat; zonele logice ale aplicației sunt documentate în `docs/application/` și implementate în `src/`;
 - regulile globale sunt în `/AGENTS.md`, cu reguli locale pentru documentație, cod și Deckbuilder;
 - vechiul repository de documentație rămâne istoric până la arhivarea aprobată separat;
-- `docs/new site/` se elimină numai după verificarea completă a migrării și aprobarea explicită a utilizatorului.
+- copia `docs/new site/` a fost eliminată după verificarea completă a migrării și aprobarea explicită a utilizatorului.
 
 ## Implementare
 
-Auditul și harta au fost aprobate la 2026-07-16. Fundația regulilor a fost fixată în commitul `793a58d`, pe branch-ul `codex/unify-repository`. Migrarea conținutului și eliminarea copiei rămân checkpoint-uri separate.
+Auditul și harta au fost aprobate la 2026-07-16. Fundația regulilor a fost fixată în commitul `793a58d`, iar migrarea conținutului în commitul `7c04ad6`, pe branch-ul `codex/unify-repository`. Copia temporară a fost eliminată în Faza 3 după aprobarea explicită a utilizatorului.
 
 Contextul complet și auditul inițial sunt păstrate în `repository-unification-handoff.md`.

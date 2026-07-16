@@ -41,7 +41,7 @@ Sursele răspund la întrebări diferite:
 - active sursă → `assets/`;
 - date structurate versionate → `data/`.
 
-Sursele canonice sunt directoarele finale enumerate mai sus. `docs/new site/` este păstrat temporar numai pentru comparația migrării: nu îl edita și nu îl folosi pentru muncă nouă.
+Sursele canonice sunt directoarele finale enumerate mai sus. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.
 
 `docs/application/`, `docs/ezplay/` și `docs/technical/` provin din versiuni anterioare ale aplicației. Sunt documentație veche și nevalidată, nu autoritate pentru aplicația Next.js/Supabase curentă. Păstrează-le până la taskul separat de refacere, dar verifică orice afirmație direct în cod.
 
