@@ -38,7 +38,7 @@ export function ExplorerRail({ dict }: ExplorerRailProps) {
   return (
     <div
       className={cn(
-        "hidden md:flex flex-col border-r border-line bg-surface transition-all duration-300 z-40 sticky top-16 h-[calc(100vh-4rem)]",
+        "hidden md:flex flex-col bg-surface transition-all duration-300 z-40 sticky top-16 h-[calc(100vh-4rem)]",
         isExpanded ? "w-72" : "w-[72px]"
       )}
     >

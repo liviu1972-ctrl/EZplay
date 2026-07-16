@@ -15,7 +15,7 @@ export function SiteFooter({ dict }: SiteFooterProps) {
 
   return (
     <footer className="bg-ink text-surface border-t border-line py-12 md:py-16 mt-auto">
-      <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
         <div className="col-span-1 md:col-span-1 flex flex-col gap-4">
           <Link href="/" className="flex items-center opacity-90 hover:opacity-100 transition-opacity">
             <Image
@@ -52,7 +52,7 @@ export function SiteFooter({ dict }: SiteFooterProps) {
           <Link href="/contact" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Contact</Link>
         </div>
       </div>
-      <div className="container mt-12 pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-surface-soft/60">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 mt-12 pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-surface-soft/60">
         <p>&copy; {currentYear} EZPLAY. Toate drepturile rezervate.</p>
         <div className="flex gap-4">
           <span>Construit cu metodologie experientială</span>

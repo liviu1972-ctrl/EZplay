@@ -29,6 +29,63 @@ export function SiteHeader({ dict, user }: SiteHeaderProps) {
   const router = useRouter()
   const supabase = createClient()
 
+  const [isVisible, setIsVisible] = React.useState(true)
+  const lastScrollYRef = React.useRef(0)
+  const isProgrammaticRef = React.useRef(false)
+  const clickTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return
+    lastScrollYRef.current = window.scrollY
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const lastScrollY = lastScrollYRef.current
+
+      // If it's a programmatic scroll (e.g. anchor link click), don't hide the header
+      if (isProgrammaticRef.current) {
+        lastScrollYRef.current = currentScrollY
+        return
+      }
+
+      if (currentScrollY < 100) {
+        setIsVisible(true)
+      } else {
+        if (currentScrollY > lastScrollY + 5) {
+          setIsVisible(false)
+        } else if (currentScrollY < lastScrollY - 5) {
+          setIsVisible(true)
+        }
+      }
+
+      lastScrollYRef.current = currentScrollY
+    }
+
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      const isScrollTrigger = target.closest("a") || target.closest("button")
+      
+      if (isScrollTrigger) {
+        isProgrammaticRef.current = true
+        setIsVisible(true)
+        
+        if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current)
+        clickTimeoutRef.current = setTimeout(() => {
+          isProgrammaticRef.current = false
+        }, 1000)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    document.addEventListener("click", handleGlobalClick, { passive: true })
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      document.removeEventListener("click", handleGlobalClick)
+      if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current)
+    }
+  }, [])
+
   const handleLogout = async () => {
     await supabase.auth.signOut()
     router.push("/login")
@@ -66,24 +123,26 @@ export function SiteHeader({ dict, user }: SiteHeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-line bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/60">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex gap-6 lg:gap-10">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo_ezplay.svg"
-              alt="EZPLAY Logo"
-              width={115}
-              height={40}
-              className="h-8 w-auto dark:brightness-0 dark:invert"
-              priority
-            />
-          </Link>
-          <nav className="hidden xl:flex gap-6 items-center">
-            <NavLinks />
-          </nav>
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full border-b border-line bg-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-canvas/60 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+      <div className="w-full flex h-16 items-center px-4 md:px-8 relative">
+        <div className="w-full max-w-[1440px] mx-auto flex items-center justify-start px-4 md:px-6 lg:px-8">
+          <div className="flex gap-6 lg:gap-10 ml-[5px]">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo_ezplay.svg"
+                alt="EZPLAY Logo"
+                width={115}
+                height={40}
+                className="h-8 w-auto dark:brightness-0 dark:invert"
+                priority
+              />
+            </Link>
+            <nav className="hidden xl:flex gap-6 items-center">
+              <NavLinks />
+            </nav>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="absolute right-4 md:right-8 flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
             <LanguageToggle />
             <ThemeToggle />
