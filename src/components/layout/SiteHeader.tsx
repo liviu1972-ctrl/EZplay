@@ -150,6 +150,9 @@ export function SiteHeader({ dict, user }: SiteHeaderProps) {
             
             {user ? (
               <>
+                <Button className="bg-brand-teal text-white hover:bg-brand-teal/90 rounded-full px-6" render={<Link href="/ezplay" />}>
+                  {dict.nav?.enterPlatform || "Intră în platformă"}
+                </Button>
                 <Button variant="outline" render={<Link href="/dashboard" />}>
                   <LayoutDashboard className="w-4 h-4 mr-2" />
                   {dict.nav?.dashboard || "Dashboard"}
@@ -196,6 +199,9 @@ export function SiteHeader({ dict, user }: SiteHeaderProps) {
                   </div>
                   {user ? (
                     <>
+                      <Button className="w-full justify-start bg-brand-teal text-white hover:bg-brand-teal/90 rounded-full" render={<Link href="/ezplay" />}>
+                        {dict.nav?.enterPlatform || "Intră în platformă"}
+                      </Button>
                       <Button variant="outline" className="w-full justify-start" render={<Link href="/dashboard" />}>
                         <LayoutDashboard className="w-4 h-4 mr-2" />
                         {dict.nav?.dashboard || "Dashboard"}
