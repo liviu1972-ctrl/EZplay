@@ -28,7 +28,7 @@ Această pagină fixează baza tehnică observată la unificarea repository-ului
 
 ## Documentație care necesită refacere
 
-`docs/application/`, `docs/ezplay/` și `docs/technical/` provin din versiuni anterioare sau nu au fost validate după reconstrucția aplicației. Ele nu sunt surse curente de adevăr și vor fi refăcute într-un task separat prin auditul codului, rutelor, autentificării, Supabase și Deckbuilder-ului.
+`docs/archive/legacy-application/` păstrează documentele `application`, `ezplay` și `technical` din versiuni anterioare sau nevalidate după reconstrucția aplicației. Ele nu sunt surse curente de adevăr. Documentația tehnică actuală va fi refăcută într-un task separat prin auditul codului, rutelor, autentificării, Supabase și Deckbuilder-ului.
 
 ## Limită de verificare
 

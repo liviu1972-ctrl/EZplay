@@ -16,7 +16,7 @@ Acesta este repository-ul canonic unificat pentru documentația de produs, cerce
 - comportamentul efectiv al aplicației → `src/`, `supabase/` și verificările rulate;
 - reguli de colaborare → `AGENTS.md` și fișierele locale `AGENTS.md`.
 
-`docs/application/`, `docs/ezplay/` și `docs/technical/` provin din aplicații sau etape anterioare și nu descriu automat implementarea curentă. Ele vor fi refăcute într-un task separat, pe baza codului actual.
+`docs/archive/legacy-application/` păstrează documentația din aplicații sau etape anterioare și nu descrie automat implementarea curentă. Documentația tehnică actuală va fi refăcută într-un task separat, pe baza codului actual.
 
 ## Structură
 

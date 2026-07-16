@@ -4,10 +4,12 @@ Aceste reguli se aplică tuturor fișierelor din `docs/` și completează reguli
 
 ## Starea actuală a documentației
 
-- `docs/application/`, `docs/ezplay/` și `docs/technical/` descriu versiuni anterioare ale aplicației și sunt nevalidate față de implementarea Next.js/Supabase curentă.
-- Nu cita aceste trei directoare ca dovadă a comportamentului actual fără verificarea codului.
-- Nu le șterge, muta sau rescrie în cadrul migrării repository-ului. Refacerea lor este un task separat.
-- Sursele canonice sunt directoarele normale din `docs/`. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.
+- `docs/archive/legacy-application/` păstrează documentația veche `application`, `ezplay` și `technical`, nevalidată față de implementarea Next.js/Supabase curentă.
+- Nu cita arhiva ca dovadă a comportamentului actual fără verificarea codului și nu o include în lectura implicită a unui task.
+- Refacerea documentației tehnice actuale este un task separat; nu rescrie materialele istorice pentru a simula actualizarea lor.
+- `docs/decisions/` separă deciziile `active`, propunerile `drafts` și istoricul `archive`.
+- `docs/work/active/` păstrează documentele de lucru curente; după reconciliere, acestea trec în `docs/work/archive/`.
+- Sursele canonice sunt directoarele curente enumerate în `docs/README.md`. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.
 
 ## Limbă, stare și front matter
 

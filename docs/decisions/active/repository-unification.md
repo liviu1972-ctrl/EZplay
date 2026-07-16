@@ -24,13 +24,13 @@ Structura și autoritatea sunt separate prin directoare și fișiere `AGENTS.md`
 - comportamentul efectiv este descris de `src/`, `supabase/` și verificările rulate;
 - un conflict între cod și o decizie de produs se reconciliază explicit;
 - documentația tehnică se actualizează pentru a descrie codul, nu invers;
-- `docs/application/`, `docs/ezplay/` și `docs/technical/` sunt momentan documentație veche și nevalidată.
+- `docs/archive/legacy-application/` păstrează documentația veche și nevalidată `application`, `ezplay` și `technical`.
 
 ## Consecințe
 
 - toate taskurile noi pornesc din rădăcina repository-ului unificat;
 - `docs/research/` și `docs/licensing/` sunt destinațiile canonice pentru cercetare și drepturi;
-- `apps/` nu este recreat; zonele logice ale aplicației sunt documentate în `docs/application/` și implementate în `src/`;
+- `apps/` nu este recreat; comportamentul aplicației se verifică în `src/`, iar refacerea documentației tehnice curente este un task separat;
 - regulile globale sunt în `/AGENTS.md`, cu reguli locale pentru documentație, cod și Deckbuilder;
 - vechiul repository de documentație rămâne istoric până la arhivarea aprobată separat;
 - copia `docs/new site/` a fost eliminată după verificarea completă a migrării și aprobarea explicită a utilizatorului.
@@ -39,4 +39,4 @@ Structura și autoritatea sunt separate prin directoare și fișiere `AGENTS.md`
 
 Auditul și harta au fost aprobate la 2026-07-16. Fundația regulilor a fost fixată în commitul `793a58d`, iar migrarea conținutului în commitul `7c04ad6`, pe branch-ul `codex/unify-repository`. Copia temporară a fost eliminată în Faza 3 după aprobarea explicită a utilizatorului.
 
-Contextul complet și auditul inițial sunt păstrate în `repository-unification-handoff.md`.
+Contextul complet și auditul inițial sunt păstrate în [`../archive/repository-unification-handoff.md`](../archive/repository-unification-handoff.md).

@@ -1,27 +1,24 @@
 # Decizii EZPLAY
 
-Aici se păstrează deciziile importante care afectează durabil proiectul.
+`decisions/` păstrează alegerile importante și motivele lor. Nu documenta aici fiecare modificare minoră sau fiecare pas de implementare.
 
-Un document de decizie trebuie să explice:
+## Structură
 
-- contextul;
-- opțiunile;
-- decizia;
-- motivele;
-- consecințele;
-- data și statutul.
+- [`active/`](active/) — decizii care guvernează proiectul acum;
+- [`drafts/`](drafts/) — propuneri în discuție sau metode încă netestate;
+- [`archive/`](archive/) — handoff-uri, audituri și decizii care nu mai fac parte din lectura implicită.
 
-Nu documenta fiecare modificare minoră. Folosește acest folder pentru alegeri care trebuie înțelese și de viitorii colaboratori sau agenți AI.
+## Decizii active
 
-## Decizii curente
-
-- `documentation-working-method.md` — metoda de lucru pentru documentația vie, stări, autonomie și active sursă inaccesibile direct agenților.
-- `repository-unification.md` — decizia canonică privind repository-ul unic, structura și ierarhia surselor.
+- [`active/documentation-working-method.md`](active/documentation-working-method.md) — metoda documentației vii, modelul `status`/`lifecycle` și autonomia agenților;
+- [`active/repository-unification.md`](active/repository-unification.md) — repository-ul unic, structura și ierarhia surselor.
 
 ## Propuneri în lucru
 
-- `product-to-implementation-collaboration-workflow.md` — flux `Draft` pentru trecerea de la discuția de produs la implementarea liberă cu Gemini și reconcilierea documentației la final.
+- [`drafts/product-to-implementation-collaboration-workflow.md`](drafts/product-to-implementation-collaboration-workflow.md) — flux `Draft` de la concept la implementare și reconciliere.
 
 ## Istoric
 
-- `repository-unification-handoff.md` — handoff `archived`; a ghidat migrarea încheiată și se păstrează numai ca istoric operațional.
+- [`archive/repository-unification-handoff.md`](archive/repository-unification-handoff.md) — handoff `archived` al migrării încheiate.
+
+Un document nou intră aici numai dacă păstrează o alegere sau o propunere care trebuie înțeleasă de viitorii colaboratori. Documentele temporare ale unei funcționalități aparțin în `docs/work/`.

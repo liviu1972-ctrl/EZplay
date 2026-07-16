@@ -47,7 +47,7 @@ Pentru ambele roluri, ordinea de citire este:
 4. documentele canonice strict necesare: `docs/decisions/`, `docs/roadmap/`, `docs/platform/website/`, `docs/products/` și `docs/methods/economic-model.md`;
 5. `docs/context/` numai pentru limitele de produs deja aprobate, nu pentru reinterpretarea viziunii sau strategiei.
 
-`docs/application/`, `docs/ezplay/` și `docs/technical/` nu sunt autoritate pentru implementarea curentă; orice afirmație din ele trebuie verificată direct în cod.
+`docs/archive/legacy-application/application/`, `docs/archive/legacy-application/ezplay/` și `docs/archive/legacy-application/technical/` nu sunt autoritate pentru implementarea curentă; orice afirmație din ele trebuie verificată direct în cod.
 
 ## 1. Autoritate și decizii
 
@@ -94,7 +94,7 @@ Sursele răspund la întrebări diferite:
 
 Sursele canonice sunt directoarele finale enumerate mai sus. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.
 
-`docs/application/`, `docs/ezplay/` și `docs/technical/` provin din versiuni anterioare ale aplicației. Sunt documentație veche și nevalidată, nu autoritate pentru aplicația Next.js/Supabase curentă. Păstrează-le până la taskul separat de refacere, dar verifică orice afirmație direct în cod.
+`docs/archive/legacy-application/` păstrează documentația `application`, `ezplay` și `technical` din versiuni anterioare. Este material istoric și nevalidat, nu autoritate pentru aplicația Next.js/Supabase curentă. Verifică orice afirmație direct în cod.
 
 Dacă documentația tehnică și codul diferă, codul descrie realitatea curentă. Dacă implementarea și o decizie de produs diferă, raportează conflictul; nu presupune că implementarea a anulat decizia.
 

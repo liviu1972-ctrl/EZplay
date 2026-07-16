@@ -196,7 +196,7 @@ Agentul declară clar dacă a verificat fișierul sursă, un export sau numai in
 
 Codul Next.js al `ezplay.org`, documentația, activele, datele, cercetarea și prompturile sunt versionate în același repository.
 
-Zonele logice ale website-ului, Deckbuilder-ului și simulatorului sunt documentate în `docs/application/`, iar implementarea lor se află în `src/`. Existența unei zone logice nu dovedește existența unei aplicații, a unui serviciu sau a unui deploy separat.
+Documentația veche despre website, Deckbuilder și simulator este păstrată în `docs/archive/legacy-application/`. Ea nu dovedește comportamentul aplicației actuale. Implementarea se verifică în `src/`, iar documentația tehnică actuală se reconstruiește separat, pe baza codului validat.
 
 Documentația de produs stabilește intenția aprobată. Codul și verificările rulate stabilesc comportamentul efectiv. Diferențele dintre ele se raportează și se reconciliază explicit.
 

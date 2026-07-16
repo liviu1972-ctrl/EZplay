@@ -11,7 +11,7 @@ Lucrezi în repository-ul EZPLAY deja deschis.
 Înainte de modificări:
 
 1. citește `AGENTS.md`;
-2. citește `docs/decisions/documentation-working-method.md`;
+2. citește `docs/decisions/active/documentation-working-method.md`;
 3. respectă ordinea de citire și sursele canonice indicate în `README.md`;
 4. citește toate README-urile de pe traseul către directoarele în care lucrezi;
 5. inspectează starea repository-ului și munca existentă.

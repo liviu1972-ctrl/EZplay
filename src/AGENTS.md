@@ -6,7 +6,7 @@ Aceste reguli se aplică întregului cod din `src/` și completează `/AGENTS.md
 
 - Citește documentele de produs relevante și cel mai apropiat `AGENTS.md`.
 - Citește documentele canonice din directoarele finale din `docs/`; nu recrea vechea copie `docs/new site/`.
-- Tratează `docs/application/`, `docs/ezplay/` și `docs/technical/` ca documentație veche până la auditul lor separat.
+- Tratează `docs/archive/legacy-application/` ca documentație veche; nu o folosi drept specificație pentru implementarea curentă.
 - Inspectează implementarea existentă înainte de a propune reorganizări sau dependențe noi.
 
 ## Limitele implementării

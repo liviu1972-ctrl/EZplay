@@ -50,7 +50,7 @@ Discuția poate include problema, publicul, experiența dorită, comportamentul,
 
 ### 2. Documentul de lucru
 
-Când direcția este suficient de coerentă, Codex creează un document de lucru `Working`. Acesta este punctul de plecare comun, nu o specificație rigidă și definitivă.
+Când direcția este suficient de coerentă, Codex creează în mod normal un document `Working` în `docs/work/active/`. Acesta este punctul de plecare comun, nu o specificație rigidă și definitivă.
 
 Documentul conține, după caz:
 
@@ -99,7 +99,16 @@ Documentul de lucru rezervă două secțiuni:
 
 Gemini poate completa aceste secțiuni pe parcurs sau la încheierea taskului. Scopul este evitarea dependenței de memoria conversației, nu controlarea implementării de către Codex.
 
-### 5. Reconcilierea finală
+### 5. Checkpoint-urile Git
+
+Pentru o comparație exactă, documentul de lucru notează:
+
+- commitul de bază înaintea implementării;
+- commitul final al etapei reconciliate.
+
+Gemini poate face oricâte commituri intermediare și push-uri sunt utile. Codex compară întregul interval dintre cele două checkpoint-uri, nu numai ultimul commit. Dacă punctul de început nu a fost notat, istoricul și data pot fi folosite pentru reconstrucție, dar sunt mai puțin precise.
+
+### 6. Reconcilierea finală
 
 După terminarea implementării, utilizatorul revine o singură dată la Codex. Codex compară:
 
@@ -111,7 +120,7 @@ După terminarea implementării, utilizatorul revine o singură dată la Codex. 
 
 Codex nu tratează automat diferențele ca erori și nu cere revenirea la soluția inițială. Dacă utilizatorul confirmă că ajustările făcute cu Gemini sunt bune, acestea devin noua decizie de produs.
 
-Codex actualizează documentația canonică relevantă, deciziile, roadmap-ul și starea implementării. Documentul de lucru păstrează traseul funcționalității, iar documentele canonice descriu adevărul actual.
+Codex actualizează documentația canonică relevantă, deciziile, roadmap-ul și starea implementării. Documentul de lucru păstrează traseul funcționalității, apoi trece în `docs/work/archive/`; documentele canonice descriu adevărul actual.
 
 ## Unitatea surselor de adevăr
 

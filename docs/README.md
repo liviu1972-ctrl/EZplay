@@ -1,34 +1,64 @@
 # Documentația EZPLAY
 
-`docs/` conține memoria de produs, cercetarea, deciziile și documentația proiectului. Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și prin testele rulate.
+Acest fișier este punctul de intrare în documentație. Nu este necesară citirea integrală a directorului `docs/` pentru fiecare task.
 
-## Surse canonice
+Comportamentul efectiv al aplicației se verifică în `src/`, `supabase/` și prin verificările tehnice rulate. Documentația descrie intenția, deciziile, cercetarea și starea cunoscută a proiectului.
 
-- `context/` — definiție, poziționare și viziune;
-- `methods/` — modele și formule comune;
-- `products/` — produse, jocuri și program educațional;
-- `platform/` — ezplay.org, copy și UX/UI;
-- `community/` — participare și guvernanță;
-- `research/` — surse, analiză și dovezi;
-- `roadmap/` — starea curentă și prioritățile;
-- `decisions/` — decizii importante și motivele lor;
-- `licensing/` — proveniență, drepturi și permisiuni.
+## Începe aici
 
-## Documentație tehnică veche
+1. Citește `/AGENTS.md` și `docs/AGENTS.md`.
+2. Citește taskul și documentul indicat din [`work/active/`](work/active/), dacă există.
+3. Consultă numai [deciziile active](decisions/active/) și sursele canonice relevante subiectului.
+4. Verifică implementarea direct în cod când taskul depinde de comportamentul actual.
+5. Consultă arhiva numai dacă istoricul este necesar.
 
-Următoarele directoare sunt păstrate pentru inventar și istoric, dar nu sunt surse actuale de adevăr:
+## Surse canonice curente
 
-- `application/` — descrieri ale unor funcții și roluri dintr-o versiune anterioară;
-- `ezplay/` — documentație pentru o arhitectură mai veche Firebase/Vite;
-- `technical/` — documentație tehnică nevalidată după reconstrucția aplicației.
+- [`context/`](context/) — definiție, poziționare și viziune;
+- [`methods/`](methods/) — modele și formule comune;
+- [`products/`](products/) — produse, jocuri și program educațional;
+- [`platform/`](platform/) — ezplay.org, copy și UX/UI;
+- [`community/`](community/) — participare și guvernanță;
+- [`research/`](research/) — surse, analiză și dovezi;
+- [`roadmap/`](roadmap/) — starea curentă și prioritățile;
+- [`licensing/`](licensing/) — proveniență, drepturi și permisiuni.
 
-Refacerea lor se va face într-un task separat, pornind din codul Next.js/Supabase curent. Până atunci, orice afirmație despre implementare trebuie verificată direct în cod.
+## Decizii și lucru curent
 
-## Reguli de lucru
+- [`decisions/active/`](decisions/active/) — decizii care guvernează proiectul acum;
+- [`decisions/drafts/`](decisions/drafts/) — propuneri încă neaprobate sau netestate;
+- [`work/active/`](work/active/) — documente de lucru pentru funcționalități și inițiative în desfășurare;
+- [`decisions/README.md`](decisions/README.md) și [`work/README.md`](work/README.md) — indexurile și regulile locale.
 
-- Citește `/AGENTS.md` și `docs/AGENTS.md` înainte de modificări.
-- Folosește numai stările `Draft`, `Working` și `Current`.
-- Pentru decizii, handoff-uri și documente de lucru importante, separă maturitatea (`status`) de rolul temporal (`lifecycle`).
-- Separă ce este implementat de ceea ce este planificat sau exploratoriu.
-- Nu dubla definițiile canonice și nu transforma README-urile în specificații paralele.
-- Notează deciziile durabile în `decisions/` și verifică linkurile relative după reorganizări.
+## Istoric
+
+- [`decisions/archive/`](decisions/archive/) — decizii, audituri și handoff-uri care nu mai guvernează munca prezentă;
+- [`work/archive/`](work/archive/) — documente de lucru închise după reconciliere;
+- [`archive/legacy-application/`](archive/legacy-application/) — documentație veche despre aplicație, joc și arhitectură tehnică.
+
+Arhiva nu se citește implicit și nu este dovadă a comportamentului curent.
+
+## Materiale încă neclasificate
+
+- `regulament-quick-start-EZPLAY.md`;
+- `cum se joaca.jpg`.
+
+Aceste două fișiere rămân temporar la rădăcina `docs/` până când conținutul, proveniența și rolul lor sunt verificate. Nu sunt declarate automat canonice.
+
+## Când se creează un document nou
+
+O conversație nu produce automat un fișier. Creează un document nou numai când rezultatul trebuie reutilizat ca:
+
+- sursă canonică;
+- decizie durabilă;
+- document de lucru pentru o funcționalitate sau inițiativă;
+- dovadă, cercetare ori registru care trebuie păstrat.
+
+Clarificările mici actualizează documentul canonic existent. Un document de lucru se creează per funcționalitate sau rezultat coerent, nu per idee, mesaj ori modificare minoră.
+
+## Status și lifecycle
+
+- `status` descrie maturitatea conținutului: `Draft`, `Working`, `Current`;
+- `lifecycle` descrie rolul temporal al deciziilor, handoff-urilor și documentelor de lucru importante: `active`, `completed`, `superseded`, `archived`.
+
+Modelul complet este definit în [`decisions/active/documentation-working-method.md`](decisions/active/documentation-working-method.md).
