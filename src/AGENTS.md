@@ -5,7 +5,7 @@ Aceste reguli se aplică întregului cod din `src/` și completează `/AGENTS.md
 ## Înainte de modificare
 
 - Citește documentele de produs relevante și cel mai apropiat `AGENTS.md`.
-- În perioada migrării, dacă documentul canonic nu există încă la destinația finală, citește echivalentul din `docs/new site/` fără să îl modifici.
+- Citește documentele canonice din directoarele finale din `docs/`. `docs/new site/` este numai copia de verificare a migrării și nu se folosește pentru muncă nouă.
 - Tratează `docs/application/`, `docs/ezplay/` și `docs/technical/` ca documentație veche până la auditul lor separat.
 - Inspectează implementarea existentă înainte de a propune reorganizări sau dependențe noi.
 

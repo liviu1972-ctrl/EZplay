@@ -7,7 +7,7 @@ Aceste reguli se aplică tuturor fișierelor din `docs/` și completează reguli
 - `docs/application/`, `docs/ezplay/` și `docs/technical/` descriu versiuni anterioare ale aplicației și sunt nevalidate față de implementarea Next.js/Supabase curentă.
 - Nu cita aceste trei directoare ca dovadă a comportamentului actual fără verificarea codului.
 - Nu le șterge, muta sau rescrie în cadrul migrării repository-ului. Refacerea lor este un task separat.
-- În perioada de migrare, `docs/new site/` este copia-sursă înghețată. Nu o edita. După migrare, sursele canonice vor fi în directoarele normale din `docs/`.
+- Sursele canonice sunt directoarele normale din `docs/`. `docs/new site/` este copia-sursă înghețată, păstrată temporar numai pentru comparația migrării; nu o edita și nu dezvolta documente noi în ea.
 - `docs/new site/AGENTS.md` este el însuși un artefact legacy. Regulile sale despre vechiul remote, vechiul branch și structura separată nu se aplică în afara copiei înghețate și vor dispărea odată cu aceasta.
 
 ## Limbă, stare și front matter
