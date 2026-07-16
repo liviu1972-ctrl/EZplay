@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-17
 ---
 
 # Direcția experienței ezplay.org
@@ -197,8 +197,10 @@ Meniul nu pornește cu autentificarea.
 
 ### Comportament la scroll
 
-- header-ul rămâne vizibil;
-- după 24–40 px de scroll primește o suprafață ușor opacă, border și umbră foarte discretă;
+- header-ul este fixat și rămâne vizibil în zona inițială a paginii;
+- la scroll deliberat în jos se retrage după primii aproximativ 100 px, iar la scroll în sus reapare;
+- clickurile pe linkuri sau butoane care pot produce scroll programatic îl mențin vizibil pe durata deplasării;
+- păstrează permanent suprafața ușor opacă, border-ul și efectul discret de backdrop blur;
 - nu își schimbă violent dimensiunea;
 - focusul și navigarea cu tastatura nu sunt afectate;
 - nu se folosește smooth-scroll global sau scroll hijacking.

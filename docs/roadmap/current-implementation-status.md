@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 canonical_for: audited implementation baseline
 ---
 
@@ -25,6 +25,18 @@ Această pagină fixează baza tehnică observată la unificarea repository-ului
 - Deckbuilder și simulator integrate în `src/features/ezplay/`;
 - rute publice pentru homepage, program, experiențe, cercetare, platformă, instrumente și contact;
 - rută separată `/ezplay` pentru experiența jocului.
+
+## Starea acceptată pentru promovarea din 2026-07-17
+
+Intervalul `main..dev` a fost reconciliat înainte de promovare, cu `00c0249` ca bază și `fd4e89f` ca ultim commit de implementare anterior checkpoint-ului documentar. Starea acceptată adaugă:
+
+- shell public cu canvas boxed, centrat, de maximum `1440px` și `ExplorerRail` păstrat în stânga canvasului;
+- header public fix, cu ascundere la scroll deliberat în jos, revenire la scroll în sus și excepție temporară pentru deplasările programatice inițiate prin linkuri sau butoane;
+- româna drept limbă inițială pentru vizitatorii fără cookie de preferință, cu selectorul RO/EN păstrat;
+- afișarea imediată, fără delay de intrare, a conținutului editorial din hero-urile Homepage și Program;
+- corectarea liniei verticale din fluxul introductiv al paginii Program.
+
+Aceste puncte descriu comportamentul observat în cod. Nu reprezintă validarea funcțională sau responsive a întregului website.
 
 ## Documentație care necesită refacere
 

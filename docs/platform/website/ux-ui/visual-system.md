@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-17
 ---
 
 # Sistemul vizual EZPLAY pentru website
@@ -232,12 +232,14 @@ Nu se micșorează fontul pentru a forța copywriting-ul într-o componentă pre
 
 ### Container
 
+- canvasul paginii publice este boxed, centrat și are lățimea maximă de `1440px`;
 - lățime maximă generală: `1360px`;
 - gutter desktop: `32–48px`;
 - gutter tabletă: `24–32px`;
 - gutter mobil: `18–24px`;
 - conținutul nu atinge marginea viewport-ului;
-- la ecrane foarte late, fundalurile pot continua, dar conținutul rămâne limitat.
+- la ecrane foarte late, suprafața exterioară rămâne vizibilă în jurul canvasului, iar conținutul rămâne limitat;
+- canvasul este separat discret de suprafața exterioară prin borduri laterale și o umbră fină.
 
 ### Grid
 
@@ -251,9 +253,9 @@ Nu se micșorează fontul pentru a forța copywriting-ul într-o componentă pre
 
 Pe paginile stabilite în `navigation-system.md`, gridul funcționează în interiorul unui shell cu două axe de navigare:
 
-- header orizontal sticky în partea de sus;
-- `ExplorerRail` vertical în stânga, sub header;
-- canvas editorial în `SidebarInset` sau o zonă echivalentă;
+- header orizontal fix în partea de sus, cu autohide la scroll în jos și revenire la scroll în sus;
+- `ExplorerRail` vertical în stânga, sub header și în afara canvasului boxed;
+- canvas editorial centrat, de maximum `1440px`, într-o zonă echivalentă cu `SidebarInset`;
 - rail colapsat aproximativ `72–88px`;
 - rail extins aproximativ `288–320px`;
 - extinderea reconfigurează canvasul pe desktop larg și devine floating/offcanvas înainte ca textul să fie comprimat;

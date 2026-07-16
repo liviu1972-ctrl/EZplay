@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-17
 ---
 
 # Componente, interacțiuni și motion
@@ -553,15 +553,14 @@ Nu se prelungește animația doar pentru efect cinematografic.
 
 La primul load:
 
-1. eyebrow și H1 apar imediat;
-2. lead-ul și CTA-urile apar la maximum 100–160 ms după H1;
-3. sistemul vizual pornește numai după ce mesajul poate fi citit;
-4. 2–3 trasee se desenează;
-5. modulele apar în ordinea conexiunilor;
-6. o componentă specială poate marca finalul secvenței;
-7. sistemul intră în stare stabilă.
+1. eyebrow, H1, lead-ul și CTA-urile sunt vizibile imediat, fără fade, scale sau stagger de intrare;
+2. sistemul vizual pornește numai după ce mesajul poate fi citit;
+3. 2–3 trasee se desenează;
+4. modulele apar în ordinea conexiunilor;
+5. o componentă specială poate marca finalul secvenței;
+6. sistemul intră în stare stabilă.
 
-Secvența completă nu depășește aproximativ 1,4 secunde și nu blochează interacțiunea.
+Orice secvență vizuală complementară nu depășește aproximativ 1,4 secunde și nu blochează interacțiunea sau afișarea conținutului editorial. Aceeași regulă de afișare imediată se aplică hero-ului paginii Program.
 
 După secvență nu există loop vizual agresiv. Poate rămâne o mișcare ambientală aproape imperceptibilă la 8–12 secunde sau sistemul poate rămâne complet static.
 

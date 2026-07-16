@@ -1,8 +1,8 @@
 ---
 title: "EZPLAY.org — continuitatea cu platforma existentă"
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 scope:
   - ezplay.org
   - migrare experiență publică
@@ -185,6 +185,8 @@ Se păstrează funcția, nu forma badge-ului actual.
 ### 5.6. Contractul bilingv română–engleză
 
 Noul site este disponibil în română și engleză. Agentul păstrează mecanismul tehnic existent numai dacă este sănătos, dar reconstruiește navigarea, copy-ul, metadatele și stările de interfață pentru noul sitemap.
+
+Pentru un vizitator fără preferință salvată, limba inițială este româna. Detectarea automată a antetului `Accept-Language` nu schimbă această intrare implicită; utilizatorul poate selecta ulterior engleza, iar alegerea este memorată.
 
 Comportamentul minim:
 

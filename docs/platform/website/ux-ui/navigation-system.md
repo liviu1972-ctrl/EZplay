@@ -1,8 +1,8 @@
 ---
 title: "EZPLAY.org — sistemul de navigare"
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 scope:
   - header global
   - explorer rail
@@ -49,7 +49,7 @@ EZPLAY interpretează acest principiu printr-un header orizontal și un rail ext
 
 ## 4. Header-ul orizontal
 
-Header-ul rămâne vizibil pe toate paginile publice, cu excepția suprafețelor care au propriul app shell aprobat.
+Header-ul este disponibil pe toate paginile publice, cu excepția suprafețelor care au propriul app shell aprobat. În shell-ul public curent, el rămâne fixat în partea de sus, se ascunde la scroll deliberat în jos după zona inițială și reapare la scroll în sus. Clickurile pe linkuri sau butoane care pot declanșa o deplasare programatică îl păstrează vizibil pe durata deplasării.
 
 Conține:
 
@@ -68,7 +68,10 @@ Pe viewport-uri foarte mari poate include CTA-ul contextual `Adu EZPLAY în comu
 
 Header-ul:
 
-- este sticky;
+- este fixat în partea de sus și rezervă permanent în layout înălțimea sa de `64px`;
+- este vizibil în primii aproximativ `100px` ai paginii;
+- se ascunde la scroll deliberat în jos și reapare la scroll în sus, fără să intercepteze scroll-ul nativ;
+- rămâne vizibil în timpul deplasărilor programatice inițiate prin linkuri sau butoane;
 - rămâne luminos și compact;
 - nu dispare când Explorer Rail-ul se extinde;
 - păstrează aceeași ordine semantică pe toate paginile;
