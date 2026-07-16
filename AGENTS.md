@@ -71,7 +71,7 @@ Pentru ambele roluri, ordinea de citire este:
 - Nu face checkout pe `main`, merge în `main` sau push fără cererea explicită a utilizatorului.
 - Adaugă în Git numai fișierele taskului și păstrează modificările existente ale utilizatorului.
 - Nu muta sau șterge în masă înainte de inventar, hartă aprobată și verificarea căii absolute.
-- Agenții lucrează secvențial în același working tree, dacă utilizatorul nu stabilește explicit alt flux.
+- Agenții pot lucra în paralel în același working tree când zonele lor nu se suprapun. Fiecare include în commit numai fișierele propriului task. Dacă trebuie modificat același fișier sau este necesară o operație Git amplă, lucrul devine temporar secvențial și conflictul se clarifică înainte de continuare.
 
 ## 3. Ierarhia surselor
 
