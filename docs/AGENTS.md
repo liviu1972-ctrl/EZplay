@@ -42,6 +42,8 @@ Aceste reguli se aplică tuturor fișierelor din `docs/` și completează reguli
 
 - Nu crea directoare noi la rădăcina repository-ului fără aprobare.
 - Nu păstra aceeași definiție canonică în două locuri.
+- La reconcilierea pentru `main`, actualizează fiecare schimbare în sursa sa canonică principală. Celelalte documente trimit la aceasta sau păstrează numai rezumatul necesar propriei responsabilități; nu repeta același comportament în mai multe locuri.
+- Nu transforma roadmap-ul, starea implementării sau documentele canonice în changelog-uri ale fiecărei promovări. Consemnează acolo numai schimbări durabile de capabilitate, produs sau stare; detaliile promovării rămân în Git.
 - README-urile explică rolul și navigarea folderelor; nu devin specificații paralele de produs.
 - Folosește linkuri relative și verifică-le după orice mutare.
 - Folosește `docs/research/` și `docs/licensing/`; nu recrea directoarele root `research/`, `licensing/` sau `apps/`.
