@@ -2,6 +2,7 @@
 status: Current
 version: "1.0"
 updated: 2026-07-16
+lifecycle: active
 canonical_for: repository structure and source hierarchy
 ---
 

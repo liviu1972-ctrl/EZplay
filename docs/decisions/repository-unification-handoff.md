@@ -2,6 +2,7 @@
 status: Working
 version: "0.1"
 updated: 2026-07-16
+lifecycle: archived
 ---
 
 # Handoff pentru unificarea repository-ului EZPLAY

@@ -16,5 +16,12 @@ Nu documenta fiecare modificare minoră. Folosește acest folder pentru alegeri 
 ## Decizii curente
 
 - `documentation-working-method.md` — metoda de lucru pentru documentația vie, stări, autonomie și active sursă inaccesibile direct agenților.
-- `repository-unification-handoff.md` — contextul, decizia de principiu și planul controlat pentru unificarea documentației cu repository-ul Next.js.
 - `repository-unification.md` — decizia canonică privind repository-ul unic, structura și ierarhia surselor.
+
+## Propuneri în lucru
+
+- `product-to-implementation-collaboration-workflow.md` — flux `Draft` pentru trecerea de la discuția de produs la implementarea liberă cu Gemini și reconcilierea documentației la final.
+
+## Istoric
+
+- `repository-unification-handoff.md` — handoff `archived`; a ghidat migrarea încheiată și se păstrează numai ca istoric operațional.

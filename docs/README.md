@@ -28,6 +28,7 @@ Refacerea lor se va face într-un task separat, pornind din codul Next.js/Supaba
 
 - Citește `/AGENTS.md` și `docs/AGENTS.md` înainte de modificări.
 - Folosește numai stările `Draft`, `Working` și `Current`.
+- Pentru decizii, handoff-uri și documente de lucru importante, separă maturitatea (`status`) de rolul temporal (`lifecycle`).
 - Separă ce este implementat de ceea ce este planificat sau exploratoriu.
 - Nu dubla definițiile canonice și nu transforma README-urile în specificații paralele.
 - Notează deciziile durabile în `decisions/` și verifică linkurile relative după reorganizări.

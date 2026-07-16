@@ -1,10 +1,12 @@
 ---
 status: Current
-version: "1.0"
-updated: 2026-07-13
+version: "1.1"
+updated: 2026-07-16
+lifecycle: active
 canonical_for:
   - documentation working method
   - document and section status model
+  - document lifecycle model
   - collaboration autonomy
   - opaque source asset handling
 ---
@@ -49,6 +51,40 @@ Materialul poate fi folosit în proiect, fără să fie prezentat automat ca fun
 
 Un document `Current` trebuie să fie coerent pentru scopul declarat.
 
+## Ciclul de viață al documentelor
+
+`status` și `lifecycle` răspund la întrebări diferite:
+
+- `status` descrie maturitatea și calitatea conținutului;
+- `lifecycle` descrie rolul documentului în munca prezentă.
+
+Lifecycle-ul folosește numai valorile:
+
+- `active` — documentul guvernează proiectul acum sau este folosit într-o lucrare în desfășurare;
+- `completed` — documentul și-a îndeplinit scopul operațional, dar poate rămâne temporar vizibil pentru închidere sau reconciliere;
+- `superseded` — documentul a fost înlocuit de o sursă mai nouă și trebuie să indice înlocuitorul;
+- `archived` — documentul este păstrat pentru istoric și nu face parte din lectura implicită a agenților.
+
+Exemple:
+
+```yaml
+status: Current
+lifecycle: active
+```
+
+descrie o decizie matură care continuă să guverneze proiectul.
+
+```yaml
+status: Working
+lifecycle: archived
+```
+
+poate descrie un handoff folosit cu succes, păstrat ca istoric chiar dacă nu a fost transformat într-un document canonic final.
+
+Schimbarea lifecycle-ului se face numai la o tranziție reală de etapă, nu după fiecare idee, editare sau commit. Tranzițiile obișnuite sunt `active → completed → archived` și `active → superseded → archived`.
+
+Lifecycle-ul este obligatoriu pentru decizii, handoff-uri și documente de lucru importante. Nu trebuie adăugat mecanic fiecărui README, inventar sau fișier auxiliar dacă nu clarifică rolul documentului.
+
 ## Front matter și starea secțiunilor
 
 Documentele importante folosesc front matter cu cel puțin:
@@ -58,6 +94,7 @@ Documentele importante folosesc front matter cu cel puțin:
 status: Working
 version: "0.1"
 updated: 2026-07-13
+lifecycle: active
 ---
 ```
 

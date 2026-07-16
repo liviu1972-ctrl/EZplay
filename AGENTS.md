@@ -64,6 +64,8 @@ Pentru ambele roluri, ordinea de citire este:
 - `dev` este branch-ul comun și implicit de lucru în folderul local `C:\Antigravity projects\EZplay`. Codex și agenții din Antigravity lucrează pe rând în același working tree.
 - Nu crea branch-uri denumite după agent sau instrument (`codex/...`, `gemini/...`, `claude/...`) decât dacă utilizatorul cere explicit un branch separat.
 - Când utilizatorul spune „push pe GitHub”, fă commit numai pentru fișierele taskului și publică branch-ul de lucru curent, în mod normal `dev`; nu crea automat alt branch sau Pull Request.
+- Pentru modificări documentare coerente și aprobate, Codex creează automat la final un commit local numai cu fișierele taskului, dacă working tree-ul nu conține modificări străine. Dacă există modificări străine, Codex nu le include și raportează situația înainte de commit.
+- Commitul local este checkpoint-ul implicit; push-ul rămâne o acțiune separată și se face numai la cererea explicită a utilizatorului.
 - Înainte și după lucru, confirmă calea, branch-ul și `git status --short --branch`.
 - Nu schimba remote-uri, nu rescrie istoricul, nu folosi force-push și nu șterge branch-uri fără aprobare explicită.
 - Nu face checkout pe `main`, merge în `main` sau push fără cererea explicită a utilizatorului.

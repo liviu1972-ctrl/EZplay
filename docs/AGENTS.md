@@ -16,6 +16,8 @@ Aceste reguli se aplică tuturor fișierelor din `docs/` și completează reguli
 - `Draft` este starea implicită pentru informații exploratorii, incomplete sau neverificate.
 - `Working` înseamnă coerent și utilizabil, dar încă în dezvoltare sau testare.
 - `Current` înseamnă referința acceptată pentru versiunea curentă; nu îl folosi dacă există secțiuni neverificate.
+- Pentru decizii, handoff-uri și documente de lucru importante, folosește separat `lifecycle`: `active`, `completed`, `superseded` sau `archived`.
+- `status` descrie maturitatea conținutului; `lifecycle` descrie dacă documentul participă la munca prezentă. Nu schimba lifecycle-ul după fiecare editare minoră.
 - Documentele importante folosesc front matter coerent. `canonical_for` descrie rolul documentului și nu este o stare suplimentară.
 
 ## Acuratețe și surse
