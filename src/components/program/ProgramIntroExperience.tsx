@@ -44,7 +44,7 @@ export function ProgramIntroExperience() {
               Fluxul inițial
             </h3>
             
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 relative">
               {steps.map((step, idx) => (
                 <div key={idx} className="flex items-center gap-4 bg-surface p-4 rounded-xl border border-line-strong shadow-sm relative z-10 group hover:-translate-y-1 transition-transform">
                   <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">

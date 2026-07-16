@@ -21,9 +21,7 @@ export async function middleware(request: NextRequest) {
   let response = NextResponse.next();
 
   if (!locale) {
-    // Detect preferred language from headers
-    const acceptLang = request.headers.get("accept-language") || "";
-    locale = acceptLang.includes("en") ? "en" : "ro";
+    locale = "ro";
     
     // Set language cookie (expires in 1 year)
     response.cookies.set(LANGUAGE_COOKIE, locale, { path: "/", maxAge: 60 * 60 * 24 * 365 });
