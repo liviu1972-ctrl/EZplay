@@ -14,3 +14,17 @@ Fișierele `.cdr` sunt acceptate ca surse editabile principale pentru creator. P
 - legătura cu identificatorul și datele structurale din `data/cards/`.
 
 Agentul declară dacă a verificat sursa, exportul PDF/PNG sau numai inventarul. Existența sursei `.cdr` nu dovedește că agentul a putut să o citească ori să o verifice vizual.
+
+## Active individuale reutilizabile
+
+`individual/<slug>/` conține activele extrase și derivate pentru o singură carte, astfel încât utilizarea curentă să nu depindă de deschiderea colilor compozite de tipar.
+
+Structura recomandată pentru fiecare slug este:
+
+- `*-face.webp` — fața completă optimizată pentru utilizare digitală;
+- `*-face.pdf` — PDF individual compact pentru reutilizare și revizuire, fără bleed sau semne de tăiere;
+- `*-art.png` — ilustrația centrală extrasă fără pierderi și folosită ca master individual;
+- `*-art.jpg` — derivată pentru contexte care cer JPEG;
+- `*-art.webp` — derivată optimizată pentru web.
+
+README-ul fiecărei cărți indică masterul compozit, pagina și poziția din care provine. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial; rolul său exact se verifică în README-ul local.
