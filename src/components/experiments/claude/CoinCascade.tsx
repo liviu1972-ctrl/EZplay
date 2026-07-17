@@ -33,7 +33,7 @@ export default function CoinCascade() {
       opacity: [0, 1, 1, 1, 1, 1],
       transition: {
         duration: 2.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         times: [0, 0.4, 0.5, 0.8, 0.9, 1]
       }
     })
