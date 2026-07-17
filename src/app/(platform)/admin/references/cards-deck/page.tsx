@@ -1,12 +1,16 @@
-﻿import { cookies } from "next/headers"
+import { cookies } from "next/headers"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config"
 import { createClient } from "@/lib/supabase/server"
 import { CardsClient } from "./CardsClient"
 
 export const metadata = {
-  title: "C─âr╚¢i ΓÇö EZPlay",
-  description: "Exploreaz─â pachetele de c─âr╚¢i EZPlay.",
+  title: "Cărți — EZPlay",
+  description: "Explorează pachetele de cărți EZPlay.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default async function CardsPage() {
@@ -42,10 +46,10 @@ export default async function CardsPage() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="flex flex-col space-y-4 mb-8 text-center">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-brand-orange to-brand-yellow bg-clip-text text-transparent">
-            {dict.cards?.title || "C─âr╚¢i"}
+            {dict.cards?.title || "Cărți"}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {dict.cards?.subtitle || "Alege un teanc de c─âr╚¢i ╚Öi descoper─â-le una c├óte una."}
+            {dict.cards?.subtitle || "Alege un teanc de Cărți și descoperă-le una câte una."}
           </p>
         </div>
 

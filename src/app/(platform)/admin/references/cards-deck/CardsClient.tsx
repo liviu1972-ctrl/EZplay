@@ -34,7 +34,7 @@ interface CardsClientProps {
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://omxcrlghlusgapkkrtgd.supabase.co"
 
-// Stack category configuration ΓÇö single source of truth for colors, icons and card backs
+// Stack category configuration — single source of truth for colors, icons and card backs
 const STACK_CONFIG: Record<string, {
   icon: React.ElementType
   color: string
@@ -143,7 +143,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
     return lang === "ro" ? asset.name_ro : asset.name_en
   }, [assetTypes, lang])
 
-  // Handle stack click ΓÇö always advances to next card
+  // Handle stack click — always advances to next card
   const handleStackClick = useCallback((slug: string) => {
     if (stacks[slug].length === 0) return
     const currentIdx = stackIndices[slug] ?? -1
@@ -180,7 +180,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
     setIsFlipped(false)
   }, [])
 
-  // Shuffle ΓÇö Fisher-Yates shuffle that actually reorders the cards
+  // Shuffle — Fisher-Yates shuffle that actually reorders the cards
   const handleShuffle = useCallback((slug: string, e: React.MouseEvent) => {
     e.stopPropagation()
     const arr = [...(baseStacks[slug] || [])]
@@ -212,7 +212,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         key={slug}
         className="flex flex-col items-center gap-3"
       >
-        {/* Stack visual wrapper ΓÇö relative container for button + overlay controls */}
+        {/* Stack visual wrapper — relative container for button + overlay controls */}
         <div className={`relative w-full mx-auto ${slug === "entrepreneur" ? "max-w-[220px]" : "max-w-[150px]"}`}>
           {/* Main clickable stack button */}
           <button
@@ -259,7 +259,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             })}
           </button>
 
-          {/* Count badge ΓÇö outside main button, positioned over it */}
+          {/* Count badge — outside main button, positioned over it */}
           <div className={`
             pointer-events-none
             absolute -top-2 -right-2 z-20
@@ -271,7 +271,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
             {count}
           </div>
 
-          {/* Shuffle button ΓÇö outside main button, positioned over it */}
+          {/* Shuffle button — outside main button, positioned over it */}
           {count > 1 && (
             <button
               onClick={(e) => handleShuffle(slug, e)}
@@ -282,7 +282,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                 text-zinc-400 hover:text-white hover:bg-zinc-800
                 transition-all shadow-md
               `}
-              title={dict.cards2?.shuffle || "Amestec─â"}
+              title={dict.cards2?.shuffle || "Amestecă"}
             >
               <Shuffle className="w-3.5 h-3.5" />
             </button>
@@ -298,7 +298,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
           <span className="text-[11px] text-zinc-500">
             {count} {count === 1
               ? (dict.cards2?.cardSingular || "carte")
-              : (dict.cards2?.cardPlural || "c─âr╚¢i")}
+              : (dict.cards2?.cardPlural || "Cărți")}
           </span>
         </div>
       </div>
@@ -314,7 +314,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
           {STACK_ORDER.filter(slug => slug !== "entrepreneur").map(renderStack)}
         </div>
 
-        {/* Row 2: Landscape cards (Entrepreneur) ΓÇö centered, natural width */}
+        {/* Row 2: Landscape cards (Entrepreneur) — centered, natural width */}
         <div className="flex justify-center items-center w-full">
           <div className="w-[220px]">
             {STACK_ORDER.filter(slug => slug === "entrepreneur").map(renderStack)}
@@ -419,7 +419,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                             <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '58%', left: '6%' }}>
                               <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
                                 <Wrench className="w-4 h-4 text-brand-green" />
-                                <span className="text-xs font-bold">{dict.cards?.production || "Produc╚¢ie"}: +{revealedCard.production}</span>
+                                <span className="text-xs font-bold">{dict.cards?.production || "Producție"}: +{revealedCard.production}</span>
                               </div>
                             </div>
                           )}
@@ -435,18 +435,18 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                             <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ top: '58%', right: '6%' }}>
                               <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
                                 <DollarSign className="w-4 h-4 text-brand-teal" />
-                                <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuial─â"}: {revealedCard.expense}</span>
+                                <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuială"}: {revealedCard.expense}</span>
                               </div>
                             </div>
                           )}
                         </>
                       ) : (
                         <>
-                          {/* La antreprenor (landscape) afi╚Ö─âm mereu Produc╚¢ie, MKT ╚Öi Cheltuial─â */}
+                          {/* La antreprenor (landscape) afi╚Ö─âm mereu Producție, MKT și Cheltuială */}
                           <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '5%' }}>
                             <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
                               <Wrench className="w-4 h-4 text-brand-green" />
-                              <span className="text-xs font-bold">{dict.cards?.production || "Produc╚¢ie"}: +{revealedCard.production ?? 0}</span>
+                              <span className="text-xs font-bold">{dict.cards?.production || "Producție"}: +{revealedCard.production ?? 0}</span>
                             </div>
                           </div>
                           
@@ -460,7 +460,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                           <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '48%' }}>
                             <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
                               <DollarSign className="w-4 h-4 text-brand-teal" />
-                              <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuial─â"}: {revealedCard.expense ?? 0}</span>
+                              <span className="text-xs font-bold">{dict.cards?.expense || "Cheltuială"}: {revealedCard.expense ?? 0}</span>
                             </div>
                           </div>
                         </>
@@ -497,7 +497,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
               </div>
 
               <p className="text-center text-[11px] text-zinc-500 mt-3 italic">
-                {dict.cards2?.clickToFlip || "Click pe carte pentru a o ├«ntoarce"}
+                {dict.cards2?.clickToFlip || "Click pe carte pentru a o întoarce"}
               </p>
             </div>
 
@@ -545,7 +545,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                   <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800/60">
                     <Wrench className="w-5 h-5 text-brand-green shrink-0" />
                     <div>
-                      <div className="text-xs text-zinc-500 font-medium">{dict.cards?.production || "Produc╚¢ie"}</div>
+                      <div className="text-xs text-zinc-500 font-medium">{dict.cards?.production || "Producție"}</div>
                       <div className="font-bold text-white text-base">+{revealedCard.production ?? 0}</div>
                     </div>
                   </div>
@@ -563,7 +563,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                   <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800/60">
                     <DollarSign className="w-5 h-5 text-brand-teal shrink-0" />
                     <div>
-                      <div className="text-xs text-zinc-500 font-medium">{dict.cards?.expense || "Cheltuial─â"}</div>
+                      <div className="text-xs text-zinc-500 font-medium">{dict.cards?.expense || "Cheltuială"}</div>
                       <div className="font-bold text-white text-base">{revealedCard.expense ?? 0}</div>
                     </div>
                   </div>
@@ -617,10 +617,10 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
         <div className="mt-12 space-y-4 animate-card-fade-in border-t border-zinc-800/50 pt-10">
           <div className="flex flex-col gap-1 mb-6">
             <h3 className="text-xl font-bold text-white flex items-center gap-2">
-              {dict.cards2?.allCards || "Toate C─âr╚¢ile din Set"} ({stacks[activeStack].length})
+              {dict.cards2?.allCards || "Toate Cărțile din Set"} ({stacks[activeStack].length})
             </h3>
             <p className="text-sm text-zinc-400">
-              {dict.cards2?.clickToReveal || "Apas─â pe o carte pentru a o vizualiza detaliat mai sus."}
+              {dict.cards2?.clickToReveal || "Apasă pe o carte pentru a o vizualiza detaliat mai sus."}
             </p>
           </div>
           

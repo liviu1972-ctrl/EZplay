@@ -32,6 +32,7 @@ Aceste rute sunt blocate la nivel de rețea prin `middleware.ts`. Fără o sesiu
 
 ### 4. Rute Administrative
 - `/admin`, `/admin/cards`, `/admin/users`
+- `/admin/references` (Admin Reference Lab) și rutele copil (ex. `/admin/references/cards-deck`)
 Middleware-ul interoghează `user_profiles.role` și acceptă numai rolul `"admin"`; fără acesta, utilizatorul este deviat către `/dashboard`. Layout-ul administrativ acceptă și `"superadmin"`, iar această diferență reprezintă o nealiniere observată, nu un model de roluri confirmat.
 
 ### 5. Rute API
