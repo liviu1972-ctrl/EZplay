@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 ---
 
@@ -589,9 +589,9 @@ Principiul urmărit este:
 
 Pe termen lung, fondatorul nu trebuie să rămână automat singurul decident.
 
-Dacă membrii cu un nivel de Prestige câștigat legitim ajung la o concluzie comună diferită de opinia fondatorului, sistemul trebuie să permită ca decizia comunității să aibă greutate reală.
+Dacă membrii cu Prestige câștigat legitim ajung la o concluzie comună diferită de opinia fondatorului, sistemul trebuie să permită ca decizia comunității să aibă greutate reală.
 
-Regulile exacte de vot, propunere, validare și protejare a identității EZPLAY nu sunt încă definite.
+Modelul canonic este definit în [`Prestige și EZPLAY Governance`](../decisions/active/prestige-and-ezplay-governance.md). Regulile exacte de propunere, validare, eligibilitate și protejare a identității EZPLAY nu sunt încă definite.
 
 ### Accesul recomandat
 
@@ -631,9 +631,9 @@ Obținut prin participare sau invitație:
 * organizare;
 * acces la instrumente și materiale speciale.
 
-#### Nivel de guvernanță
+#### Participare la EZPLAY Governance
 
-Deblocat printr-un nivel suficient de Prestige:
+Exercitată conform contribuției validate, Prestige-ului și rolului relevant:
 
 * participarea la consultări;
 * evaluarea propunerilor;
@@ -649,10 +649,11 @@ Astfel, platforma poate fi publică fără ca toate funcțiile și toate decizii
 * diferența exactă dintre Builder și Founder;
 * regulile pentru Founder Skills;
 * rolul Credits;
-* regulile exacte pentru câștigarea, validarea și eventuala pierdere a Prestige-ului;
-* pragurile de Prestige și drepturile asociate acestora;
-* drepturile asociate fiecărui nivel;
-* modelul de guvernanță;
+* valorile exacte pentru câștigarea și validarea Prestige-ului;
+* validatorii și mecanismul de contestare;
+* badge-urile care deschid permisiuni și drepturile asociate;
+* eligibilitatea pentru propuneri și decizii;
+* pragurile și procesul deciziilor fundamentale;
 * relația dintre sesiunile offline și online;
 * cine poate crea scenarii;
 * cine poate propune cărți;

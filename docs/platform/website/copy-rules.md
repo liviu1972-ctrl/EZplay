@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.3"
+version: "0.4"
 updated: 2026-07-17
 ---
 
@@ -103,7 +103,8 @@ EZPLAY este:
 - `Founder Profile` — profilul combinat al progresului în cei cinci Business Pillars;
 - `Level Up` — faza finală de acordare a XP-ului și actualizare a Founder Profile;
 - `New Level` — rezultatul afișat numai când este atins pragul unui nivel nou;
-- `Prestige` — contribuție și încredere comunitară;
+- `Prestige` — contribuție validată și influență comunitară;
+- `EZPLAY Governance` / `Guvernanța EZPLAY` — sistemul prin care EZPLAY își asumă și închide deciziile;
 - `Equity` — numai valoarea economică a unei companii;
 - `Credits` — concept separat, încă nedefinit.
 

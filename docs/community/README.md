@@ -16,3 +16,8 @@ Subiecte posibile:
 Prestige este diferit de Founder Skills, Credits și Equity.
 
 Nu deschide guvernanța sau drepturile sensibile fără reguli clare, responsabilitate și protecția identității proiectului.
+
+## Documente
+
+- [Prestige și EZPLAY Governance](../decisions/active/prestige-and-ezplay-governance.md) — decizia `Current` care guvernează principiile sistemului;
+- [Harta badge-urilor EZPLAY](badge-map.md) — propunerea `Draft` pentru pipeline, familii de badge-uri și condiții.

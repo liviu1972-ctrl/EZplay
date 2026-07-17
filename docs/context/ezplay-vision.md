@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 ---
 
@@ -241,36 +241,34 @@ Rolul lor exact nu este încă stabilit și nu trebuie confundat cu progresul ed
 
 ### Prestige
 
-Prestige exprimă contribuția demonstrată, reputația, încrederea și responsabilitatea câștigate în comunitate.
+Prestige exprimă contribuția validată și influența câștigată în comunitate.
 
 Prestige:
 
 - nu este Equity financiar;
 - nu este Founder Skills;
 - nu poate fi cumpărat;
+- nu poate fi transferat sau cheltuit;
 - nu trebuie acordat pentru popularitate sau activitate superficială;
 - trebuie câștigat prin contribuții reale și validate.
 
-Prestige poate deveni una dintre condițiile pentru accesul la roluri, instrumente și procese de guvernanță.
+Există un singur Prestige în ecosistem. Badge-urile eligibile pot oferi o alocare inițială mică, dar cea mai mare parte a Prestige-ului trebuie să provină din contribuții validate.
 
-## Acces și guvernanță progresivă
+Prestige oferă greutate decizională în **EZPLAY Governance**, fără să creeze niveluri generale de încredere, responsabilitate sau rang comunitar.
 
-Ecosistemul poate folosi niveluri progresive de acces:
+## Acces și EZPLAY Governance
 
-1. acces public pentru descoperire, reguli, tutoriale și anumite experiențe;
-2. acces cu cont pentru progres, istoric, feedback și participare;
-3. acces de contributor pentru testare, propuneri, facilitare și organizare;
-4. acces de guvernanță pentru membri cu experiență, responsabilitate și Prestige demonstrate.
+Ecosistemul poate diferenția accesul public, accesul cu cont și permisiunile asociate badge-urilor sau rolurilor. Aceste permisiuni nu formează o scară generală a persoanelor.
 
 La început, fondatorul EZPLAY ia deciziile importante și poartă responsabilitatea principală pentru proiect.
 
-Pe măsură ce comunitatea maturizează contribuții reale, influența asupra proiectului trebuie să devină gradual mai participativă.
+Pe măsură ce comunitatea acumulează contribuții validate și Prestige, influența ei asupra proiectului crește proporțional.
 
 Principiul este:
 
 > Influența se câștigă prin contribuție, responsabilitate și experiență demonstrată.
 
-Guvernanța participativă nu înseamnă că toate deciziile sunt deschise imediat oricui. Identitatea proiectului, siguranța participanților, calitatea educațională și responsabilitatea juridică trebuie protejate.
+Toate deciziile aparțin Guvernanței EZPLAY, dar procesul diferă: deciziile operaționale aparțin rolului care își asumă execuția, deciziile comunitare folosesc greutatea Prestige, iar deciziile fundamentale necesită o regulă mai dificilă decât majoritatea simplă. Regulile canonice și limitele încă deschise sunt definite în [decizia dedicată](../decisions/active/prestige-and-ezplay-governance.md).
 
 ## Deschidere, protecție și sustenabilitate
 

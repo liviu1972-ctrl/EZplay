@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 page: Platforma EZPLAY
 route: /platform
 evidence_map: ../content-evidence-map.md
@@ -237,9 +237,9 @@ Recomandarea pentru prima versiune este ca `/platform` să fie o pagină de cont
 
 ### Text
 
-> Founder Skills descriu progresul educațional. Prestige va descrie contribuția demonstrată, încrederea și responsabilitatea câștigate în comunitatea EZPLAY.
+> Founder Skills descriu progresul educațional. Prestige descrie contribuția demonstrată și influența câștigată în comunitatea EZPLAY.
 
-> Prestige nu este Equity, nu este o monedă financiară și nu poate fi cumpărat. Regulile prin care se câștigă și influența pe care o poate oferi sunt încă în dezvoltare. Platforma nu afișează puncte Prestige înainte de definirea și validarea acestor reguli.
+> Prestige nu este Equity, nu este o monedă financiară și nu poate fi cumpărat. El se câștigă în principal prin contribuții validate și oferă greutate în Guvernanța EZPLAY. Valorile, validarea și procesele exacte nu sunt încă finalizate, iar platforma nu afișează puncte Prestige înainte ca acestea să poată funcționa responsabil.
 
 ### CTA
 

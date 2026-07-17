@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-17
 page: Contribuie la dezvoltare
 route: /development
 evidence_map: ../content-evidence-map.md
@@ -275,7 +275,7 @@ Pagina transformă starea de dezvoltare într-o invitație clară și responsabi
 
 #### Text
 
-> Prestige este direcția prin care comunitatea va putea recunoaște contribuția și încrederea câștigată. Regulile nu sunt încă definite, așa că participarea de acum nu primește automat puncte, statut sau drept de decizie.
+> Prestige este mecanismul prin care comunitatea va recunoaște contribuția și influența câștigată. Principiile sunt definite, dar valorile și procesele nu sunt încă operaționale, așa că participarea de acum nu primește automat puncte, statut sau drept de decizie.
 
 ## Secțiunea 4 — De la feedback la influență
 
@@ -285,9 +285,9 @@ Pagina transformă starea de dezvoltare într-o invitație clară și responsabi
 
 ### Text
 
-> Viziunea EZPLAY este ca oamenii care contribuie consecvent și își asumă responsabilitate să poată avea, în timp, un rol mai mare în comunitate. Prestige va reprezenta contribuția și încrederea, separat de Founder Skills și de valoarea economică a unei companii.
+> Viziunea EZPLAY este ca oamenii care contribuie consecvent și își asumă responsabilitate să poată avea, în timp, un rol mai mare în comunitate. Prestige reprezintă contribuția și influența câștigată, separat de Founder Skills și de valoarea economică a unei companii.
 
-> Mecanismele de validare, recunoaștere și guvernanță nu sunt încă stabilite. Până atunci, fiecare colaborare trebuie să aibă așteptări explicite, iar deciziile finale rămân la responsabilul actual al proiectului.
+> Principiile Prestige și ale Guvernanței EZPLAY sunt stabilite, dar valorile, validatorii și procesele operaționale nu sunt încă finalizate. Până atunci, fiecare colaborare trebuie să aibă așteptări explicite, iar deciziile finale rămân la responsabilul actual al proiectului.
 
 ## Secțiunea 5 — Ce nu cerem
 

@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.1"
 updated: 2026-07-17
 lifecycle: active
 canonical_for:
@@ -39,11 +39,22 @@ Stările permise sunt:
 
 ### IDEA-002 — Influență comunitară progresivă prin Prestige
 
+- `idea_stage`: `promoted`
+- `captured`: 2026-07-17
+- `theme`: comunitate și guvernanță
+- `summary`: Prestige devine greutate decizională în EZPLAY Governance, proporțional cu contribuția validată, fără niveluri generale de încredere sau rang comunitar.
+- `why_keep`: poate transforma contribuția demonstrată în responsabilitate reală și poate permite o guvernanță mai participativă pe măsură ce comunitatea se maturizează.
+- `already_excluded`: Prestige nu poate fi cumpărat, transferat sau transformat într-un rang general al persoanei; nu toate deciziile folosesc același proces.
+- `revisit_when`: —
+- `promoted_to`: [`docs/decisions/active/prestige-and-ezplay-governance.md`](decisions/active/prestige-and-ezplay-governance.md)
+
+### IDEA-003 — Influență contextuală la scară mare
+
 - `idea_stage`: `parked`
 - `captured`: 2026-07-17
 - `theme`: comunitate și guvernanță
-- `summary`: explorarea unui sistem în care membrii cu Prestige mai mare, câștigat prin contribuții validate și responsabilitate, pot avea un cuvânt mai greu în anumite decizii importante ale comunității EZPLAY.
-- `why_keep`: poate transforma contribuția demonstrată în responsabilitate reală și poate permite o guvernanță mai participativă pe măsură ce comunitatea se maturizează.
-- `already_excluded`: Prestige nu poate fi cumpărat sau transferat și nu devine automat un multiplicator liniar, nelimitat, pentru orice vot; siguranța minorilor, obligațiile juridice și protecția identității EZPLAY rămân zone cu responsabilitate explicită.
-- `revisit_when`: există contribuții comunitare reale, un proces de validare, roluri definite și o primă listă a categoriilor de decizii care pot fi deschise gradual participării.
+- `summary`: dacă EZPLAY devine o organizație mare, greutatea unei contribuții sau eligibilitatea decizională ar putea ține cont de domeniul în care persoana a demonstrat experiență, fără a crea acum mai multe tipuri de Prestige.
+- `why_keep`: poate împiedica transformarea experienței dintr-o singură zonă în autoritate universală într-un ecosistem foarte mare.
+- `already_excluded`: în etapa actuală există un singur Prestige și nu se construiesc scoruri contextuale.
+- `revisit_when`: volumul și diversitatea comunității fac ca un singur context decizional să producă probleme observabile de relevanță sau reprezentare.
 - `promoted_to`: —
