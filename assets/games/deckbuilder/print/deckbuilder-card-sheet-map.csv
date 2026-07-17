@@ -1,0 +1,26 @@
+sheet_asset_id,pdf_page,position,row,column,card_slug,visual_group,mapping_basis,similarity,notes
+DECK-PRINT-CARDS-TANGIBLE-001,1,r1c1,1,1,s101,VG-001,owner-confirmed,,Vizual identică cu s102
+DECK-PRINT-CARDS-TANGIBLE-001,1,r1c2,1,2,s102,VG-001,owner-confirmed,,Vizual identică cu s101
+DECK-PRINT-CARDS-TANGIBLE-001,1,r1c3,1,3,s103,VG-002,owner-confirmed,,Vizual identică cu s104
+DECK-PRINT-CARDS-TANGIBLE-001,1,r1c4,1,4,s104,VG-002,owner-confirmed,,Vizual identică cu s103
+DECK-PRINT-CARDS-TANGIBLE-001,1,r1c5,1,5,s105,VG-003,owner-confirmed,,Vizual identică cu s106
+DECK-PRINT-CARDS-TANGIBLE-001,1,r2c1,2,1,s107,VG-004,owner-confirmed,,Vizual identică cu s109
+DECK-PRINT-CARDS-TANGIBLE-001,1,r2c2,2,2,s109,VG-004,owner-confirmed,,Vizual identică cu s107
+DECK-PRINT-CARDS-TANGIBLE-001,1,r2c3,2,3,s108,VG-005,owner-confirmed,,Vizual identică cu s110
+DECK-PRINT-CARDS-TANGIBLE-001,1,r2c4,2,4,s110,VG-005,owner-confirmed,,Vizual identică cu s108
+DECK-PRINT-CARDS-TANGIBLE-001,1,r2c5,2,5,s106,VG-003,owner-confirmed,,Vizual identică cu s105
+DECK-PRINT-CARDS-TANGIBLE-001,1,r3c1,3,1,s121,,webp-visual-match,0.959933,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r3c2,3,2,s122,,webp-visual-match,0.956706,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r3c3,3,3,s123,,webp-visual-match,0.955010,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r3c4,3,4,s124,,webp-visual-match,0.951082,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r3c5,3,5,s125,,webp-visual-match,0.977149,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r4c1,4,1,s126,,webp-visual-match,0.978928,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r4c2,4,2,s127,,webp-visual-match,0.974041,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r4c3,4,3,s128,,webp-visual-match,0.952976,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r4c4,4,4,s129,,webp-visual-match,0.973766,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r4c5,4,5,s130,,webp-visual-match,0.959341,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r5c1,5,1,s131,,webp-visual-match,0.952915,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r5c2,5,2,s132,,webp-visual-match,0.967843,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r5c3,5,3,s133,,webp-visual-match,0.969506,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r5c4,5,4,s134,,webp-visual-match,0.970069,
+DECK-PRINT-CARDS-TANGIBLE-001,1,r5c5,5,5,corporate_gol,,owner-confirmed-and-visual-match,0.976135,Carte goală de înlocuire scrisă cu markerul dacă se pierde o carte
