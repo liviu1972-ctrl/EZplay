@@ -3,7 +3,7 @@ import { cookies } from "next/headers"
 import { getDictionary } from "@/lib/i18n/get-dictionary"
 import { LANGUAGE_COOKIE, type Locale } from "@/lib/i18n/config"
 import { createClient } from "@/lib/supabase/server"
-import { Sidebar } from "@/components/dashboard/Sidebar"
+import { AdminLayoutClient } from "./AdminLayoutClient"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export default async function AdminLayout({
@@ -39,12 +39,9 @@ export default async function AdminLayout({
       enableSystem
       disableTransitionOnChange
     >
-      <div className="flex h-screen overflow-hidden bg-background">
-        <Sidebar dict={dict} profile={profile} />
-        <main className="flex-1 overflow-y-auto">
-          {children}
-        </main>
-      </div>
+      <AdminLayoutClient dict={dict} profile={profile}>
+        {children}
+      </AdminLayoutClient>
     </ThemeProvider>
   )
 }
