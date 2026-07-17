@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.3"
-updated: 2026-07-17
+version: "0.5"
+updated: 2026-07-18
 ---
 
 # Inventarul actual al activelor EZPLAY
@@ -19,16 +19,17 @@ Valorile precum `Beta`, `funcțional` sau `Concept` descriu maturitatea activelo
 |Supabase|Funcțional|Auth, date și Storage|
 |Autentificare|Implementată|Fluxurile finale nu sunt încă definite|
 |Poziționare de brand|Working|`WHERE FUTURE FOUNDERS START`|
-## Surse unice de adevăr
+## Trimiteri către sursele canonice
 
-Până la separarea acestui inventar în documente dedicate, următoarele secțiuni reprezintă sursele canonice pentru conceptele de bază:
+Acest document inventariază activele și experiența existentă. Definițiile separate între timp sunt întreținute numai în sursele canonice dedicate:
 
 | Concept                                            | Sursa curentă                                                                                                           |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Formula economică, variabilele și cei cinci piloni | [Modelul economic comun și dicționarul variabilelor EZPLAY](#modelul-economic-comun-și-dicționarul-variabilelor-ezplay) |
-| Founder Round și structura Founder Loop            | [Founder Round și Founder Loop](#founder-round-și-founder-loop)                                                         |
-| Founder Skills, Credits și Prestige                | [Platforma ezplay.org](#platforma-ezplayorg)                                                                            |
-| Modelul de licențiere                              | [Modelul de licențiere și protecție EZPLAY](#modelul-de-licențiere-și-protecție-ezplay)                                 |
+| Formula economică, variabilele și cei cinci piloni | [Modelul economic comun EZPLAY](../methods/economic-model.md)                                                           |
+| Founder Round, Founder Loop și progres curricular  | [Arhitectura curriculară](../products/educational-program/curriculum/architecture.md)                                  |
+| Founder Skills, Founder Profile și Skills XP       | [Arhitectura curriculară](../products/educational-program/curriculum/architecture.md)                                  |
+| Prestige și EZPLAY Governance                      | [Decizia activă](../decisions/active/prestige-and-ezplay-governance.md)                                                |
+| Modelul de licențiere                              | [Licențiere și protecție](../licensing/README.md)                                                                        |
 
 Celelalte secțiuni pot explica modul în care un concept este folosit de un anumit produs, dar nu trebuie să îi redefinească formula, etapele sau terminologia.
 
@@ -60,7 +61,7 @@ Produsul educațional complet trebuie să includă:
 * aplicații în situații reale;
 * progres sau Level Up.
 
-„Founder Rounds” este momentan un posibil nume pentru formatul de sesiune, nu o denumire oficială stabilită.
+`Founder Round` este denumirea generică de lucru a lecției, iar `Finance Round`, `Strategy Round`, `Product Round`, `Market Round` și `Operations Round` sunt denumirile folosite în hărțile pilonilor. Terminologia și limitele ei sunt definite în arhitectura curriculară.
 
 ### Ce experiență există deja
 
@@ -133,6 +134,39 @@ Această diferență poate deveni o temă educațională despre:
 * simplificarea companiei;
 * eliminarea resurselor care nu mai creează valoare.
 
+### Tipare de joc observate la copii și adulți
+
+Observațiile de mai jos provin din facilitarea directă a partidelor EZPLAY Deckbuilder. Ele sunt dovezi de produs și ipoteze pedagogice de lucru, nu rezultate ale unui studiu controlat.
+
+**Situația de pornire:** fiecare companie începe cu zece cărți slabe, cu cost de achiziție zero. Cu acest deck, Profitul unei ture poate fi numai `−1`, `0` sau `+1`. În fiecare tură, jucătorul poate lua o singură decizie principală: cumpără o carte din piață, elimină definitiv o carte plătind un ban sau nu face niciuna dintre acestea.
+
+Au apărut recurent următoarele comportamente:
+
+* majoritatea începătorilor caută mai întâi să adauge cărți și observă mai greu valoarea eliminării resurselor slabe;
+* mai mulți copii decât adulți au început spontan să elimine asemenea resurse;
+* unii jucători dezvoltă Producția fără suficienți Clienți sau Clienții fără suficientă Producție și pierd Vânzări din cauza dezechilibrului;
+* jucătorii timizi cumpără frecvent numai cărți cu cost `1`, deși acestea sunt proiectate să ofere în principal un bonus imediat la cumpărare, nu un rezultat financiar superior cărților de cost `0`;
+* jucătorii experimentați urmăresc și concurează pentru anumite cărți de cost `3–4`, pe care le consideră mult mai valoroase pentru compania construită;
+* cărțile flexibile, precum roboții care pot contribui fie la Producție, fie la Marketing în fiecare tură, sunt apreciate de jucătorii avansați, dar pot fi evitate de începători din cauza calculelor și alegerilor suplimentare;
+* cărțile de sisteme, care reduc Cheltuielile fără să adauge direct Producție sau Clienți, sunt subevaluate de începători și foarte căutate de jucătorii avansați.
+
+Aceste comportamente indică teme educaționale despre adăugare versus simplificare, preț versus valoare, efect vizibil versus efect financiar, flexibilitate, încărcare cognitivă, echilibrul firmei și asumarea riscului.
+
+### Două modele de companie observate
+
+În partidele urmărite au apărut două strategii de succes recurente:
+
+1. **Compania compactă și predictibilă.** Jucătorul elimină multe cărți slabe și ajunge la aproximativ cinci resurse bune, pe care le folosește aproape în fiecare tură. Compania devine eficientă și previzibilă, dar poate fi vulnerabilă în etapa de construcție și tinde să ajungă ulterior la un plafon de creștere.
+2. **Compania mare, cu sisteme.** Jucătorul construiește Producție, Marketing și Vânzări mari, acceptă Cheltuieli ridicate și le compensează prin cărți de sisteme. Este mai dificilă și mai riscantă la început, dar a produs cele mai mari valori de Profit și Cifră de afaceri în sesiunile observate.
+
+Au apărut și tranziții între ele: o companie mare este simplificată ulterior, iar o companie compactă folosește Cash-ul acumulat pentru a cumpăra o resursă foarte bună atunci când aceasta apare în piață. În ultimul caz, disponibilitatea cărții, nu prețul ei, poate deveni limita creșterii.
+
+### Falimentul și restartul
+
+Jucătorii care operează permanent cu Cash minim și calculează fără rezervă sunt expuși falimentului și pot resimți puternic eșecul. Totuși, în unele partide, un faliment timpuriu urmat de o companie reconstruită mai bine a produs rezultate mai bune decât supraviețuirea îndelungată cu `0–2` bani și fără posibilitatea reală de creștere sau optimizare.
+
+La restart, jucătorul poate păstra resurse din compania veche numai dacă plătește din nou costul lor. Mecanismul face vizibile atât valoarea resurselor pe care dorește să le salveze, cât și diferența dintre perseverență, supraviețuire fără progres și reconstrucție.
+
 ### Debrief-ul folosit până acum
 
 În sesiunile cu antreprenori a existat un debrief la finalul jocului.
@@ -172,7 +206,7 @@ Stilul de facilitare urmărește să conecteze mecanica jocului cu situații pe 
 
 ### Lecții existente sau aflate în lucru
 
-Există deja idei de lecții, dar nu sunt încă transformate în module complete.
+Există hărți reconciliate de Round-uri pentru Level 1 în toți cei cinci Business Pillars, dar Round-urile nu sunt încă dezvoltate ca experiențe complete.
 
 Temele identificate până acum includ:
 
@@ -192,19 +226,13 @@ Temele identificate până acum includ:
 
 Pentru lecția despre Profit și Cashflow există deja câteva probleme și exerciții de rezolvat.
 
-Nu există încă un modul educațional complet, testat de la început până la sfârșit.
+Nu există încă un Founder Round complet, testat de la început până la sfârșit.
 
 ### Founder Loop
 
-Founder Loop este arhitectura pedagogică folosită în interiorul unui Founder Round.
+Founder Loop este denumirea generică a metodei pedagogice recurente folosite de un Founder Round. Nu reprezintă un container curricular suplimentar. Definiția curentă și cele cinci faze sunt întreținute numai în [arhitectura curriculară](../products/educational-program/curriculum/architecture.md).
 
-Definiția curentă și cele cinci etape ale modelului sunt documentate în secțiunea [Founder Round și Founder Loop](#founder-round-și-founder-loop).
-
-Versiunea actuală include o etapă explicită de învățare între Founder Debrief și Business Challenge.
-
-Homepage-ul platformei prezintă încă versiunea anterioară, cu patru etape, și trebuie actualizat pentru a include etapa Learning Input.
-
-Founder Loop trebuie tratat momentan ca **Draft / Concept**, nu ca metodă validată.
+Founder Loop rămâne o ipoteză `Draft`, nu o metodă validată.
 
 ### Formatele educaționale care se conturează
 
@@ -296,7 +324,7 @@ Aceste formate depind încă de prezența creatorului sau a unei persoane care c
 * exemple concrete de business;
 * debrief informal;
 * conceptul Founder Loop;
-* idei de lecții;
+* hărți curriculare Level 1 pentru cei cinci Business Pillars;
 * câteva probleme despre Profit și Cashflow;
 * joc fizic și digital;
 * regulamente și tutoriale în lucru;
@@ -319,9 +347,9 @@ Aceste formate depind încă de prezența creatorului sau a unei persoane care c
 * diferențierea pe vârste și niveluri;
 * un program de pregătire a facilitatorilor;
 * criterii de evaluare;
-* un sistem de progres;
-* o structură de curs sau parcurs;
-* testarea unui modul complet cu un facilitator diferit de creator;
+* un sistem de progres calibrat și validat;
+* un traseu de livrare testat;
+* testarea unui Founder Round complet cu un facilitator diferit de creator;
 * documentarea formatului de competiție.
 
 ### Rolul în proiect
@@ -354,17 +382,7 @@ Platforma ezplay.org trebuie să susțină programul prin:
 
 ### Următoarea decizie necesară
 
-Trebuie construit și testat primul modul educațional complet de două ore.
-
-Înaintea acestuia trebuie documentat separat formatul introductiv:
-
-> Joc liber + Debrief
-
-Primul modul tematic poate fi construit în jurul unei teme deja parțial dezvoltate:
-
-> Profit, Cash și Cashflow
-
-Acest modul trebuie să devină modelul pe baza căruia vor fi create celelalte Founder Rounds sau lecții EZPLAY.
+Level 1 este schițat și reconciliat pentru cei cinci Business Pillars. Următoarea decizie este alegerea primului Round care va fi dezvoltat și testat complet. Existența unor exerciții mai vechi despre Profit, Cash și Cash Flow nu stabilește automat alegerea.
 
 
 ## Platforma ezplay.org
@@ -1329,7 +1347,7 @@ Obiectivul primului test este să răspundă la întrebările:
 **Importanță:** fundație conceptuală comună pentru jocurile și experiențele EZPLAY
 **Categorie:** model economic / sistem conceptual / terminologie / proprietate intelectuală
 **Stare generală:** Working — model coerent, documentat și folosit, dar încă trebuie validat și propagat în toate materialele
-**Sursă oficială pentru:** formula economică, variabilele, cei cinci piloni și cele două limbaje EZPLAY
+**Sursă canonică actuală:** [Modelul economic comun EZPLAY](../methods/economic-model.md). Secțiunea de mai jos inventariază modelul folosit de active; nu redefinește formulele sau terminologia.
 
 ### Ce este
 
@@ -1637,7 +1655,7 @@ După acest audit, documentul comun al variabilelor poate deveni sursa oficială
 **Categorie:** format educațional / metodă de învățare experiențială
 **Stare generală:** Concept / Draft — arhitectura de bază este clarificată, dar nu există încă o sesiune complet standardizată și testată
 **Nume public:** încă nestabilit
-**Sursă oficială pentru:** definiția Founder Round și structura Founder Loop
+**Sursă canonică actuală:** [Arhitectura curriculară](../products/educational-program/curriculum/architecture.md). Secțiunea de mai jos inventariază forma de lucru și activele asociate; nu redefinește termenii.
 
 ### Ce este un Founder Round
 
@@ -1687,7 +1705,7 @@ Participantul nu citește doar pentru că facilitatorul îi cere acest lucru, ci
 
 ### Founder Loop
 
-Founder Loop este structura de învățare din interiorul unui Founder Round.
+Founder Loop este denumirea generică a metodei pedagogice recurente folosite de un Founder Round, nu un container curricular suplimentar.
 
 Structura de lucru actuală este:
 
@@ -1697,7 +1715,7 @@ Structura de lucru actuală este:
 4. Business Challenge;
 5. Level Up.
 
-Denumirile nu sunt încă definitive.
+Denumirile celor cinci faze sunt terminologia de lucru curentă. Metoda și modul de livrare nu sunt încă validate.
 
 ### 1. Business Run
 
@@ -1802,21 +1820,20 @@ Sistemul exact de evaluare și acordare a progresului nu este încă definit.
 
 ### Relația dintre Founder Round și Founder Loop
 
-Un Founder Round complet folosește un Founder Loop complet.
+Un Founder Round complet folosește direct toate cele cinci faze ale Founder Loop.
 
 ```text
 Founder Round
-└── Founder Loop
-    ├── Business Run
-    ├── Founder Debrief
-    ├── Learning Input
-    ├── Business Challenge
-    └── Level Up
+├── Business Run
+├── Founder Debrief
+├── Learning Input
+├── Business Challenge
+└── Level Up
 ```
 
 Founder Round este sesiunea livrată participanților.
 
-Founder Loop este arhitectura pedagogică a acelei sesiuni.
+Founder Loop este numele generic al metodei pedagogice recurente, nu un al doilea folder din structură.
 
 ### Sesiunea Joc + Debrief
 
@@ -1909,7 +1926,8 @@ Founder Round este una dintre aceste „rotițe” ale sistemului.
 * probleme despre Profit și Cashflow;
 * viziunea unei sesiuni de două ore;
 * experiență cu mese de patru jucători;
-* ideea progresului în cei cinci piloni.
+* ideea progresului în cei cinci piloni;
+* hărți curriculare Level 1 reconciliate pentru cei cinci Business Pillars.
 
 ### Ce nu există încă
 
@@ -1923,17 +1941,13 @@ Founder Round este una dintre aceste „rotițe” ale sistemului.
 * materiale pentru participant;
 * o configurație de joc validată pentru o lecție;
 * timpi verificați pentru fiecare etapă;
-* un sistem de progres;
+* un sistem de progres calibrat și validat;
 * o denumire publică definitivă;
 * formarea facilitatorilor.
 
 ### Următorul pas necesar
 
-Trebuie construit primul Founder Round complet.
-
-Tema recomandată este:
-
-> Profit, Cash și Cashflow
+Trebuie ales și construit primul Founder Round complet dintre Round-urile Level 1 reconciliate. Tema nu este încă selectată.
 
 Prima versiune trebuie să definească:
 
@@ -1957,6 +1971,7 @@ Acest prim Founder Round va deveni prototipul metodei pentru toate lecțiile vii
 
 **Categorie:** proprietate intelectuală / acces deschis / model de ecosistem
 **Stare generală:** Working — direcția strategică este clară, dar documentele juridice și limitele exacte nu sunt finalizate
+**Sursă canonică actuală:** [Licențiere și protecție](../licensing/README.md). Secțiunea de mai jos inventariază direcția istorică; nu reprezintă document juridic sau definiție paralelă.
 
 ### Obiectiv
 

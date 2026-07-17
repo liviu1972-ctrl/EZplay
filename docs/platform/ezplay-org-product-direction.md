@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-17
+version: "0.3"
+updated: 2026-07-18
 ---
 
 # Direcția de produs și website pentru ezplay.org
@@ -766,7 +766,7 @@ Până la clarificare, arhitectura nu trebuie construită în jurul unui magazin
 
 ### Etapa 3 — primul Founder Round complet
 
-- primul Founder Round despre Profit, Cash și Cash Flow;
+- alegerea primului Round dintre hărțile Level 1 reconciliate;
 - Business Run configurat;
 - Founder Debrief;
 - Learning Input;

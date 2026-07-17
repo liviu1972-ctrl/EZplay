@@ -1,10 +1,10 @@
 ---
 status: Draft
-version: "0.4"
-updated: 2026-07-17
+version: "0.7"
+updated: 2026-07-18
 ---
 
-# Arhitectura curriculară a programului de educație antreprenorială pentru tineri
+# Arhitectura curriculară a Programului educațional EZPLAY
 
 ## Rolul documentului
 
@@ -12,7 +12,6 @@ Acest document organizează prima ipoteză coerentă pentru curriculumul unui pr
 
 Documentul nu definește încă:
 
-- numele public al programului;
 - curriculumul complet;
 - numărul nivelurilor;
 - pragurile de Skills XP;
@@ -37,6 +36,8 @@ EZPLAY creează programe și experiențe de educație antreprenorială, precum �
 Deckbuilder-ul este instrumentul disponibil și cel mai matur în prezent. Poate susține în special primele experiențe și primele trepte ale curriculumului. Tableau Builder poate deveni un instrument pentru experiențe mai avansate, dar acest rol rămâne o ipoteză până la prototipare și testare.
 
 Programul nu trebuie limitat de mecanicile jocurilor existente. În același timp, nu trebuie să devină o bibliotecă de teorie separată de principiul central EZPLAY: participantul decide, observă consecințele, reflectează și aplică din nou.
+
+Deckbuilder este un instrument configurabil, nu o programă. Fiecare Round poate folosi o configurație construită special pentru competența urmărită, inclusiv selecții diferite de cărți, cărți noi, reguli speciale, condiții inițiale, Evenimente sau obiective proprii. Absența unui concept din jocul implicit nu justifică eliminarea lui din curriculum și nu înseamnă că Deckbuilder nu poate fi adaptat pentru a-l face vizibil.
 
 ## Fundamentul pedagogic de lucru
 
@@ -90,20 +91,22 @@ Participantul trebuie să înțeleagă, să conecteze, să analizeze și să dec
 
 Founder Round este o sesiune educațională tematică de aproximativ două ore.
 
+`Founder Round` este denumirea generică a unității curriculare comparabile cu o lecție. În harta unui Business Pillar, Round-ul folosește denumirea specifică pilonului său principal: `Finance Round`, `Strategy Round`, `Product Round`, `Market Round` sau `Operations Round`.
+
 Un Founder Round poate include:
 
 - una sau mai multe competențe urmărite;
 - cerințe de acces;
 - o configurație de joc, o simulare sau altă experiență;
-- un Founder Loop complet;
+- cele cinci faze ale Founder Loop;
 - recompense de progres;
 - condiții pentru deblocarea altor Founder Rounds.
 
-Founder Round este unitatea de livrare comparabilă cu o lecție. Relația dintre Founder Round și termenul `modul` nu este încă stabilită.
+Round-ul este unitatea curriculară și de livrare. `Modul` nu introduce un nivel suplimentar între Business Pillar Level și Round; numele tehnic al folderului `modules/` desemnează numai locul în care vor fi păstrate fișele Round-urilor complete.
 
 ### Founder Loop
 
-Structura de lucru rămâne:
+Founder Loop este numele generic al metodei pedagogice recurente, nu un container curricular suplimentar între Round și activitățile sale. Fiecare Round complet folosește direct cele cinci faze:
 
 ```text
 Business Run
@@ -174,7 +177,15 @@ Modelul de lucru este ca fiecare Business Pillar să aibă o singură progresie 
 
 Cele cinci progresii sunt interconectate. Modelul este, provizoriu, o **rețea de spirale** și nu o succesiune unică de lecții.
 
-Prima schiță detaliată a acestei logici este [Spirala Finance](finance-spiral.md). Ea este un model de lucru pentru construirea celorlalți patru Business Pillars, nu un șablon care îi obligă să aibă aceleași teme sau același număr de niveluri.
+Hărțile dezvoltate în prezent sunt:
+
+- [Spirala Strategy](strategy-spiral.md) — Strategy Level 1;
+- [Spirala Product](product-spiral.md) — Product Level 1;
+- [Spirala Market](market-spiral.md) — Market Level 1;
+- [Spirala Operations](operations-spiral.md) — Operations Level 1;
+- [Spirala Finance](finance-spiral.md) — Finance Level 1 și schița nivelurilor ulterioare existentă înaintea extinderii celorlalți piloni.
+
+Hărțile Level 1 folosesc aceeași gramatică curriculară, fără să oblige Business Pillars să aibă aceleași teme sau același număr de Round-uri.
 
 ```text
 Strategy ─────┐
@@ -194,8 +205,9 @@ Terminologia de lucru este:
 |---|---|
 | **Spirala Finance** | Întreaga progresie curriculară Finance, în care conceptele revin cu profunzime și complexitate mai mari |
 | **Finance XP** | Punctele acumulate de participant în Business Pillar-ul Finance |
-| **Finance Level** | Poziția participantului în Spirala Finance, determinată de pragurile Finance XP |
+| **Finance Level** | Nivelul curricular din Spirala Finance și poziția participantului în această progresie; relația exactă dintre competențe, prerechizite și pragurile Finance XP rămâne de calibrat |
 | **Founder Round** | Experiența educațională de aproximativ două ore |
+| **Finance Round** | Founder Round al cărui Business Pillar principal este Finance; aceeași regulă se aplică denumirilor specifice celorlalți piloni |
 | **Nivel minim pentru acces** | Nivelul sau combinația de niveluri necesare pentru participarea la un Founder Round |
 | **Business Challenge** | Provocarea de echipă din Founder Round |
 | **Varianta Business Challenge-ului** | Una dintre provocările disponibile în același Round sau la același nivel minim |
@@ -206,6 +218,67 @@ Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare Busi
 > `Finance Level 2`
 
 Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este Business Pillar-ul principal și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în ceilalți piloni.
+
+### Identificarea și ordinea Round-urilor
+
+Un identificator curricular poate exprima Business Pillar-ul, nivelul, linia de continuitate și, când este necesar, poziția într-o serie. Exemplu Finance:
+
+```text
+FIN 1.2.1
+│   │ │ └── poziția în seria secvențială
+│   │ └──── linia de continuitate
+│   └────── nivelul curricular
+└────────── Business Pillar-ul
+```
+
+Regulile generale sunt:
+
+1. accesul la un nivel presupune, ca regulă de bază, fundația nivelurilor anterioare din același Business Pillar;
+2. Round-urile din același nivel pot fi parcurse în orice ordine dacă nu există o dependență explicită;
+3. o serie precum `FIN 3.2.1 → FIN 3.2.2 → FIN 3.2.3` are ordine internă;
+4. fiecare Round declară prerechizitele specifice, iar acestea au prioritate față de regula generală;
+5. o linie nouă poate începe la un nivel superior și trebuie urmărită ulterior cât timp rămâne relevantă;
+6. lipsa continuării unei linii trebuie să fie o decizie pedagogică explicită, nu o omisiune accidentală.
+
+Identificatorul arată continuitatea curriculară. El nu impune singur o ordine între două Round-uri independente din același nivel.
+
+## Reconcilierea Level 1
+
+Cele cinci hărți Level 1 au fost comparate împreună. Regula de acces rezultată este deliberat permisivă:
+
+> După onboardingul comun sau demonstrarea unei experiențe echivalente, Round-urile Level 1 pot fi parcurse în orice ordine, cu excepția unei dependențe conceptuale declarate explicit.
+
+Onboardingul comun înseamnă că participantul poate urmări o tură de Deckbuilder, recunoaște valorile principale și ia decizia de final de tură cu sprijin rezonabil. Nu înseamnă că a parcurs deja câte un Round din fiecare Business Pillar.
+
+Singura serie obligatorie identificată acum este:
+
+> `FIN 1.2.1 → FIN 1.2.2`
+
+În această serie, participantul înțelege mai întâi cum se calculează Vânzările, apoi folosește rezultatul pentru a calcula Cheltuielile și Profitul. Un participant care demonstrează deja competența echivalentă poate intra direct în al doilea Round.
+
+Următoarele sunt **condiții de lucru**, nu prerechizite curriculare:
+
+- un Round despre Evenimente are nevoie de un scenariu sau de o partidă cu Evenimente;
+- un Round despre rezultatul anual are nevoie de datele unui an complet;
+- un Round despre învățarea din rezultat are nevoie de o decizie și un rezultat care pot fi analizate;
+- un Round despre faliment și restart are nevoie de o situație de faliment sau de risc apropiat de faliment;
+- un Round care folosește o perspectivă secundară poate oferi în interiorul său informația minimă necesară, fără să blocheze automat participantul în spatele altui Business Pillar.
+
+### Delimitarea suprapunerilor dintre Business Pillars
+
+Aceeași situație din Deckbuilder poate fi folosită de mai multe Round-uri, dar întrebarea principală și competența urmărită trebuie să rămână diferite.
+
+| Situație comună | Round-uri apropiate | Delimitare |
+|---|---|---|
+| Producție, Clienți și Vânzări | `FIN 1.2.1`, `MKT 1.4`, `OPS 1.2` | Finance calculează Vânzările; Market identifică limita creată de Clienți; Operations interpretează capacitatea de Producție |
+| Cheltuieli și resurse | `FIN 1.2.2`, `OPS 1.3`, `OPS 1.5` | Finance calculează Profitul; Operations compară capacitatea, costul și eficiența resurselor |
+| Alegerea următoarei acțiuni | `STR 1.2`, `FIN 1.5`, `MKT 1.5`, `OPS 1.6`, `PRD 1.5` | Strategy stabilește prioritatea; fiecare pilon funcțional justifică o decizie prin propria perspectivă |
+| Client, nevoie și valoare | `MKT 1.1`, `PRD 1.2`, `PRD 1.3` | Market identifică persoana la care ajunge firma; Product explică problema și valoarea ofertei pentru acel client |
+| Promisiune și livrare | `PRD 1.4`, `OPS 1.2` | Product verifică promisiunea făcută clientului; Operations verifică existența capacității de execuție |
+| Eliminarea resurselor | `STR 1.4`, `OPS 1.5`, `FIN 1.5` | Strategy judecă potrivirea cu direcția firmei; Operations judecă eficiența; Finance judecă efectul asupra indicatorilor și Cash-ului |
+| Faliment și restart | `FIN 1.6`, `STR 1.6` | Finance analizează continuitatea și costul restartului; Strategy transformă rezultatul într-o schimbare de abordare |
+
+Suprapunerea mecanicii este intenționată când permite privirea aceleiași companii din alt unghi. Nu este acceptată repetarea aceleiași întrebări și a aceleiași competențe sub două denumiri diferite.
 
 ## Libertatea traseului
 
@@ -448,6 +521,10 @@ Principiile de lucru sunt:
 
 Programul poate fi destinat copiilor și adolescenților, dar nu trebuie proiectat pornind de la presupunerea că o generație are un singur stil de învățare.
 
+Publicul de bază al primei versiuni este format din participanți din clasele a IV-a–a X-a din România. Programul poate avea extensii pentru clasele a II-a–a III-a, destinate copiilor pregătiți pentru cerințele respective, și pentru clasele a XI-a–a XII-a, destinate participanților cu interes mai mare pentru antreprenoriat și educație financiară.
+
+Finance Level 1 este calibrat inițial pentru nivelul mediu al clasei a IV-a și poate fi accesibil unor participanți bine pregătiți din clasa a III-a. Această calibrare nu stabilește automat aceeași relație între clasă și nivel pentru toate Business Pillars.
+
 Vârsta, dezvoltarea cognitivă, experiența anterioară, accesul la tehnologie, interesele și contextul social pot influența experiența mai mult decât eticheta generațională.
 
 Curriculumul trebuie să separe cel puțin două dimensiuni:
@@ -457,14 +534,23 @@ Curriculumul trebuie să separe cel puțin două dimensiuni:
 
 Aceeași idee economică poate folosi Learn Language, exemple și Business Challenges diferite pentru un copil mai mic și pentru un adolescent. Relația exactă dintre vârstă, nivel și dovezile cerute rămâne de cercetat și testat.
 
+## Cele două registre editoriale
+
+Programul se adresează simultan participantului și adultului sau organizației care îi face posibilă participarea: părinte, profesor, școală, organizație sau sponsor.
+
+Fiecare Business Pillar Level și fiecare Round trebuie să aibă:
+
+- un titlu și o descriere pentru participant, construite în jurul unei întrebări, situații sau mize pe care acesta o poate recunoaște;
+- un titlu și o descriere pedagogică pentru adult, care fac vizibile competența urmărită, conținutul și valoarea educațională.
+
+Cele două registre exprimă același produs și aceleași rezultate. Ele nu creează promisiuni diferite. Ipotezele de design și aspectele încă netestate rămân marcate separat în documentația internă și nu sunt transformate în promisiuni publice.
+
 ## Ce nu este încă decis
 
-- numele public al programului;
 - numele public al hărții și al traseelor;
 - dacă termenul `Founder Path` este necesar;
-- relația dintre Founder Round, lecție și modul;
 - numărul nivelurilor pentru fiecare Business Pillar;
-- harta competențelor observabile din fiecare nivel;
+- harta competențelor pentru nivelurile următoare și criteriile de mastery pentru Level 1;
 - pragurile de Skills XP;
 - nivelul inițial al unui participant;
 - mecanismul de poziționare a participanților cu experiență anterioară;
@@ -477,8 +563,8 @@ Aceeași idee economică poate folosi Learn Language, exemple și Business Chall
 - regulile pentru nereușită, progres parțial și reluarea Business Challenge-ului;
 - formele de sprijin permise și modul în care acestea se reduc progresiv;
 - modul de validare a unei finalizări;
-- structura exactă a prerechizitelor;
-- adaptarea pe grupe de vârstă;
+- structura exactă a prerechizitelor pentru nivelurile următoare;
+- adaptarea exactă a conținutului și dovezilor pentru grupele de vârstă;
 - vizualizarea profilului participantului;
 - rolul platformei în prima versiune testabilă.
 
@@ -486,15 +572,13 @@ Aceeași idee economică poate folosi Learn Language, exemple și Business Chall
 
 Arhitectura generală nu trebuie completată integral înainte de testarea primei experiențe.
 
-După schițarea inițială a [Spiralei Finance](finance-spiral.md), pașii de lucru propuși sunt:
+Level 1 este schițat pentru toți cei cinci Business Pillars, iar hărțile au fost reconciliate comparativ. Următorii pași sunt:
 
-1. documentarea onboardingului Joc + Debrief pentru Deckbuilder;
-2. descompunerea Finance Levels 1 și 2 în competențe observabile;
-3. confirmarea sau corectarea poziției temei `Profit, Cash și Cash Flow` în această progresie;
-4. construirea primului Founder Round complet;
-5. definirea dovezilor, sprijinului, recompensei și etapei Level Up pentru acel Round;
-6. testarea cu participanți și observarea efectelor sistemului de progres;
-7. corectarea hărții înainte de extinderea către ceilalți Business Pillars.
+1. alegerea Round-ului care testează cel mai bine arhitectura programului;
+2. documentarea cerinței minime de onboarding necesare acelui Round;
+3. construirea Round-ului în cele cinci faze;
+4. definirea dovezilor, sprijinului, recompensei și etapei Level Up;
+5. testarea cu participanți și corectarea hărților înainte de dezvoltarea Level 2.
 
 ## Repere externe pentru cercetare
 

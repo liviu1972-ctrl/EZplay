@@ -18,5 +18,11 @@ Ordinea de dezvoltare și punctul recomandat pentru reluarea lucrului sunt păst
 
 ## Documente
 
-- `architecture.md` — primul draft al arhitecturii curriculare și al sistemului de progres.
-- `finance-spiral.md` — prima schiță a progresiei Finance și modelul de lucru pentru construirea unei spirale reale.
+- `architecture.md` — sursa comună pentru arhitectura curriculară, regulile de acces, delimitarea suprapunerilor și sistemul de progres.
+- `finance-spiral.md` — sursa unică pentru progresia Finance, nivelurile sale și harta Round-urilor dezvoltate.
+- `strategy-spiral.md` — sursa de lucru pentru Strategy; în prezent dezvoltă numai Level 1.
+- `product-spiral.md` — sursa de lucru pentru Product; în prezent dezvoltă numai Level 1.
+- `market-spiral.md` — sursa de lucru pentru Market; în prezent dezvoltă numai Level 1.
+- `operations-spiral.md` — sursa de lucru pentru Operations; în prezent dezvoltă numai Level 1.
+
+Hărțile Level 1 au fost reconciliate comparativ. După onboardingul comun, Round-urile pot fi parcurse în orice ordine, cu excepția seriei `FIN 1.2.1 → FIN 1.2.2`; condițiile de caz și delimitările dintre piloni sunt definite în `architecture.md`.

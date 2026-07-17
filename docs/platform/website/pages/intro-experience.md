@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Experiența introductivă EZPLAY
 route: /experiences/introduction
 evidence_map: ../content-evidence-map.md
@@ -205,9 +205,9 @@ evidence_map: ../content-evidence-map.md
 
 > După ce cunoaște instrumentul și a trecut prin primul Founder Debrief, participantul poate continua către Founder Rounds tematice. Acestea folosesc întregul Founder Loop și urmăresc aplicarea unor idei și capacități mai clare.
 
-### Prima direcție
+### Continuarea
 
-> Primul Founder Round complet aflat în dezvoltare urmărește relația dintre Profit, Cash și Cash Flow.
+> Primul Founder Round complet va fi ales dintre Round-urile Level 1 reconciliate. Tema nu este încă selectată.
 
 ### CTA
 

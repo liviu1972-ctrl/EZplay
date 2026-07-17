@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Experiențe EZPLAY
 route: /experiences
 evidence_map: ../content-evidence-map.md
@@ -85,9 +85,9 @@ evidence_map: ../content-evidence-map.md
 
 > Round-ul este construit în jurul unor obiective și capacități observabile. Configurația, întrebările, materialele și provocarea trebuie să lucreze împreună pentru aceeași temă.
 
-### Primul Founder Round în dezvoltare
+### Primul Founder Round complet
 
-> Prima direcție de lucru este `Profit, Cash și Cash Flow`: o temă în care participanții descoperă că un rezultat profitabil nu înseamnă automat că firma are banii necesari pentru a continua.
+> Primul Round complet va fi ales dintre hărțile Level 1 pentru Finance, Strategy, Product, Market și Operations. Tema nu este încă selectată.
 
 ### Notă de stare
 

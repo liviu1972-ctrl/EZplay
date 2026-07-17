@@ -63,6 +63,12 @@ Pentru derivatele individuale ale cărților Deckbuilder se folosește o formă 
 
 De exemplu: `s109-activ-corporal-cost-0.webp`. Slugul este primul, iar descrierea umană rămâne vizibilă în nume.
 
+## Transparență pentru elemente reutilizabile
+
+Pentru un element vizual izolat — de exemplu monedă, icon, token sau ilustrație decupată — derivata `public` în WebP păstrează canalul alpha și elimină numai fundalul care nu face parte din design. JPEG rămâne potrivit pentru fotografie, print sau imagini cu fundal intenționat, deoarece nu poate păstra transparența.
+
+Această regulă nu se aplică automat fețelor complete de cărți, afișelor sau compozițiilor în care fundalul face parte din layout. Înainte de a publica o derivată transparentă, agentul verifică vizual că nu au fost eliminate elemente albe intenționate din interiorul obiectului.
+
 ## Inventarul
 
 [`inventory.csv`](inventory.csv) este registrul operațional al fișierelor și al relațiilor dintre ele. Agenții îl întrețin; Product Owner-ul nu trebuie să completeze manual rânduri, căi sau versiuni.

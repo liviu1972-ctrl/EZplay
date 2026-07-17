@@ -8,3 +8,10 @@ Aici intră elementele reutilizabile ale jocului, distincte de layout-urile fina
 - alte componente individuale extrase sau reconstruite din masterele compozite.
 
 O componentă extrasă dintr-o coală CorelDRAW/PDF păstrează în inventar legătura cu fișierul, pagina și versiunea de origine. Extragerea nu transformă automat componenta într-un master aprobat și nu înlocuiește sursa compozită.
+
+Structura folosită pentru fiecare familie este:
+
+- `source/` — importul original, inclusiv PDF-ul primit;
+- `review/` — randare sau export pentru verificare;
+- `approved-master/` — PNG-ul curent, fidel sursei;
+- `public/` — WebP pentru utilizări digitale. Pentru monede și iconuri izolate, acest WebP are fundal transparent.

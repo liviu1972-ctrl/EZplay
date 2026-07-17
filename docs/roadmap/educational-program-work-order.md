@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-15
+version: "0.3"
+updated: 2026-07-18
 ---
 
 # Ordinea de lucru pentru programul educațional EZPLAY
@@ -22,48 +22,47 @@ Documentele de produs explică rezultatele fiecărei etape. Acest document arat�
 - tratăm numărul nivelurilor, denumirile, competențele, prerechizitele și recompensele ca ipoteze `Draft`;
 - folosim primul Founder Round și playtest-urile pentru a corecta arhitectura înainte de extindere.
 
-De aceea, prima progresie detaliată este Finance, nu toți cei cinci Business Pillars, iar următoarea zonă de lucru este limitată la Finance Levels 1 și 2, nu la toate nivelurile posibile.
+Finance a fost prima progresie detaliată. Hărțile Level 1 există acum în formă `Draft` pentru toți cei cinci Business Pillars și au fost reconciliate comparativ. Următoarea zonă de lucru este alegerea primului Round complet, nu dezvoltarea Level 2.
 
 ## Ordinea generală
 
-| Etapă | Întrebarea la care răspunde | Stare la 2026-07-15 |
+| Etapă | Întrebarea la care răspunde | Stare la 2026-07-18 |
 |---|---|---|
 | 1. Poziția programului | Ce este programul educațional și ce rol au jocurile? | Primul draft există |
 | 2. Fundamentul pedagogic | Cum se completează curriculumul spiral, competențele, mastery, problem-based și experiential learning? | Primul draft există |
 | 3. Arhitectura experienței | Ce sunt Founder Round și Founder Loop? | Primul draft există |
 | 4. Arhitectura progresului | Cum se leagă Founder Skills, Founder Profile, Skills XP, nivelurile, traseele și deblocările? | Terminologia este decisă; valorile nu sunt stabilite |
-| 5. Harta mare a curriculumului | Cum se raportează Strategy, Product, Market, Operations și Finance? | Direcția există; conținutul nu este dezvoltat complet |
+| 5. Harta mare a curriculumului | Cum se raportează Strategy, Product, Market, Operations și Finance? | Hărțile Level 1 au fost comparate și delimitate |
 | 6. Spirala unei perspective | Cum evoluează gândirea Finance? | Primul draft există |
-| 7. Competențele nivelurilor apropiate | Ce poate face concret participantul la Finance Levels 1 și 2? | **Următorul pas** |
-| 8. Harta primelor Founder Rounds | Ce experiențe dezvoltă și fac vizibile competențele respective? | După etapa 7 |
-| 9. Primul Founder Round | Cum arată Founder Loop complet pentru `Profit, Cash și Cash Flow`? | După etapele 7–8 |
+| 7. Competențele Level 1 | Ce poate face concret participantul în fiecare Business Pillar? | Primul draft reconciliat există pentru toți cei cinci piloni |
+| 8. Alegerea primului Round complet | Care Round testează cel mai bine arhitectura programului? | Următorul pas |
+| 9. Primul Round complet | Cum arată cele cinci faze pentru Round-ul ales? | După etapele 7–8 |
 | 10. Progresul prototipului | Ce dovezi, sprijin, Skills XP și deblocări folosește primul Round? | Se definește local, odată cu Round-ul |
 | 11. Facilitarea și materialele | Ce primește facilitatorul și ce folosesc participanții? | După designul Round-ului |
 | 12. Playtest și revizie | Ce funcționează, ce este confuz și ce trebuie schimbat? | După pregătirea prototipului |
 | 13. Extinderea Finance | Ce păstrăm și cum dezvoltăm nivelurile următoare? | Numai după primul ciclu de testare |
-| 14. Celelalte perspective | Cum construim Strategy, Product, Market și Operations? | După ce metoda este suficient de clară |
+| 14. Nivelurile următoare ale celorlalte perspective | Cum continuă Strategy, Product, Market și Operations după Level 1? | Nu intră încă în lucru |
 | 15. Reprezentarea pe platformă | Cum sunt afișate traseele, XP-ul și deblocările pe `ezplay.org`? | După validarea experienței, nu înaintea ei |
 
 ## Fluxul imediat
 
 ```text
-Spirala Finance — draft existent
-→ competențele observabile pentru Finance Levels 1 și 2
-→ harta primelor Founder Rounds Finance
-→ primul Founder Round „Profit, Cash și Cash Flow”
+Hărți Level 1 reconciliate pentru toți cei cinci Business Pillars
+→ alegerea Round-ului care va fi dezvoltat complet pentru prototip
+→ dezvoltarea Round-ului ales în cele cinci faze
 → dovezi, sprijin, Skills XP și Level Up pentru prototip
 → ghidul facilitatorului și materialele participanților
 → playtest
 → revizia curriculumului și a Round-ului
 ```
 
-## De ce urmează competențele
+## De ce competențele preced designul unui Round
 
-[Spirala Finance](../products/educational-program/curriculum/finance-spiral.md) descrie temele, întrebările fondatorului și evoluția gândirii. Ea nu definește încă suficient de exact ce trebuie să poată face participantul.
+Hărțile celor cinci Business Pillars descriu temele, întrebările fondatorului și competențele propuse pentru Level 1. Compararea lor este încheiată ca prim draft; competența fiecărui Round rămâne punctul de plecare pentru dezvoltarea experienței complete.
 
 O competență observabilă poate avea forma:
 
-> Participantul poate anticipa că o alegere profitabilă produce o criză de Cash și poate propune o alternativă fezabilă.
+> Participantul poate identifica dacă Vânzările sunt limitate de Producție sau de Clienți și poate recomanda ce capacitate trebuie dezvoltată.
 
 Această clarificare trebuie să preceadă designul complet al unui Founder Round deoarece determină:
 
@@ -79,25 +78,25 @@ Această clarificare trebuie să preceadă designul complet al unui Founder Roun
 
 ## Punctul de reluare
 
+Reconcilierea comparativă a celor cinci hărți Level 1 este încheiată ca prim draft. Ea a stabilit:
+
+1. acces liber între Round-urile Level 1 după onboardingul comun;
+2. o singură serie obligatorie, `FIN 1.2.1 → FIN 1.2.2`, cu posibilitatea demonstrării competenței echivalente;
+3. diferența dintre prerechizite și condițiile de caz;
+4. delimitarea suprapunerilor dintre cei cinci Business Pillars;
+5. coduri Operations aliniate cu liniile curriculare.
+
 La următoarea sesiune, reluăm cu:
 
-> **Schița competențelor observabile pentru Finance Levels 1 și 2.**
+> **Alegerea primului Round complet care va fi dezvoltat pentru prototipare.**
 
-Obiectivul nu este să construim acum o taxonomie completă. Este suficient să stabilim:
-
-1. capacitatea centrală a fiecărui nivel;
-2. câteva competențe observabile esențiale;
-3. exemple de dovezi potrivite;
-4. ce trebuie demonstrat individual și ce poate fi demonstrat de echipă;
-5. ce rămâne deschis pentru playtest.
-
-După această schiță trecem la harta primelor Founder Rounds Finance.
+Nu trecem încă la Level 2.
 
 ## Ce nu stabilim încă
 
 - numărul definitiv de Finance Levels;
 - competențele tuturor nivelurilor Finance;
-- structura completă a celorlalți patru Business Pillars;
+- nivelurile următoare din Strategy, Product, Market și Operations;
 - pragurile globale de Skills XP;
 - toate prerechizitele și deblocările;
 - o regulă universală pentru recompensele fiecărui Founder Round;

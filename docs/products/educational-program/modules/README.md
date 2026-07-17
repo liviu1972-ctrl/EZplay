@@ -1,8 +1,8 @@
-# Module educaționale
+# Founder Rounds complete
 
-Aici vor fi create lecțiile tematice complete.
+Aici vor fi documentate lecțiile tematice complete. Numele tehnic al folderului rămâne `modules/`, dar `modul` nu reprezintă un container curricular suplimentar: fiecare document va descrie un Founder Round complet.
 
-Un modul poate include:
+Fișa unui Round poate include:
 
 - obiective de învățare;
 - configurația jocului;
@@ -13,4 +13,4 @@ Un modul poate include:
 - criteriul de Level Up;
 - materiale pentru participant și facilitator.
 
-Prima temă recomandată în inventar este Profit, Cash și Cashflow, dar nu există încă un modul complet validat.
+Primul Round complet nu este încă ales. El va fi selectat dintre Round-urile Level 1 reconciliate și va deveni prototipul pentru această structură.
