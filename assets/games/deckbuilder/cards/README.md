@@ -34,4 +34,6 @@ Exemplu: `s109-activ-corporal-cost-0.webp`. Slugul rămâne primul pentru legăt
 - `artwork/png` — ilustrația centrală extrasă fără pierderi și folosită ca master individual;
 - `artwork/jpg` și `artwork/webp` — derivate pentru contexte care cer JPEG sau web.
 
-README-urile individuale poartă aceeași denumire de bază ca activul și indică masterul compozit, pagina și poziția din care provine. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial.
+Când există un README individual, acesta poartă aceeași denumire de bază ca activul și indică masterul compozit, pagina și poziția din care provine. Pentru seturile complete, manifestul este registrul compact al acestor legături. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial.
+
+Pentru toate activele extrase din BT1, [bt1-assets-manifest.csv](bt1-assets-manifest.csv) leagă slugul, poziția din coală, costul și toate formatele disponibile. Harta originală a colii rămâne în `../print/deckbuilder-card-sheet-map.csv`.
