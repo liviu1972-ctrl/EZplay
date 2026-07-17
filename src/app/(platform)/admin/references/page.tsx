@@ -27,6 +27,12 @@ const REFERENCES = [
     reason: "Testarea și validarea deciziei de design de a folosi 30% energie tactilă în interfața publică.",
     route: "/admin/ux-experiments-gemini",
   },
+  {
+    title: "Laborator UX Claude — 15 Efecte Avansate",
+    description: "5 efecte cu cărți + 10 cu artwork-uri, monede, icoane și video. Vortex 3D, fizică magnetică, Ken Burns, peliculă de cinema.",
+    reason: "Comparație directă agent-la-agent: diversitatea efectelor și calitatea animațiilor cu aceleași asset-uri EZPLAY.",
+    route: "/admin/ux-experiments-claude",
+  },
 ]
 
 export default function ReferencesPage() {
