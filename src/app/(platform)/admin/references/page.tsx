@@ -21,6 +21,12 @@ const REFERENCES = [
     reason: "Păstrarea teancurilor, comportamentului de shuffle, reveal-ului cărților și tranzițiilor vizuale din pagina legacy.",
     route: "/admin/references/cards-deck",
   },
+  {
+    title: "Laborator UX Gemini - Energie Tactilă",
+    description: "Componente experimentale pentru testarea interacțiunilor dinamice (hover, parallax, swipe, scroll) cu asseturile EZplay.",
+    reason: "Testarea și validarea deciziei de design de a folosi 30% energie tactilă în interfața publică.",
+    route: "/admin/ux-experiments-gemini",
+  },
 ]
 
 export default function ReferencesPage() {
