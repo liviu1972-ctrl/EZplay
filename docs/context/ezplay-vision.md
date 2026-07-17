@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-13
+version: "0.2"
+updated: 2026-07-17
 ---
 
 # Viziunea EZPLAY
@@ -215,9 +215,9 @@ Platforma trebuie să permită aceste parcursuri diferite fără să oblige toț
 
 EZPLAY trebuie să separe trei tipuri diferite de valoare acumulată.
 
-### Founder Skills / Skill XP
+### Founder Skills / Skills XP
 
-Founder Skills arată progresul de învățare în cele cinci perspective:
+Founder Skills arată progresul de învățare în cei cinci **Business Pillars**:
 
 - Strategy;
 - Product;
@@ -225,7 +225,13 @@ Founder Skills arată progresul de învățare în cele cinci perspective:
 - Operations;
 - Finance.
 
+Progresul distinct din cei cinci Business Pillars formează **Founder Profile**. După prima mențiune clară se pot folosi formele scurte `Skills` și `Profile`.
+
+În documentație, sistemul generic de XP se numește **Skills XP**. În profil și în situațiile concrete se folosesc denumirile Strategy XP, Product XP, Market XP, Operations XP și Finance XP. Nu există implicit `Founder XP` sau un nivel general al fondatorului.
+
 Progresul nu trebuie acordat doar pentru timpul petrecut în platformă. El trebuie legat de experiențe, decizii, reflecție, provocări și demonstrarea înțelegerii.
+
+`Level Up` rămâne faza finală din Founder Loop. Faza poate adăuga XP fără schimbarea nivelului. Când XP-ul acumulat în Business Pillar-ul relevant atinge pragul următor, rezultatul este afișat ca `New Level`.
 
 ### Credits
 

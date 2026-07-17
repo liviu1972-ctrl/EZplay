@@ -1,11 +1,11 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-17
 canonical_for:
   - economic model
   - economic formulas
-  - five business perspectives
+  - Business Pillars
   - Learn Language
   - Business Language
 ---
@@ -19,7 +19,7 @@ Acest document este sursa canonică pentru modelul economic comun folosit în jo
 El definește:
 
 - formula economică generală;
-- cele cinci perspective ale companiei;
+- cei cinci Business Pillars ai companiei;
 - relația dintre EZPLAY Deckbuilder și EZPLAY Tableau Builder;
 - Learn Language și Business Language;
 - formulele și regulile principale de terminologie.
@@ -44,9 +44,9 @@ Formula poate fi descompusă astfel:
 
 > **Revenue = Sales Volume × Product**
 
-## Cele cinci perspective EZPLAY
+## Cei cinci Business Pillars
 
-Modelul complet al unei companii este privit prin cinci perspective:
+Modelul complet al unei companii este organizat prin cinci **Business Pillars**:
 
 1. **Strategy**
 2. **Product**
@@ -58,7 +58,7 @@ Modelul complet al unei companii este privit prin cinci perspective:
 
 Stabilește direcția, alegerile, prioritățile și modul în care compania își construiește avantajul.
 
-Strategy influențează celelalte perspective, dar nu intră direct în formula Revenue.
+Strategy influențează ceilalți piloni, dar nu intră direct în formula Revenue.
 
 ### Product
 
@@ -153,7 +153,7 @@ Formula este:
 
 > **Revenue = min(Operations, Market) × Product**
 
-Tableau Builder poate face vizibile toate cele cinci perspective, dar mecanicile sale concrete rămân ipoteze până la prototipare și testare.
+Tableau Builder poate face vizibili toți cei cinci Business Pillars, dar mecanicile sale concrete rămân ipoteze până la prototipare și testare.
 
 ## Cele două limbaje
 
@@ -288,8 +288,9 @@ Modelul presupune momentan că firma nu are datorii. Dacă sunt introduse datori
 12. `Clienți` reprezintă capacitatea de a câștiga clienți într-o tură, nu baza totală de clienți.
 13. `Equity` se folosește numai pentru valoarea economică a companiei.
 14. Contribuția comunitară se numește **Prestige**, nu Community Equity.
-15. Simbolurile pot rămâne constante între publicuri; legenda și limbajul se pot adapta.
-16. Definițiile detaliate ale variabilelor unui joc apar în documentul acelui joc, nu se repetă aici.
+15. Cele cinci domenii ale companiei se numesc **Business Pillars**: Strategy, Product, Market, Operations și Finance.
+16. Simbolurile pot rămâne constante între publicuri; legenda și limbajul se pot adapta.
+17. Definițiile detaliate ale variabilelor unui joc apar în documentul acelui joc, nu se repetă aici.
 
 ## Surse derivate
 

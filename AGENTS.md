@@ -114,7 +114,7 @@ Dacă documentația tehnică și codul diferă, codul descrie realitatea curent�
 - Dacă utilizatorul scrie `EZPLAY1` sau `EZPLAY 1`, interpretează aliasul istoric drept `EZPLAY Deckbuilder`. Dacă scrie `EZPLAY2` sau `EZPLAY 2`, interpretează aliasul istoric drept `EZPLAY Tableau Builder`. Normalizează documentația, copy-ul și interfața la numele canonice fără să corectezi inutil conversația.
 - `EZPLAY` folosit singur poate desemna istoric jocul de bază, dar în documentația curentă desemnează implicit proiectul sau ecosistemul. Cere clarificare numai dacă sensul schimbă material decizia.
 - Identificatorii tehnici istorici pot fi documentați ca atare, dar nu se redenumesc incidental și nu devin nume publice.
-- Termenii canonici includ `Founder Round`, `Founder Loop`, `Prestige`, `Equity` și `Founder Skills / Skill XP` conform documentației dedicate.
+- Termenii canonici includ `Business Pillars`, `Founder Round`, `Founder Loop`, `Founder Skills`, `Founder Profile`, `Skills XP`, `Level Up`, `Prestige` și `Equity` conform documentației dedicate. Pentru progresul dintr-un pilon se folosesc formele `Finance XP`, `Strategy XP`, `Product XP`, `Market XP` și `Operations XP`; nu se folosește `Founder XP`.
 - Nu inventa copy, oferte, rezultate, cercetări, funcții existente sau promisiuni publice.
 
 ## 5. Intenție și realitate

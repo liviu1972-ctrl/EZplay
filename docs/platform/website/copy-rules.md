@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-17
 ---
 
 # Reguli de copywriting pentru ezplay.org
@@ -98,14 +98,18 @@ EZPLAY este:
 - `Tableau Builder` — jocul avansat;
 - `Founder Round` — sesiunea educațională;
 - `Founder Loop` — arhitectura pedagogică;
-- `Founder Skills / Skill XP` — progres educațional;
+- `Business Pillars` — Strategy, Product, Market, Operations și Finance;
+- `Founder Skills / Skills XP` — progres educațional;
+- `Founder Profile` — profilul combinat al progresului în cei cinci Business Pillars;
+- `Level Up` — faza finală de acordare a XP-ului și actualizare a Founder Profile;
+- `New Level` — rezultatul afișat numai când este atins pragul unui nivel nou;
 - `Prestige` — contribuție și încredere comunitară;
 - `Equity` — numai valoarea economică a unei companii;
 - `Credits` — concept separat, încă nedefinit.
 
-## Cele cinci perspective
+## Business Pillars
 
-Până la o decizie canonică diferită folosim:
+Cele cinci domenii canonice ale companiei se numesc **Business Pillars**:
 
 - Strategy;
 - Product;
@@ -115,9 +119,11 @@ Până la o decizie canonică diferită folosim:
 
 În copy public poate apărea formularea:
 
-> cele cinci perspective din care privești o companie
+> cei cinci piloni ai unei companii
 
-Nu se înlocuiește cu `piloni` în textele finale fără actualizarea sursei canonice.
+După prima mențiune clară se poate folosi forma scurtă `pilonii`.
+
+În documentație folosim `Skills XP` pentru sistemul generic. În copy și în profil folosim valoarea concretă a pilonului: `Finance XP`, `Strategy XP`, `Product XP`, `Market XP` sau `Operations XP`. Nu folosim `Founder XP`.
 
 ## Formulări preferate
 

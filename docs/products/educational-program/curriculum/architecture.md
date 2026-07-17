@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.3"
-updated: 2026-07-15
+version: "0.4"
+updated: 2026-07-17
 ---
 
 # Arhitectura curriculară a programului de educație antreprenorială pentru tineri
@@ -15,7 +15,7 @@ Documentul nu definește încă:
 - numele public al programului;
 - curriculumul complet;
 - numărul nivelurilor;
-- pragurile de Skill XP;
+- pragurile de Skills XP;
 - toate competențele sau Founder Rounds;
 - o metodă pedagogică validată;
 - funcțiile care trebuie implementate pe `ezplay.org`.
@@ -72,7 +72,7 @@ Problem-based nu înseamnă descoperire fără ghidaj. Facilitatorul, regulile e
 
 - **Competența** descrie o capacitate observabilă, de exemplu: participantul poate anticipa când o alegere profitabilă produce o criză de cash.
 - **Dovada** este comportamentul sau rezultatul prin care capacitatea devine vizibilă într-un context.
-- **Skill XP** înregistrează progresul recunoscut de program.
+- **Skills XP** înregistrează progresul recunoscut de program.
 - **Nivelul** sintetizează poziția participantului și controlează o parte din acces.
 - **Mastery** este standardul de suficiență pentru o anumită capacitate sau familie de capacități; nu rezultă automat numai din atingerea unui prag numeric.
 
@@ -80,9 +80,9 @@ Problem-based nu înseamnă descoperire fără ghidaj. Facilitatorul, regulile e
 
 ### De ce nu folosim cinci cicluri universale
 
-Etichetele `Understand`, `Connect`, `Analyze`, `Decide` și `Lead` pot fi utile ca lentile pentru verificarea profunzimii unei experiențe. Nu devin însă cinci cicluri obligatorii și sincronizate pentru toate perspectivele.
+Etichetele `Understand`, `Connect`, `Analyze`, `Decide` și `Lead` pot fi utile ca lentile pentru verificarea profunzimii unei experiențe. Nu devin însă cinci cicluri obligatorii și sincronizate pentru toți cei cinci Business Pillars.
 
-Participantul trebuie să înțeleagă, să conecteze, să analizeze și să decidă încă din experiențele de început, în forme potrivite nivelului său. La niveluri mai avansate cresc calitatea dovezilor, complexitatea sistemului, incertitudinea și responsabilitatea deciziei. Fiecare perspectivă poate avea propria evoluție conceptuală și propriile prerechizite.
+Participantul trebuie să înțeleagă, să conecteze, să analizeze și să decidă încă din experiențele de început, în forme potrivite nivelului său. La niveluri mai avansate cresc calitatea dovezilor, complexitatea sistemului, incertitudinea și responsabilitatea deciziei. Fiecare Business Pillar poate avea propria evoluție conceptuală și propriile prerechizite.
 
 ## Unitatea educațională
 
@@ -119,7 +119,7 @@ Rolurile etapelor sunt:
 - **Founder Debrief** — fiecare participant reflectează asupra experienței și propriilor alegeri, într-o conversație facilitată la masă;
 - **Learning Input** — facilitatorul oferă grupului conceptele și instrumentele relevante prin explicații, documentație, exemple, materiale scrise, video sau alte resurse;
 - **Business Challenge** — participanții lucrează ca o echipă pentru a produce o decizie sau o soluție într-o situație relevantă;
-- **Level Up** — rezultatul echipei este transformat în Skill XP, profilurile sunt actualizate și sunt verificate noile deblocări.
+- **Level Up** — rezultatul echipei este transformat în XP-ul Business Pillar-ului relevant, Founder Profile este actualizat și sunt verificate pragurile și noile deblocări.
 
 Configurația de lucru preferată în acest moment este:
 
@@ -147,13 +147,13 @@ Competența antreprenorială nu înseamnă ca o singură persoană să păstreze
 
 În acest sens, nu contează cine a făcut fiecare calcul sau cine a formulat primul soluția, dacă echipa a lucrat ca echipă și poate susține rezultatul. Facilitatorul trebuie să creeze condiții pentru participare, fără să transforme Business Challenge-ul într-o succesiune de examinări individuale.
 
-Rezultatul Business Challenge-ului aparține echipei. Ipoteza de lucru este ca Skill XP obținut să fie acordat participanților activi ai echipei. Gărzile necesare pentru situațiile în care un participant este exclus sau nu contribuie deloc trebuie definite și testate separat.
+Rezultatul Business Challenge-ului aparține echipei. Ipoteza de lucru este ca Skills XP obținut să fie acordat participanților activi ai echipei. Gărzile necesare pentru situațiile în care un participant este exclus sau nu contribuie deloc trebuie definite și testate separat.
 
 Founder Loop și etapele sale sunt încă ipoteze de lucru. Ele nu trebuie prezentate ca metodă validată înainte de documentare și testare repetată.
 
 ## Harta curriculară
 
-Curriculumul folosește cele cinci perspective definite de modelul economic comun EZPLAY:
+Curriculumul folosește cei cinci **Business Pillars** definiți de modelul economic comun EZPLAY:
 
 1. Strategy;
 2. Product;
@@ -161,9 +161,9 @@ Curriculumul folosește cele cinci perspective definite de modelul economic comu
 4. Operations;
 5. Finance.
 
-Folosirea acestor perspective ca domenii curriculare este o ipoteză de design compatibilă cu modelul EZPLAY, nu o concluzie deja validată.
+Folosirea acestor Business Pillars ca domenii curriculare este o ipoteză de design compatibilă cu modelul EZPLAY, nu o concluzie deja validată.
 
-Modelul de lucru este ca fiecare perspectivă să aibă o singură progresie spiralată. Participantul revine asupra conceptelor importante cu:
+Modelul de lucru este ca fiecare Business Pillar să aibă o singură progresie spiralată. Participantul revine asupra conceptelor importante cu:
 
 - profunzime mai mare;
 - mai multe variabile;
@@ -174,7 +174,7 @@ Modelul de lucru este ca fiecare perspectivă să aibă o singură progresie spi
 
 Cele cinci progresii sunt interconectate. Modelul este, provizoriu, o **rețea de spirale** și nu o succesiune unică de lecții.
 
-Prima schiță detaliată a acestei logici este [Spirala Finance](finance-spiral.md). Ea este un model de lucru pentru construirea celorlalte patru perspective, nu un șablon care le obligă să aibă aceleași teme sau același număr de niveluri.
+Prima schiță detaliată a acestei logici este [Spirala Finance](finance-spiral.md). Ea este un model de lucru pentru construirea celorlalți patru Business Pillars, nu un șablon care îi obligă să aibă aceleași teme sau același număr de niveluri.
 
 ```text
 Strategy ─────┐
@@ -193,23 +193,23 @@ Terminologia de lucru este:
 | Termen | Sens |
 |---|---|
 | **Spirala Finance** | Întreaga progresie curriculară Finance, în care conceptele revin cu profunzime și complexitate mai mari |
-| **Finance XP** | Punctele acumulate de participant în perspectiva Finance |
+| **Finance XP** | Punctele acumulate de participant în Business Pillar-ul Finance |
 | **Finance Level** | Poziția participantului în Spirala Finance, determinată de pragurile Finance XP |
 | **Founder Round** | Experiența educațională de aproximativ două ore |
 | **Nivel minim pentru acces** | Nivelul sau combinația de niveluri necesare pentru participarea la un Founder Round |
 | **Business Challenge** | Provocarea de echipă din Founder Round |
 | **Varianta Business Challenge-ului** | Una dintre provocările disponibile în același Round sau la același nivel minim |
-| **Level Up** | Faza finală în care se acordă Skill XP, se actualizează nivelurile și se verifică deblocările |
+| **Level Up** | Faza finală în care se acordă XP-ul relevant, se actualizează Founder Profile, se verifică pragurile și deblocările |
 
-Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare perspectivă are o singură spirală, iar poziția participantului este exprimată prin nivel:
+Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare Business Pillar are o singură spirală, iar poziția participantului este exprimată prin nivel:
 
 > `Finance Level 2`
 
-Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este perspectiva principală și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în alte perspective.
+Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este Business Pillar-ul principal și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în ceilalți piloni.
 
 ## Libertatea traseului
 
-Participantul nu trebuie obligat să mențină același nivel în toate cele cinci perspective și nici să parcurgă toate experiențele într-o ordine universală.
+Participantul nu trebuie obligat să mențină același nivel în toți cei cinci Business Pillars și nici să parcurgă toate experiențele într-o ordine universală.
 
 Programul oferă:
 
@@ -219,7 +219,7 @@ Programul oferă:
 - prerechizite numai acolo unde sunt necesare pentru înțelegere și aplicare;
 - recomandări de traseu, fără a transforma recomandările în obligații arbitrare.
 
-Poate exista un onboarding comun pentru Deckbuilder și pentru modul de lucru EZPLAY. Onboardingul nu înseamnă automat atingerea nivelului 1 în toate cele cinci Founder Skills.
+Poate exista un onboarding comun pentru Deckbuilder și pentru modul de lucru EZPLAY. Onboardingul nu înseamnă automat atingerea nivelului 1 în toți cei cinci Business Pillars.
 
 Un participant poate avansa mai mult în Finance decât în Operations. Pentru un Founder Round avansat de Finance poate avea însă nevoie de un nivel minim în Operations, Product sau Strategy.
 
@@ -240,9 +240,11 @@ Recompensă posibilă:
 
 Nivelurile și valorile din exemplu nu reprezintă o decizie curriculară.
 
-## Founder Skills, Skill XP și niveluri
+## Founder Skills, Founder Profile, Skills XP și niveluri
 
-Participantul are un profil separat în cele cinci perspective:
+Founder Skills este sistemul de progres educațional, iar Founder Profile combină poziția participantului în cei cinci Business Pillars. După prima mențiune clară pot fi folosite formele scurte `Skills` și `Profile`.
+
+Participantul are progres separat în fiecare Business Pillar:
 
 - Strategy XP și Strategy Level;
 - Product XP și Product Level;
@@ -250,7 +252,7 @@ Participantul are un profil separat în cele cinci perspective:
 - Operations XP și Operations Level;
 - Finance XP și Finance Level.
 
-Nivelurile diferite formează profilul participantului. Un participant poate avea, de exemplu, Finance Level 4, Operations Level 2 și Product Level 1, fără să existe obligația unui nivel general unic de antreprenor.
+Nivelurile diferite formează Founder Profile. Un participant poate avea, de exemplu, Finance Level 4, Operations Level 2 și Product Level 1, fără să existe obligația unui nivel general unic de antreprenor. Nu se folosește `Founder XP`.
 
 ### Variante la același nivel
 
@@ -263,7 +265,7 @@ Variantele pot diferi prin:
 - timpul disponibil;
 - incertitudine;
 - coordonarea necesară în echipă;
-- perspectivele antreprenoriale implicate;
+- pilonii implicați;
 - cantitatea de sprijin oferită.
 
 Exemplu ilustrativ pentru trei variante disponibile la Finance Level 2:
@@ -289,18 +291,18 @@ Valorile nu sunt stabilite. Exemplul arată numai că nivelul de acces, dificult
 
 Facilitatorul poate selecta varianta potrivită folosind nivelul și istoricul echipei, scopul sesiunii și ceea ce dorește să observe. Regula de selecție trebuie descrisă în fișa Founder Round-ului și nu improvizată arbitrar în timpul sesiunii.
 
-### Skill XP
+### Skills XP
 
-Skill XP reprezintă progresul acumulat într-o perspectivă.
+Skills XP este denumirea generică a sistemului de XP acumulat separat în Business Pillars.
 
-Un Founder Round acordă Skill XP după Business Challenge, conform rezultatelor definite în fișa Round-ului. Skill XP este singurul sistem de puncte curriculare; nu se introduce separat un `Challenge Rating`.
+Un Founder Round acordă XP după Business Challenge, conform rezultatelor definite în fișa Round-ului. Skills XP este singurul sistem de puncte curriculare; nu se introduce separat un `Challenge Rating`.
 
 Nu există o regulă universală conform căreia fiecare Founder Round acordă un singur punct sau folosește întotdeauna schema `3 / 2 / 1`. Fiecare Round poate declara:
 
 - cerințele de acces;
 - rezultatele posibile;
 - cantitatea de XP asociată fiecărui rezultat;
-- perspectiva sau perspectivele în care se acordă XP;
+- Business Pillar-ul sau Business Pillars în care se acordă XP;
 - condițiile în care poate fi folosit sprijin suplimentar.
 
 Exemplu posibil pentru un Business Challenge:
@@ -311,15 +313,15 @@ Rezolvare după primul indiciu: +2 Finance XP
 Rezolvare după al doilea indiciu: +1 Finance XP
 ```
 
-Acesta este numai un exemplu. Un alt Round poate folosi alte valori sau poate acorda XP în mai multe perspective dacă rezultatul cere în mod real acele competențe.
+Acesta este numai un exemplu. Un alt Round poate folosi alte valori sau poate acorda XP în mai mulți Business Pillars dacă rezultatul cere în mod real acele competențe.
 
 Pentru a păstra sistemul inteligibil, ipoteza recomandată este:
 
-- fiecare Round are o perspectivă principală și o recompensă principală;
-- XP secundar se acordă numai când o altă perspectivă este parte reală și observabilă a provocării;
+- fiecare Round are un Business Pillar principal și o recompensă principală;
+- XP secundar se acordă numai când un alt Business Pillar este parte reală și observabilă a provocării;
 - valorile și condițiile sunt stabilite înaintea livrării, nu improvizate în funcție de echipă.
 
-XP-ul rămâne general pentru perspectivă:
+XP-ul este înregistrat specific pentru Business Pillar:
 
 > `+3 Finance XP`
 
@@ -329,9 +331,9 @@ XP-ul recompensează rezultatul antreprenorial definit de Round, care poate incl
 
 Pentru a evita acumularea artificială, o ipoteză inițială este că același Founder Round acordă recompensa curriculară o singură dată după prima finalizare validă. Replay-ul poate rămâne disponibil pentru practică, joc social sau obținerea unui rezultat mai bun, dar regula privind diferența de XP la replay nu este încă stabilită.
 
-### Founder Skill Level
+### Business Pillar Level
 
-Nivelul reprezintă pragul de progres atins într-o perspectivă și este determinat de Skill XP acumulat în acea perspectivă.
+Nivelul reprezintă pragul de progres atins într-un Business Pillar și este determinat de XP-ul acumulat în acel pilon.
 
 Exemplu ilustrativ:
 
@@ -343,11 +345,11 @@ Finance Level 4: 200–499 Finance XP
 Finance Level 5: de la 500 Finance XP
 ```
 
-Pragurile nu sunt stabilite. Trebuie decis ulterior dacă toate perspectivele folosesc aceleași praguri și dacă un participant începe la Level 0, la Level 1 sau într-o stare inițială separată.
+Pragurile nu sunt stabilite. Trebuie decis ulterior dacă cei cinci Business Pillars folosesc aceleași praguri și dacă un participant începe la Level 0, la Level 1 sau într-o stare inițială separată.
 
-Când Skill XP ajunge la pragul necesar:
+Când XP-ul unui Business Pillar ajunge la pragul necesar:
 
-- nivelul perspectivei poate crește;
+- nivelul Business Pillar-ului crește;
 - pot deveni vizibile sau accesibile noi Founder Rounds;
 - unele experiențe pot rămâne blocate până la îndeplinirea altor prerechizite relevante.
 
@@ -359,8 +361,9 @@ Nivelul nu este un nivel general de „antreprenor”. Profilul poate fi asimetr
 
 ```text
 Rezultatul Business Challenge-ului
-→ acordarea Skill XP
-→ actualizarea nivelurilor
+→ acordarea XP-ului relevant
+→ actualizarea Founder Profile
+→ verificarea pragului pentru New Level
 → verificarea deblocărilor
 ```
 
@@ -379,21 +382,22 @@ Exemplu cu creștere de nivel:
 LEVEL UP
 
 Finance XP: 7 → 10
+NEW LEVEL
 Finance Level: 2 → 3
 Noi Founder Rounds disponibile: 2
 ```
 
-Business Challenge produce dovada de aplicare. Level Up înregistrează și face vizibil progresul rezultat.
+Business Challenge produce dovada de aplicare. Level Up înregistrează și face vizibil progresul rezultat. `New Level` apare numai când XP-ul acumulat atinge pragul următor; forma `Level New` nu se folosește.
 
 ## Deblocări și prerechizite
 
 Fiecare Founder Round poate declara:
 
-- perspectiva principală;
+- Business Pillar-ul principal;
 - tema și competențele urmărite;
 - nivelurile minime necesare;
 - alte Founder Rounds sau experiențe necesare;
-- recompensa de Skill XP;
+- recompensa de Skills XP;
 - condiția unei finalizări valide;
 - ce poate debloca.
 
@@ -429,7 +433,7 @@ Sistemul de progres trebuie proiectat pentru autonomie, competență și învă�
 
 Principiile de lucru sunt:
 
-1. Skill XP face vizibil progresul; nu înlocuiește obiectivul educațional.
+1. Skills XP face vizibil progresul; nu înlocuiește obiectivul educațional.
 2. Deblocările extind libertatea de alegere; nu creează presiune artificială de a continua.
 3. Recompensa urmează experiența și aplicarea; nu este oferită doar pentru prezență sau timp petrecut.
 4. Traseul personal este mai important decât comparația publică între participanți.
@@ -459,15 +463,15 @@ Aceeași idee economică poate folosi Learn Language, exemple și Business Chall
 - numele public al hărții și al traseelor;
 - dacă termenul `Founder Path` este necesar;
 - relația dintre Founder Round, lecție și modul;
-- numărul nivelurilor pentru fiecare perspectivă;
+- numărul nivelurilor pentru fiecare Business Pillar;
 - harta competențelor observabile din fiecare nivel;
-- pragurile de Skill XP;
+- pragurile de Skills XP;
 - nivelul inițial al unui participant;
 - mecanismul de poziționare a participanților cu experiență anterioară;
-- dacă pragurile sunt comune sau diferite între perspective;
+- dacă pragurile sunt comune sau diferite între Business Pillars;
 - relația exactă dintre pragurile XP, dovezile de mastery și acces;
 - scala XP și calibrarea recompenselor între Founder Rounds;
-- condițiile exacte pentru acordarea XP secundar în alte perspective;
+- condițiile exacte pentru acordarea XP secundar în ceilalți piloni;
 - regulile de selectare a variantei Business Challenge-ului;
 - distribuirea XP către profilurile individuale când Business Challenge-ul este rezolvat în echipă;
 - regulile pentru nereușită, progres parțial și reluarea Business Challenge-ului;
@@ -490,7 +494,7 @@ După schițarea inițială a [Spiralei Finance](finance-spiral.md), pașii de l
 4. construirea primului Founder Round complet;
 5. definirea dovezilor, sprijinului, recompensei și etapei Level Up pentru acel Round;
 6. testarea cu participanți și observarea efectelor sistemului de progres;
-7. corectarea hărții înainte de extinderea către alte perspective.
+7. corectarea hărții înainte de extinderea către ceilalți Business Pillars.
 
 ## Repere externe pentru cercetare
 

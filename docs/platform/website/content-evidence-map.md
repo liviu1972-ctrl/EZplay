@@ -65,7 +65,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | EZPLAY este educație antreprenorială prin experiență, decizii și consecințe | Hero, diferența EZPLAY, parcurs | `INT-DEF-001`, `INT-BRAND-001` | Acoperit intern | Se prezintă drept poziționare și principiu de design, nu rezultat măsurat. |
 | Founder Loop leagă experiența, reflecția, inputul și aplicarea | Parcurs, dincolo de joc | `INT-CURR-001`, `SRC-EDU-010`, `SRC-EDU-011`, `SRC-EDU-012` | Informat extern / Ipoteză explicită | Nu se numește metodă validată. |
 | Primul program este destinat tinerilor | Primul program, pentru cine construim | `INT-WEB-001`, `INT-CURR-001` | Ipoteză explicită | Numele, vârstele, durata și disponibilitatea rămân condiționate. |
-| Cele cinci perspective | Ce dezvoltă, cele cinci perspective | `INT-ECON-001` | Acoperit intern | Se folosește `perspective`, nu `piloni`. |
+| Business Pillars | Ce dezvoltă, cei cinci piloni ai unei companii | `INT-ECON-001` | Acoperit intern | Se folosește denumirea canonică `Business Pillars`; după prima mențiune poate apărea `pilonii`. |
 | Cercetarea informează dezvoltarea | Cercetare | `INT-RES-001`, `INT-SRC-001` | Acoperit intern | Linkul duce la `/research`; nu implică validarea EZPLAY. |
 | Deckbuilder și Tableau Builder sunt instrumente EZPLAY | Instrumentele | `INT-ASSET-001`, `INT-ECON-001` | Acoperit intern / Ipoteză explicită | Tableau Builder rămâne concept de produs; disponibilitatea digitală se verifică tehnic. |
 | Participarea, solicitarea unei experiențe sau contribuția sunt disponibile | CTA-uri | `INT-ASSET-001`, `INT-WEB-001` | De confirmat | CTA-ul se activează numai cu proces, responsabil și capacitate reală. |
@@ -76,7 +76,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 |---|---|---|---|---|
 | Programul folosește Founder Rounds și Founder Loop | Început, Founder Rounds | `INT-CURR-001`, `INT-ASSET-001` | Ipoteză explicită / Dovadă internă parțială | Formatul complet nu este prezentat ca standardizat sau validat. |
 | Curriculumul revizitează ideile cu dificultate mai mare | Spirale | `INT-CURR-001`, `INT-CURR-002`, `SRC-EDU-007` | Informat extern | Este decizie de design în lucru. |
-| Progresul urmărește aplicarea și competențe observabile | Progres, traseu | `INT-CURR-001`, `SRC-EDU-008`, `SRC-EDU-009` | Informat extern / Ipoteză explicită | Skill XP și pragurile nu sunt validate. |
+| Progresul urmărește aplicarea și competențe observabile | Progres, traseu | `INT-CURR-001`, `SRC-EDU-008`, `SRC-EDU-009` | Informat extern / Ipoteză explicită | Skills XP și pragurile nu sunt validate. |
 | Participanții pot alege direcții și lucra individual și în echipă | Libertatea traseului, individ și echipă | `INT-CURR-001` | Ipoteză explicită | Nu se afirmă efecte asupra motivației înainte de testare. |
 
 ## `/how-we-learn` — Cum învățăm
@@ -109,7 +109,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | Grup de afirmații | Secțiuni | Dovezi | Stare | Regula publicării |
 |---|---|---|---|---|
 | Participantul ia decizii și poate încerca din nou | Ce vei face, greșeala | `INT-DEF-001`, `INT-ASSET-001`, `INT-PLAY-001` | Acoperit intern / Dovadă internă parțială | Se descrie experiența jocului, nu o transformare personală garantată. |
-| Programul explorează cele cinci perspective | Ce vei descoperi | `INT-ECON-001`, `INT-CURR-001` | Acoperit intern / Ipoteză explicită | Perspectivele sunt model EZPLAY; curriculumul complet este în lucru. |
+| Programul explorează cei cinci Business Pillars | Ce vei descoperi | `INT-ECON-001`, `INT-CURR-001` | Acoperit intern / Ipoteză explicită | Business Pillars fac parte din modelul EZPLAY; curriculumul complet este în lucru. |
 | Tinerii pot participa acum | Cum poți participa | `INT-WEB-001` | De confirmat | CTA-ul se condiționează de existența unui adult, formular și proces operațional. |
 
 ## `/for/parents` — Pentru părinți
@@ -153,7 +153,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | Grup de afirmații | Secțiuni | Dovezi | Stare | Regula publicării |
 |---|---|---|---|---|
 | Cele șase teme sunt informate de cercetare publicată | Temele, biblioteca | `SRC-EDU-001`, `SRC-EDU-002`, `SRC-EDU-003`, `SRC-EDU-004`, `SRC-EDU-005`, `SRC-EDU-006`, `SRC-EDU-007`, `SRC-EDU-008`, `SRC-EDU-009`, `SRC-EDU-010`, `SRC-EDU-011`, `SRC-EDU-012`, `INT-RES-001`, `INT-SRC-001` | Informat extern | Fiecare card păstrează tipul, relevanța, limita și linkul. |
-| Founder Loop și Skill XP nu sunt validate | Ce investigăm, ce nu afirmăm | `INT-CURR-001`, `INT-RES-001` | Acoperit intern | Limitele nu se elimină din copy. |
+| Founder Loop și Skills XP nu sunt validate | Ce investigăm, ce nu afirmăm | `INT-CURR-001`, `INT-RES-001` | Acoperit intern | Limitele nu se elimină din copy. |
 | Observațiile EZPLAY sunt distincte de dovezile externe | Trei niveluri | `INT-PLAY-001`, `INT-RES-001` | Acoperit intern | Observațiile nu devin concluzii generale. |
 
 ## `/development` — Dezvoltare

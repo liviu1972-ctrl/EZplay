@@ -119,17 +119,17 @@ evidence_map: ../content-evidence-map.md
 
 ### Level Up
 
-> Rezultatul devine feedback pentru progres. Skill XP, nivelurile și deblocările vor fi definite și validate împreună cu Founder Rounds reale.
+> Rezultatul devine feedback pentru progres. Skills XP, nivelurile și deblocările vor fi definite și validate împreună cu Founder Rounds reale.
 
 ### Mesaj evidențiat
 
 > **Founder Round nu testează doar ce își amintește participantul. Urmărește ce poate face cu ceea ce a înțeles.**
 
-## Secțiunea 4 — Cele cinci perspective
+## Secțiunea 4 — Business Pillars
 
 ### H2
 
-> **O companie poate fi privită din cinci perspective.**
+> **O companie este construită pe cinci piloni conectați.**
 
 ### Introducere
 
@@ -165,7 +165,7 @@ evidence_map: ../content-evidence-map.md
 
 > Profitul poate apărea într-o experiență introductivă ca rezultat simplu. Mai târziu, participantul îl compară cu Cash-ul, investițiile, riscul, performanța și deciziile strategice. Fiecare revenire adaugă profunzime, variabile și autonomie.
 
-> Acesta este sensul progresiei spiralate: nu bifăm o temă și o abandonăm. O reîntâlnim în contexte mai complexe și o conectăm cu celelalte perspective.
+> Acesta este sensul progresiei spiralate: nu bifăm o temă și o abandonăm. O reîntâlnim în contexte mai complexe și o conectăm cu ceilalți piloni.
 
 ### Mesaj evidențiat
 
@@ -179,7 +179,7 @@ evidence_map: ../content-evidence-map.md
 
 ### Text
 
-> După onboarding, participanții nu trebuie să păstreze același nivel în toate cele cinci perspective și nici să urmeze o ordine universală. Unele Founder Rounds cer experiențe anterioare pentru că problema depinde cu adevărat de ele. Altele oferă libertatea de a alege tema sau provocarea următoare.
+> După onboarding, participanții nu trebuie să păstreze același nivel în toți cei cinci Business Pillars și nici să urmeze o ordine universală. Unele Founder Rounds cer experiențe anterioare pentru că problema depinde cu adevărat de ele. Altele oferă libertatea de a alege tema sau provocarea următoare.
 
 > Programul poate recomanda un traseu fără să transforme recomandarea într-o obligație arbitrară.
 
@@ -207,7 +207,7 @@ evidence_map: ../content-evidence-map.md
 
 ### Text
 
-> Founder Skills și Skill XP vor face vizibil progresul în Strategy, Product, Market, Operations și Finance. Ele nu vor recompensa simplul timp petrecut în platformă, numărul de clickuri sau finalizarea mecanică a unei activități.
+> Founder Skills și Skills XP vor face vizibil progresul în Strategy, Product, Market, Operations și Finance. Ele nu vor recompensa simplul timp petrecut în platformă, numărul de clickuri sau finalizarea mecanică a unei activități.
 
 > Până la validarea Round-urilor, profilul poate arăta zonele care urmează să fie explorate, fără să pretindă că pragurile și nivelurile sunt deja definitive.
 

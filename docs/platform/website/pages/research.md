@@ -133,7 +133,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 
 #### Ce schimbă în EZPLAY
 
-> Fiecare mecanică trebuie să aibă un rol explicabil. Founder Skills și Skill XP trebuie să facă progresul inteligibil și să urmeze dovezi relevante de aplicare, nu să recompenseze mecanic timpul petrecut.
+> Fiecare mecanică trebuie să aibă un rol explicabil. Founder Skills și Skills XP trebuie să facă progresul inteligibil și să urmeze dovezi relevante de aplicare, nu să recompenseze mecanic timpul petrecut.
 
 #### Limită
 
@@ -173,7 +173,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 
 #### Limită
 
-> EZPLAY nu are încă un sistem validat de praguri, niveluri sau Skill XP. Acestea rămân ipoteze de produs și evaluare.
+> EZPLAY nu are încă un sistem validat de praguri, niveluri sau Skills XP. Acestea rămân ipoteze de produs și evaluare.
 
 ### Tema 5
 
@@ -316,7 +316,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 
 #### Limită
 
-> Sursa nu testează EZPLAY, jocurile de masă sau Skill XP.
+> Sursa nu testează EZPLAY, jocurile de masă sau Skills XP.
 
 #### Link
 
@@ -364,7 +364,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 
 #### Relevanță pentru EZPLAY
 
-> Numărul de activități finalizate nu trebuie confundat cu înțelegerea. Skill XP trebuie legat de aplicare relevantă.
+> Numărul de activități finalizate nu trebuie confundat cu înțelegerea. Skills XP trebuie legat de aplicare relevantă.
 
 #### Limită
 
@@ -498,7 +498,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 
 #### Limită
 
-> Cercetarea este veche și reunește programe diferite. Nu justifică pragurile de Skill XP sau deblocarea automată.
+> Cercetarea este veche și reunește programe diferite. Nu justifică pragurile de Skills XP sau deblocarea automată.
 
 #### Link
 
@@ -619,7 +619,7 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 > În acest moment, cercetarea externă și documentarea internă nu ne permit să afirmăm că:
 
 - Founder Loop este o metodă validată independent;
-- Skill XP măsoară cu precizie dezvoltarea unei competențe;
+- Skills XP măsoară cu precizie dezvoltarea unei competențe;
 - deblocările și nivelurile motivează toți participanții;
 - același traseu este potrivit pentru toate vârstele;
 - o experiență EZPLAY produce rezultate de lungă durată;

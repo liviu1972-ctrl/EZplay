@@ -78,10 +78,10 @@ Pagina transformă starea de dezvoltare într-o invitație clară și responsabi
 
 - experiența introductivă într-un format clar și repetabil;
 - Founder Rounds complete și Founder Loop aplicat în conținut real;
-- progresia spiralată pentru cele cinci perspective;
+- progresia spiralată pentru cei cinci Business Pillars;
 - pregătirea și instrumentele facilitatorilor;
 - cercetarea, observarea și evaluarea rezultatelor;
-- profilul Founder Skills și regulile pentru Skill XP;
+- Founder Profile și regulile pentru Skills XP;
 - rolurile, siguranța și experiențele din platforma digitală;
 - procesele prin care comunitatea poate contribui responsabil.
 

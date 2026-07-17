@@ -11,6 +11,7 @@
 ## Decizii active
 
 - [`active/documentation-working-method.md`](active/documentation-working-method.md) — metoda documentației vii, modelul `status`/`lifecycle` și autonomia agenților;
+- [`active/progression-system-terminology.md`](active/progression-system-terminology.md) — terminologia canonică pentru Business Pillars, Founder Skills, Founder Profile, Skills XP, Level Up și New Level;
 - [`active/repository-unification.md`](active/repository-unification.md) — repository-ul unic, structura și ierarhia surselor.
 
 ## Propuneri în lucru

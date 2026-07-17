@@ -421,7 +421,7 @@ Homepage-ul prezintă in mod draft, nefinalizat deja:
 * Founder Debrief;
 * Business Challenge;
 * Level Up;
-* cele cinci perspective antreprenoriale:
+* cei cinci Business Pillars:
 
   * Market;
   * Product;
@@ -518,7 +518,7 @@ Acestea nu trebuie să înlocuiască automat jocul fizic, dar pot crește accesu
 
 Platforma trebuie să urmărească progresul acumulat prin jocuri și experiențe.
 
-Acest progres se bazează pe cele cinci perspective:
+Acest progres se bazează pe cei cinci Business Pillars:
 
 * Market;
 * Product;
@@ -541,7 +541,7 @@ Acest sistem trebuie să arate dezvoltarea competențelor, nu doar timpul petrec
 
 Denumirea de lucru recomandată este:
 
-**Founder Skills / Skill XP**
+**Founder Skills / Skills XP**
 
 Acest progres este legat de învățare și nu trebuie confundat cu prestigiul comunitar.
 
@@ -699,7 +699,7 @@ Platforma trebuie să poată funcționa fără ca fiecare activitate să depind�
 * feedback asupra jocurilor;
 * testarea unor configurații;
 * contribuții validate;
-* progres în cele cinci perspective;
+* progres în cei cinci Business Pillars;
 * membri care câștigă Prestige prin contribuții validate;
 * decizii în care comunitatea are un rol real.
 

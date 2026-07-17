@@ -110,7 +110,7 @@ Traseele reprezintă conexiuni și consecințe. Modulele reprezintă părți ale
 Documentele sunt `Draft`. Ele sunt suficient de clare pentru realizarea unui prototip vizual complet, dar următoarele decizii pot cere actualizări:
 
 - fonturile finale după testare în browser;
-- asocierea culorilor cu cele cinci perspective;
+- asocierea culorilor cu cei cinci Business Pillars;
 - disponibilitatea fotografiilor reale;
 - rolul public al Deckbuilder-ului digital;
 - textele și fluxurile juridice;

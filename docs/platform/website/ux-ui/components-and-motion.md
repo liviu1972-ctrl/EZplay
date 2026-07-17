@@ -290,15 +290,15 @@ Fiecare etapă are:
 
 Nu este o roată generică infinită dacă aceasta reduce lizibilitatea pe mobil.
 
-#### `PerspectiveSystem`
+#### Business Pillars — identificator existent `PerspectiveSystem`
 
-Arată cele cinci perspective în jurul participantului sau companiei.
+Arată cei cinci Business Pillars în jurul participantului sau companiei. Identificatorul tehnic existent nu schimbă denumirea publică.
 
 Până la decizia culorilor:
 
-- numele perspectivelor sunt neutre;
+- denumirile pilonilor sunt neutre;
 - activarea poate folosi spectrul de brand ca efect general;
-- token-urile nu poartă numele unei perspective.
+- token-urile nu poartă numele unui Business Pillar.
 
 #### `SpiralProgression`
 
@@ -319,7 +319,7 @@ Joc / simulare
 
 #### `FounderSkillsPreview`
 
-Arată cele cinci perspective în starea `neînceput` fără numere inventate.
+Arată cei cinci Business Pillars în starea `neînceput` fără numere inventate.
 
 ### Componente de ofertă și public
 
@@ -450,7 +450,7 @@ Mesaj contextual, vizibil și calm. Nu folosește alarmism.
 - `CalendarDays` numai când calendarul există;
 - `MapPin` numai pentru o locație confirmată.
 
-Aceste iconuri susțin UI-ul. Nu devin simbolurile oficiale ale perspectivelor sau programului.
+Aceste iconuri susțin UI-ul. Nu devin simbolurile oficiale ale Business Pillars sau programului.
 
 ## Sistemul de motion
 

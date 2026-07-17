@@ -35,7 +35,7 @@ Documentul trebuie actualizat când apar surse mai bune, când se formulează o 
 
 **Relevanță pentru EZPLAY:** Programul nu trebuie proiectat pe baza unei personalități imaginare a „Generației Alpha”. Vârsta, dezvoltarea, experiența, interesele și comportamentul observat sunt repere mai utile. Un sistem digital sau gamificat trebuie ales pentru rolul său educațional, nu pentru că participanții sunt considerați automat „digital natives”.
 
-**Limită:** Sursa discută relația generală dintre tineri și tehnologie; nu testează curriculumul EZPLAY, jocurile de masă sau sistemele de Skill XP.
+**Limită:** Sursa discută relația generală dintre tineri și tehnologie; nu testează curriculumul EZPLAY, jocurile de masă sau sistemele de Skills XP.
 
 ## 2. Gamificare și motivație
 
@@ -67,7 +67,7 @@ Documentul trebuie actualizat când apar surse mai bune, când se formulează o 
 
 **Rezumat:** Punctele, nivelurile și clasamentele nu au crescut semnificativ motivația intrinsecă sau satisfacerea nevoii de competență în sarcina studiată. Au crescut însă cantitatea activității, nu și calitatea ei, funcționând în principal ca stimulente extrinseci.
 
-**Relevanță pentru EZPLAY:** Numărul de Round-uri parcurse sau cantitatea de activitate nu trebuie confundate cu înțelegerea. Skill XP trebuie să urmeze aplicarea relevantă și să nu devină obiectivul principal al participantului.
+**Relevanță pentru EZPLAY:** Numărul de Round-uri parcurse sau cantitatea de activitate nu trebuie confundate cu înțelegerea. Skills XP trebuie să urmeze aplicarea relevantă și să nu devină obiectivul principal al participantului.
 
 **Limită:** Sarcina a fost etichetarea imaginilor, nu o experiență educațională facilitată. Rezultatele nu pot fi transferate direct la copii sau la jocuri de business.
 
@@ -151,7 +151,7 @@ Documentul trebuie actualizat când apar surse mai bune, când se formulează o 
 
 **Relevanță pentru EZPLAY:** Susține investigarea progresului bazat pe ceea ce poate demonstra participantul, nu doar pe vârstă sau timp. Avertizează însă că flexibilitatea și ritmul propriu nu rezolvă automat persistența și finalizarea.
 
-**Limită:** Cercetarea este veche și reunește programe foarte diferite. Nu justifică direct pragurile de Skill XP sau deblocarea automată a nivelurilor.
+**Limită:** Cercetarea este veche și reunește programe foarte diferite. Nu justifică direct pragurile de Skills XP sau deblocarea automată a nivelurilor.
 
 ### iNACOL — Designing Competency-Based Pathways
 
@@ -165,7 +165,7 @@ Documentul trebuie actualizat când apar surse mai bune, când se formulează o 
 
 **Rezumat:** Cadrul propune trei principii: participanții avansează prin demonstrarea competenței, obiectivele sunt explicite și măsurabile, iar evaluarea este o experiență utilă pentru învățare. Documentul avertizează că simpla flexibilizare a creditelor poate crea un sistem gol dacă nu protejează standardele de competență.
 
-**Relevanță pentru EZPLAY:** Founder Skills și Level Up trebuie legate de rezultate observabile. Skill XP nu trebuie să devină o monedă acordată mecanic, fără o relație clară cu Business Challenge și obiectivele Round-ului.
+**Relevanță pentru EZPLAY:** Founder Skills și Level Up trebuie legate de rezultate observabile. Skills XP nu trebuie să devină o monedă acordată mecanic, fără o relație clară cu Business Challenge și obiectivele Round-ului.
 
 **Limită:** Este un document de orientare și politică educațională, nu un experiment. Se referă în principal la sisteme școlare și online din Statele Unite.
 
@@ -234,7 +234,7 @@ Sursele de mai sus susțin ca ipoteze de design:
 
 Sursele nu demonstrează încă:
 
-- că Skill XP va îmbunătăți învățarea în programul EZPLAY;
+- că Skills XP va îmbunătăți învățarea în programul EZPLAY;
 - că un anumit număr de puncte corespunde unui nivel valid;
 - că deblocările vor motiva toți participanții;
 - că un traseu foarte liber este potrivit pentru toate vârstele;
@@ -248,7 +248,7 @@ Sursele nu demonstrează încă:
 1. Participanții aleg Round-uri pentru interesul temei sau doar pentru XP?
 2. Înțeleg de ce un prerechizit este necesar?
 3. Profilul asimetric produce autonomie sau sentimentul că sunt „slabi” în anumite perspective?
-4. Skill XP reflectă demonstrarea unei competențe sau numai finalizarea activității?
+4. Skills XP reflectă demonstrarea unei competențe sau numai finalizarea activității?
 5. Cum reacționează participanții când Business Challenge-ul nu este finalizat cu succes?
 6. Deblocările cresc curiozitatea fără să creeze presiune de continuare?
 7. Ce diferențe apar între copii mai mici, adolescenți și adulți?

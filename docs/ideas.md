@@ -33,7 +33,7 @@ Stările permise sunt:
 - `theme`: economie de platformă și monetizare
 - `summary`: explorarea unui sistem cu o resursă obținută relativ ușor prin activități eligibile și o resursă premium obținută rar sau cumpărată cu bani fiat, fiecare având utilizări distincte în ecosistem.
 - `why_keep`: poate susține în viitor produse, beneficii sau servicii digitale recurente și o economie internă inteligibilă.
-- `already_excluded`: Founder Skills / Skill XP, Prestige și Equity nu pot fi cumpărate și nu se convertesc în Credits; simpla vânzare a jocului fizic nu justifică introducerea unei monede virtuale; denumirile `EZC`, `EZG`, `Coins`, `Gold` și `Gems` nu sunt aprobate.
+- `already_excluded`: Founder Skills / Skills XP, Prestige și Equity nu pot fi cumpărate și nu se convertesc în Credits; simpla vânzare a jocului fizic nu justifică introducerea unei monede virtuale; denumirile `EZC`, `EZG`, `Coins`, `Gold` și `Gems` nu sunt aprobate.
 - `revisit_when`: există un catalog concret de bunuri sau servicii recurente pentru care plata în monedă internă ar crea o experiență mai bună decât prețul direct în fiat și sunt definite protecțiile comerciale și de siguranță pentru minori.
 - `promoted_to`: —
 

@@ -137,7 +137,7 @@ Experiență
 
 #### Text
 
-> Rezultatul devine feedback. Programul poate recunoaște Skill XP, actualiza niveluri și deschide experiențe noi numai atunci când regulile și dovezile au fost definite pentru acel Round.
+> Rezultatul devine feedback. Programul poate recunoaște Skills XP, actualiza Founder Profile și deschide experiențe noi numai atunci când regulile și dovezile au fost definite pentru acel Round.
 
 ## Secțiunea 4 — De ce Learning Input nu dispare
 

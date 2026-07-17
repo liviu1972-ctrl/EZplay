@@ -18,7 +18,7 @@ Nu este încă:
 - sistem validat de niveluri, competențe sau evaluare;
 - promisiune despre funcțiile platformei.
 
-Arhitectura comună a programului, inclusiv relația dintre spirală, Skill XP, niveluri și Founder Rounds, este definită în [arhitectura curriculară](architecture.md). Formulele și termenii economici canonici rămân în [modelul economic EZPLAY](../../../methods/economic-model.md) și nu sunt redefiniți aici.
+Arhitectura comună a programului, inclusiv relația dintre spirală, Skills XP, niveluri și Founder Rounds, este definită în [arhitectura curriculară](architecture.md). Formulele și termenii economici canonici rămân în [modelul economic EZPLAY](../../../methods/economic-model.md) și nu sunt redefiniți aici.
 
 ## Deciziile de design ale draftului
 
@@ -234,7 +234,7 @@ Fiecare capacitate centrală trebuie descompusă ulterior în competențe observ
 - formele de sprijin permise;
 - tipurile de dovezi;
 - legătura cu Founder Rounds;
-- regula prin care dovada produce Skill XP sau acces.
+- regula prin care dovada produce Skills XP sau acces.
 
 Un răspuns corect poate fi dovadă insuficientă dacă este obținut întâmplător. În același timp, o singură persoană nu trebuie examinată ca și cum ar lucra fără echipă sau resurse atunci când competența urmărită este o decizie antreprenorială colectivă. Fișa Round-ului trebuie să spună clar ce dovedește echipa și ce, dacă este necesar, trebuie observat individual.
 
@@ -249,7 +249,7 @@ Pentru primul prototip trebuie clarificate:
 3. ce parte este demonstrată individual în Business Run și Founder Debrief;
 4. ce parte este demonstrată de echipă în Business Challenge;
 5. ce sprijin este disponibil și cum se modifică provocarea;
-6. ce Skill XP poate fi acordat și de ce;
+6. ce Skills XP poate fi acordat și de ce;
 7. ce observații din playtest pot infirma poziționarea la Level 2.
 
 ## Întrebări deschise

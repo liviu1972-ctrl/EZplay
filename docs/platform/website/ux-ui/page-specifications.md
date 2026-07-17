@@ -145,12 +145,12 @@ Compoziție split:
 - modulele pot apărea conectate, dar cardurile rămân lizibile independent;
 - pe mobil devin o listă vizuală, nu carousel.
 
-### 6. Cele cinci perspective — `PerspectiveSystem`
+### 6. Business Pillars — identificator existent `PerspectiveSystem`
 
 - secțiune interactivă principală;
 - participantul sau compania în centru;
-- cinci perspective dispuse în jur;
-- selectarea uneia afișează explicația și legăturile cu alte perspective;
+- cinci Business Pillars dispuși în jur;
+- selectarea unuia afișează explicația și legăturile cu ceilalți piloni;
 - nu asociază permanent culorile înaintea deciziei canonice;
 - legendă și listă textuală completă;
 - CTA către arhitectura programului.
@@ -230,7 +230,7 @@ Pagina trebuie să transforme promisiunea homepage-ului într-o arhitectură de 
 
 ## Element memorabil
 
-`ProgramMap`: început comun, Founder Rounds, cinci perspective și trasee care se dezvoltă în spirală.
+`ProgramMap`: început comun, Founder Rounds, cinci Business Pillars și trasee care se dezvoltă în spirală.
 
 ## Structură
 
@@ -238,11 +238,11 @@ Pagina trebuie să transforme promisiunea homepage-ului într-o arhitectură de 
 2. `AudienceRange` — pentru cine este, cu accent pe nivel și experiență, nu doar vârstă;
 3. `CommonStart` — traseu scurt pentru experiența introductivă;
 4. `FounderLoopDiagram` — cele cinci etape, complet și interactiv;
-5. `PerspectiveSystem` — cele cinci perspective;
+5. `PerspectiveSystem` — cei cinci Business Pillars; identificatorul tehnic nu este denumirea publică;
 6. `SpiralProgression` — trei reveniri exemplificative asupra unei idei, fără a inventa curriculum;
 7. `PathChoice` — libertate ghidată, prerechizite și trasee;
 8. `IndividualTeamSplit` — individ vs echipă, două panouri conectate;
-9. `FounderSkillsPreview` — toate perspectivele `neînceput`;
+9. `FounderSkillsPreview` — toți cei cinci Business Pillars `neîncepuți`;
 10. `PromiseBoundary` — ce este și ce nu este programul;
 11. CTA final către experiența introductivă.
 

@@ -112,7 +112,7 @@ Vizitatorul identifică imediat:
 
 ### Descoperire
 
-Vizitatorul vede că deciziile, consecințele, reflecția, provocările și cele cinci perspective formează un sistem.
+Vizitatorul vede că deciziile, consecințele, reflecția, provocările și cei cinci Business Pillars formează un sistem.
 
 ### Înțelegere
 

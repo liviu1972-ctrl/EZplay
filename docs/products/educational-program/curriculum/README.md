@@ -4,10 +4,10 @@ Acest folder păstrează arhitectura curriculară și hărțile de progres ale p
 
 Aici pot fi documentate:
 
-- perspectivele și competențele urmărite;
+- Business Pillars și competențele urmărite;
 - progresia spiralată;
 - legăturile și prerechizitele dintre competențe;
-- relația dintre Founder Rounds, Founder Skills, Skill XP și niveluri;
+- relația dintre Founder Rounds, Founder Skills, Founder Profile, Skills XP și niveluri;
 - adaptarea curriculumului pentru vârste și niveluri diferite.
 
 Founder Rounds complete se documentează în `../modules/`, iar formatele de livrare în `../formats/`. Cercetarea care susține deciziile curriculare se păstrează în `docs/research/`.

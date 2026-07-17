@@ -4,7 +4,7 @@ Aici sunt documentate modelele care pot fi folosite de mai multe jocuri, formate
 
 În prezent:
 
-- `economic-model.md` — formula economică, cele cinci perspective și limbajele oficiale.
+- `economic-model.md` — formula economică, cei cinci Business Pillars și limbajele oficiale.
 
 În viitor, aici poate fi documentat și Founder Loop după ce este separat și stabilizat.
 

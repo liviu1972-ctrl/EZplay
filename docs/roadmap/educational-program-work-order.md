@@ -22,7 +22,7 @@ Documentele de produs explică rezultatele fiecărei etape. Acest document arat�
 - tratăm numărul nivelurilor, denumirile, competențele, prerechizitele și recompensele ca ipoteze `Draft`;
 - folosim primul Founder Round și playtest-urile pentru a corecta arhitectura înainte de extindere.
 
-De aceea, prima progresie detaliată este Finance, nu toate cele cinci perspective, iar următoarea zonă de lucru este limitată la Finance Levels 1 și 2, nu la toate nivelurile posibile.
+De aceea, prima progresie detaliată este Finance, nu toți cei cinci Business Pillars, iar următoarea zonă de lucru este limitată la Finance Levels 1 și 2, nu la toate nivelurile posibile.
 
 ## Ordinea generală
 
@@ -31,13 +31,13 @@ De aceea, prima progresie detaliată este Finance, nu toate cele cinci perspecti
 | 1. Poziția programului | Ce este programul educațional și ce rol au jocurile? | Primul draft există |
 | 2. Fundamentul pedagogic | Cum se completează curriculumul spiral, competențele, mastery, problem-based și experiential learning? | Primul draft există |
 | 3. Arhitectura experienței | Ce sunt Founder Round și Founder Loop? | Primul draft există |
-| 4. Arhitectura progresului | Cum se leagă Founder Skills, Skill XP, nivelurile, traseele și deblocările? | Primul draft există; valorile nu sunt stabilite |
+| 4. Arhitectura progresului | Cum se leagă Founder Skills, Founder Profile, Skills XP, nivelurile, traseele și deblocările? | Terminologia este decisă; valorile nu sunt stabilite |
 | 5. Harta mare a curriculumului | Cum se raportează Strategy, Product, Market, Operations și Finance? | Direcția există; conținutul nu este dezvoltat complet |
 | 6. Spirala unei perspective | Cum evoluează gândirea Finance? | Primul draft există |
 | 7. Competențele nivelurilor apropiate | Ce poate face concret participantul la Finance Levels 1 și 2? | **Următorul pas** |
 | 8. Harta primelor Founder Rounds | Ce experiențe dezvoltă și fac vizibile competențele respective? | După etapa 7 |
 | 9. Primul Founder Round | Cum arată Founder Loop complet pentru `Profit, Cash și Cash Flow`? | După etapele 7–8 |
-| 10. Progresul prototipului | Ce dovezi, sprijin, Skill XP și deblocări folosește primul Round? | Se definește local, odată cu Round-ul |
+| 10. Progresul prototipului | Ce dovezi, sprijin, Skills XP și deblocări folosește primul Round? | Se definește local, odată cu Round-ul |
 | 11. Facilitarea și materialele | Ce primește facilitatorul și ce folosesc participanții? | După designul Round-ului |
 | 12. Playtest și revizie | Ce funcționează, ce este confuz și ce trebuie schimbat? | După pregătirea prototipului |
 | 13. Extinderea Finance | Ce păstrăm și cum dezvoltăm nivelurile următoare? | Numai după primul ciclu de testare |
@@ -51,7 +51,7 @@ Spirala Finance — draft existent
 → competențele observabile pentru Finance Levels 1 și 2
 → harta primelor Founder Rounds Finance
 → primul Founder Round „Profit, Cash și Cash Flow”
-→ dovezi, sprijin, Skill XP și Level Up pentru prototip
+→ dovezi, sprijin, Skills XP și Level Up pentru prototip
 → ghidul facilitatorului și materialele participanților
 → playtest
 → revizia curriculumului și a Round-ului
@@ -72,7 +72,7 @@ Această clarificare trebuie să preceadă designul complet al unui Founder Roun
 - ce trebuie să conțină Learning Input;
 - ce problemă primește echipa în Business Challenge;
 - ce reprezintă o dovadă suficientă;
-- pentru ce acordăm Skill XP;
+- pentru ce acordăm Skills XP;
 - ce poate fi deblocat ulterior.
 
 `Observabil` nu înseamnă automat test individual sau reproducere academică. Dovada poate fi o decizie, o explicație, un model, folosirea potrivită a resurselor sau un rezultat de echipă, în funcție de competența urmărită.
@@ -97,8 +97,8 @@ După această schiță trecem la harta primelor Founder Rounds Finance.
 
 - numărul definitiv de Finance Levels;
 - competențele tuturor nivelurilor Finance;
-- structura completă a celorlalte patru perspective;
-- pragurile globale de Skill XP;
+- structura completă a celorlalți patru Business Pillars;
+- pragurile globale de Skills XP;
 - toate prerechizitele și deblocările;
 - o regulă universală pentru recompensele fiecărui Founder Round;
 - implementarea completă pe platformă;

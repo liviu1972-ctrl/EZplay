@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-15
+version: "0.2"
+updated: 2026-07-17
 ---
 
 # Direcția de produs și website pentru ezplay.org
@@ -285,9 +285,9 @@ Configurația de lucru confirmată este:
 
 Participantul este unitatea centrală a experienței. Echipa și facilitatorul susțin parcursul, dar nu înlocuiesc nevoile și progresul participantului.
 
-## Cele cinci zone de progres
+## Cei cinci Business Pillars
 
-Terminologia canonică actuală este `cele cinci perspective EZPLAY`:
+Terminologia canonică este `Business Pillars`:
 
 1. Strategy;
 2. Product;
@@ -295,9 +295,7 @@ Terminologia canonică actuală este `cele cinci perspective EZPLAY`:
 4. Operations;
 5. Finance.
 
-În conversația de discovery a apărut preferința posibilă pentru termenul public `piloni`.
-
-Schimbarea de la `perspective` la `piloni` nu se face în acest document. Ea necesită o decizie explicită și, dacă este aprobată, actualizarea sursei canonice înainte de propagarea în site.
+În română poate fi folosită formularea `cei cinci piloni ai unei companii`, iar după prima mențiune clară se poate folosi simplu `pilonii`.
 
 Fiecare zonă are propria progresie spiralată. Vârsta și nivelul din program nu sunt același lucru.
 
@@ -383,7 +381,7 @@ Homepage-ul nu trebuie să înceapă cu:
 - Deckbuilder;
 - crearea unui cont;
 - Founder Loop prezentat ca produs principal;
-- Skill XP;
+- Skills XP;
 - monede;
 - comunitate și guvernanță;
 - o listă de funcții ale platformei.
@@ -525,7 +523,7 @@ Valori posibile ale contului:
 - înscriere la experiențe;
 - materiale asociate programului;
 - istoric de participare;
-- Founder Skills și Skill XP;
+- Founder Skills și Skills XP;
 - niveluri și deblocări;
 - recomandarea următoarei experiențe;
 - feedback;
@@ -556,7 +554,7 @@ Direcția dorită este ca utilizatorul să vadă încă de la început cele cinc
 Există însă o tensiune nerezolvată:
 
 - experiența de produs ar beneficia de vizibilitatea traseului încă de la crearea contului;
-- valorile, pragurile și regulile de Skill XP nu sunt încă validate;
+- valorile, pragurile și regulile de Skills XP nu sunt încă validate;
 - roadmap-ul curricular recomandă reprezentarea pe platformă după validarea experienței.
 
 Recomandarea temporară este ca profilul să poată afișa cele cinci zone ca `neîncepute`, fără valori numerice și fără promisiunea unor niveluri definitive. Valorile apar numai după definirea și testarea sistemului.
@@ -573,7 +571,7 @@ Ideea se păstrează ca direcție de explorat. Nu intră în arhitectura primei 
 
 Sistemele trebuie păstrate distincte:
 
-- `Founder Skills / Skill XP` — progres educațional;
+- `Founder Skills / Skills XP` — progres educațional;
 - `Prestige` — contribuție demonstrată, încredere și responsabilitate comunitară;
 - `Credits` — concept separat, încă nedefinit;
 - `Equity` — numai valoarea economică a unei companii.
@@ -781,7 +779,7 @@ Până la clarificare, arhitectura nu trebuie construită în jurul unui magazin
 ### Etapa 4 — platforma de progres și facilitare
 
 - profilul celor cinci Founder Skills;
-- Skill XP și niveluri validate;
+- Skills XP și niveluri validate;
 - recomandări și trasee;
 - dashboard-uri în funcție de rol;
 - instrumente pentru facilitatori și organizații;
@@ -824,17 +822,16 @@ Indicatorii recomandați sunt:
 4. durata și formatul experienței introductive;
 5. CTA-ul operațional principal al homepage-ului;
 6. capacitatea reală de livrare în primele luni;
-7. folosirea publică a termenilor `perspective` sau `piloni`;
-8. rolurile și tipurile de cont;
-9. relația dintre contul minorului, părinte și organizație;
-10. vizibilitatea inițială a Founder Skills înainte de validarea XP;
-11. rolul Deckbuilder-ului digital;
-12. rolul și definiția Credits;
-13. existența și rolul celor două monede discutate;
-14. modelul comercial;
-15. regulile juridice și de siguranță pentru minori;
-16. activele de încredere care pot fi publicate;
-17. calendarul lansării și țintele inițiale.
+7. rolurile și tipurile de cont;
+8. relația dintre contul minorului, părinte și organizație;
+9. vizibilitatea inițială a Founder Skills înainte de validarea XP;
+10. rolul Deckbuilder-ului digital;
+11. rolul și definiția Credits;
+12. existența și rolul celor două monede discutate;
+13. modelul comercial;
+14. regulile juridice și de siguranță pentru minori;
+15. activele de încredere care pot fi publicate;
+16. calendarul lansării și țintele inițiale.
 
 ## Următorul pas recomandat
 

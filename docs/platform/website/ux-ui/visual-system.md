@@ -453,7 +453,7 @@ Se folosesc:
 - expandare;
 - controale carousel.
 
-Conceptele centrale EZPLAY nu sunt reprezentate numai prin iconuri Lucide generice. Cele cinci perspective, Founder Loop și sistemul companiei primesc simboluri sau diagrame proprii.
+Conceptele centrale EZPLAY nu sunt reprezentate numai prin iconuri Lucide generice. Cei cinci Business Pillars, Founder Loop și sistemul companiei primesc simboluri sau diagrame proprii.
 
 Reguli:
 

@@ -247,15 +247,15 @@ Homepage-ul nu începe cu jocul, autentificarea sau funcțiile platformei.
 
 > Încrederea nu vine din promisiunea că totul va merge bine, ci din experiența că poți observa, învăța și continua.
 
-## Secțiunea 6 — Cele cinci perspective
+## Secțiunea 6 — Business Pillars
 
 ### H2
 
-> **Cinci perspective. Aceeași companie.**
+> **Cinci piloni. Aceeași companie.**
 
 ### Text
 
-> Programul privește compania din cinci perspective conectate. Participantul poate avansa diferit în fiecare dintre ele și poate descoperi treptat cum se influențează reciproc.
+> Programul conectează cei cinci Business Pillars ai unei companii. Participantul poate avansa diferit în fiecare dintre ei și poate descoperi treptat cum se influențează reciproc.
 
 ### Strategy
 

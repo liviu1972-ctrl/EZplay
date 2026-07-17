@@ -125,7 +125,7 @@ Recomandarea pentru prima versiune este ca `/platform` să fie o pagină de cont
 
 #### Text
 
-> Profilul va conecta experiențele parcurse cu cele cinci perspective EZPLAY și cu următorii pași relevanți.
+> Founder Profile va conecta experiențele parcurse cu cei cinci Business Pillars și cu următorii pași relevanți.
 
 #### CTA
 
@@ -203,7 +203,7 @@ Recomandarea pentru prima versiune este ca `/platform` să fie o pagină de cont
 
 ### Introducere
 
-> Progresul educațional va fi organizat în jurul celor cinci perspective EZPLAY:
+> Progresul educațional va fi organizat în jurul celor cinci Business Pillars:
 
 ### Lista
 
@@ -215,9 +215,9 @@ Recomandarea pentru prima versiune este ca `/platform` să fie o pagină de cont
 
 ### Text
 
-> Founder Skills trebuie să reflecte experiențe și dovezi relevante de înțelegere sau aplicare. Skill XP este numele de lucru pentru progresul din fiecare perspectivă. El nu trebuie acordat doar pentru prezență, timp petrecut sau click-uri.
+> Founder Skills trebuie să reflecte experiențe și dovezi relevante de înțelegere sau aplicare. Skills XP este numele sistemului generic, iar în Profile progresul este afișat ca Finance XP, Strategy XP, Product XP, Market XP sau Operations XP. XP-ul nu trebuie acordat doar pentru prezență, timp petrecut sau click-uri.
 
-> Până când pragurile și evaluarea sunt definite, un profil nou va afișa cele cinci perspective ca **neîncepute**, fără valori numerice inventate și fără comparație publică între participanți.
+> Până când pragurile și evaluarea sunt definite, un Founder Profile nou va afișa cei cinci Business Pillars ca **neîncepuți**, fără valori numerice inventate și fără comparație publică între participanți.
 
 ### Microcopy pentru stare nouă
 
@@ -256,7 +256,7 @@ Recomandarea pentru prima versiune este ca `/platform` să fie o pagină de cont
 - monede sau recompense fără o definiție clară;
 - clasamente publice pentru copii;
 - mesagerie directă între necunoscuți și minori;
-- valori Skill XP fără criterii observabile;
+- valori Skills XP fără criterii observabile;
 - badge-uri acordate doar pentru activitate;
 - comunitate fără moderare și responsabilitate;
 - acces la date care nu este cerut de rolul utilizatorului;
