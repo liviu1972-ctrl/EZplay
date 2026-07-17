@@ -55,6 +55,14 @@ deckbuilder-component-production-icon-v01-approved-master.svg
 
 Numele sunt scrise cu litere mici, fără spații și fără diacritice. Identificatorii existenți ai cărților se păstrează. Agentul nu redenumește în orb: verifică mai întâi relația dintre fișier, versiune și utilizarea reală.
 
+Pentru derivatele individuale ale cărților Deckbuilder se folosește o formă mai scurtă, deoarece directoarele indică deja tipul și formatul:
+
+```text
+<slug>-<tip>-<categorie>-cost-<valoare>.<extensie>
+```
+
+De exemplu: `s109-activ-corporal-cost-0.webp`. Slugul este primul, iar descrierea umană rămâne vizibilă în nume.
+
 ## Inventarul
 
 [`inventory.csv`](inventory.csv) este registrul operațional al fișierelor și al relațiilor dintre ele. Agenții îl întrețin; Product Owner-ul nu trebuie să completeze manual rânduri, căi sau versiuni.

@@ -17,14 +17,21 @@ Agentul declară dacă a verificat sursa, exportul PDF/PNG sau numai inventarul.
 
 ## Active individuale reutilizabile
 
-`individual/<slug>/` conține activele extrase și derivate pentru o singură carte, astfel încât utilizarea curentă să nu depindă de deschiderea colilor compozite de tipar.
+Activele extrase sunt organizate pe tip și format, nu într-un folder separat pentru fiecare slug:
 
-Structura recomandată pentru fiecare slug este:
+```text
+faces/webp/<slug>-<tip>-<categorie>-cost-<valoare>.webp
+faces/pdf/<slug>-<tip>-<categorie>-cost-<valoare>.pdf
+artwork/png/<slug>-<tip>-<categorie>-cost-<valoare>.png
+artwork/jpg/<slug>-<tip>-<categorie>-cost-<valoare>.jpg
+artwork/webp/<slug>-<tip>-<categorie>-cost-<valoare>.webp
+```
 
-- `*-face.webp` — fața completă optimizată pentru utilizare digitală;
-- `*-face.pdf` — PDF individual compact pentru reutilizare și revizuire, fără bleed sau semne de tăiere;
-- `*-art.png` — ilustrația centrală extrasă fără pierderi și folosită ca master individual;
-- `*-art.jpg` — derivată pentru contexte care cer JPEG;
-- `*-art.webp` — derivată optimizată pentru web.
+Exemplu: `s109-activ-corporal-cost-0.webp`. Slugul rămâne primul pentru legătura sigură cu baza de date; tipul, categoria și costul fac fișierul ușor de găsit pentru om. Numele sunt lowercase, fără spații și fără diacritice.
 
-README-ul fiecărei cărți indică masterul compozit, pagina și poziția din care provine. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial; rolul său exact se verifică în README-ul local.
+- `faces/webp` — fața completă optimizată pentru utilizare digitală;
+- `faces/pdf` — PDF individual compact pentru reutilizare și revizuire, fără bleed sau semne de tăiere;
+- `artwork/png` — ilustrația centrală extrasă fără pierderi și folosită ca master individual;
+- `artwork/jpg` și `artwork/webp` — derivate pentru contexte care cer JPEG sau web.
+
+README-urile individuale poartă aceeași denumire de bază ca activul și indică masterul compozit, pagina și poziția din care provine. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial.

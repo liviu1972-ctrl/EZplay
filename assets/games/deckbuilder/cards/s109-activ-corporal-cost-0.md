@@ -1,4 +1,4 @@
-# Active individuale s109
+# Active individuale s109 — activ corporal, cost 0
 
 Acest folder conține active reutilizabile pentru cartea `s109` din EZPLAY Deckbuilder.
 
@@ -12,10 +12,10 @@ Acest folder conține active reutilizabile pentru cartea `s109` din EZPLAY Deckb
 
 ## Fișiere
 
-- `deckbuilder-card-s109-ro-v01-face.webp` - fața completă existentă în biblioteca runtime, păstrată fără modificare;
-- `deckbuilder-card-s109-ro-v01-face.pdf` - PDF individual de 62 × 84 mm construit din WebP pentru reutilizare și revizuire; nu este master vectorial și nu este certificat pentru tipar;
-- `deckbuilder-card-s109-ro-v01-art.png` - ilustrația centrală RGB de 685 × 665 px, extrasă fără pierderi din obiectul grafic al masterului PDF;
-- `deckbuilder-card-s109-ro-v01-art.jpg` - derivată JPEG la calitate 95;
-- `deckbuilder-card-s109-ro-v01-art.webp` - derivată WebP la calitate 95.
+- `faces/webp/s109-activ-corporal-cost-0.webp` - fața completă existentă în biblioteca runtime, păstrată fără modificare;
+- `faces/pdf/s109-activ-corporal-cost-0.pdf` - PDF individual de 62 × 84 mm construit din WebP pentru reutilizare și revizuire; nu este master vectorial și nu este certificat pentru tipar;
+- `artwork/png/s109-activ-corporal-cost-0.png` - ilustrația centrală RGB de 685 × 665 px, extrasă fără pierderi din obiectul grafic al masterului PDF;
+- `artwork/jpg/s109-activ-corporal-cost-0.jpg` - derivată JPEG la calitate 95;
+- `artwork/webp/s109-activ-corporal-cost-0.webp` - derivată WebP la calitate 95.
 
 Fișierele nu includ bleed sau semne de tăiere. Ilustrația nu include header-ul, valorile, iconurile sau zona de efect a cărții.
