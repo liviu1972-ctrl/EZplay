@@ -1,0 +1,11 @@
+asset_id,family,product,component,title,language,version,status,source_path,review_export_path,approved_master_path,public_derivative_path,created_with,rights_status,rights_id,permission_id,notes
+BRAND-LOGO-001,brand,ezplay,logo,EZPLAY logo,n/a,unknown,public,,,,public/logo_ezplay.svg,unknown,owner-confirmed,RIGHT-004,,Sursa editabilă trebuie localizată
+DECK-CARDBACK-STANDARD-001,game,deckbuilder,cardback,Cardback standard,n/a,unknown,public,,,,public/images/cardbacks/base-game/cardback-standard.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-CARDBACK-EVENT-001,game,deckbuilder,cardback,Cardback event,n/a,unknown,public,,,,public/images/cardbacks/base-game/cardback-event.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-CAPITALIZATION-001,game,deckbuilder,icon,Capitalization icon,n/a,unknown,public,,,,public/images/game-icons/capitalization.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-CASH-001,game,deckbuilder,icon,Cash icon,n/a,unknown,public,,,,public/images/game-icons/cash.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-EXPENSES-001,game,deckbuilder,icon,Expenses icon,n/a,unknown,public,,,,public/images/game-icons/expenses.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-INCOME-001,game,deckbuilder,icon,Income icon,n/a,unknown,public,,,,public/images/game-icons/income.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-PRODUCTION-001,game,deckbuilder,icon,Production icon,n/a,unknown,public,,,,public/images/game-icons/production.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-PROFIT-001,game,deckbuilder,icon,Profit icon,n/a,unknown,public,,,,public/images/game-icons/profit.webp,unknown,owner-confirmed,RIGHT-006,,Masterul sursă trebuie localizat
+DECK-ICON-SALES-001,game,deckbuilder,icon,Sales icon,n/a,unknown,public,,,,public/images/game-icons/sales.webp,unknown,owner-confirmed,RIGHT-006,,Relația cu termenul Clients trebuie verificată la importul sursei

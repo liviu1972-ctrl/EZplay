@@ -1,1 +1,33 @@
-*.cdr filter=lfs diff=lfs merge=lfs -text
+# Activele sursă și exporturile de verificare din `assets/` sunt păstrate prin
+# Git LFS. Fișierele runtime optimizate din `public/` rămân în Git normal.
+
+# Surse editabile și documente de producție
+assets/**/*.cdr filter=lfs diff=lfs merge=lfs -text
+assets/**/*.psd filter=lfs diff=lfs merge=lfs -text
+assets/**/*.psb filter=lfs diff=lfs merge=lfs -text
+assets/**/*.ai filter=lfs diff=lfs merge=lfs -text
+assets/**/*.indd filter=lfs diff=lfs merge=lfs -text
+assets/**/*.afdesign filter=lfs diff=lfs merge=lfs -text
+assets/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Imagini master și exporturi vizuale
+assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+assets/**/*.tif filter=lfs diff=lfs merge=lfs -text
+assets/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
+
+# Video uzual: CapCut, telefon și exporturi web
+assets/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/**/*.mov filter=lfs diff=lfs merge=lfs -text
+assets/**/*.m4v filter=lfs diff=lfs merge=lfs -text
+assets/**/*.mkv filter=lfs diff=lfs merge=lfs -text
+assets/**/*.avi filter=lfs diff=lfs merge=lfs -text
+assets/**/*.webm filter=lfs diff=lfs merge=lfs -text
+
+# Audio asociat producției video
+assets/**/*.wav filter=lfs diff=lfs merge=lfs -text
+assets/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+assets/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+assets/**/*.aac filter=lfs diff=lfs merge=lfs -text

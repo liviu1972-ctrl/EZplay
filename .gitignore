@@ -46,6 +46,9 @@ yarn-error.log*
 .env*
 !.env.example
 
+# local-only restricted assets and media
+/assets/private-local/
+
 # vercel
 .vercel
 
