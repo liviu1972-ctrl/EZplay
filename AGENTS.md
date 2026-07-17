@@ -88,6 +88,7 @@ Sursele răspund la întrebări diferite:
 - website, copy și UX/UI → `docs/platform/website/`;
 - cercetare → `docs/research/`;
 - stare și priorități → `docs/roadmap/`;
+- idei păstrate pentru explorare ulterioară → `docs/ideas.md`;
 - decizii → `docs/decisions/`;
 - drepturi și permisiuni → `docs/licensing/`;
 - arhitectură și stare tehnică auditată → `docs/technical/`;
@@ -95,6 +96,8 @@ Sursele răspund la întrebări diferite:
 - active runtime → `public/` și Supabase Storage;
 - active sursă → `assets/`;
 - date structurate versionate → `data/`.
+
+`docs/ideas.md` este un registru de memorie, nu backlog, roadmap, decizie, cerință sau autorizație de implementare. Agenții nu pornesc taskuri și nu modifică produsul pe baza unei idei `captured`, `exploring` sau `parked`. Numai o idee `promoted`, legată explicit de o decizie, o sursă canonică sau un document din `docs/work/active/`, poate intra în munca aprobată.
 
 Sursele canonice sunt directoarele finale enumerate mai sus. Copia temporară `docs/new site/` a fost eliminată după verificarea migrării; nu o recrea.
 

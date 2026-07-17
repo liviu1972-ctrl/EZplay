@@ -31,7 +31,10 @@ Documentația din `technical/` este referința tehnică de lucru, nu un certific
 - [`decisions/active/`](decisions/active/) — decizii care guvernează proiectul acum;
 - [`decisions/drafts/`](decisions/drafts/) — propuneri încă neaprobate sau netestate;
 - [`work/active/`](work/active/) — documente de lucru pentru funcționalități și inițiative în desfășurare;
+- [`ideas.md`](ideas.md) — registru minimal pentru idei care merită păstrate fără a deveni automat priorități sau taskuri;
 - [`decisions/README.md`](decisions/README.md) și [`work/README.md`](work/README.md) — indexurile și regulile locale.
+
+Registrul de idei nu face parte din lectura implicită a unui task și nu este sursă de cerințe. O idee intră în lucru numai după promovarea explicită către o decizie, o sursă canonică sau un document din `work/active/`.
 
 ## Istoric
 
@@ -58,6 +61,8 @@ O conversație nu produce automat un fișier. Creează un document nou numai câ
 - dovadă, cercetare ori registru care trebuie păstrat.
 
 Clarificările mici actualizează documentul canonic existent. Un document de lucru se creează per funcționalitate sau rezultat coerent, nu per idee, mesaj ori modificare minoră.
+
+Ideile pe care utilizatorul dorește să le păstreze pentru mai târziu se adaugă concis în registrul unic [`ideas.md`](ideas.md), fără fișier separat pentru fiecare idee.
 
 ## Status și lifecycle
 

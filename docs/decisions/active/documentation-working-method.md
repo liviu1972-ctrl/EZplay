@@ -1,12 +1,13 @@
 ---
 status: Current
-version: "1.1"
-updated: 2026-07-16
+version: "1.2"
+updated: 2026-07-17
 lifecycle: active
 canonical_for:
   - documentation working method
   - document and section status model
   - document lifecycle model
+  - idea capture and promotion model
   - collaboration autonomy
   - opaque source asset handling
 ---
@@ -145,6 +146,30 @@ Golurile se declară prin secțiuni precum:
 - `Direcții de explorat`.
 
 Informațiile lipsă nu se înlocuiesc cu presupuneri prezentate ca fapte.
+
+## Registrul minimal de idei
+
+Ideile care merită păstrate, dar nu sunt încă decizii sau inițiative active, se consemnează într-un singur registru: [`docs/ideas.md`](../../ideas.md).
+
+`idea_stage` nu este o a patra stare a documentației. `status` continuă să folosească numai `Draft`, `Working` și `Current`. Câmpul `idea_stage` descrie doar poziția unei idei în traseul dintre captură și o eventuală promovare:
+
+- `captured` — ideea este păstrată concis, fără analiză suficientă;
+- `exploring` — ideea este discutată sau cercetată, fără decizie;
+- `parked` — ideea merită păstrată, dar nu este prioritate și are o condiție de reluare;
+- `promoted` — ideea a fost mutată explicit într-o decizie, o sursă canonică sau un document de lucru activ.
+
+Registrul este memorie, nu backlog, roadmap sau sistem de taskuri. Prezența unei idei nu autorizează implementarea și nu schimbă prioritățile. Agenții nu acționează pe baza ideilor `captured`, `exploring` sau `parked` și nu le includ în lectura implicită a unui task.
+
+Regulile de simplitate sunt:
+
+1. există un singur registru, nu câte un document pentru fiecare idee;
+2. intrarea păstrează numai rezumatul, motivul, lucrurile deja excluse și condiția de reluare;
+3. `revisit_when` este obligatoriu pentru o idee `parked`;
+4. o idee produce muncă numai după promovarea explicită și legarea destinației în `promoted_to`;
+5. după promovare, documentul destinație devine autoritatea; registrul păstrează numai legătura și contextul minim;
+6. respingerea importantă se consemnează ca decizie și motiv, nu prin extinderea registrului cu un flux paralel de închidere.
+
+Codex poate captura fără micro-confirmare o idee atunci când utilizatorul spune explicit că dorește să fie păstrată pentru mai târziu. Brainstormingul trecător nu se copiază automat în repository.
 
 ## Autonomia agentului
 
