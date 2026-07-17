@@ -22,7 +22,7 @@ Compania este reprezentată ca o hartă vie:
 
 ## Formula de dozaj
 
-### 70% — Canvas editorial
+### 50% — Canvas editorial
 
 - suprafețe luminoase;
 - tipografie clară;
@@ -38,8 +38,10 @@ Compania este reprezentată ca o hartă vie:
 - animații cauză–efect;
 - hărți și progresii.
 
-### 10% — Energie tactilă
+### 30% — Energie tactilă (Spectaculos & Interactiv)
 
+- interacțiuni bogate (stack-uri de cărți amestecabile, elemente ce reacționează la acțiuni);
+- compoziții dinamice din asset-uri (nu imagini statice tip WordPress);
 - cărți;
 - token-uri;
 - culorile logo-ului;
@@ -47,7 +49,7 @@ Compania este reprezentată ca o hartă vie:
 - componente speciale;
 - fotografie reală.
 
-Aceste procente sunt principii de compoziție, nu valori de măsurat în CSS.
+Aceste procente sunt principii de compoziție, nu valori de măsurat în CSS, menite să prevină un design "plictisitor" prin creșterea interactivității vizuale.
 
 ## Personalitatea vizuală
 
