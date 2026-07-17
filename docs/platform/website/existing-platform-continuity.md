@@ -91,6 +91,7 @@ Această implementare **nu se păstrează**. Ea nu reprezintă Deckbuilder-ul fu
 | Supabase Database | Protejează | citește contractele existente și adaugă adaptoare la nivelul de prezentare | redenumirea tabelelor, câmpurilor, identificatorilor sau relațiilor doar pentru noul UI |
 | Supabase Storage | Protejează | reutilizează imaginile și optimizează afișarea | mutarea bucket-urilor, schimbarea căilor ori regenerarea activelor fără inventar |
 | Pagina actuală `/cards` | Înlocuiește | păstrează numai datele și imaginile din spate; construiește orice experiență viitoare de la zero după noua specificație | reutilizarea paginii, structurii, componentelor sau interacțiunilor actuale ca model UX/UI |
+| Sandbox-ul `/cards_old` | Excepție asumată | rută restaurată local exclusiv ca referință funcțională și teren de joacă pentru Product Owner; izolată complet de navigarea site-ului | promovarea acestei rute ca pagină publică, conectarea ei în sitemap sau utilizarea ei ca bază tehnică pentru noul Cards Library |
 | Deckbuilder `/ezplay` | Păstrează | protejează regulile, starea, datele și accesul; adaptează ulterior shell-ul vizual | rescrierea jocului în cadrul construirii site-ului public |
 | Configuratorul `/cards3` | Elimină | scoate din navigare, verifică dependențele și elimină implementarea | redesign, migrare sau prezentare ca parte a noului produs |
 | Autentificare și login | Păstrează funcția, adaptează UI | aplică noul sistem vizual și copy-ul verificat | schimbarea providerilor, callback-urilor sau sesiunii pentru motive vizuale |
@@ -137,6 +138,8 @@ Până la audit, se consideră stabile:
 Noul UI poate introduce un `view model` sau un adaptor care transformă datele pentru prezentare. Nu se remodelează baza de date doar pentru ca o componentă React să primească proprietăți mai comode.
 
 Pagina actuală `/cards` nu creează un contract de interfață. Dacă noul produs va include o bibliotecă de cărți, funcțiile, structura și interacțiunile ei pornesc din blueprint și din specificația UX/UI. Ea folosește datele și imaginile reale, dar nu moștenește obligația de a reproduce pachetele, shuffle-ul, galeria sau organizarea curentă.
+
+> **Notă privind excepția `/cards_old`:** La decizia directă a utilizatorului (Product Owner), vechea implementare a fost extrasă din istoric și restaurată exclusiv ca rută izolată (`/cards_old`). Aceasta este strict o referință funcțională vizuală și un „sandbox” privat de explorare, deconectat complet de navigarea noului site. Restaurarea ei nu anulează decizia de eliminare a paginii publice și nu contrazice viziunea curentă. Agenții nu vor cere ștergerea ei și nu o vor confunda cu o cerință publică. Orice bibliotecă viitoare publică va continua să se construiască de la zero.
 
 ### 5.3. Contractul Deckbuilder-ului
 
