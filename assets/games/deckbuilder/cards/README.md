@@ -37,3 +37,5 @@ Exemplu: `s109-activ-corporal-cost-0.webp`. Slugul rămâne primul pentru legăt
 Când există un README individual, acesta poartă aceeași denumire de bază ca activul și indică masterul compozit, pagina și poziția din care provine. Pentru seturile complete, manifestul este registrul compact al acestor legături. PDF-ul individual nu este declarat automat fișier de tipar și nu este presupus vectorial.
 
 Pentru toate activele extrase din BT1, [bt1-assets-manifest.csv](bt1-assets-manifest.csv) leagă slugul, poziția din coală, costul și toate formatele disponibile. Harta originală a colii rămâne în `../print/deckbuilder-card-sheet-map.csv`.
+
+Pentru BT2 se folosește același model în [bt2-assets-manifest.csv](bt2-assets-manifest.csv), iar ordinea din coala trimisă la tipar este în `../print/bt2-card-sheet-map.csv`.
