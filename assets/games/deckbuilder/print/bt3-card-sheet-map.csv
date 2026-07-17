@@ -47,5 +47,5 @@ DECK-PRINT-BT3-001,2,r4c5,4,5,cardback-event,cardback,owner-confirmed,,Spate eve
 DECK-PRINT-BT3-001,2,r5c1,5,1,a106,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
 DECK-PRINT-BT3-001,2,r5c2,5,2,a107,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
 DECK-PRINT-BT3-001,2,r5c3,5,3,a108,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
-DECK-PRINT-BT3-001,2,r5c4,5,4,a109,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
-DECK-PRINT-BT3-001,2,r5c5,5,5,a110,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
+DECK-PRINT-BT3-001,2,r5c4,5,4,a110,antreprenor,owner-confirmed-and-webp-match,,Big Boss; metadata confirmat in Supabase
+DECK-PRINT-BT3-001,2,r5c5,5,5,a109,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
