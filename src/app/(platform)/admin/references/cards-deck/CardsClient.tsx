@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import * as React from "react"
 import { useState, useMemo, useCallback } from "react"
@@ -442,7 +442,7 @@ export function CardsClient({ initialCards, cardTypes, assetTypes, lang, dict }:
                         </>
                       ) : (
                         <>
-                          {/* La antreprenor (landscape) afi╚Ö─âm mereu Producție, MKT și Cheltuială */}
+                          {/* La antreprenor (landscape) afișăm mereu Producție, MKT și Cheltuială */}
                           <div className="absolute w-12 h-12 rounded-full group flex items-center justify-center cursor-help pointer-events-auto" style={{ bottom: '8%', left: '5%' }}>
                             <div className="absolute bottom-full mb-2 w-max px-3 py-2 bg-zinc-900/95 backdrop-blur-sm border border-zinc-700/60 rounded-xl text-white shadow-2xl opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 pointer-events-none flex items-center gap-2 z-50">
                               <Wrench className="w-4 h-4 text-brand-green" />

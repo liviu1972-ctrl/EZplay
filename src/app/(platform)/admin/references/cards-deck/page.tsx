@@ -5,8 +5,8 @@ import { createClient } from "@/lib/supabase/server"
 import { CardsClient } from "./CardsClient"
 
 export const metadata = {
-  title: "Cărți — EZPlay",
-  description: "Explorează pachetele de cărți EZPlay.",
+  title: "Cărți — EZPLAY",
+  description: "Explorează pachetele de cărți EZPLAY.",
   robots: {
     index: false,
     follow: false,
@@ -45,11 +45,17 @@ export default async function CardsPage() {
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="flex flex-col space-y-4 mb-8 text-center">
+          <div className="flex items-center justify-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20 max-w-fit mx-auto mb-2">
+            Referință internă — necanonică
+          </div>
+          <p className="text-sm text-muted-foreground max-w-xl mx-auto italic mb-4">
+            Această pagină este păstrată pentru observarea interacțiunilor. Nu reprezintă produsul curent și nu este viitorul Cards Library.
+          </p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-brand-orange to-brand-yellow bg-clip-text text-transparent">
             {dict.cards?.title || "Cărți"}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {dict.cards?.subtitle || "Alege un teanc de Cărți și descoperă-le una câte una."}
+            {dict.cards?.subtitle || "Alege un teanc de cărți și descoperă-le una câte una."}
           </p>
         </div>
 
