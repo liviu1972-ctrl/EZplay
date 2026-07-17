@@ -39,3 +39,5 @@ Când există un README individual, acesta poartă aceeași denumire de bază ca
 Pentru toate activele extrase din BT1, [bt1-assets-manifest.csv](bt1-assets-manifest.csv) leagă slugul, poziția din coală, costul și toate formatele disponibile. Harta originală a colii rămâne în `../print/deckbuilder-card-sheet-map.csv`.
 
 Pentru BT2 se folosește același model în [bt2-assets-manifest.csv](bt2-assets-manifest.csv), iar ordinea din coala trimisă la tipar este în `../print/bt2-card-sheet-map.csv`.
+
+Pentru BT3, [bt3-assets-manifest.csv](bt3-assets-manifest.csv) include activele pentru active necorporale, evenimente și antreprenori, inclusiv antreprenorii suplimentari de pe pagina 2. Harta celor două pagini este în `../print/bt3-card-sheet-map.csv`; spatele standard și spatele evenimentelor sunt referințe către asseturile existente, nu duplicate noi.

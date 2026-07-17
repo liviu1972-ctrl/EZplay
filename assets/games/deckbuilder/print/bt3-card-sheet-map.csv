@@ -1,0 +1,51 @@
+sheet_asset_id,pdf_page,position,row,column,card_slug,visual_group,mapping_basis,similarity,notes
+DECK-PRINT-BT3-001,1,r1c1,1,1,s149,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r1c2,1,2,s150,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r1c3,1,3,s151,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r1c4,1,4,s152,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r1c5,1,5,s153,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r2c1,2,1,s154,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r2c2,2,2,s155,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r2c3,2,3,s156,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r2c4,2,4,s157,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r2c5,2,5,s158,activ-necorporal,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r3c1,3,1,e101,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r3c2,3,2,e102,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r3c3,3,3,e103,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r3c4,3,4,e104,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r3c5,3,5,e105,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r4c1,4,1,e106,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r4c2,4,2,e107,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r4c3,4,3,e108,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r4c4,4,4,e109,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r4c5,4,5,e110,eveniment,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r5c1,5,1,a101,antreprenor,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r5c2,5,2,a102,antreprenor,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r5c3,5,3,a103,antreprenor,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r5c4,5,4,a104,antreprenor,webp-visual-match,,
+DECK-PRINT-BT3-001,1,r5c5,5,5,a105,antreprenor,webp-visual-match,,
+DECK-PRINT-BT3-001,2,r1c1,1,1,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r1c2,1,2,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r1c3,1,3,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r1c4,1,4,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r1c5,1,5,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r2c1,2,1,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r2c2,2,2,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r2c3,2,3,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r2c4,2,4,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r2c5,2,5,cardback-standard,cardback,owner-confirmed,,Spate standard reutilizat
+DECK-PRINT-BT3-001,2,r3c1,3,1,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r3c2,3,2,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r3c3,3,3,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r3c4,3,4,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r3c5,3,5,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r4c1,4,1,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r4c2,4,2,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r4c3,4,3,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r4c4,4,4,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r4c5,4,5,cardback-event,cardback,owner-confirmed,,Spate evenimente reutilizat
+DECK-PRINT-BT3-001,2,r5c1,5,1,a106,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
+DECK-PRINT-BT3-001,2,r5c2,5,2,a107,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
+DECK-PRINT-BT3-001,2,r5c3,5,3,a108,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
+DECK-PRINT-BT3-001,2,r5c4,5,4,a109,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
+DECK-PRINT-BT3-001,2,r5c5,5,5,a110,antreprenor,webp-visual-match,,Carte antreprenor suplimentara
