@@ -1,7 +1,7 @@
 import 'server-only';
 import fs from 'fs';
 import path from 'path';
-import { Round, MasteryLens, CurriculumGraph } from '@/types/curriculum';
+import { Round, MasteryLens, CurriculumGraph, CatalogRound, PUBLIC_STATUS } from '@/types/curriculum';
 import { parseFrontmatter, extractSections, extractField } from './parser';
 
 export interface IntersectionOverview {
@@ -202,6 +202,46 @@ export function getAllEligibleSlugs(): string[] {
   return graph.rounds
     .filter(r => isEligibleForDetailedPage(r))
     .map(r => r.slug);
+}
+
+export const PUBLISHED_DETAILED_SLUGS = [
+  'fin-1-1',
+  'fin-1-2-1',
+  'fin-1-2-2',
+  'fin-1-3',
+  'fin-1-4',
+  'fin-1-5',
+  'fin-1-6'
+];
+
+export function isPublishedDetailedRound(slug: string): boolean {
+  return PUBLISHED_DETAILED_SLUGS.includes(slug);
+}
+
+export function getPublishedDetailedSlugs(): string[] {
+  const allEligible = getAllEligibleSlugs();
+  return allEligible.filter(slug => isPublishedDetailedRound(slug));
+}
+
+export function mapToCatalogRound(round: Round): CatalogRound {
+  let destination = '';
+  if (isPublishedDetailedRound(round.slug)) {
+    destination = `/program/curriculum/rounds/${round.slug}`;
+  } else if (round.level === 'MST') {
+    destination = `/program/curriculum/mastery#${round.slug}`;
+  } else {
+    destination = `/program/curriculum/levels/${round.level}/pillars/${round.pillar.toLowerCase()}#${round.slug}`;
+  }
+
+  return {
+    id: round.id,
+    slug: round.slug,
+    title: round.titlu_participant || round.id,
+    pillar: round.pillar,
+    level: round.level,
+    status: PUBLIC_STATUS,
+    destination
+  };
 }
 
 export function getIntersectionOverview(pillar: string, level: string | number): IntersectionOverview {

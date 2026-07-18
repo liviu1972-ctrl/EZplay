@@ -2,7 +2,7 @@ import { test, describe, before, after } from 'node:test';
 import assert from 'node:assert';
 import fs from 'fs';
 import path from 'path';
-import { getCurriculumGraph, generateSlug } from './content-engine';
+import { getCurriculumGraph, generateSlug, getPublishedDetailedSlugs, mapToCatalogRound } from './content-engine';
 
 describe('Curriculum Content Engine', () => {
   const TEST_DIR = path.join(process.cwd(), '.test-curriculum-fixtures');
@@ -95,5 +95,47 @@ level: 1
       assert.ok(lens.standard_profunzime.length > 0, `Lens ${lens.pillar} standard profunzime is empty`);
       assert.ok(lens.corp_dovezi.length > 0, `Lens ${lens.pillar} corp dovezi is empty`);
     }
+  });
+
+  test('Phase 2 subset: exactly 7 Finance L1 rounds are published', () => {
+    const published = getPublishedDetailedSlugs();
+    const expected = [
+      'fin-1-1',
+      'fin-1-2-1',
+      'fin-1-2-2',
+      'fin-1-3',
+      'fin-1-4',
+      'fin-1-5',
+      'fin-1-6'
+    ];
+    assert.deepStrictEqual(published.sort(), expected.sort());
+  });
+
+  test('FIN 1.2.1 identity and sales topic is strictly validated', () => {
+    const graph = getCurriculumGraph();
+    const fin121 = graph.rounds.find(r => r.slug === 'fin-1-2-1');
+    assert.ok(fin121);
+    assert.strictEqual(fin121.titlu_participant, 'Cum face firma vânzări?');
+    assert.ok(fin121.descriere_participant?.includes('Vânzări') || fin121.descriere_participant?.includes('vânzări'));
+  });
+
+  test('Catalog mapping is exact and computes right destinations', () => {
+    const graph = getCurriculumGraph();
+    const catalog = graph.rounds.map(mapToCatalogRound);
+    
+    assert.strictEqual(catalog.length, 191);
+    
+    // Check specific destinations
+    const published = catalog.find(r => r.slug === 'fin-1-1');
+    assert.strictEqual(published?.destination, '/program/curriculum/rounds/fin-1-1');
+    
+    const unpublishedL1To5 = catalog.find(r => r.slug === 'str-1-1');
+    assert.strictEqual(unpublishedL1To5?.destination, '/program/curriculum/levels/1/pillars/strategy#str-1-1');
+    
+    const mastery = catalog.find(r => r.level === 'MST');
+    assert.strictEqual(mastery?.destination, `/program/curriculum/mastery#${mastery?.slug}`);
+    
+    // Status should be the PUBLIC_STATUS for everyone
+    assert.ok(catalog.every(r => r.status === 'Hartă curriculară'));
   });
 });

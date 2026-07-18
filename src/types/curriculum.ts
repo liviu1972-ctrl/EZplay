@@ -44,3 +44,15 @@ export type CurriculumGraph = {
   lenses: MasteryLens[];
   // we could store the full matrix or use helper functions
 };
+
+export const PUBLIC_STATUS = 'Hartă curriculară';
+
+export type CatalogRound = {
+  id: string;
+  slug: string;
+  title: string;
+  pillar: string;
+  level: string;
+  status: string;
+  destination: string;
+};
