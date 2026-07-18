@@ -26,7 +26,7 @@ Programul folosește următoarele benzi principale:
 - Level 5 — clasele a XI-a–a XII-a;
 - Mastery — program terminal, independent de vârstă.
 
-Level 1 rămâne fundația deja construită. Nivelurile exprimă progresul competenței și folosesc clasele ca repere de proiectare, fără să devină etichete rigide. Mastery presupune fundația Level 5 în cei cinci Business Pillars sau competențe echivalente și nu repetă sistematic traseul anterior.
+Level 1 rămâne fundația deja construită. Nivelurile exprimă progresul competenței și folosesc clasele ca repere de proiectare, fără să devină etichete rigide. Mastery presupune fundația Level 5 în cei cinci Business Pillars sau competențe echivalente și nu repetă sistematic traseul anterior. Etapa terminală are un nucleu integrat și cinci lentile obligatorii care păstrează profunzimea Strategy, Product, Market, Operations și Finance.
 
 ## Documente de lucru
 
@@ -38,4 +38,5 @@ Level 1 rămâne fundația deja construită. Nivelurile exprimă progresul compe
 - [Spirala Strategy](curriculum/strategy-spiral.md), [Product](curriculum/product-spiral.md), [Market](curriculum/market-spiral.md), [Operations](curriculum/operations-spiral.md) și [Finance](curriculum/finance-spiral.md) — hărțile verticale și indexurile fișierelor Level 1–5;
 - [Programul Mastery](curriculum/mastery.md) — identitatea și rezultatele etapei terminale;
 - [Founder Rounds Mastery](curriculum/mastery-rounds.md) — cele 13 decizii integrate ale etapei terminale;
+- [Arhitectura hibridă Mastery](curriculum/mastery/README.md) — relația dintre nucleul comun, cele cinci lentile terminale, bridge-uri, laboratoare și demonstrația finală;
 - [Ordinea de lucru](../../roadmap/educational-program-work-order.md) — ordinea de dezvoltare și punctul de reluare a lucrului.

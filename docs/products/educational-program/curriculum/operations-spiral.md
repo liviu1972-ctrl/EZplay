@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 canonical_for:
   - vertical Operations curriculum progression
@@ -40,7 +40,7 @@ Deckbuilder face vizibile la Level 1 Producția, Cheltuielile, variația deckulu
 | **Level 3** | clasele VII–VIII | Ce ne arată datele despre flux și ce intervenție îmbunătățește sistemul complet? | [Operations Level 3](operations/level-3.md) |
 | **Level 4** | clasele IX–X | Ce operating model poate susține creșterea fără să distrugă promisiunea, oamenii, Cash-ul sau reziliența? | [Operations Level 4](operations/level-4.md) |
 | **Level 5** | clasele XI–XII | Ce sistem operațional și ce leadership permit companiei să livreze strategia la scară și să absoarbă șocuri? | [Operations Level 5](operations/level-5.md) |
-| **Mastery** | independent de vârstă | Cum proiectăm și transformăm operating model-ul când strategia, tehnologia, oamenii și riscul se schimbă simultan? | [Harta integrată Mastery](mastery-rounds.md) |
+| **Mastery** | independent de vârstă | Cum proiectăm și transformăm operating model-ul când strategia, tehnologia, oamenii și riscul se schimbă simultan? | [Lentila Operations](mastery/operations.md) / [harta integrată](mastery-rounds.md) |
 
 ## Matricea revenirilor Operations
 
@@ -66,6 +66,8 @@ Operations nu optimizează local o etapă dacă efectul degradează clientul, Ca
 ## Contribuția la Mastery
 
 Mastery presupune deja capacitatea de a proiecta footprint, sourcing, planning, capital/technology investment, management system, leadership, risk, crisis și due diligence. Standardul terminal cere reconfigurarea lor sub o schimbare strategică, o tranzacție sau o criză, cu board și stakeholderi reali în ecuație.
+
+[Lentila Operations în Mastery](mastery/operations.md) definește standardul terminal, Round-urile cu profunzime directă, corpul coerent de dovezi, bridge-urile și laboratoarele posibile. Ea nu creează `Operations Level 6` și nu separă Operations de nucleul comun `MST`.
 
 ## Ce rămâne de proiectat
 

@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 canonical_for:
   - vertical Product curriculum progression
@@ -40,7 +40,7 @@ ofertă, nevoie și îmbunătățire
 | **Level 3** | clasele VII–VIII | Care este cea mai mică ofertă care produce valoarea importantă și ne ajută să învățăm? | [Product Level 3](product/level-3.md) |
 | **Level 4** | clasele IX–X | Ce produs alegem să construim și să scalăm, pentru cine și prin ce sistem de dovezi și capabilități? | [Product Level 4](product/level-4.md) |
 | **Level 5** | clasele XI–XII | Cum construim și guvernăm portofoliul Product care susține strategia și valoarea pe termen lung? | [Product Level 5](product/level-5.md) |
-| **Mastery** | independent de vârstă | Cum conducem valoarea, inovarea și portofoliul când tehnologia, piața, capitalul și responsabilitatea se schimbă simultan? | [Harta integrată Mastery](mastery-rounds.md) |
+| **Mastery** | independent de vârstă | Cum conducem valoarea, inovarea și portofoliul când tehnologia, piața, capitalul și responsabilitatea se schimbă simultan? | [Lentila Product](mastery/product.md) / [harta integrată](mastery-rounds.md) |
 
 ## Matricea revenirilor Product
 
@@ -67,6 +67,8 @@ Product nu este sinonim cu tehnologia și nu se limitează la produse digitale. 
 La Mastery, participantul nu mai primește o lecție despre prototip, MVP, Product–Market Fit sau roadmap. Trebuie să conducă deja portofolii, lifecycle, platforme, organizația Product, build–buy–partner–acquire, tehnologie/date/AI/IP și due diligence.
 
 Standardul terminal cere să decidă cum se transformă valoarea și portofoliul în relație cu strategia, sistemul comercial, operating model-ul, capitalul, riscul și stakeholderii.
+
+[Lentila Product în Mastery](mastery/product.md) definește standardul terminal, Round-urile cu profunzime directă, corpul coerent de dovezi, bridge-urile și laboratoarele posibile. Ea nu creează `Product Level 6` și nu separă Product de nucleul comun `MST`.
 
 ## Ce rămâne de proiectat
 

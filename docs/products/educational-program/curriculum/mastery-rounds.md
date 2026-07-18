@@ -1,21 +1,22 @@
 ---
 status: Draft
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 stage: Mastery
 grade_band: "independent de vârstă"
 canonical_for:
   - integrated Mastery Founder Round map
   - terminal entrepreneurship decision curriculum
+  - integrated Round core used by the five Mastery pillar lenses
 ---
 
 # Harta integrată a Founder Rounds din Mastery
 
 ## Rolul documentului
 
-Acest fișier definește inventarul curricular al Round-urilor pentru [Programul Mastery](mastery.md). Câmpurile obligatorii sunt stabilite în [standardul hărților de Founder Rounds](round-map-standard.md), iar fundația presupusă este Level 1–5.
+Acest fișier definește inventarul curricular al Round-urilor pentru [Programul Mastery](mastery.md). Câmpurile obligatorii sunt stabilite în [standardul hărților de Founder Rounds](round-map-standard.md), relația dintre Round-uri și profunzimea fiecărui pilon este în [arhitectura hibridă Mastery](mastery/README.md), iar fundația presupusă este Level 1–5.
 
-Mastery nu are cinci trasee paralele și nu este `Level 6` repetat în fiecare Business Pillar. Fiecare Round pornește de la o decizie de companie în care Strategy, Product, Market, Operations și Finance sunt inseparabile. People & Leadership, Governance, Ethics & Legal și Risk & Resilience funcționează ca lentile transversale.
+Mastery nu are cinci trasee paralele și nu este `Level 6` repetat în fiecare Business Pillar. Fiecare Round pornește de la o decizie de companie în care Strategy, Product, Market, Operations și Finance sunt inseparabile. Profunzimea lor este urmărită separat prin cele cinci lentile terminale, iar People & Leadership, Governance, Ethics & Legal, Risk & Resilience, Technology & Data și Sustainability & Impact funcționează transversal.
 
 Harta nu proiectează încă Business Run-ul, Learning Input-ul, Challenge-ul sau celelalte faze ale Founder Loop-ului.
 
@@ -37,6 +38,15 @@ Harta nu proiectează încă Business Run-ul, Learning Input-ul, Challenge-ul sa
 
 Round-urile nu reiau definițiile, calculele sau instrumentele predate la Level 1–5. Un participant care nu poate citi un cap table, construi un forecast, analiza un portofoliu ori proiecta un operating model folosește un diagnostic și un bridge țintit înainte sau în afara Round-ului. Learning Input-ul Mastery poate introduce o perspectivă nouă cerută de caz, dar nu devine recapitulare generală.
 
+## Regula profunzimii pe piloni
+
+Integrarea nu înseamnă că fiecare Round dezvoltă toate lentilele în aceeași măsură. [Matricea Round × lentilă](mastery/README.md#matricea-inițială-round--lentilă) distinge:
+
+- profunzimea directă, unde o capacitate terminală a pilonului este obiect explicit al dovezii;
+- integrarea materială, unde pilonul trebuie să schimbe decizia chiar dacă nu este centrul Round-ului.
+
+Fiecare participant trebuie să construiască un corp coerent de dovezi pentru toate cele cinci lentile și să le reconcilieze în `MST 13`. Harta comună nu permite dispariția unui pilon în spatele muncii de echipă.
+
 ## Harta Round-urilor
 
 | Cod | Titlu pentru participant | Titlu pedagogic | Decizia centrală |
@@ -56,6 +66,8 @@ Round-urile nu reiau definițiile, calculele sau instrumentele predate la Level 
 | `MST 13` | Poți conduce transformarea până la consecințe? | Decizie terminală integrată și apărare în fața board-ului | demonstrează ciclul complet diagnostic–decizie–execuție–revizuire |
 
 Ordinea `MST 01–12` este o progresie recomandată a problemelor, nu un calendar obligatoriu. `MST 13` este terminal și presupune fundația întregii etape. Un caz longitudinal poate genera mai multe Round-uri, dar fiecare trebuie să aibă propria decizie și dovadă observabilă.
+
+Matricea de acoperire nu schimbă aceste coduri și nu adaugă Round-uri paralele de tip `STR MST`, `PRO MST`, `MKT MST`, `OPS MST` sau `FIN MST`.
 
 ## MST 01 — Enterprise diagnosis și formularea mandatului
 
@@ -101,7 +113,7 @@ Ordinea `MST 01–12` este o progresie recomandată a problemelor, nu un calenda
 
 **Prerechizite:** `MST 01` sau un mandat enterprise echivalent; Strategy Level 5.
 
-**Integrarea pilonilor:** teza trebuie tradusă în portofoliu Product, system Market, operating model și model/capital Finance.
+**Integrarea pilonilor:** teza trebuie tradusă în portofoliu Product, sistem Market, operating model și model/capital Finance.
 
 **Continuitate:** devine ipoteza centrală pentru `MST 03–09` și este stress-testată în criză, tranzacție și decizia terminală.
 
@@ -385,6 +397,8 @@ Participantul nu absolvă prin memorarea termenilor sau printr-o singură prezen
 10. monitoriza, răspunde consecințelor și revizui direcția.
 
 Forma rubricii, durata, ponderea experienței reale și componența panelului rămân decizii de prototipare. Harta stabilește obiectul evaluării, nu mecanica finală.
+
+Recunoașterea finală va cere atât suficiență în fiecare dintre cele cinci [lentile terminale](mastery/README.md), cât și demonstrarea integrării lor prin standardul `MST 13`. Ponderile și pragurile exacte nu sunt stabilite de această hartă.
 
 ## Limita terminală
 

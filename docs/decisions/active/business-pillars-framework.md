@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.1"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -119,6 +119,8 @@ Hărțile curriculare folosesc structura comună Level 1–5 și contribuie la e
 - aceeași profunzime la aceeași vârstă.
 
 Coerența modelului cere o bandă comună de dificultate, nu simetrie artificială a conținutului. Mastery nu este un al șaselea pilon și nu creează o progresie separată de tip `Founder XP`.
+
+În etapa terminală, fiecare Business Pillar are o lentilă proprie de competență și un corp de dovezi, dar toate sunt demonstrate în [nucleul integrat Mastery](../../products/educational-program/curriculum/mastery/README.md). Expresii precum `Finance Mastery` descriu standardul terminal privit prin pilon, nu un program sau un nivel separat.
 
 ## Regula pentru comunicarea publică
 

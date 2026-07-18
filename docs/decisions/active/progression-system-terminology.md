@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.1"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -9,6 +9,7 @@ canonical_for:
   - Skills XP and pillar-specific XP terminology
   - Level Up and New Level terminology
   - Mastery stage terminology
+  - Mastery pillar lens terminology
 ---
 
 # Terminologia sistemului de progres EZPLAY
@@ -100,6 +101,10 @@ Mastery:
 - nu se obține automat numai prin atingerea unui prag XP;
 - presupune fundația Level 5 în cei cinci piloni sau competențe echivalente.
 
+Mastery are cinci **lentile terminale**: Strategy, Product, Market, Operations și Finance. O lentilă Mastery este standardul prin care profunzimea unui pilon este urmărită în Round-urile integrate; nu este un traseu, un nivel sau un tip de XP separat.
+
+Formele `Strategy Mastery`, `Product Mastery`, `Market Mastery`, `Operations Mastery` și `Finance Mastery` pot denumi concis rezultatul terminal privit prin pilon. Ele nu se folosesc pentru a sugera cinci programe Mastery sau cinci certificări independente. Când există risc de confuzie, forma preferată este `lentila Strategy în Mastery` și echivalentul pentru ceilalți piloni.
+
 Documentația păstrează diferența dintre:
 
 - **standard de mastery** sau **standard de stăpânire** — suficiența într-o competență de la orice nivel;
@@ -126,6 +131,7 @@ Această decizie nu definește:
 - condițiile concrete pentru acordarea XP;
 - Unlock-urile și prerechizitele;
 - mecanismul de acces, finalizare și reprezentare a Mastery în Founder Profile;
+- ponderile, pragurile și reprezentarea celor cinci lentile terminale;
 - reprezentarea vizuală finală pe platformă.
 
 Aceste elemente se decid în taskuri separate. Terminologia stabilită aici rămâne însă baza comună pentru ele.

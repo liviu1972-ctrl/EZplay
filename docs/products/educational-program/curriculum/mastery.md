@@ -1,11 +1,12 @@
 ---
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 canonical_for:
   - terminal Mastery curriculum stage
   - Mastery entry assumptions and non-repetition rule
   - integrated advanced entrepreneurship outcomes
+  - hybrid Mastery core and pillar-lens model
 ---
 
 # Programul Mastery
@@ -22,7 +23,7 @@ Mastery este echivalent numai structural cu un posibil „Level 6”. Numele cur
 - nu mai este urmată de un alt nivel;
 - urmărește judecata și responsabilitatea antreprenorială în contexte complexe.
 
-Documentul definește identitatea, standardul și limitele etapei, dar nu dublează inventarul lecțiilor și nu proiectează Founder Loops, jocuri, simulări sau calendarul cursului. Cele 13 decizii curriculare sunt în [harta integrată a Founder Rounds Mastery](mastery-rounds.md), harta comună în [progresia Level 1–5 și Mastery](progression-map.md), iar decizia de produs în [structura curriculară aprobată](../../../decisions/active/curriculum-levels-and-mastery.md).
+Documentul definește identitatea, standardul și limitele etapei, dar nu dublează inventarul lecțiilor și nu proiectează Founder Loops, jocuri, simulări sau calendarul cursului. Cele 13 decizii curriculare sunt în [harta integrată a Founder Rounds Mastery](mastery-rounds.md), relația dintre nucleul comun și cele cinci standarde terminale în [arhitectura hibridă Mastery](mastery/README.md), harta comună în [progresia Level 1–5 și Mastery](progression-map.md), iar decizia de produs în [structura curriculară aprobată](../../../decisions/active/curriculum-levels-and-mastery.md).
 
 ## Definiția de lucru
 
@@ -115,7 +116,32 @@ La Level 5, participantul primește o problemă complexă și construiește o re
 
 Mastery nu înseamnă că persoana execută singură toate analizele tehnice. Înseamnă că știe ce trebuie decis, ce expertiză îi lipsește, cum evaluează contribuția specialiștilor și pentru ce răspunde ca fondator sau lider.
 
+## Arhitectura hibridă
+
+Mastery păstrează o singură progresie de decizii enterprise, dar face profunzimea fiecărui Business Pillar explicită. Arhitectura decisă este:
+
+```text
+un nucleu comun MST 01–13
++ cinci lentile terminale obligatorii
++ bridge-uri și laboratoare țintite
++ o demonstrație terminală integrată
+```
+
+| Lentilă terminală | Întrebarea de control | Standard operațional |
+|---|---|---|
+| **Strategy** | Direcția rămâne coerentă și adaptabilă sub incertitudine? | [Lentila Strategy](mastery/strategy.md) |
+| **Product** | Portofoliul creează valoare demonstrabilă și responsabilă? | [Lentila Product](mastery/product.md) |
+| **Market** | Sistemul comercial produce cerere, încredere și Revenue de calitate? | [Lentila Market](mastery/market.md) |
+| **Operations** | Operating model-ul poate executa și absorbi schimbarea? | [Lentila Operations](mastery/operations.md) |
+| **Finance** | Capitalul, Cash-ul, ownership-ul și valoarea sunt conduse responsabil? | [Lentila Finance](mastery/finance.md) |
+
+Acestea sunt lentile de competență și evaluare, nu cinci programe, trasee de `Level 6` sau certificări independente. Un participant poate avea un profil de profunzime asimetric, dar recunoașterea finală nu poate compensa un gol critic într-un pilon prin performanță foarte puternică în altul.
+
+[Matricea Round × lentilă](mastery/README.md#matricea-inițială-round--lentilă) arată unde fiecare pilon este dezvoltat direct și unde trebuie integrat material. Distribuția exactă a ponderilor și pragurilor rămâne de validat.
+
 ## Cele cinci rezultate terminale
+
+Rezultatele de mai jos definesc destinația. Fișierele-lentilă definesc corpul de dovezi, acoperirea în Round-uri, bridge-urile, laboratoarele și limitele față de specialiști.
 
 ### Strategy Mastery
 
@@ -383,17 +409,26 @@ Standardul terminal cere ca participantul să poată:
 
 Harta Round-urilor cere deja un corp coerent de dovezi și o apărare terminală. Forma exactă a rubricii, ponderea experienței reale, condițiile de echivalare și componența panelului nu sunt încă decise.
 
+Recunoașterea finală cere două tipuri de suficiență simultan:
+
+- **suficiență pe fiecare lentilă** — un corp coerent de dovezi Strategy, Product, Market, Operations și Finance;
+- **suficiență integrată** — capacitatea de a reconcilia toate lentilele și dimensiunile transversale într-o decizie de tip `MST 13`.
+
+Nu folosim o medie simplă prin care excelența într-un pilon ascunde o vulnerabilitate materială în altul. Pragurile și regulile exacte vor fi definite prin rubrica terminală.
+
 ## Nucleu comun și profunzime contextuală
 
 Un program complet nu poate trata fiecare industrie, jurisdicție și tranzacție la aceeași adâncime.
 
-Arhitectura recomandată este:
+Arhitectura decisă este:
 
 - un nucleu comun al deciziei antreprenoriale;
 - probleme integrate care cer toți cei cinci piloni;
+- câte o lentilă terminală explicită pentru fiecare pilon;
 - profunzime contextuală în funcție de companie, industrie și etapă;
 - acces la specialiști și surse profesionale;
-- eventuale extensii în interiorul Mastery, fără nivel ulterior.
+- bridge-uri pentru goluri de fundație și laboratoare de profunzime pentru contexte avansate;
+- extensii sau specializări în interiorul Mastery, fără nivel ulterior.
 
 Extensiile nu sunt „Level 7”. Ele rămân aplicații, domenii sau trasee în interiorul etapei terminale.
 
@@ -418,11 +453,13 @@ Extensiile nu sunt „Level 7”. Ele rămân aplicații, domenii sau trasee în
 - nucleul obligatoriu și eventualele extensii;
 - mecanismul de diagnostic și admitere;
 - rubricile și pragurile pentru competențele granulare deja definite în harta Round-urilor;
+- ponderile, pragurile și regulile de compensare sau non-compensare pentru cele cinci lentile;
 - forma dovezilor terminale;
 - ponderea experienței reale față de cazuri și simulări;
 - rolul mentorilor, specialiștilor și panelurilor;
 - industriile și jurisdicțiile folosite în primele prototipuri;
 - forma de recunoaștere a finalizării;
 - numele public complet;
+- catalogul bridge-urilor și al laboratoarelor de profunzime;
 - jocurile și experiențele care pot servi fiecare rezultat;
 - condițiile în care programul poate fi descris drept disponibil.

@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.6"
+version: "0.7"
 updated: 2026-07-18
 canonical_for:
   - vertical Finance curriculum progression
@@ -48,7 +48,7 @@ Profitul, Cash-ul, riscul și decizia reapar la fiecare nivel. Progresia nu este
 | **Level 3** | clasele VII–VIII | Ce arată performanța, Cash-ul și poziția financiară împreună și ce parte a modelului produce rezultatul? | [Finance Level 3](finance/level-3.md) |
 | **Level 4** | clasele IX–X | De câți bani avem nevoie, pentru ce, din ce sursă și ce risc sau drepturi cedăm în schimb? | [Finance Level 4](finance/level-4.md) |
 | **Level 5** | clasele XI–XII | Ce capital servește strategia, ce valoare și drepturi negociem și cum folosim banii responsabil după tranzacție? | [Finance Level 5](finance/level-5.md) |
-| **Mastery** | independent de vârstă | Cum guvernăm capitalul, ownership-ul și valoarea prin finanțare, transformare, tranzacții și ciclul de viață? | [Harta integrată Mastery](mastery-rounds.md) |
+| **Mastery** | independent de vârstă | Cum guvernăm capitalul, ownership-ul și valoarea prin finanțare, transformare, tranzacții și ciclul de viață? | [Lentila Finance](mastery/finance.md) / [harta integrată](mastery-rounds.md) |
 
 ## Matricea revenirilor Finance
 
@@ -73,6 +73,8 @@ Finance nu este „pilonul care decide” în locul celorlalți. Face vizibile c
 ## Contribuția la Mastery
 
 Mastery presupune deja modelare integrată, valuation, capital allocation, capital structure, cap table multirundă, term sheets, fundraising, due diligence, reporting și lifecycle options. Etapa terminală cere folosirea lor simultană cu Strategy, Product, Market, Operations, leadershipul și board-ul într-o decizie care evoluează în timp.
+
+[Lentila Finance în Mastery](mastery/finance.md) definește standardul terminal, Round-urile cu profunzime directă, corpul coerent de dovezi, bridge-urile și laboratoarele posibile. Ea nu creează `Finance Level 6` și nu separă Finance de nucleul comun `MST`.
 
 IPO-ul este una dintre mai multe opțiuni posibile. Programa dezvoltă judecata asupra readiness-ului, capitalului, guvernanței și obligațiilor; nu predă execuția juridică a unei oferte publice și nu prezintă listarea drept destinație implicită.
 

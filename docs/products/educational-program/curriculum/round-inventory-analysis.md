@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - initial cross-level analysis of the Founder Round inventory
@@ -14,7 +14,7 @@ canonical_for:
 
 Acest document consemnează analiza făcută odată cu descompunerea celor cinci spirale în hărți Level 1–5 și cu definirea Mastery. Nu este o a doua programă și nu înlocuiește fișierele de nivel. Rolul său este să explice logica împărțirii, să facă vizibile riscurile și să ofere întrebările pentru auditul curricular și expert review.
 
-Standardul fiecărei lecții este în [standardul hărților de Founder Rounds](round-map-standard.md), inventarul se accesează din cele cinci fișiere spirală, iar progresia comună din [harta Level 1–5 și Mastery](progression-map.md).
+Standardul fiecărei lecții este în [standardul hărților de Founder Rounds](round-map-standard.md), inventarul se accesează din cele cinci fișiere spirală, progresia comună din [harta Level 1–5 și Mastery](progression-map.md), iar acoperirea terminală a fiecărui pilon din [arhitectura hibridă Mastery](mastery/README.md).
 
 ## Rezultatul descompunerii
 
@@ -27,7 +27,7 @@ Standardul fiecărei lecții este în [standardul hărților de Founder Rounds](
 | Finance | 7 | 7 | 8 | 8 | 10 | 40 |
 | **Total** | **29** | **33** | **36** | **38** | **42** | **178** |
 
-Mastery adaugă 13 Round-uri integrate. Inventarul complet are 191 de Round-uri definite curricular.
+Mastery adaugă 13 Round-uri integrate și cinci lentile terminale care verifică profunzimea pilonilor în interiorul lor. Lentilele nu adaugă Round-uri, astfel încât inventarul complet rămâne la 191 de Round-uri definite curricular.
 
 Numerele nu stabilesc durata programului și nu înseamnă că fiecare Round va fi obligatoriu pentru fiecare participant. Simetria numerică ar fi artificială: Finance are mai multe distincții tehnice care trebuie făcute înainte ca participantul să poată lua în siguranță o decizie complexă, iar Product poate grupa mai multe instrumente în jurul aceleiași decizii de valoare. Nucleul obligatoriu și extensiile trebuie stabilite după audit, nu deduse din numărul fișierelor.
 
@@ -56,6 +56,16 @@ Participantul lucrează cu portofolii, mai mulți ani, leadership, capital, owne
 ### Mastery — conduce decizia și răspunde pentru consecințe
 
 Mastery schimbă standardul, nu doar volumul. Participantul formulează problema, mobilizează specialiștii, negociază interese legitime, construiește guvernanța, implementează și revizuiește decizia. De aceea Mastery are o singură hartă integrată și nu cinci seturi de recapitulare.
+
+### De ce o hartă comună are totuși cinci lentile
+
+O singură hartă protejează obiectul real al deciziei: compania ca sistem. Cele cinci lentile protejează standardul de profunzime și împiedică trei scurtături:
+
+- un participant foarte puternic într-un pilon nu poate ascunde un gol critic în altul;
+- munca de echipă nu poate face invizibilă contribuția și judecata individuală;
+- „integrarea” nu poate rămâne o listă în care fiecare pilon este doar menționat.
+
+[Matricea Round × lentilă](mastery/README.md#matricea-inițială-round--lentilă) marchează unde un pilon este dezvoltat direct și unde trebuie integrat material. Ea este un instrument de audit Draft, nu o grilă numerică finală de absolvire.
 
 ## De ce Level 5 nu este doar pregătire pentru Mastery
 
@@ -108,7 +118,8 @@ Programa trebuie verificată cu profesori și participanți reali pentru încăr
 4. Product–Market Fit nu este confundat cu feedback pozitiv sau cu validarea unui MVP.
 5. IPO-ul nu este destinație implicită; este una dintre opțiunile de ownership, capital și lichiditate.
 6. Mastery este integrat prin obiectul deciziei, nu prin acordarea arbitrară a unui al șaselea pilon.
-7. Fiecare Round nou cere o dovadă observabilă și declară legăturile cu ceilalți piloni.
+7. Cele cinci lentile terminale fac vizibilă profunzimea fiecărui pilon fără a crea trasee paralele.
+8. Fiecare Round nou cere o dovadă observabilă și declară legăturile cu ceilalți piloni.
 
 ## Riscurile curriculare principale
 
@@ -119,6 +130,10 @@ Programa trebuie verificată cu profesori și participanți reali pentru încăr
 ### Densitatea Level 5
 
 Level 5 are 42 de Round-uri și subiecte apropiate de practica executive. Trebuie verificat dacă unele pot fi experiențe integrate cu un pilon principal și dovezi secundare, fără a pierde fundația fiecărei discipline.
+
+### Integrarea superficială în Mastery
+
+O matrice completă poate crea iluzia acoperirii dacă aceeași mențiune generică este bifată în toate Round-urile. Auditul trebuie să verifice dacă fiecare celulă marcată drept integrare materială schimbă efectiv alternativa, decizia, planul sau consecințele și dacă fiecare lentilă produce un corp de dovezi care rezistă separat.
 
 ### Diferența dintre hartă și lecție livrabilă
 

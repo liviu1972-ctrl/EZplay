@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 canonical_for:
   - integrated curriculum progression from Level 1 to Mastery
@@ -352,6 +352,18 @@ Mastery nu este o continuare liniară în care fiecare temă primește încă un
 
 Participantul poate formula, conduce și guverna o decizie antreprenorială complexă de la diagnostic până la implementare, monitorizare și adaptare, mobilizând oamenii și expertiza potrivite.
 
+### Un singur program, cinci lentile terminale
+
+Mastery folosește o arhitectură hibridă:
+
+- cele 13 Founder Rounds formează un singur nucleu de decizii integrate;
+- Strategy, Product, Market, Operations și Finance au fiecare un standard terminal explicit;
+- bridge-urile recuperează numai golurile de fundație;
+- laboratoarele de profunzime adaugă context fără a crea un nivel nou;
+- `MST 13` cere demonstrarea integrată a tuturor lentilelor.
+
+Lentilele protejează profunzimea fiecărui pilon, dar nu devin programe sau coduri paralele. Arhitectura, matricea de acoperire și standardele operaționale sunt în [arhitectura hibridă Mastery](mastery/README.md).
+
 ### Ce se schimbă față de Level 5
 
 | Level 5 | Mastery |
@@ -379,7 +391,7 @@ Mastery trebuie să poată aborda:
 - risc, legal, etică, date, securitate, sustenabilitate și impact;
 - capital allocation și valoare pe termen lung.
 
-Identitatea completă a etapei este definită în [Programul Mastery](mastery.md).
+Identitatea completă a etapei este definită în [Programul Mastery](mastery.md), iar relația dintre nucleul integrat și profunzimea fiecărui pilon în [arhitectura hibridă](mastery/README.md).
 
 ## Dimensiunile transversale în spirală
 

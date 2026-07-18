@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.9"
+version: "1.0"
 updated: 2026-07-18
 ---
 
@@ -198,9 +198,11 @@ Hărțile dezvoltate în prezent sunt:
 - [Spirala Operations](operations-spiral.md) — progresia Operations;
 - [Spirala Finance](finance-spiral.md) — progresia Finance;
 - [Programul Mastery](mastery.md) — identitatea și rezultatele etapei terminale;
-- [Harta integrată Mastery](mastery-rounds.md) — cele 13 decizii curriculare terminale.
+- [Harta integrată Mastery](mastery-rounds.md) — cele 13 decizii curriculare terminale;
+- [Arhitectura hibridă Mastery](mastery/README.md) — relația dintre nucleul comun, cele cinci lentile terminale, bridge-uri, laboratoare și demonstrația finală;
+- lentilele [Strategy](mastery/strategy.md), [Product](mastery/product.md), [Market](mastery/market.md), [Operations](mastery/operations.md) și [Finance](mastery/finance.md) — standardele de profunzime și corpurile de dovezi terminale.
 
-Fiecare spirală este acum un index vertical. Hărțile canonice Level 1–5 se află în subfolderele `strategy/`, `product/`, `market/`, `operations/` și `finance/`: în total 25 de fișiere de nivel și 178 de Founder Rounds numerice. Mastery adaugă 13 Round-uri integrate, fără a crea `Level 6` în fiecare pilon.
+Fiecare spirală este acum un index vertical. Hărțile canonice Level 1–5 se află în subfolderele `strategy/`, `product/`, `market/`, `operations/` și `finance/`: în total 25 de fișiere de nivel și 178 de Founder Rounds numerice. Mastery adaugă 13 Round-uri integrate și cinci lentile terminale de evaluare, fără a crea `Level 6` în fiecare pilon și fără a modifica numărul Round-urilor.
 
 Inventarul total are 191 de Round-uri. Cele 29 de Round-uri Level 1 păstrează fără redesenare granularitatea hărților existente. Cele 149 de Round-uri Level 2–5 și cele 13 Round-uri Mastery folosesc standardul nou: întrebare, competență, concepte, dovadă, prerechizite, integrare și continuitate. Niciunul dintre aceste Round-uri nu este încă o experiență completă: Founder Loop-ul, jocul sau cazul, materialele, facilitarea, durata exactă, XP-ul și rubrica finală se proiectează ulterior.
 
@@ -224,6 +226,25 @@ Finance ──────┘
 | **Mastery** | independent de vârstă | etapă terminală integrată; decizii ambigue și cu miză ridicată |
 
 Nivelurile 1–5 există separat în fiecare Business Pillar și pot produce un Founder Profile asimetric. Mastery este o etapă integrată, echivalentă numai structural cu un posibil Level 6; nu creează un al șaselea pilon și nu introduce `Founder XP`.
+
+### Arhitectura hibridă a etapei terminale
+
+Mastery combină două nevoi care nu trebuie confundate:
+
+- **integrarea** — decizia este luată asupra companiei ca întreg, printr-un singur nucleu `MST 01–13`;
+- **profunzimea** — Strategy, Product, Market, Operations și Finance au fiecare un standard terminal și un corp de dovezi propriu.
+
+Modelul complet este:
+
+```text
+nucleu comun integrat
+→ profunzime urmărită prin cinci lentile
+→ bridge-uri numai pentru golurile Level 1–5
+→ laboratoare pentru contexte avansate
+→ demonstrație terminală integrată
+```
+
+Lentilele nu creează Round-uri paralele, XP nou sau absolviri independente. Ele mapează fiecare Round ca profunzime directă ori integrare materială și împiedică folosirea unei medii compensatorii care ar ascunde un gol critic. Profilurile pot rămâne diferite, dar standardul terminal cere suficiență în fiecare pilon și reconcilierea lor în `MST 13`.
 
 ### Ce produce progresul spiral
 
@@ -624,22 +645,25 @@ Cele două registre exprimă același produs și aceleași rezultate. Ele nu cre
 - vizualizarea profilului participantului;
 - modul în care accesul și finalizarea Mastery devin vizibile în Founder Profile;
 - durata, nucleul obligatoriu, extensiile și forma de recunoaștere pentru Mastery;
+- ponderile, pragurile și regulile de suficiență pentru cele cinci lentile Mastery;
+- catalogul bridge-urilor și al laboratoarelor de profunzime;
 - rolul platformei în prima versiune testabilă.
 
 ## Direcția imediată de dezvoltare
 
-Level 1 este păstrat și reconciliat pentru toți cei cinci Business Pillars. Structura comună Level 2–5 și Mastery este decisă, iar cele 25 de hărți de nivel și harta integrată Mastery au primul inventar complet de Founder Rounds.
+Level 1 este păstrat și reconciliat pentru toți cei cinci Business Pillars. Structura comună Level 2–5 și Mastery este decisă, cele 25 de hărți de nivel și harta integrată Mastery au primul inventar complet de Founder Rounds, iar cele cinci lentile terminale fac vizibilă profunzimea fiecărui pilon.
 
 În faza curentă nu proiectăm Founder Loop-urile nivelurilor noi. Următorii pași sunt:
 
 1. auditarea verticală a revenirilor și a suprapunerilor dintre cele 191 de Round-uri;
 2. auditarea orizontală a încărcării, matematicii, autonomiei și integrării la fiecare nivel;
-3. revizuirea prerechizitelor și a dovezilor observabile;
-4. separarea nucleului obligatoriu de extensiile posibile;
-5. revizuirea cu specialiști în antreprenoriat, educație și ariile reglementate relevante;
-6. alegerea Round-urilor care merită prototipate primele;
-7. proiectarea ulterioară a Founder Loop-urilor, jocurilor, simulărilor și materialelor;
-8. testarea și corectarea hărților pe baza dovezilor reale.
+3. verificarea matricei Mastery și a corpurilor de dovezi pentru cele cinci lentile;
+4. revizuirea prerechizitelor și a dovezilor observabile;
+5. separarea nucleului obligatoriu de extensiile posibile;
+6. revizuirea cu specialiști în antreprenoriat, educație și ariile reglementate relevante;
+7. alegerea Round-urilor care merită prototipate primele;
+8. proiectarea ulterioară a Founder Loop-urilor, jocurilor, simulărilor și materialelor;
+9. testarea și corectarea hărților pe baza dovezilor reale.
 
 Prototiparea unui Founder Round Level 1 poate continua în paralel ca validare a metodei. Ea nu mai blochează documentarea progresiei Level 2–Mastery și nu autorizează construirea tuturor experiențelor înaintea validării.
 

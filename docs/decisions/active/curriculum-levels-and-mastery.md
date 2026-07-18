@@ -1,12 +1,13 @@
 ---
 status: Current
-version: "1.1"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
   - common curriculum level structure
   - school grade reference bands for Levels 1-5
   - terminal Mastery stage
+  - hybrid integrated-core and five-lens Mastery architecture
   - curriculum-first design order for Levels 2-Mastery
 ---
 
@@ -109,6 +110,15 @@ Mastery este:
 - comparabil ca ambiție de acoperire cu o educație solidă de general management, fără a fi prezentat ca MBA, diplomă universitară sau calificare acreditată;
 - o etapă în care cei cinci piloni și dimensiunile transversale sunt folosite împreună.
 
+Mastery folosește o arhitectură hibridă decisă:
+
+- o singură hartă de Founder Rounds integrate;
+- câte o lentilă terminală obligatorie pentru Strategy, Product, Market, Operations și Finance;
+- bridge-uri țintite pentru golurile de fundație și laboratoare de profunzime pentru contexte avansate;
+- o demonstrație terminală în care toate cele cinci lentile sunt materiale.
+
+Lentilele fac vizibilă profunzimea fiecărui pilon și corpul său de dovezi. Ele nu sunt cinci programe Mastery, nu continuă numerotarea cu `Level 6`, nu primesc un tip nou de XP și nu produc absolviri independente. Recunoașterea finală cere atât suficiență în fiecare lentilă, cât și integrarea lor; pragurile și rubrica exactă rămân de validat.
+
 Mastery nu reia sistematic curriculumul Level 1–5. Participanții veniți din afara traseului EZPLAY pot folosi diagnostic, recunoașterea experienței anterioare și resurse-punte țintite. Acestea sunt condiții de acces și remediere a unor goluri, nu module Mastery care repetă întregul traseu.
 
 În Mastery, teme precum Equity, atragerea investitorilor, construirea echipei de conducere, board-ul, tranzacțiile sau pregătirea pentru o posibilă listare publică sunt tratate drept alegeri conectate cu Strategy, Product, Market, Operations și Finance. IPO-ul este o opțiune de finanțare și transformare cu obligații și compromisuri, nu destinația implicită a unei companii.
@@ -131,6 +141,7 @@ Majuscula și contextul trebuie să păstreze diferența. Atingerea standardului
 - pragurile de Skills XP;
 - mecanismul final de poziționare și recunoaștere a experienței anterioare;
 - criteriile complete de absolvire;
+- ponderile și pragurile celor cinci lentile terminale;
 - forma unui certificat, badge sau altă recunoaștere;
 - specializările opționale din interiorul Mastery;
 - jurisdicțiile juridice și fiscale folosite în studiile aplicate;
@@ -146,4 +157,5 @@ Aceste elemente se decid după stabilizarea hărților de competențe și, unde 
 - [standardul hărților de Founder Rounds](../../products/educational-program/curriculum/round-map-standard.md) păstrează granularitatea și convenția codurilor Draft;
 - [Programul Mastery](../../products/educational-program/curriculum/mastery.md) păstrează identitatea și standardul terminal;
 - [harta Founder Rounds Mastery](../../products/educational-program/curriculum/mastery-rounds.md) păstrează inventarul integrat Draft;
+- [arhitectura hibridă Mastery](../../products/educational-program/curriculum/mastery/README.md) păstrează regulile celor cinci lentile și matricea de acoperire Draft;
 - [analiza de cercetare](../../research/product/entrepreneurship-curriculum-levels-and-mastery.md) păstrează argumentele, comparațiile și limitele surselor externe.

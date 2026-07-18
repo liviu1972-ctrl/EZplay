@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - curricular specification standard for Founder Round maps
@@ -90,6 +90,17 @@ MST 02
 
 Cele două cifre reprezintă identificatorul Round-ului, nu un nivel. Convenția rămâne `Draft` până la validarea primei experiențe Mastery.
 
+### Acoperirea prin lentilele Mastery
+
+Round-urile `MST` rămân într-o singură hartă integrată. Ele nu primesc coduri paralele pentru Strategy, Product, Market, Operations sau Finance.
+
+Fiecare Round este mapat separat în [arhitectura hibridă Mastery](mastery/README.md) prin două roluri:
+
+- **profunzime directă** — Round-ul dezvoltă și evaluează explicit o capacitate terminală a lentilei;
+- **integrare materială** — lentila trebuie să schimbe analiza, alternativa, decizia sau planul, chiar dacă nu este obiectul principal.
+
+Un Round Mastery nu poate avea un pilon absent. Dacă eliminarea unui pilon nu schimbă dovada sau decizia, Round-ul trebuie revizuit înainte de proiectarea experienței.
+
 ## Regula pilonului principal
 
 Fiecare Round Level 1–5 are un singur Business Pillar principal. Celelalte apar prin:
@@ -101,7 +112,7 @@ Fiecare Round Level 1–5 are un singur Business Pillar principal. Celelalte apa
 
 Un Round nu devine multi-pilon doar fiindcă folosește cifre, oameni sau clienți. Întrebarea centrală stabilește pilonul principal.
 
-Mastery este excepția integratoare: fiecare Round Mastery trebuie să ceară o decizie în care mai mulți piloni sunt inseparabili.
+Mastery este excepția integratoare: fiecare Round Mastery trebuie să ceară o decizie în care cei cinci piloni sunt materiali, cu grade diferite de profunzime directă.
 
 ## Regula ordinii
 

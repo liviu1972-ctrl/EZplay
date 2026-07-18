@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 canonical_for:
   - vertical Strategy curriculum progression
@@ -40,7 +40,7 @@ La Level 1, Deckbuilder face vizibile obiectivul, prioritatea, coerența, renun�
 | **Level 3** | clasele VII–VIII | Pentru cine, față de ce alternative și prin ce sistem alegem să creăm valoare? | [Strategy Level 3](strategy/level-3.md) |
 | **Level 4** | clasele IX–X | Unde și cum creștem, ce trebuie să construim și la ce renunțăm pentru a păstra coerența? | [Strategy Level 4](strategy/level-4.md) |
 | **Level 5** | clasele XI–XII | Ce companie alegem să devenim, cum alocăm resursele și cine susține sau guvernează transformarea? | [Strategy Level 5](strategy/level-5.md) |
-| **Mastery** | independent de vârstă | Cum conducem direcția, capitalul și transformarea când nu există un răspuns sigur? | [Harta integrată Mastery](mastery-rounds.md) |
+| **Mastery** | independent de vârstă | Cum conducem direcția, capitalul și transformarea când nu există un răspuns sigur? | [Lentila Strategy](mastery/strategy.md) / [harta integrată](mastery-rounds.md) |
 
 ## Matricea revenirilor Strategy
 
@@ -76,6 +76,8 @@ diagnostic
 → execuție și semnale
 → revizuire și răspundere pentru consecințe
 ```
+
+[Lentila Strategy în Mastery](mastery/strategy.md) definește standardul terminal, Round-urile cu profunzime directă, corpul coerent de dovezi, bridge-urile și laboratoarele posibile. Ea nu creează `Strategy Level 6` și nu separă Strategy de nucleul comun `MST`.
 
 ## Ce rămâne de proiectat
 

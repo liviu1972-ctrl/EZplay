@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.8"
+version: "0.9"
 updated: 2026-07-18
 ---
 
@@ -220,7 +220,7 @@ Stilul de facilitare urmărește să conecteze mecanica jocului cu situații pe 
 
 Există hărți reconciliate de Round-uri pentru Level 1 în toți cei cinci Business Pillars, dar Round-urile nu sunt încă dezvoltate ca experiențe complete.
 
-Există și primul draft al hărții comune Level 2–5 și Mastery, al celor 25 de hărți de nivel și al celor 13 decizii integrate Mastery. Cele 191 de Round-uri sunt definite curricular, dar nu sunt gata de livrare.
+Există și primul draft al hărții comune Level 2–5 și Mastery, al celor 25 de hărți de nivel, al celor 13 decizii integrate Mastery și al celor cinci lentile terminale care urmăresc profunzimea pilonilor. Cele 191 de Round-uri sunt definite curricular, dar nu sunt gata de livrare.
 
 Temele identificate până acum includ:
 
@@ -343,6 +343,7 @@ Aceste formate depind încă de prezența creatorului sau a unei persoane care c
 * spirale-index Level 1–Mastery pentru Strategy, Product, Market, Operations și Finance;
 * 25 de hărți canonice Level 1–5, cu 178 de Founder Rounds numerice definite curricular;
 * definiția curriculară și harta celor 13 Founder Rounds integrate Mastery;
+* arhitectura hibridă Mastery, matricea Round × pilon și cele cinci lentile terminale de competență;
 * analiza de cercetare a progresiei, acoperirii avansate și riscurilor;
 * câteva probleme despre Profit și Cashflow;
 * joc fizic și digital;
@@ -1949,7 +1950,7 @@ Founder Round este una dintre aceste „rotițe” ale sistemului.
 * experiență cu mese de patru jucători;
 * ideea progresului în cei cinci piloni;
 * hărți curriculare Level 1 reconciliate pentru cei cinci Business Pillars;
-* harta comună, cele cinci spirale-index, cele 25 de hărți Level 1–5 și harta Mastery, ca documente Draft fără Founder Loop-uri sau experiențe asociate încă.
+* harta comună, cele cinci spirale-index, cele 25 de hărți Level 1–5, harta Mastery și cele cinci lentile terminale, ca documente Draft fără Founder Loop-uri sau experiențe asociate încă.
 
 ### Ce nu există încă
 

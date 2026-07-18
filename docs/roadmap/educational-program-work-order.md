@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 ---
 
@@ -42,7 +42,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 7. Mastery este etapa terminală, independentă de vârstă și echivalentă numai structural cu un posibil Level 6.
 8. Mastery nu repetă sistematic Level 1–5 și nu este urmat de alt nivel.
 9. În faza curentă nu proiectăm Founder Loop-urile, Business Run-urile sau Challenge-urile noilor niveluri.
-10. Level 1–5 au 25 de hărți canonice de nivel, iar Mastery are o singură hartă integrată; codurile și inventarul Round-urilor rămân Draft până la validare.
+10. Level 1–5 au 25 de hărți canonice de nivel, iar Mastery are o singură hartă integrată și cinci lentile terminale; lentilele nu adaugă Round-uri, iar codurile și inventarul rămân Draft până la validare.
 
 ## Ordinea generală
 
@@ -55,7 +55,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 | 5. Structura comună | Care sunt nivelurile și benzile lor? | Level 1–5 și Mastery sunt decise |
 | 6. Harta integrată | Cum crește complexitatea între niveluri? | Primul draft există |
 | 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Indexurile verticale și matricile există |
-| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea și 13 decizii integrate sunt definite Draft |
+| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea, arhitectura hibridă, cinci lentile și 13 decizii integrate sunt definite Draft |
 | 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și 178 Round-uri Level 1–5 sunt definite Draft |
 | 10. Audit structural | Sunt complete fișierele, codurile, câmpurile și legăturile? | Verificare automată și editorială inițială realizată |
 | 11. Audit vertical și orizontal | Fiecare revenire adaugă complexitate și fiecare nivel este coerent? | Următorul pas de revizuire curriculară |
@@ -70,8 +70,9 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 ## Fluxul imediat
 
 ```text
-harta comună, spiralele și cele 191 de Round-uri în primul draft
+harta comună, spiralele, cele 191 de Round-uri și matricea lentilelor Mastery în primul draft
 → audit vertical și orizontal la granularitate de Round
+→ auditul corpurilor de dovezi pentru cele cinci lentile Mastery
 → revizuirea prerechizitelor și dovezilor
 → separarea nucleului de extensii
 → expert review
@@ -100,9 +101,9 @@ Această clarificare trebuie să preceadă jocul sau Founder Round-ul deoarece d
 
 ## Punctul de reluare
 
-Primul draft al arhitecturii Level 1–5 și Mastery este complet până la granularitatea Founder Round-urilor, iar constatările inițiale sunt în [analiza transversală a inventarului](../products/educational-program/curriculum/round-inventory-analysis.md). Reluăm cu:
+Primul draft al arhitecturii Level 1–5 și Mastery este complet până la granularitatea Founder Round-urilor, iar profunzimea Mastery este mapată prin cinci lentile terminale. Constatările inițiale sunt în [analiza transversală a inventarului](../products/educational-program/curriculum/round-inventory-analysis.md). Reluăm cu:
 
-> **auditul curricular al celor 191 de Round-uri, pentru a verifica suprapunerile, încărcarea pe vârstă, prerechizitele, calitatea dovezilor și progresul real între niveluri.**
+> **auditul curricular al celor 191 de Round-uri și al celor cinci corpuri de dovezi Mastery, pentru a verifica suprapunerile, încărcarea pe vârstă, prerechizitele, calitatea dovezilor și progresul real între niveluri.**
 
 Auditul trebuie realizat atât vertical, în interiorul fiecărei spirale, cât și orizontal, între cei cinci piloni ai aceleiași benzi.
 
@@ -115,6 +116,7 @@ Nu proiectăm încă Founder Loop-urile nivelurilor 2–Mastery.
 - nucleul final și extensiile fiecărui nivel;
 - durata nivelurilor și a Mastery;
 - rubricile, pragurile și standardele finale de evaluare pentru competențele Draft;
+- ponderile și pragurile celor cinci lentile Mastery;
 - pragurile globale de Skills XP;
 - mecanismul final de poziționare și bridge;
 - forma de recunoaștere a finalizării Mastery;

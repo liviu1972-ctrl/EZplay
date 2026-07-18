@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 canonical_for:
   - vertical Market curriculum progression
@@ -40,7 +40,7 @@ client și acces
 | **Level 3** | clasele VII–VIII | Ce segment alegem și prin ce sistem repetabil îl transformăm în clienți care primesc și susțin valoarea? | [Market Level 3](market/level-3.md) |
 | **Level 4** | clasele IX–X | Ce sistem de achiziție, conversie, retenție și monetizare poate crește fără să distrugă economia sau promisiunea? | [Market Level 4](market/level-4.md) |
 | **Level 5** | clasele XI–XII | Unde și prin ce sistem comercial alocăm resurse pentru Revenue de calitate și relații durabile? | [Market Level 5](market/level-5.md) |
-| **Mastery** | independent de vârstă | Cum construim și transformăm cererea, încrederea și Revenue-ul de calitate în piețe aflate în schimbare? | [Harta integrată Mastery](mastery-rounds.md) |
+| **Mastery** | independent de vârstă | Cum construim și transformăm cererea, încrederea și Revenue-ul de calitate în piețe aflate în schimbare? | [Lentila Market](mastery/market.md) / [harta integrată](mastery-rounds.md) |
 
 ## Matricea revenirilor Market
 
@@ -65,6 +65,8 @@ Market nu poate compensa permanent o ofertă fără valoare sau un sistem care n
 ## Contribuția la Mastery
 
 La Mastery nu mai sunt reluate segmentarea, funnel-ul, CAC, LTV, pricing-ul sau sales forecasting. Participantul trebuie să poată transforma un sistem comercial multi-segment și multi-canal și să îl integreze cu portofoliul Product, operating model-ul, capitalul, board-ul, riscul și reputația.
+
+[Lentila Market în Mastery](mastery/market.md) definește standardul terminal, Round-urile cu profunzime directă, corpul coerent de dovezi, bridge-urile și laboratoarele posibile. Ea nu creează `Market Level 6` și nu separă Market de nucleul comun `MST`.
 
 ## Ce rămâne de proiectat
 
