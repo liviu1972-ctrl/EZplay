@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.4"
-updated: 2026-07-17
+version: "0.5"
+updated: 2026-07-18
 ---
 
 # Reguli de copywriting pentru ezplay.org
@@ -74,6 +74,33 @@ EZPLAY este:
 6. jocuri și simulări ca instrumente;
 7. platformă, progres și comunitate;
 8. dezvoltarea viitoare.
+
+## Vocea comună și lentilele editoriale
+
+Vocea EZPLAY este comună tuturor paginilor. Lentilele nu sunt branduri separate, ci perspective controlate asupra aceluiași adevăr.
+
+Cele patru lentile sunt:
+
+- **tânăr / participant** — acțiune, provocare, consecință, autonomie și primul pas;
+- **părinte** — mecanismul experienței, progresie, limite, acces și rolul adultului;
+- **educator / facilitator** — Founder Loop, obiective, facilitare, debrief și aplicare;
+- **organizație / decident** — potrivire, dovezi, implementare, roluri, condiții și următorul pas.
+
+Regulile complete de activare, fallback și conservare sunt în [`adaptive-editorial-lenses.md`](adaptive-editorial-lenses.md).
+
+### Reguli de redactare a variantelor
+
+- copy-ul comun se scrie sau se confirmă înaintea variantelor;
+- se creează numai lentilele care produc o diferență utilă;
+- o variantă poate schimba perspectiva, ritmul, exemplul, ordinea și CTA-ul;
+- o variantă nu schimbă faptele, promisiunea, starea de dovadă sau condițiile de acces;
+- rutele de public își păstrează vocea și nu sunt rescrise de lentila sesiunii;
+- o pagină fără variantă folosește copy-ul comun existent;
+- tonul prietenos nu reduce automat complexitatea cognitivă a subiectului;
+- agentul tehnic nu inventează și nu generează variante lipsă;
+- AI poate sprijini redactarea, dar website-ul nu generează liber copy în runtime.
+
+Limba este o dimensiune separată. O lentilă aprobată trebuie să păstreze același sens în română și engleză.
 
 ## Verbele preferate
 
@@ -238,6 +265,8 @@ Preferăm:
 
 CTA-urile folosesc acțiuni clare.
 
+Lentilele pot folosi etichete diferite pentru aceeași destinație când descriu același pas din perspectiva publicului. De exemplu, `Vezi prima experiență` și `Descoperă experiența introductivă` pot conduce la aceeași rută. Destinația se schimbă numai când acțiunea utilizatorului este realmente diferită.
+
 ### Principale
 
 - `Descoperă programul`;
@@ -308,11 +337,12 @@ Această soluție nu trebuie folosită pentru a ascunde informații comerciale c
 
 ## Regula finală
 
-Orice text public trebuie să treacă trei întrebări:
+Orice text public, inclusiv o variantă de lentilă, trebuie să treacă patru întrebări:
 
 1. Este adevărat acum?
 2. Este susținut de o sursă sau de o experiență documentată?
 3. Îl ajută pe utilizator să înțeleagă ce este EZPLAY și ce poate face?
+4. Păstrează același sens și aceleași limite ca textul comun ori documentează explicit afirmația nouă?
 
 Dacă răspunsul la una dintre întrebări este `nu`, textul se rescrie sau se elimină.
 

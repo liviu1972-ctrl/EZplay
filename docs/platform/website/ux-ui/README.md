@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-18
 ---
 
 # Specificația UX/UI pentru ezplay.org
@@ -28,7 +28,8 @@ Site-ul trebuie să transmită simultan că:
 3. experiența este atractivă și vie pentru tineri;
 4. adulții pot înțelege și evalua programul fără limbaj infantil;
 5. jocurile și platforma sunt instrumente, nu identitatea principală;
-6. complexitatea este controlată și ușor de explorat.
+6. complexitatea este controlată și ușor de explorat;
+7. aceeași arhitectură poate prezenta accente potrivite intenției sesiunii fără să schimbe adevărul sau rutele.
 
 Formula de design:
 
@@ -38,15 +39,16 @@ Formula de design:
 
 1. `../../ezplay-org-product-direction.md`;
 2. `../blueprint-v1.md`;
-3. `../existing-platform-continuity.md`;
-4. `../copy-rules.md`;
-5. documentul de copy al paginii implementate din `../pages/`;
-6. `experience-direction.md`;
-7. `navigation-system.md`;
-8. `visual-system.md`;
-9. `components-and-motion.md`;
-10. `page-specifications.md`;
-11. `implementation-handoff.md`.
+3. `../adaptive-editorial-lenses.md`;
+4. `../existing-platform-continuity.md`;
+5. `../copy-rules.md`;
+6. documentul de copy al paginii implementate din `../pages/`;
+7. `experience-direction.md`;
+8. `navigation-system.md`;
+9. `visual-system.md`;
+10. `components-and-motion.md`;
+11. `page-specifications.md`;
+12. `implementation-handoff.md`.
 
 Agentul nu începe implementarea din `page-specifications.md` fără să citească mai întâi direcția și sistemul vizual. O pagină corectă structural, dar construită cu estetica implicită `shadcn/ui`, nu satisface această specificație.
 

@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-15
+version: "0.2"
+updated: 2026-07-18
 ---
 
 # Blueprint pentru prima versiune publică ezplay.org
@@ -64,6 +64,14 @@ El trebuie să simtă că experiența:
 Include facilitatorul, contributorul, antreprenorul, cercetătorul sau partenerul care poate ajuta EZPLAY să crească.
 
 Acest public este important, dar nu trebuie să concureze cu mesajul programului în primul ecran.
+
+## Lentile editoriale adaptive
+
+Website-ul păstrează un singur sitemap, dar paginile comune pot fi prezentate prin patru lentile: tânăr/participant, părinte, educator/facilitator și organizație/decident.
+
+Prima intrare folosește copy-ul comun și nu cere declararea unui rol. Traseul sesiunii poate produce progresiv o ipoteză despre intenția curentă și poate adapta numai variante editoriale aprobate. Rutele de public rămân porți de intrare cu voce proprie, iar copy-ul actual al paginilor comune rămâne fallback complet.
+
+Sistemul nu creează profil persistent, nu schimbă sitemap-ul și nu generează liber copy în runtime. Regula completă este în [sistemul de lentile editoriale adaptive](adaptive-editorial-lenses.md).
 
 ## Oferta de lucru pentru versiunea 1
 
@@ -138,6 +146,10 @@ Destinație: pagina de intrare în zona autentificată.
 8. Contul nu este cerut înainte ca utilizatorul să înțeleagă valoarea.
 9. Jocurile nu sunt folosite ca decor dominant.
 10. Copywriting-ul nu atacă școala și nu promite succes antreprenorial.
+11. Prima vizită rămâne completă fără profil, întrebare obligatorie sau personalizare.
+12. Intenția poate adapta prezentarea, nu adevărul, siguranța sau starea produsului.
+13. Rutele rămân stabile; lentilele nu creează site-uri paralele.
+14. Orice incertitudine revine la copy-ul comun.
 
 ## Navigația principală
 
@@ -252,6 +264,8 @@ Paginile juridice rămân indisponibile public până când textele sunt verific
 
 Identificatorii sunt independenți de mecanismul tehnic de localizare. Versiunea engleză va folosi echivalentele stabilite după aprobarea copywriting-ului românesc.
 
+Lentilele editoriale sunt independente de identificatorii rutelor și de localizare. Ele nu produc variante de sitemap sau URL-uri separate pe public.
+
 ## Ierarhia paginilor în prima lansare
 
 ### Nivel 1 — obligatoriu
@@ -347,6 +361,8 @@ Homepage sau link direct
 
 Succes: participantul existent nu este obligat să parcurgă din nou site-ul public.
 
+Aceste parcursuri sunt și surse posibile de semnale pentru lentila sesiunii. Niciun parcurs nu dovedește singur identitatea persoanei, iar semnalele ambigue păstrează copy-ul comun sau lentila stabilă.
+
 ## Rolul zonei autentificate
 
 Zona autentificată este prezentată public ca infrastructură în dezvoltare pentru:
@@ -420,3 +436,6 @@ Website-ul este corect din punct de vedere editorial dacă:
 8. fiecare pagină are un CTA principal clar;
 9. conținutul indisponibil este marcat sau eliminat, nu inventat;
 10. site-ul conduce către o ofertă concretă sau către colectarea interesului.
+11. copy-ul comun rămâne coerent când personalizarea nu rulează;
+12. o lentilă schimbă numai blocuri aprobate și nu slăbește trasabilitatea afirmațiilor;
+13. corecția perspectivei este discretă și nu concurează cu acțiunea principală.

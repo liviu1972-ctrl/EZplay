@@ -27,16 +27,19 @@ Copywriting-ul nu trebuie regenerat de agentul care scrie codul. Dacă un text n
 
 1. `../ezplay-org-product-direction.md`;
 2. `blueprint-v1.md`;
-3. `existing-platform-continuity.md`;
-4. `copy-rules.md`;
-5. `pages/homepage.md`;
-6. toate celelalte documente din `pages/`;
-7. `ux-ui/README.md` și documentele indicate acolo;
-8. `ux-ui/implementation-handoff.md` înaintea implementării.
+3. `adaptive-editorial-lenses.md`;
+4. `existing-platform-continuity.md`;
+5. `copy-rules.md`;
+6. `pages/homepage.md`;
+7. toate celelalte documente din `pages/`;
+8. `ux-ui/README.md` și documentele indicate acolo;
+9. `ux-ui/implementation-handoff.md` înaintea implementării.
 
 ## Regula de utilizare a copy-ului
 
-Textele din `pages/` sunt copywriting sursă, nu simple exemple. Agentul le poate adapta numai pentru:
+Textele din `pages/` sunt copywriting sursă, nu simple exemple. Pe paginile comune ele formează și copy-ul comun implicit, folosit când o lentilă nu este stabilită sau nu are o variantă aprobată.
+
+Agentul le poate adapta direct numai pentru:
 
 - lungimea necesară în interfață;
 - acord gramatical;
@@ -44,11 +47,14 @@ Textele din `pages/` sunt copywriting sursă, nu simple exemple. Agentul le poat
 - traducere;
 - eliminarea unui bloc marcat explicit ca indisponibil.
 
+Variantele pentru lentile nu sunt adaptări libere în cod. Ele se redactează, se verifică și se aprobă conform [`adaptive-editorial-lenses.md`](adaptive-editorial-lenses.md), apoi devin surse versionate. Lipsa unei variante nu autorizează generarea ei de către agentul tehnic.
+
 Agentul nu inventează statistici, testimoniale, parteneri, prețuri, certificări, funcții, rezultate sau afirmații juridice.
 
 ## Documente editoriale
 
 - `blueprint-v1.md` — scope, sitemap, navigare, parcursuri și rolul paginilor;
+- `adaptive-editorial-lenses.md` — cele patru lentile, semnalele sesiunii, fallback-ul, conservarea copy-ului și limitele personalizării;
 - `existing-platform-continuity.md` — ce se păstrează, adaptează, înlocuiește sau elimină din platforma actuală;
 - `copy-rules.md` — voce, terminologie, reguli editoriale și microcopy comun;
 - `content-evidence-map.md` — legătura dintre afirmațiile publice, sursele interne, cercetarea externă, dovezile proprii și blocajele de publicare;

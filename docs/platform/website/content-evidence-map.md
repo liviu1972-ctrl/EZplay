@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.3"
+version: "0.4"
 updated: 2026-07-18
 canonical_for:
   - website public claim evidence traceability
@@ -29,6 +29,8 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 3. nu transformă o ipoteză într-un rezultat;
 4. elimină sau condiționează blocurile `De confirmat` și `Blocat`;
 5. actualizează harta când copy-ul își schimbă sensul sau apare o dovadă nouă.
+
+Pentru o variantă de lentilă, agentul verifică în plus că ea moștenește același grup de afirmații, aceeași stare și aceleași limite ca blocul comun. O schimbare de ton, exemplu sau CTA nu poate întări afirmația. Dacă sensul devine mai puternic ori apare o promisiune nouă, harta se actualizează înainte de publicare.
 
 ## Stări de acoperire
 
@@ -59,9 +61,20 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | `INT-RES-003` | analiza progresiei Level 2–5 și Mastery | [`entrepreneurship-curriculum-levels-and-mastery.md`](../../research/product/entrepreneurship-curriculum-levels-and-mastery.md) |
 | `INT-SRC-001` | registrul surselor externe și starea linkurilor | [`source-register.md`](../../research/source-register.md) |
 | `INT-WEB-001` | direcția de produs pentru site | [`ezplay-org-product-direction.md`](../ezplay-org-product-direction.md) |
+| `INT-WEB-002` | lentile editoriale, inferență contextuală și conservarea copy-ului | [`adaptive-editorial-lenses.md`](adaptive-editorial-lenses.md) |
 | `INT-TECH-001` | continuitatea declarată a platformei existente | [`existing-platform-continuity.md`](existing-platform-continuity.md) |
 | `INT-RIGHTS-001` | proveniență, copyright și atribuiri | [`rights-and-provenance-register.md`](../../licensing/rights-and-provenance-register.md) |
 | `INT-PERM-001` | permisiuni de publicare | [`publication-permissions-register.md`](../../licensing/publication-permissions-register.md) |
+
+## Regula de trasabilitate pentru lentile
+
+- copy-ul comun al rutei rămâne fallback-ul editorial;
+- fiecare variantă indică blocul comun din care derivă;
+- varianta moștenește dovezile și starea blocului comun;
+- ordonarea diferită a blocurilor nu schimbă starea lor de publicare;
+- CTA-ul adaptat păstrează starea operațională a destinației;
+- lipsa unei variante nu permite generarea ei în implementare;
+- o afirmație nouă primește sursă și intrare în hartă înainte să devină publicabilă.
 
 ## `/` — Homepage
 

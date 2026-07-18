@@ -1,12 +1,13 @@
 ---
 title: "EZPLAY.org — sistemul de navigare"
 status: Draft
-version: "0.2"
-updated: 2026-07-17
+version: "0.3"
+updated: 2026-07-18
 scope:
   - header global
   - explorer rail
   - navigare responsive
+  - corectarea discretă a perspectivei editoriale
 ---
 
 # EZPLAY.org — sistemul de navigare
@@ -181,7 +182,24 @@ După selectarea unei zone sau pe o pagină lungă, panoul extins arată:
 
 Nivelul contextual are prioritate față de repetarea integrală a meniului global.
 
-## 7. Unde apare
+## 7. Corectarea discretă a perspectivei
+
+Navigarea oferă o cale secundară prin care utilizatorul poate ajunge la perspectiva potrivită fără să fie întrerupt și fără să i se afișeze o clasificare.
+
+Controlul:
+
+- poate apărea în Explorer Rail extins, în `MobileNavigationSheet` sau în footer;
+- folosește o formulare discretă precum `Cauți altceva?` sau `Vezi EZPLAY pentru...`;
+- oferă legături către tineri, părinți, educatori și organizații;
+- nu ocupă poziția CTA-ului principal și nu intră ca item dominant în header;
+- nu este modal, banner persistent, toast repetat ori popover declanșat automat;
+- nu afișează lentila activă drept identitate, scor sau probabilitate;
+- rămâne complet utilizabil cu tastatura și pe mobil;
+- poate furniza un semnal puternic pentru sesiunea curentă conform [`../adaptive-editorial-lenses.md`](../adaptive-editorial-lenses.md).
+
+Până la aprobarea unei rute pentru educatori, legătura folosește destinația comună relevantă, fără să introducă o rută nouă în sitemap.
+
+## 8. Unde apare
 
 ### Explorer Rail complet
 
@@ -222,7 +240,7 @@ Nu apare pe:
 
 Acestea sunt fluxuri focalizate. Header-ul, breadcrumb-ul, butonul de revenire sau app shell-ul propriu oferă orientarea necesară.
 
-## 8. Componente shadcn/ui
+## 9. Componente shadcn/ui
 
 Agentul verifică versiunea instalată și folosește, unde sunt disponibile:
 
@@ -246,7 +264,7 @@ Direcția recomandată este `collapsible="icon"`, adaptată la top header și la
 
 Referință: `https://ui.shadcn.com/docs/components/radix/sidebar`.
 
-## 9. Componente proprii
+## 10. Componente proprii
 
 ### `TopHeader`
 
@@ -280,7 +298,7 @@ Indicator discret de progres și poziție în paginile lungi. Nu înlocuiește s
 
 Combină navigarea globală și contextuală în grupuri, fără rail permanent.
 
-## 10. Motion și efecte
+## 11. Motion și efecte
 
 ### `RailExpand`
 
@@ -317,7 +335,7 @@ Combină navigarea globală și contextuală în grupuri, fără rail permanent.
 
 Motion folosește `motion/react`, în principal `layout`, `layoutId`, `AnimatePresence` și `MotionConfig reducedMotion="user"`.
 
-## 11. Stil vizual
+## 12. Stil vizual
 
 Rail-ul:
 
@@ -332,7 +350,7 @@ Rail-ul:
 
 Complexitatea trebuie să provină din ierarhie, relații, schimbări de stare și continuitate vizuală — nu din înghesuirea tuturor linkurilor.
 
-## 12. Accesibilitate
+## 13. Accesibilitate
 
 - deschiderea și închiderea funcționează cu click, Enter și Space;
 - trigger-ul expune `aria-expanded` și relația cu panoul;
@@ -346,7 +364,7 @@ Complexitatea trebuie să provină din ierarhie, relații, schimbări de stare �
 - cu reduced motion, rail-ul își schimbă starea fără deplasări ample;
 - pagina rămâne complet navigabilă dacă JavaScript-ul de motion nu se încarcă.
 
-## 13. Persistența stării
+## 14. Persistența stării
 
 - preferința colapsat/extins poate fi păstrată în sesiunea curentă;
 - starea nu se salvează în cont înainte să existe un motiv real;
@@ -354,7 +372,7 @@ Complexitatea trebuie să provină din ierarhie, relații, schimbări de stare �
 - revenirea într-o pagină eligibilă poate restaura alegerea din sesiune;
 - schimbarea limbii păstrează, pe cât posibil, starea rail-ului și pagina curentă.
 
-## 14. Criterii de acceptare
+## 15. Criterii de acceptare
 
 Sistemul este acceptat când:
 
@@ -368,4 +386,5 @@ Sistemul este acceptat când:
 - mobilul primește aceeași informație într-un `Sheet` coerent;
 - tastatura, focusul și reduced motion funcționează;
 - versiunea și selectorul RO/EN rămân accesibile;
+- corectarea perspectivei este disponibilă discret, fără să concureze cu navigarea globală sau CTA-ul principal;
 - sistemul arată ca o extensie a identității EZPLAY, nu ca o temă shadcn sau un dashboard SaaS.

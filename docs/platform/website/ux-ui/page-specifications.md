@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-18
 ---
 
 # Specificații UX/UI pentru paginile ezplay.org
@@ -18,6 +18,8 @@ Pentru fiecare rută, copywriting-ul din `../pages/` este sursa textului. Acest 
 - ce trebuie evitat.
 
 Agentul nu înlocuiește textele cu lorem ipsum și nu scurtează mesajele înainte să testeze layout-ul cu copy-ul real.
+
+Pe paginile comune, copy-ul din `../pages/` este și fallback-ul obligatoriu pentru sistemul descris în [`../adaptive-editorial-lenses.md`](../adaptive-editorial-lenses.md). Variantele lipsă nu se inventează în componente.
 
 ## Sistemul comun al paginilor
 
@@ -50,6 +52,16 @@ Nu se repetă în `RelatedPaths` destinația CTA-ului principal.
 - secțiunile consecutive alternează compoziția;
 - paginile de public sunt mai directe decât paginile de metodă;
 - paginile de cercetare și platformă acceptă densitate mai mare.
+
+### Stratul editorial adaptiv
+
+- o pagină comună poate schimba numai blocurile declarate adaptabile și aprobate editorial;
+- `PageHero`, introducerile, exemplele, CTA-ul și `RelatedPaths` sunt candidații principali;
+- faptele, dovezile, siguranța, accesul și stările produsului rămân fixe;
+- rutele de public folosesc întotdeauna vocea declarată de rută;
+- o variantă incompletă revine la copy-ul comun, fără placeholder;
+- schimbarea lentilei se aplică la navigarea următoare, nu rearanjează pagina în timpul lecturii;
+- pagina trebuie să rămână coerentă dacă adaptarea este dezactivată.
 
 ### Stări fără active
 
@@ -178,6 +190,8 @@ Compoziție split:
 - fiecare include întrebarea publicului, răspunsul scurt și CTA;
 - pe mobil ordinea este tânăr, părinte, organizație;
 - pagina pentru organizații poate avea accent vizual mai puternic datorită conversiei curente.
+- componenta este navigare explicită spre pagini de public, nu chestionar obligatoriu de profilare;
+- selectarea unei intrări poate deveni semnal puternic pentru paginile comune următoare.
 
 ### 10. Cercetare — `EvidencePreview`
 

@@ -10,6 +10,7 @@
 
 ## Decizii active
 
+- [`active/adaptive-editorial-lenses.md`](active/adaptive-editorial-lenses.md) — personalizarea contextuală de sesiune prin patru lentile editoriale, cu sitemap unic și copy comun drept fallback;
 - [`active/admin-reference-lab.md`](active/admin-reference-lab.md) — zona administrativă pentru pagini și interacțiuni interne, necanonice;
 - [`active/business-pillars-framework.md`](active/business-pillars-framework.md) — adoptarea celor cinci Business Pillars drept modelul de business predat în EZPLAY și limitele afirmațiilor despre această împărțire;
 - [`active/curriculum-levels-and-mastery.md`](active/curriculum-levels-and-mastery.md) — structura comună Level 1–5, benzile de clase, arhitectura hibridă a etapei terminale Mastery și ordinea curriculum-first pentru etapele noi;

@@ -1,8 +1,8 @@
 ---
 title: "EZPLAY.org — handoff UX/UI pentru implementare"
 status: Draft
-version: "0.2"
-updated: 2026-07-17
+version: "0.3"
+updated: 2026-07-18
 lifecycle: active
 owners:
   - EZPLAY
@@ -31,17 +31,36 @@ Ordinea de lectură este:
 5. `docs/roadmap/current-assets.md`;
 6. `docs/platform/ezplay-org-product-direction.md`;
 7. `docs/platform/website/blueprint-v1.md`;
-8. `docs/platform/website/existing-platform-continuity.md`;
-9. `docs/platform/website/copy-rules.md`;
-10. fișierul de copy al paginii implementate;
-11. `docs/platform/website/ux-ui/navigation-system.md`;
-12. toate documentele din acest folder UX/UI.
+8. `docs/platform/website/adaptive-editorial-lenses.md`;
+9. `docs/platform/website/existing-platform-continuity.md`;
+10. `docs/platform/website/copy-rules.md`;
+11. fișierul de copy al paginii implementate;
+12. `docs/platform/website/ux-ui/navigation-system.md`;
+13. toate documentele din acest folder UX/UI.
 
 Copy-ul din `docs/platform/website/pages/` este sursa editorială. Poate fi adaptat ca lungime numai pentru integrarea în componentă, fără schimbarea promisiunii, terminologiei sau sensului. O modificare editorială importantă se întoarce în documentul-sursă, nu rămâne numai în cod.
 
 `docs/platform/website/content-evidence-map.md` este controlul de publicare pentru afirmații. Înainte ca o rută să intre în build-ul public, implementarea trebuie să confirme că blocurile `De confirmat` și `Blocat` au fost eliminate, înlocuite cu starea reală sau rezolvate prin dovadă și drepturi documentate.
 
 Pentru imagini, logo-uri, testimoniale, citate, rezultate și contribuții, fișierul implementat trebuie să poată fi legat de un ID `RIGHT-xxx` și, când este necesar, de un ID `PERM-xxx`. Lipsa lanțului exclude activul din build.
+
+## 2A. Lentile editoriale adaptive
+
+Implementarea website-ului trebuie să păstreze copy-ul comun ca experiență completă și să trateze lentilele drept strat progresiv, nu drept condiție pentru funcționarea rutelor.
+
+Agentul de implementare nu proiectează direct mecanismul din această specificație. Urmează planul tehnic aprobat pornind de la [handoff-ul activ pentru planning](../../../work/active/adaptive-editorial-lenses-handoff.md).
+
+Sunt obligatorii:
+
+- sitemap unic și rute de public cu voce proprie;
+- o stare comună și exact patru lentile conceptuale;
+- semnale limitate la sesiunea curentă;
+- prag, diferență suficientă, inerție și fallback;
+- aplicarea schimbării la navigarea următoare;
+- variante versionate și aprobate, fără generare live;
+- lipsa profilului persistent, cookie-ului editorial persistent și scrierii în cont ori bază de date;
+- control discret în navigarea secundară sau footer;
+- funcționare completă când adaptarea este indisponibilă.
 
 ## 3. Audit tehnic înainte de instalare
 
@@ -305,6 +324,9 @@ Sunt ținte de produs, nu rezultate declarabile fără măsurare. În plus:
 - primul ecran comunică educație antreprenorială;
 - jocul nu domină hero-ul și nu definește categoria proiectului;
 - textele provin din sursele editoriale;
+- copy-ul comun rămâne fallback, iar lentilele folosesc numai variante aprobate;
+- rutele de public nu sunt rescrise de lentila sesiunii;
+- nicio variantă nu întărește afirmațiile sau starea de dovadă;
 - terminologia este consecventă;
 - viziunea nu apare drept funcție existentă;
 - formulele economice nu sunt reinterpretate.
@@ -321,6 +343,7 @@ Sunt ținte de produs, nu rezultate declarabile fără măsurare. În plus:
 - rail-ul se extinde prin click și tastatură, iar iconurile colapsate au tooltip și nume accesibil;
 - rutele folosesc varianta de shell stabilită în `navigation-system.md`;
 - versiunea și RO/EN rămân accesibile în toate variantele relevante;
+- corectarea perspectivei este discretă, accesibilă și nu afișează scoruri ori clasificări;
 
 ### Responsive, accesibilitate și tehnic
 
