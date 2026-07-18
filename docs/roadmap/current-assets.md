@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.7"
+version: "0.8"
 updated: 2026-07-18
 ---
 
@@ -73,7 +73,7 @@ Arhitectura curriculară decisă folosește:
 * Level 5 — clasele a XI-a–a XII-a;
 * Mastery — etapă terminală, independentă de vârstă.
 
-Level 1 rămâne Deckbuilder-first. Hărțile Level 2–Mastery sunt curriculum-first, iar instrumentele lor nu sunt încă proiectate sau validate.
+Level 1 rămâne Deckbuilder-first. Hărțile Level 2–Mastery sunt curriculum-first și au inventarul Draft de Founder Rounds; Founder Loop-urile, jocurile și instrumentele de livrare nu sunt încă proiectate sau validate.
 
 ### Ce experiență există deja
 
@@ -220,7 +220,7 @@ Stilul de facilitare urmărește să conecteze mecanica jocului cu situații pe 
 
 Există hărți reconciliate de Round-uri pentru Level 1 în toți cei cinci Business Pillars, dar Round-urile nu sunt încă dezvoltate ca experiențe complete.
 
-Există și primul draft al hărții comune Level 2–5 și Mastery, al progresiei complete pentru fiecare Business Pillar și al programului terminal Mastery. Aceste documente definesc capacități și conținut, nu Round-uri gata de livrare.
+Există și primul draft al hărții comune Level 2–5 și Mastery, al celor 25 de hărți de nivel și al celor 13 decizii integrate Mastery. Cele 191 de Round-uri sunt definite curricular, dar nu sunt gata de livrare.
 
 Temele identificate până acum includ:
 
@@ -340,8 +340,9 @@ Aceste formate depind încă de prezența creatorului sau a unei persoane care c
 * conceptul Founder Loop;
 * hărți curriculare Level 1 pentru cei cinci Business Pillars;
 * harta curriculară comună Level 1–5 și Mastery;
-* spirale Level 1–Mastery pentru Strategy, Product, Market, Operations și Finance;
-* definiția curriculară a programului terminal Mastery;
+* spirale-index Level 1–Mastery pentru Strategy, Product, Market, Operations și Finance;
+* 25 de hărți canonice Level 1–5, cu 178 de Founder Rounds numerice definite curricular;
+* definiția curriculară și harta celor 13 Founder Rounds integrate Mastery;
 * analiza de cercetare a progresiei, acoperirii avansate și riscurilor;
 * câteva probleme despre Profit și Cashflow;
 * joc fizic și digital;
@@ -362,7 +363,7 @@ Aceste formate depind încă de prezența creatorului sau a unei persoane care c
 * definirea etapei Level Up;
 * configurații validate pentru fiecare lecție;
 * materiale pentru participant;
-* diferențierea pe vârste și niveluri;
+* validarea și adaptarea didactică exactă a conținutului pentru fiecare bandă de clase;
 * un program de pregătire a facilitatorilor;
 * criterii de evaluare;
 * un sistem de progres calibrat și validat;
@@ -400,7 +401,7 @@ Platforma ezplay.org trebuie să susțină programul prin:
 
 ### Următoarea decizie necesară
 
-Level 1 este schițat și reconciliat, iar Level 2–Mastery există ca prim draft curriculum-first. Următoarea etapă este auditul vertical al revenirilor și auditul orizontal al încărcării fiecărui nivel, urmate de separarea nucleului obligatoriu de extensii.
+Level 1 este păstrat și reconciliat, iar Level 2–Mastery există până la granularitatea Founder Round-urilor ca prim draft curriculum-first. Următoarea etapă este auditul curricular al suprapunerilor, progresiei, încărcării, prerechizitelor și dovezilor, urmat de separarea nucleului obligatoriu de extensii.
 
 Alegerea primului Round complet rămâne următorul pas al firului de prototipare, dar nu blochează stabilizarea hărții curriculare. Existența unor exerciții mai vechi despre Profit, Cash și Cash Flow nu stabilește automat alegerea.
 
@@ -1948,7 +1949,7 @@ Founder Round este una dintre aceste „rotițe” ale sistemului.
 * experiență cu mese de patru jucători;
 * ideea progresului în cei cinci piloni;
 * hărți curriculare Level 1 reconciliate pentru cei cinci Business Pillars;
-* harta comună Level 2–5 și Mastery și cele cinci spirale de la Level 1 la Mastery, ca documente Draft fără experiențe asociate încă.
+* harta comună, cele cinci spirale-index, cele 25 de hărți Level 1–5 și harta Mastery, ca documente Draft fără Founder Loop-uri sau experiențe asociate încă.
 
 ### Ce nu există încă
 
@@ -1968,7 +1969,7 @@ Founder Round este una dintre aceste „rotițe” ale sistemului.
 
 ### Următorul pas necesar
 
-Pentru firul de dezvoltare Founder Round, trebuie ales și construit primul Round complet dintre Round-urile Level 1 reconciliate. Tema nu este încă selectată. Acest pas este distinct de auditul curriculumului Level 2–Mastery și nu autorizează proiectarea Round-urilor noilor niveluri.
+Pentru firul de dezvoltare Founder Round, trebuie ales și construit primul Round complet dintre Round-urile Level 1 reconciliate. Tema nu este încă selectată. Acest pas este distinct de auditul celor 191 de Round-uri definite curricular și nu autorizează proiectarea în masă a Founder Loop-urilor noilor niveluri.
 
 Prima versiune trebuie să definească:
 

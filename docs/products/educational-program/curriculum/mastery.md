@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - terminal Mastery curriculum stage
@@ -22,7 +22,7 @@ Mastery este echivalent numai structural cu un posibil „Level 6”. Numele cur
 - nu mai este urmată de un alt nivel;
 - urmărește judecata și responsabilitatea antreprenorială în contexte complexe.
 
-Documentul nu definește Founder Rounds, Founder Loops, jocuri, simulări sau calendarul cursului. Harta comună se află în [progresia Level 1–5 și Mastery](progression-map.md), iar decizia de produs în [structura curriculară aprobată](../../../decisions/active/curriculum-levels-and-mastery.md).
+Documentul definește identitatea, standardul și limitele etapei, dar nu dublează inventarul lecțiilor și nu proiectează Founder Loops, jocuri, simulări sau calendarul cursului. Cele 13 decizii curriculare sunt în [harta integrată a Founder Rounds Mastery](mastery-rounds.md), harta comună în [progresia Level 1–5 și Mastery](progression-map.md), iar decizia de produs în [structura curriculară aprobată](../../../decisions/active/curriculum-levels-and-mastery.md).
 
 ## Definiția de lucru
 
@@ -381,7 +381,7 @@ Standardul terminal cere ca participantul să poată:
 14. recunoaște când nu are autoritatea sau expertiza necesară;
 15. păstra coerența dintre direcție, promisiune, piață, livrare și economie.
 
-Forma exactă a dovezilor nu este încă decisă. Poate include un portofoliu de decizii, cazuri integrate, proiecte, experiență antreprenorială documentată și o apărare în fața unui panel, dar niciuna dintre aceste forme nu este aprobată prin acest document.
+Harta Round-urilor cere deja un corp coerent de dovezi și o apărare terminală. Forma exactă a rubricii, ponderea experienței reale, condițiile de echivalare și componența panelului nu sunt încă decise.
 
 ## Nucleu comun și profunzime contextuală
 
@@ -417,7 +417,7 @@ Extensiile nu sunt „Level 7”. Ele rămân aplicații, domenii sau trasee în
 - durata și ritmul Mastery;
 - nucleul obligatoriu și eventualele extensii;
 - mecanismul de diagnostic și admitere;
-- competențele granulare și rubricile;
+- rubricile și pragurile pentru competențele granulare deja definite în harta Round-urilor;
 - forma dovezilor terminale;
 - ponderea experienței reale față de cazuri și simulări;
 - rolul mentorilor, specialiștilor și panelurilor;

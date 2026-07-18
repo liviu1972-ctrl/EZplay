@@ -33,10 +33,9 @@ Level 1 rămâne fundația deja construită. Nivelurile exprimă progresul compe
 - [Cei cinci Business Pillars](../../methods/business-pillars/README.md) — modelul de business predat în EZPLAY și sursa conceptuală comună pentru Strategy, Product, Market, Operations și Finance;
 - [Arhitectura curriculară](curriculum/architecture.md) — regulile curriculare, reconcilierea Level 1 și sistemul de progres;
 - [Harta Level 1–5 și Mastery](curriculum/progression-map.md) — standardul comun de dificultate și progresia integrată;
-- [Spirala Finance](curriculum/finance-spiral.md) — progresia completă Finance;
-- [Spirala Strategy](curriculum/strategy-spiral.md) — progresia completă Strategy;
-- [Spirala Product](curriculum/product-spiral.md) — progresia completă Product;
-- [Spirala Market](curriculum/market-spiral.md) — progresia completă Market;
-- [Spirala Operations](curriculum/operations-spiral.md) — progresia completă Operations;
+- [Standardul hărților de Founder Rounds](curriculum/round-map-standard.md) — granularitatea lecțiilor și convenția codurilor;
+- [Analiza inventarului de Round-uri](curriculum/round-inventory-analysis.md) — progresia, suprapunerile, încărcarea și riscurile pentru audit;
+- [Spirala Strategy](curriculum/strategy-spiral.md), [Product](curriculum/product-spiral.md), [Market](curriculum/market-spiral.md), [Operations](curriculum/operations-spiral.md) și [Finance](curriculum/finance-spiral.md) — hărțile verticale și indexurile fișierelor Level 1–5;
 - [Programul Mastery](curriculum/mastery.md) — identitatea și rezultatele etapei terminale;
+- [Founder Rounds Mastery](curriculum/mastery-rounds.md) — cele 13 decizii integrate ale etapei terminale;
 - [Ordinea de lucru](../../roadmap/educational-program-work-order.md) — ordinea de dezvoltare și punctul de reluare a lucrului.

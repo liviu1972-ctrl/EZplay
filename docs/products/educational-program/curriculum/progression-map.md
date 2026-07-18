@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - integrated curriculum progression from Level 1 to Mastery
@@ -21,9 +21,9 @@ Acest document este harta mare a progresiei Programului educațional EZPLAY. El 
 - dimensiunile transversale;
 - creșterea autonomiei, responsabilității și complexității.
 
-Documentul definește **ce trebuie să înțeleagă și să poată decide participantul**. Nu proiectează:
+Documentul definește **ce trebuie să înțeleagă și să poată decide participantul** la nivel de etapă. Nu dublează:
 
-- Founder Rounds;
+- inventarul și specificațiile curriculare ale Founder Rounds;
 - Founder Loops;
 - Business Run-uri;
 - Learning Inputs;
@@ -33,7 +33,9 @@ Documentul definește **ce trebuie să înțeleagă și să poată decide partic
 
 Acestea vor fi proiectate ulterior, după stabilizarea competențelor.
 
-Decizia privind benzile de clase și statutul Mastery este în [decizia dedicată](../../../decisions/active/curriculum-levels-and-mastery.md). Arhitectura sistemului rămâne în [arhitectura curriculară](architecture.md), iar definițiile pilonilor în [cadrul Business Pillars](../../../methods/business-pillars/README.md).
+Decizia privind benzile de clase și statutul Mastery este în [decizia dedicată](../../../decisions/active/curriculum-levels-and-mastery.md). Arhitectura sistemului rămâne în [arhitectura curriculară](architecture.md), definițiile pilonilor în [cadrul Business Pillars](../../../methods/business-pillars/README.md), iar granularitatea lecțiilor în [standardul hărților de Founder Rounds](round-map-standard.md).
+
+Inventarul canonic este separat pe piloni și niveluri: cinci fișiere în fiecare dintre subfolderele `strategy/`, `product/`, `market/`, `operations/` și `finance/`, plus [harta integrată Mastery](mastery-rounds.md).
 
 ## Regula de proiectare
 
@@ -487,10 +489,10 @@ O competență sau temă nouă intră în hartă numai dacă:
 
 ## Ce rămâne de proiectat
 
-- competențele granulare și dovezile pentru fiecare linie;
-- relațiile exacte de prerechizit între piloni;
+- auditul și revizuirea de specialitate a competențelor și dovezilor Draft;
+- validarea relațiilor de prerechizit între piloni;
 - nucleul obligatoriu și extensiile opționale;
-- numărul și ordinea Founder Rounds;
+- ordinea și ritmul de livrare, distincte de ordinea curriculară recomandată;
 - formatele, jocurile și simulările;
 - criteriile de poziționare;
 - standardele de trecere între niveluri;

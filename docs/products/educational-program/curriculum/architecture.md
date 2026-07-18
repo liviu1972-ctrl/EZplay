@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.8"
+version: "0.9"
 updated: 2026-07-18
 ---
 
@@ -12,9 +12,9 @@ Acest document organizează arhitectura comună a Programului educațional EZPLA
 
 Documentul nu definește încă:
 
-- curriculumul complet;
-- pragurile de Skills XP;
-- toate competențele granulare sau Founder Rounds;
+- Founder Loop-urile și materialele complete ale Round-urilor;
+- pragurile de Skills XP și rubricile finale;
+- durata și calendarul nivelurilor;
 - o metodă pedagogică validată;
 - funcțiile care trebuie implementate pe `ezplay.org`.
 
@@ -190,14 +190,19 @@ Cele cinci progresii sunt interconectate. Modelul este o **rețea de spirale** �
 Hărțile dezvoltate în prezent sunt:
 
 - [Harta comună Level 1–5 și Mastery](progression-map.md) — progresia integrată și standardul comun de complexitate;
+- [Standardul hărților de Founder Rounds](round-map-standard.md) — granularitatea, codurile și criteriile unui Round definit curricular;
+- [Analiza inventarului de Round-uri](round-inventory-analysis.md) — primul audit transversal al progresiei, suprapunerilor și riscurilor;
 - [Spirala Strategy](strategy-spiral.md) — progresia Strategy;
 - [Spirala Product](product-spiral.md) — progresia Product;
 - [Spirala Market](market-spiral.md) — progresia Market;
 - [Spirala Operations](operations-spiral.md) — progresia Operations;
 - [Spirala Finance](finance-spiral.md) — progresia Finance;
-- [Programul Mastery](mastery.md) — identitatea și rezultatele etapei terminale.
+- [Programul Mastery](mastery.md) — identitatea și rezultatele etapei terminale;
+- [Harta integrată Mastery](mastery-rounds.md) — cele 13 decizii curriculare terminale.
 
-Level 1 păstrează hărțile de Round-uri existente. Level 2–5 și Mastery descriu mai întâi capacități, fire curriculare și granițe; Round-urile și instrumentele lor vor fi proiectate ulterior.
+Fiecare spirală este acum un index vertical. Hărțile canonice Level 1–5 se află în subfolderele `strategy/`, `product/`, `market/`, `operations/` și `finance/`: în total 25 de fișiere de nivel și 178 de Founder Rounds numerice. Mastery adaugă 13 Round-uri integrate, fără a crea `Level 6` în fiecare pilon.
+
+Inventarul total are 191 de Round-uri. Cele 29 de Round-uri Level 1 păstrează fără redesenare granularitatea hărților existente. Cele 149 de Round-uri Level 2–5 și cele 13 Round-uri Mastery folosesc standardul nou: întrebare, competență, concepte, dovadă, prerechizite, integrare și continuitate. Niciunul dintre aceste Round-uri nu este încă o experiență completă: Founder Loop-ul, jocul sau cazul, materialele, facilitarea, durata exactă, XP-ul și rubrica finală se proiectează ulterior.
 
 ```text
 Strategy ─────┐
@@ -261,16 +266,25 @@ Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare Busi
 
 Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este Business Pillar-ul principal și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în ceilalți piloni.
 
-Convenția pentru identificarea experiențelor din Mastery nu este încă decisă. Ea nu trebuie inventată prin continuarea automată a codurilor cu cifra 6 înainte de stabilirea arhitecturii etapei.
+Mastery nu continuă automat codurile cu cifra 6. Convenția de lucru `MST 01`, `MST 02` etc. este definită în [standardul hărților](round-map-standard.md); cele două cifre identifică Round-ul, nu nivelul. Convenția rămâne `Draft` până la validarea primei experiențe Mastery.
 
 ### Identificarea și ordinea Round-urilor
 
-Un identificator curricular poate exprima Business Pillar-ul, nivelul, linia de continuitate și, când este necesar, poziția într-o serie. Exemplu Finance:
+Identificatorul de bază exprimă Business Pillar-ul, nivelul și numărul stabil al Round-ului:
+
+```text
+FIN 4.5
+│   │ └── Round-ul din nivel
+│   └──── nivelul curricular
+└──────── Business Pillar-ul
+```
+
+Un segment suplimentar apare numai pentru o serie pedagogică reală, precum exemplul Level 1:
 
 ```text
 FIN 1.2.1
 │   │ │ └── poziția în seria secvențială
-│   │ └──── linia de continuitate
+│   │ └──── Round-ul-serie din nivel
 │   └────── nivelul curricular
 └────────── Business Pillar-ul
 ```
@@ -279,12 +293,12 @@ Regulile generale sunt:
 
 1. accesul la un nivel presupune, ca regulă de bază, fundația nivelurilor anterioare din același Business Pillar;
 2. Round-urile din același nivel pot fi parcurse în orice ordine dacă nu există o dependență explicită;
-3. o serie precum `FIN 3.2.1 → FIN 3.2.2 → FIN 3.2.3` are ordine internă;
+3. o serie precum `FIN 1.2.1 → FIN 1.2.2` are ordine internă;
 4. fiecare Round declară prerechizitele specifice, iar acestea au prioritate față de regula generală;
-5. o linie nouă poate începe la un nivel superior și trebuie urmărită ulterior cât timp rămâne relevantă;
-6. lipsa continuării unei linii trebuie să fie o decizie pedagogică explicită, nu o omisiune accidentală.
+5. continuitatea unui concept se documentează în câmpul `Continuitate` și în matricea spiralei, nu trebuie dedusă numai din număr;
+6. un segment suplimentar nu se folosește doar pentru a evita renumerotarea.
 
-Identificatorul arată continuitatea curriculară. El nu impune singur o ordine între două Round-uri independente din același nivel.
+Identificatorul oferă adresă curriculară stabilă. El nu impune singur o ordine între două Round-uri independente din același nivel și nu substituie prerechizitele declarate.
 
 ## Reconcilierea Level 1
 
@@ -592,7 +606,7 @@ Cele două registre exprimă același produs și aceleași rezultate. Ele nu cre
 - numele public al hărții și al traseelor;
 - dacă termenul `Founder Path` este necesar;
 - subtitlurile publice finale pentru Level 1–5 și Mastery;
-- competențele granulare și criteriile de stăpânire din fiecare nivel;
+- rubricile, pragurile și criteriile finale de stăpânire pentru competențele granulare Draft;
 - pragurile de Skills XP;
 - nivelul inițial al unui participant;
 - mecanismul de poziționare a participanților cu experiență anterioară;
@@ -614,17 +628,17 @@ Cele două registre exprimă același produs și aceleași rezultate. Ele nu cre
 
 ## Direcția imediată de dezvoltare
 
-Level 1 este schițat și reconciliat pentru toți cei cinci Business Pillars. Structura comună Level 2–5 și Mastery este decisă, iar hărțile lor de conținut sunt primul draft.
+Level 1 este păstrat și reconciliat pentru toți cei cinci Business Pillars. Structura comună Level 2–5 și Mastery este decisă, iar cele 25 de hărți de nivel și harta integrată Mastery au primul inventar complet de Founder Rounds.
 
 În faza curentă nu proiectăm Founder Loop-urile nivelurilor noi. Următorii pași sunt:
 
-1. verificarea verticală a revenirilor din fiecare spirală;
-2. verificarea orizontală a încărcării și integrării la fiecare nivel;
-3. separarea nucleului obligatoriu de extensiile posibile;
-4. descompunerea capacităților în competențe și dovezi observabile;
+1. auditarea verticală a revenirilor și a suprapunerilor dintre cele 191 de Round-uri;
+2. auditarea orizontală a încărcării, matematicii, autonomiei și integrării la fiecare nivel;
+3. revizuirea prerechizitelor și a dovezilor observabile;
+4. separarea nucleului obligatoriu de extensiile posibile;
 5. revizuirea cu specialiști în antreprenoriat, educație și ariile reglementate relevante;
-6. alegerea competențelor care merită prototipate prin experiențe;
-7. proiectarea ulterioară a jocurilor, simulărilor și Founder Rounds;
+6. alegerea Round-urilor care merită prototipate primele;
+7. proiectarea ulterioară a Founder Loop-urilor, jocurilor, simulărilor și materialelor;
 8. testarea și corectarea hărților pe baza dovezilor reale.
 
 Prototiparea unui Founder Round Level 1 poate continua în paralel ca validare a metodei. Ea nu mai blochează documentarea progresiei Level 2–Mastery și nu autorizează construirea tuturor experiențelor înaintea validării.

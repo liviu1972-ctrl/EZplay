@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.1"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -142,6 +142,8 @@ Aceste elemente se decid după stabilizarea hărților de competențe și, unde 
 
 - [Arhitectura curriculară](../../products/educational-program/curriculum/architecture.md) păstrează regulile comune de progres;
 - [Harta Level 1–5 și Mastery](../../products/educational-program/curriculum/progression-map.md) păstrează progresia integrată;
-- cele cinci spirale păstrează dezvoltarea fiecărui Business Pillar;
+- cele cinci spirale păstrează dezvoltarea verticală și indexează fișierele Level 1–5 ale fiecărui Business Pillar;
+- [standardul hărților de Founder Rounds](../../products/educational-program/curriculum/round-map-standard.md) păstrează granularitatea și convenția codurilor Draft;
 - [Programul Mastery](../../products/educational-program/curriculum/mastery.md) păstrează identitatea și standardul terminal;
+- [harta Founder Rounds Mastery](../../products/educational-program/curriculum/mastery-rounds.md) păstrează inventarul integrat Draft;
 - [analiza de cercetare](../../research/product/entrepreneurship-curriculum-levels-and-mastery.md) păstrează argumentele, comparațiile și limitele surselor externe.

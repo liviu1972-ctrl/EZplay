@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.4"
+version: "0.5"
 updated: 2026-07-18
 ---
 
@@ -42,6 +42,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 7. Mastery este etapa terminală, independentă de vârstă și echivalentă numai structural cu un posibil Level 6.
 8. Mastery nu repetă sistematic Level 1–5 și nu este urmat de alt nivel.
 9. În faza curentă nu proiectăm Founder Loop-urile, Business Run-urile sau Challenge-urile noilor niveluri.
+10. Level 1–5 au 25 de hărți canonice de nivel, iar Mastery are o singură hartă integrată; codurile și inventarul Round-urilor rămân Draft până la validare.
 
 ## Ordinea generală
 
@@ -53,14 +54,14 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 | 4. Reconcilierea Level 1 | Care este fundația comună pentru clasele a II-a–a IV-a? | Hărțile celor cinci piloni există și sunt reconciliate |
 | 5. Structura comună | Care sunt nivelurile și benzile lor? | Level 1–5 și Mastery sunt decise |
 | 6. Harta integrată | Cum crește complexitatea între niveluri? | Primul draft există |
-| 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Primul draft Level 1–Mastery există |
-| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Primul draft există |
-| 9. Audit vertical | Fiecare revenire adaugă complexitate reală? | Următorul pas |
-| 10. Audit orizontal | Nivelul este coerent ca încărcare și integrare între piloni? | După auditul vertical |
-| 11. Nucleu și extensii | Ce trebuie să știe orice participant și ce rămâne contextual? | După auditurile 9–10 |
-| 12. Competențe și dovezi | Ce poate face concret participantul și ce dovadă este suficientă? | După stabilizarea hărților |
-| 13. Expert review | Ce trebuie corectat pedagogic, economic, juridic sau profesional? | După primul set de competențe |
-| 14. Alegerea prototipului | Ce competență merită transformată prima într-o experiență? | După etapele 9–13 |
+| 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Indexurile verticale și matricile există |
+| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea și 13 decizii integrate sunt definite Draft |
+| 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și 178 Round-uri Level 1–5 sunt definite Draft |
+| 10. Audit structural | Sunt complete fișierele, codurile, câmpurile și legăturile? | Verificare automată și editorială inițială realizată |
+| 11. Audit vertical și orizontal | Fiecare revenire adaugă complexitate și fiecare nivel este coerent? | Următorul pas de revizuire curriculară |
+| 12. Nucleu și extensii | Ce trebuie să știe orice participant și ce rămâne contextual? | După auditul curricular |
+| 13. Expert review | Ce trebuie corectat pedagogic, economic, juridic sau profesional? | După primul audit intern |
+| 14. Alegerea prototipului | Ce Round merită transformat primul într-o experiență? | După etapele 11–13 |
 | 15. Designul experienței | Ce joc, simulare, caz și Founder Loop servesc competența? | După alegerea prototipului |
 | 16. Playtest și revizie | Ce funcționează și ce trebuie schimbat în hartă și experiență? | După pregătirea prototipului |
 | 17. Skills XP și progres | Cum sunt recunoscute dovezile și deblocările? | După validarea unor experiențe reale |
@@ -69,13 +70,12 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 ## Fluxul imediat
 
 ```text
-harta comună și cele cinci spirale în primul draft
-→ audit vertical al revenirilor
-→ audit orizontal al fiecărui nivel
+harta comună, spiralele și cele 191 de Round-uri în primul draft
+→ audit vertical și orizontal la granularitate de Round
+→ revizuirea prerechizitelor și dovezilor
 → separarea nucleului de extensii
-→ competențe și dovezi observabile
 → expert review
-→ alegerea unei experiențe de prototipat
+→ alegerea unui Round de prototipat
 ```
 
 Prototiparea unui Round Level 1 poate continua ca fir separat de validare a metodei. Ea nu mai este o condiție care blochează proiectarea hărții Level 2–Mastery.
@@ -100,21 +100,21 @@ Această clarificare trebuie să preceadă jocul sau Founder Round-ul deoarece d
 
 ## Punctul de reluare
 
-Primul draft al arhitecturii Level 1–5 și Mastery este complet la nivel de hartă. Reluăm cu:
+Primul draft al arhitecturii Level 1–5 și Mastery este complet până la granularitatea Founder Round-urilor, iar constatările inițiale sunt în [analiza transversală a inventarului](../products/educational-program/curriculum/round-inventory-analysis.md). Reluăm cu:
 
-> **auditul vertical al fiecărei spirale, pentru a verifica dacă revenirea adaugă autonomie, variabile, incertitudine, integrare și responsabilitate, nu doar termeni noi.**
+> **auditul curricular al celor 191 de Round-uri, pentru a verifica suprapunerile, încărcarea pe vârstă, prerechizitele, calitatea dovezilor și progresul real între niveluri.**
 
-După auditul vertical urmează comparația orizontală a celor cinci piloni în fiecare bandă de clase.
+Auditul trebuie realizat atât vertical, în interiorul fiecărei spirale, cât și orizontal, între cei cinci piloni ai aceleiași benzi.
 
 Nu proiectăm încă Founder Loop-urile nivelurilor 2–Mastery.
 
 ## Ce nu stabilim încă
 
-- numărul și ordinea Founder Rounds din Level 2–Mastery;
+- ordinea și ritmul de livrare ale Founder Rounds, distincte de ordinea curriculară recomandată;
 - jocurile și simulările folosite;
 - nucleul final și extensiile fiecărui nivel;
 - durata nivelurilor și a Mastery;
-- competențele granulare și rubricile de evaluare;
+- rubricile, pragurile și standardele finale de evaluare pentru competențele Draft;
 - pragurile globale de Skills XP;
 - mecanismul final de poziționare și bridge;
 - forma de recunoaștere a finalizării Mastery;

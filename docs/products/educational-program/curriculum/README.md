@@ -14,7 +14,7 @@ Aici pot fi documentate:
 
 Structura comună decisă este Level 1 pentru clasele a II-a–a IV-a, Level 2 pentru V–VI, Level 3 pentru VII–VIII, Level 4 pentru IX–X, Level 5 pentru XI–XII și etapa terminală Mastery, independentă de vârstă.
 
-Founder Rounds complete se documentează în `../modules/`, iar formatele de livrare în `../formats/`. Cercetarea care susține deciziile curriculare se păstrează în `docs/research/`.
+Hărțile curriculare ale Founder Rounds sunt în subfolderele fiecărui pilon. Founder Rounds complete, cu Founder Loop, materiale și facilitare, se documentează în `../modules/`, iar formatele de livrare în `../formats/`. Cercetarea care susține deciziile curriculare se păstrează în `docs/research/`.
 
 Existența unui document în acest folder nu înseamnă că arhitectura descrisă este validată sau implementată.
 
@@ -24,13 +24,13 @@ Ordinea de dezvoltare și punctul recomandat pentru reluarea lucrului sunt păst
 
 - `architecture.md` — sursa comună pentru arhitectura curriculară, regulile de acces, delimitarea suprapunerilor și sistemul de progres.
 - `progression-map.md` — harta integrată Level 1–5 și Mastery și standardul comun de complexitate.
-- `finance-spiral.md` — sursa unică pentru progresia Finance, de la Level 1 la contribuția în Mastery.
-- `strategy-spiral.md` — sursa unică pentru progresia Strategy.
-- `product-spiral.md` — sursa unică pentru progresia Product.
-- `market-spiral.md` — sursa unică pentru progresia Market.
-- `operations-spiral.md` — sursa unică pentru progresia Operations.
+- `round-map-standard.md` — câmpurile obligatorii și convenția codurilor pentru lecțiile definite curricular.
+- `round-inventory-analysis.md` — analiza transversală a volumului, progresiei, suprapunerilor și riscurilor inventarului.
+- `strategy-spiral.md`, `product-spiral.md`, `market-spiral.md`, `operations-spiral.md`, `finance-spiral.md` — hărțile verticale și indexurile fiecărui pilon.
+- `strategy/level-1.md` … `strategy/level-5.md` — hărțile canonice Strategy; aceeași structură există în `product/`, `market/`, `operations/` și `finance/`.
 - `mastery.md` — identitatea, accesul, ariile integrate și standardul terminal Mastery.
+- `mastery-rounds.md` — harta celor 13 Founder Rounds integrate Mastery.
 
 Hărțile Level 1 au fost reconciliate comparativ. După onboardingul comun, Round-urile pot fi parcurse în orice ordine, cu excepția seriei `FIN 1.2.1 → FIN 1.2.2`; condițiile de caz și delimitările dintre piloni sunt definite în `architecture.md`.
 
-Level 2–5 și Mastery sunt hărți curriculum-first. Ele nu stabilesc încă Round-urile, Founder Loop-urile, jocurile sau pragurile XP. Acestea se proiectează după descompunerea capacităților în competențe și dovezi.
+Level 2–5 și Mastery sunt hărți curriculum-first. Cele 149 de Round-uri Level 2–5 și cele 13 Round-uri Mastery sunt definite prin standardul curricular nou; cele 29 de Round-uri Level 1 păstrează fără redesenare hărțile deja construite. Inventarul total nu are încă Founder Loop-uri, jocuri, materiale, durate exacte, rubrici finale sau praguri XP.
