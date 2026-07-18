@@ -1,5 +1,5 @@
 ---
-status: Draft
+status: Working
 version: "1.0"
 updated: 2026-07-18
 ---
@@ -18,7 +18,7 @@ Documentul nu definește încă:
 - o metodă pedagogică validată;
 - funcțiile care trebuie implementate pe `ezplay.org`.
 
-Structura Level 1–5 și Mastery este decisă. Conținutul hărților rămâne `Draft` și trebuie revizuit de specialiști, transformat ulterior în experiențe și testat cu participanți reali.
+Structura Level 1–5 și Mastery este decisă. Conținutul hărților este `Working`: poate susține auditul și dezvoltarea, dar trebuie revizuit de specialiști, transformat ulterior în experiențe și testat cu participanți reali.
 
 ## Poziția programului în EZPLAY
 
@@ -287,7 +287,7 @@ Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare Busi
 
 Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este Business Pillar-ul principal și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în ceilalți piloni.
 
-Mastery nu continuă automat codurile cu cifra 6. Convenția de lucru `MST 01`, `MST 02` etc. este definită în [standardul hărților](round-map-standard.md); cele două cifre identifică Round-ul, nu nivelul. Convenția rămâne `Draft` până la validarea primei experiențe Mastery.
+Mastery nu continuă automat codurile cu cifra 6. Convenția de lucru `MST 01`, `MST 02` etc. este definită în [standardul hărților](round-map-standard.md); cele două cifre identifică Round-ul, nu nivelul. Convenția rămâne provizorie până la validarea primei experiențe Mastery.
 
 ### Identificarea și ordinea Round-urilor
 

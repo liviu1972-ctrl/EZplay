@@ -1,5 +1,5 @@
 ---
-status: Draft
+status: Working
 version: "0.2"
 updated: 2026-07-18
 canonical_for:
@@ -65,7 +65,7 @@ O singură hartă protejează obiectul real al deciziei: compania ca sistem. Cel
 - munca de echipă nu poate face invizibilă contribuția și judecata individuală;
 - „integrarea” nu poate rămâne o listă în care fiecare pilon este doar menționat.
 
-[Matricea Round × lentilă](mastery/README.md#matricea-inițială-round--lentilă) marchează unde un pilon este dezvoltat direct și unde trebuie integrat material. Ea este un instrument de audit Draft, nu o grilă numerică finală de absolvire.
+[Matricea Round × lentilă](mastery/README.md#matricea-inițială-round--lentilă) marchează unde un pilon este dezvoltat direct și unde trebuie integrat material. Ea este un instrument de audit Working, nu o grilă numerică finală de absolvire.
 
 ## De ce Level 5 nu este doar pregătire pentru Mastery
 

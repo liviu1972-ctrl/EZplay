@@ -16,6 +16,8 @@ Structura comună decisă este Level 1 pentru clasele a II-a–a IV-a, Level 2 p
 
 Hărțile curriculare ale Founder Rounds sunt în subfolderele fiecărui pilon. Founder Rounds complete, cu Founder Loop, materiale și facilitare, se documentează în `../modules/`, iar formatele de livrare în `../formats/`. Cercetarea care susține deciziile curriculare se păstrează în `docs/research/`.
 
+Documentele curriculare sunt `Working`: inventarul și relațiile pot susține auditul și construcția reprezentării pe site, dar conținutul rămâne în dezvoltare și validare. `Working` nu este o stare publică de disponibilitate. Regulile pentru stratul public sunt în [specificația Curriculum Explorer](../../../platform/website/curriculum-explorer.md).
+
 Existența unui document în acest folder nu înseamnă că arhitectura descrisă este validată sau implementată.
 
 Ordinea de dezvoltare și punctul recomandat pentru reluarea lucrului sunt păstrate în [roadmap-ul programului educațional](../../../roadmap/educational-program-work-order.md).

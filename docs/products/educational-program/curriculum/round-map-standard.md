@@ -1,5 +1,5 @@
 ---
-status: Draft
+status: Working
 version: "0.2"
 updated: 2026-07-18
 canonical_for:
@@ -88,7 +88,7 @@ MST 02
 …
 ```
 
-Cele două cifre reprezintă identificatorul Round-ului, nu un nivel. Convenția rămâne `Draft` până la validarea primei experiențe Mastery.
+Cele două cifre reprezintă identificatorul Round-ului, nu un nivel. Convenția rămâne provizorie până la validarea primei experiențe Mastery.
 
 ### Acoperirea prin lentilele Mastery
 
@@ -141,7 +141,7 @@ O lecție nu este mutată la un nivel superior doar prin adăugarea unor termeni
 ## Statutul fișierelor de nivel
 
 - Level 1 păstrează hărțile deja construite;
-- Level 2–5 primesc hărți curriculare complete ca inventar de Round-uri, dar rămân `Draft`;
-- Mastery primește o hartă integrată `Draft`;
+- Level 2–5 au hărți curriculare complete ca inventar Working de Round-uri;
+- Mastery are o hartă integrată Working;
 - un Round devine gata de prototipare numai după verificarea suprapunerilor, prerechizitelor și dovezilor;
 - un Round devine gata de livrare numai după proiectarea Founder Loop-ului, materialelor, facilitării și verificărilor necesare.

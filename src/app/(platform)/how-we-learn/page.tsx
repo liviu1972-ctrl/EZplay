@@ -85,8 +85,14 @@ export default function HowWeLearnPage() {
               Founder Round nu este numele întregului program. Este una dintre unitățile prin care programul devine experiență concretă.
             </p>
           </div>
-          <div className="p-4 bg-brand-yellow/10 border-l-4 border-brand-yellow text-ink font-medium max-w-[600px] mx-auto text-left">
+          <div className="p-4 bg-brand-yellow/10 border-l-4 border-brand-yellow text-ink font-medium max-w-[600px] mx-auto text-left mb-8">
             <strong>Notă:</strong> Formatul este în dezvoltare. Primele Founder Rounds vor fi documentate, testate și îmbunătățite înainte să fie prezentate ca experiențe validate.
+          </div>
+          <div className="flex justify-center md:justify-center w-full mt-4">
+            <Link href="/program/curriculum" className="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange/80 transition-colors group">
+              Vezi cum metoda devine curriculum
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>

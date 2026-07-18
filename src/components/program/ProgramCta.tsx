@@ -17,12 +17,15 @@ export function ProgramCta() {
           Experiența introductivă le permite participanților să cunoască jocul, să ia primele decizii și să analizeze ce s-a întâmplat. De aici poate începe parcursul către Founder Rounds.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto flex-wrap">
           <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-orange text-white hover:bg-brand-orange/90 text-base h-14 px-8 shadow-sm border-0" render={<Link href="/experiences/introduction" />}>
             Descoperă experiența introductivă
           </Button>
+          <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-white/30 text-white hover:bg-white/10" render={<Link href="/program/curriculum" />}>
+            Explorează harta programului
+          </Button>
           <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-white/30 text-white hover:bg-white/10" render={<Link href="/for/organizations" />}>
-            Adu Programul EZPLAY în organizația ta
+            Adu Programul în organizația ta
           </Button>
         </div>
         

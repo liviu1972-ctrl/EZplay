@@ -1,5 +1,5 @@
 ---
-status: Draft
+status: Working
 version: "0.3"
 updated: 2026-07-18
 canonical_for:
@@ -445,7 +445,7 @@ Extensiile nu sunt „Level 7”. Ele rămân aplicații, domenii sau trasee în
 9. Nu reducem oamenii la costuri ori unități de capacitate.
 10. Nu repetăm Level 1–5 pentru participanții care au deja fundația.
 11. Nu separăm o decizie avansată de responsabilitatea ei etică și umană.
-12. Nu prezentăm harta Draft ca program deja validat sau disponibil.
+12. Nu prezentăm harta Working ca program deja validat sau disponibil.
 
 ## Ce rămâne de decis
 

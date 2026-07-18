@@ -11,7 +11,8 @@ import {
   Map, 
   Wrench, 
   LineChart, 
-  AlertCircle
+  AlertCircle,
+  ArrowRight
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -40,13 +41,19 @@ export default function ForOrganizationsPage() {
               Putem construi împreună o primă experiență sau un parcurs mai amplu, potrivit comunității tale și nivelului de dezvoltare al programului.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-8">
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-8 flex-wrap">
             <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-orange text-white hover:bg-brand-orange/90 text-base h-14 px-8" render={<Link href="#contact" />}>
               Discută cu noi despre o experiență
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-line-strong text-ink hover:bg-surface-soft" render={<Link href="/how-we-learn" />}>
               Vezi cum învățăm
             </Button>
+            <div className="w-full sm:w-auto mt-4 sm:mt-0 flex items-center justify-center sm:justify-start">
+              <Link href="/program/curriculum" className="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange/80 transition-colors group">
+                Vezi structura programului
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
           <div className="text-sm text-ink-muted flex items-start gap-2 max-w-[600px] bg-canvas p-4 rounded-xl border border-line">
             <AlertCircle className="w-5 h-5 shrink-0 text-brand-orange mt-0.5" />

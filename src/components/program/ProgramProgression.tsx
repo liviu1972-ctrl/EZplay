@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { RepeatIcon } from "lucide-react"
+import { RepeatIcon, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function ProgramProgression() {
   return (
@@ -36,9 +37,17 @@ export function ProgramProgression() {
               </p>
             </div>
             
-            <div className="p-4 bg-brand-charcoal text-white rounded-xl font-medium border-l-4 border-brand-orange">
+            <div className="p-4 bg-brand-charcoal text-white rounded-xl font-medium border-l-4 border-brand-orange mb-8">
               Nivelul nu este vârsta participantului. Nivelul arată cât de departe a ajuns într-o anumită perspectivă.
             </div>
+
+            <Link 
+              href="/program/curriculum"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange text-white rounded-lg hover:bg-brand-orange/90 transition-colors font-semibold"
+            >
+              Explorează harta programului
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
           
         </div>

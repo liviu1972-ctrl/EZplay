@@ -32,10 +32,11 @@ export function SiteFooter({ dict }: SiteFooterProps) {
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-heading font-bold text-surface">Program</h3>
+          <h3 className="font-heading font-bold text-surface">Descoperă</h3>
           <Link href="/program" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Programul</Link>
+          <Link href="/program/curriculum" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Harta programului</Link>
+          <Link href="/experiences/introduction" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Experiența introductivă</Link>
           <Link href="/how-we-learn" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Cum învățăm</Link>
-          <Link href="/experiences" className="text-surface-soft hover:text-brand-orange text-sm transition-colors">Experiențe</Link>
         </div>
 
         <div className="flex flex-col gap-4">

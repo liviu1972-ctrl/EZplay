@@ -1,5 +1,5 @@
 ---
-status: Draft
+status: Working
 version: "0.6"
 updated: 2026-07-18
 canonical_for:

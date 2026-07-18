@@ -14,7 +14,8 @@ import {
   MessageSquare,
   ShieldCheck,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  ArrowRight
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -107,13 +108,19 @@ export default function ResearchPage() {
               De aceea arătăm atât ce ne informează, cât și ce nu știm încă.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto flex-wrap">
             <Button size="lg" className="w-full sm:w-auto rounded-full bg-brand-teal text-white hover:bg-brand-teal/90 text-base h-14 px-8" render={<Link href="#repere" />}>
               Explorează reperele de cercetare
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-line-strong text-ink hover:bg-surface-soft" render={<Link href="/how-we-learn" />}>
               Vezi cum învățăm
             </Button>
+            <div className="w-full sm:w-auto mt-4 sm:mt-0 flex items-center justify-center sm:justify-start">
+              <Link href="/program/curriculum" className="inline-flex items-center text-brand-orange font-bold hover:text-brand-orange/80 transition-colors group">
+                Explorează arhitectura curriculară
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

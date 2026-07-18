@@ -28,11 +28,12 @@ export function ExplorerRail({ dict }: ExplorerRailProps) {
   const pathname = usePathname()
 
   const navItems = [
-    { href: "/program", label: dict.nav?.program || "Programul", icon: Compass },
-    { href: "/how-we-learn", label: dict.nav?.howWeLearn || "Cum învățăm", icon: BookOpen },
-    { href: "/experiences", label: dict.nav?.experiences || "Experiențe", icon: Map },
-    { href: "/for/organizations", label: dict.nav?.forOrganizations || "Pentru organizații", icon: Building2 },
-    { href: "/research", label: dict.nav?.research || "Cercetare", icon: Beaker },
+    { href: "/program", label: "Prezentare", icon: Compass },
+    { href: "/program/curriculum", label: "Harta programului", icon: Map },
+    { href: "/experiences/introduction", label: "Experiența introductivă", icon: Briefcase },
+    { href: "/how-we-learn", label: "Cum învățăm", icon: BookOpen },
+    { href: "/for/organizations", label: "Pentru organizații", icon: Building2 },
+    { href: "/research", label: "Cercetare", icon: Beaker },
   ]
 
   return (
