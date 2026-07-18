@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.5"
+version: "0.6"
 updated: 2026-07-18
 ---
 
@@ -25,7 +25,8 @@ Acest document inventariază activele și experiența existentă. Definițiile s
 
 | Concept                                            | Sursa curentă                                                                                                           |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Formula economică, variabilele și cei cinci piloni | [Modelul economic comun EZPLAY](../methods/economic-model.md)                                                           |
+| Modelul de business predat prin cei cinci piloni   | [Cei cinci Business Pillars](../methods/business-pillars/README.md)                                                    |
+| Formula economică și rolul economic al pilonilor   | [Modelul economic comun EZPLAY](../methods/economic-model.md)                                                          |
 | Founder Round, Founder Loop și progres curricular  | [Arhitectura curriculară](../products/educational-program/curriculum/architecture.md)                                  |
 | Founder Skills, Founder Profile și Skills XP       | [Arhitectura curriculară](../products/educational-program/curriculum/architecture.md)                                  |
 | Prestige și EZPLAY Governance                      | [Decizia activă](../decisions/active/prestige-and-ezplay-governance.md)                                                |

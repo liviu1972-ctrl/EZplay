@@ -11,6 +11,7 @@
 ## Decizii active
 
 - [`active/admin-reference-lab.md`](active/admin-reference-lab.md) — zona administrativă pentru pagini și interacțiuni interne, necanonice;
+- [`active/business-pillars-framework.md`](active/business-pillars-framework.md) — adoptarea celor cinci Business Pillars drept modelul de business predat în EZPLAY și limitele afirmațiilor despre această împărțire;
 - [`active/documentation-working-method.md`](active/documentation-working-method.md) — metoda documentației vii, modelul `status`/`lifecycle` și autonomia agenților;
 - [`active/prestige-and-ezplay-governance.md`](active/prestige-and-ezplay-governance.md) — principiile Prestige, badge-urile și modelul decizional EZPLAY Governance;
 - [`active/progression-system-terminology.md`](active/progression-system-terminology.md) — terminologia canonică pentru Business Pillars, Founder Skills, Founder Profile, Skills XP, Level Up și New Level;

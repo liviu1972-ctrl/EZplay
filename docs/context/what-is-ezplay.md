@@ -1,7 +1,7 @@
 ---
 status: Current
-version: "1.1"
-updated: 2026-07-17
+version: "1.2"
+updated: 2026-07-18
 canonical_for:
   - project definition
   - project scope
@@ -122,6 +122,7 @@ Youth Founders și FounderOS pot folosi în viitor instrumente sau experiențe E
 
 - `brand-positioning.md` definește promisiunea și exprimarea brandului;
 - `ezplay-vision.md` descrie direcția în care vrem să evolueze ecosistemul;
+- `docs/methods/business-pillars/README.md` definește modelul de business predat în EZPLAY și relațiile dintre cei cinci piloni;
 - `docs/methods/economic-model.md` definește modelul economic, formulele și limbajele;
 - documentele de produs descriu regulile și particularitățile fiecărui joc;
 - `current-assets.md` descrie ceea ce există în prezent.

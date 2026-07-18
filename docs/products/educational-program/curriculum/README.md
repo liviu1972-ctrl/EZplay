@@ -2,6 +2,8 @@
 
 Acest folder păstrează arhitectura curriculară și hărțile de progres ale programului educațional EZPLAY.
 
+Modelul de business predat în EZPLAY și definițiile conceptuale ale celor cinci Business Pillars sunt păstrate în [sursa comună Business Pillars](../../../methods/business-pillars/README.md). Acest folder descrie felul în care pilonii devin progresii, competențe și Founder Rounds, fără să le redefinească.
+
 Aici pot fi documentate:
 
 - Business Pillars și competențele urmărite;

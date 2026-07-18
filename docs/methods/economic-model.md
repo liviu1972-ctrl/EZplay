@@ -1,11 +1,11 @@
 ---
 status: Working
-version: "0.3"
-updated: 2026-07-17
+version: "0.4"
+updated: 2026-07-18
 canonical_for:
   - economic model
   - economic formulas
-  - Business Pillars
+  - economic role of Business Pillars
   - Learn Language
   - Business Language
 ---
@@ -19,7 +19,7 @@ Acest document este sursa canonică pentru modelul economic comun folosit în jo
 El definește:
 
 - formula economică generală;
-- cei cinci Business Pillars ai companiei;
+- rolul economic al celor cinci Business Pillars;
 - relația dintre EZPLAY Deckbuilder și EZPLAY Tableau Builder;
 - Learn Language și Business Language;
 - formulele și regulile principale de terminologie.
@@ -53,6 +53,8 @@ Modelul complet al unei companii este organizat prin cinci **Business Pillars**:
 3. **Market**
 4. **Operations**
 5. **Finance**
+
+Modelul de business predat în EZPLAY, relațiile dintre piloni și definițiile lor conceptuale sunt dezvoltate în [sursa generală Business Pillars](business-pillars/README.md). Acest document păstrează rolul lor în formula economică și limbajele comune.
 
 ### Strategy
 

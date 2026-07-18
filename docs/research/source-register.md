@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 canonical_for:
   - external research source register
   - public research source identifiers
@@ -61,6 +61,15 @@ Verificarea confirmă destinația și identitatea sursei, nu accesul gratuit la 
 | `SRC-EDU-010` | Învățare bazată pe probleme | Cindy E. Hmelo-Silver, „Problem-Based Learning: What and How Do Students Learn?”, 2004 | sinteză teoretică și de cercetare | [Springer Nature](https://doi.org/10.1023/B:EDPR.0000034022.16470.F3) | Verificat, 2026-07-16 | Parafrază și trimitere; nu stabilește formatul Founder Loop. |
 | `SRC-EDU-011` | Facilitare și scaffolding | Cindy E. Hmelo-Silver, Ravit Golan Duncan și Clark A. Chinn, „Scaffolding and Achievement in Problem-Based and Inquiry Learning”, 2007 | articol de poziție | [Rutgers University](https://scholarship.libraries.rutgers.edu/esploro/outputs/journalArticle/Scaffolding-and-Achievement-in-Problem-Based-and/991031758567904646) | Verificat, 2026-07-16 | Parafrază și trimitere; nu oferă o cantitate universală de sprijin. |
 | `SRC-EDU-012` | Învățare experiențială | Thomas Howard Morris, „Experiential Learning: A Systematic Review and Revision of Kolb's Model”, 2020 | review sistematic și revizuire conceptuală | [ERIC](https://eric.ed.gov/?id=EJ1277350) | Verificat, 2026-07-16 | Parafrază și trimitere; nu validează Founder Loop. |
+| `SRC-BIZ-001` | Model de business | Strategyzer, „What is a Business Model?” | cadru conceptual și instrument de design | [Strategyzer](https://www.strategyzer.com/library/what-is-a-business-model) | Verificat, 2026-07-18 | Mapare și parafrază; cele nouă blocuri nu sunt reproduse vizual și nu validează împărțirea predată de EZPLAY. |
+| `SRC-BIZ-002` | Planificarea companiei | U.S. Small Business Administration, „Write your business plan”, actualizat 2025 | ghid instituțional pentru întreprinderi mici | [U.S. SBA](https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan) | Verificat, 2026-07-18 | Parafrază și comparație de acoperire; ghidul nu este tratat drept curriculum sau taxonomie universală. |
+| `SRC-BIZ-003` | Strategy | Michael E. Porter, „What Is Strategy?”, 1996 | articol conceptual | [Harvard Business Review](https://hbr.org/1996/11/what-is-strategy) | Verificat, 2026-07-18 | Parafrază scurtă a delimitării dintre strategie și eficacitate operațională; fără reproducerea articolului. |
+| `SRC-BIZ-004` | Market și marketing | American Marketing Association, „Definitions of Marketing” | definiție profesională instituțională | [American Marketing Association](https://www.ama.org/the-definition-of-marketing-what-is-marketing/) | Verificat, 2026-07-18 | Parafrază și delimitare; terminologia EZPLAY nu este prezentată drept definiția universală a marketingului. |
+| `SRC-BIZ-005` | Product și procese de business | OECD/Eurostat, „Oslo Manual 2018” | manual metodologic internațional | [OECD](https://www.oecd.org/en/publications/2018/10/oslo-manual-2018_g1g9373b.html) | Verificat, 2026-07-18 | Parafrază a distincției product–business process; taxonomia statistică nu este copiată și nu devine programa EZPLAY. |
+| `SRC-BIZ-006` | Finance și raportare | IFRS Foundation, „Conceptual Framework for Financial Reporting”, revizuit 2018 | cadru internațional de raportare financiară | [IFRS Foundation](https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/) | Verificat, 2026-07-18 | Parafrază și delimitare între raportare, contabilitate și Finance; fără consultanță contabilă sau juridică. |
+| `SRC-BIZ-007` | Competență antreprenorială | Joint Research Centre, „EntreComp: The Entrepreneurship Competence Framework”, 2016 | cadru european de competențe | [Comisia Europeană — JRC](https://joint-research-centre.ec.europa.eu/entrecomp-entrepreneurship-competence-framework/competence-areas-and-learning-progress_en) | Verificat, 2026-07-18 | Comparație între competențele persoanei și perspectivele companiei; EntreComp nu validează Business Pillars sau Founder Skills. |
+| `SRC-BIZ-008` | Managementul performanței | Robert S. Kaplan și David P. Norton, „Using the Balanced Scorecard as a Strategic Management System”, 2007 | cadru conceptual și de management | [Harvard Business Review](https://hbr.org/2007/07/using-the-balanced-scorecard-as-a-strategic-management-system) | Verificat, 2026-07-18 | Parafrază scurtă a perspectivelor; cadrul nu este reprodus și nu este tratat drept alternativă curriculară directă. |
+| `SRC-BIZ-009` | Guvernanță și dimensiuni transversale | OECD, „G20/OECD Principles of Corporate Governance 2023” | principii internaționale | [OECD](https://www.oecd.org/en/publications/g20-oecd-principles-of-corporate-governance-2023_ed750b30-en/full-report/component-3.html) | Verificat, 2026-07-18 | Parafrază privind guvernanța, stakeholderii, sustenabilitatea și reziliența; aplicabilitatea la firme mici rămâne contextuală. |
 
 ## Acoperirea curentă
 
@@ -72,7 +81,10 @@ Registrul acoperă în prezent:
 - mastery learning și progresul pe competențe;
 - învățarea bazată pe probleme;
 - scaffolding și rolul facilitării;
-- învățarea experiențială.
+- învățarea experiențială;
+- comparația Business Pillars cu modele de business, planificare, strategie și managementul performanței;
+- delimitările conceptuale pentru Product, Market, Operations și Finance;
+- competența antreprenorială și dimensiunile transversale de guvernanță.
 
 Nu acoperă încă în mod suficient:
 

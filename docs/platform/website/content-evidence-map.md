@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 canonical_for:
   - website public claim evidence traceability
   - website publication evidence status
@@ -47,11 +47,14 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | `INT-BRAND-001` | poziționare, promisiune și voce | [`brand-positioning.md`](../../context/brand-positioning.md) |
 | `INT-VISION-001` | direcția ecosistemului și starea de viziune | [`ezplay-vision.md`](../../context/ezplay-vision.md) |
 | `INT-ECON-001` | formule și terminologie economică | [`economic-model.md`](../../methods/economic-model.md) |
+| `INT-PILLAR-001` | modelul de business predat în EZPLAY, relațiile și regulile editoriale generale | [`business-pillars/README.md`](../../methods/business-pillars/README.md) |
+| `INT-PILLAR-002` | definițiile și granițele fiecărui Business Pillar | [Strategy](../../methods/business-pillars/strategy.md), [Product](../../methods/business-pillars/product.md), [Market](../../methods/business-pillars/market.md), [Operations](../../methods/business-pillars/operations.md), [Finance](../../methods/business-pillars/finance.md) |
 | `INT-CURR-001` | arhitectura curriculumului și Founder Loop | [`architecture.md`](../../products/educational-program/curriculum/architecture.md) |
 | `INT-CURR-002` | spirala Finance și progresul propus | [`finance-spiral.md`](../../products/educational-program/curriculum/finance-spiral.md) |
 | `INT-ASSET-001` | realitatea actuală a produselor și activelor | [`current-assets.md`](../../roadmap/current-assets.md) |
 | `INT-PLAY-001` | sinteza retrospectivă a sesiunilor cunoscute | [`historical-session-evidence.md`](../../research/playtests/historical-session-evidence.md) |
 | `INT-RES-001` | bibliografia comentată | [`curriculum-progression-and-gamification.md`](../../research/product/curriculum-progression-and-gamification.md) |
+| `INT-RES-002` | analiza comparativă și limitele împărțirii Business Pillars | [`business-pillars-framework-analysis.md`](../../research/product/business-pillars-framework-analysis.md) |
 | `INT-SRC-001` | registrul surselor externe și starea linkurilor | [`source-register.md`](../../research/source-register.md) |
 | `INT-WEB-001` | direcția de produs pentru site | [`ezplay-org-product-direction.md`](../ezplay-org-product-direction.md) |
 | `INT-TECH-001` | continuitatea declarată a platformei existente | [`existing-platform-continuity.md`](existing-platform-continuity.md) |
@@ -65,7 +68,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | EZPLAY este educație antreprenorială prin experiență, decizii și consecințe | Hero, diferența EZPLAY, parcurs | `INT-DEF-001`, `INT-BRAND-001` | Acoperit intern | Se prezintă drept poziționare și principiu de design, nu rezultat măsurat. |
 | Founder Loop leagă experiența, reflecția, inputul și aplicarea | Parcurs, dincolo de joc | `INT-CURR-001`, `SRC-EDU-010`, `SRC-EDU-011`, `SRC-EDU-012` | Informat extern / Ipoteză explicită | Nu se numește metodă validată. |
 | Primul program este destinat tinerilor | Primul program, pentru cine construim | `INT-WEB-001`, `INT-CURR-001` | Ipoteză explicită | Numele, vârstele, durata și disponibilitatea rămân condiționate. |
-| Business Pillars | Ce dezvoltă, cei cinci piloni ai unei companii | `INT-ECON-001` | Acoperit intern | Se folosește denumirea canonică `Business Pillars`; după prima mențiune poate apărea `pilonii`. |
+| Business Pillars | Ce dezvoltă, cei cinci piloni ai unei companii | `INT-PILLAR-001`, `INT-PILLAR-002`, `INT-ECON-001` | Acoperit intern | Se poate spune că aceștia formează modelul de business predat în EZPLAY; nu se revendică invenția sau singura taxonomie posibilă. |
 | Cercetarea informează dezvoltarea | Cercetare | `INT-RES-001`, `INT-SRC-001` | Acoperit intern | Linkul duce la `/research`; nu implică validarea EZPLAY. |
 | Deckbuilder și Tableau Builder sunt instrumente EZPLAY | Instrumentele | `INT-ASSET-001`, `INT-ECON-001` | Acoperit intern / Ipoteză explicită | Tableau Builder rămâne concept de produs; disponibilitatea digitală se verifică tehnic. |
 | Participarea, solicitarea unei experiențe sau contribuția sunt disponibile | CTA-uri | `INT-ASSET-001`, `INT-WEB-001` | De confirmat | CTA-ul se activează numai cu proces, responsabil și capacitate reală. |
@@ -75,6 +78,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | Grup de afirmații | Secțiuni | Dovezi | Stare | Regula publicării |
 |---|---|---|---|---|
 | Programul folosește Founder Rounds și Founder Loop | Început, Founder Rounds | `INT-CURR-001`, `INT-ASSET-001` | Ipoteză explicită / Dovadă internă parțială | Formatul complet nu este prezentat ca standardizat sau validat. |
+| Strategy, Product, Market, Operations și Finance formează modelul de business predat în EZPLAY | Business Pillars | `INT-PILLAR-001`, `INT-PILLAR-002`, `INT-RES-002`, `SRC-BIZ-001`, `SRC-BIZ-002`, `SRC-BIZ-005`, `SRC-BIZ-007` | Acoperit intern / Informat extern | Împărțirea este prezentată ca larg aplicabilă și asumată de EZPLAY, nu ca invenție proprie, taxonomie exclusivă sau garanție de succes. |
 | Curriculumul revizitează ideile cu dificultate mai mare | Spirale | `INT-CURR-001`, `INT-CURR-002`, `SRC-EDU-007` | Informat extern | Este decizie de design în lucru. |
 | Progresul urmărește aplicarea și competențe observabile | Progres, traseu | `INT-CURR-001`, `SRC-EDU-008`, `SRC-EDU-009` | Informat extern / Ipoteză explicită | Skills XP și pragurile nu sunt validate. |
 | Participanții pot alege direcții și lucra individual și în echipă | Libertatea traseului, individ și echipă | `INT-CURR-001` | Ipoteză explicită | Nu se afirmă efecte asupra motivației înainte de testare. |
@@ -109,7 +113,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | Grup de afirmații | Secțiuni | Dovezi | Stare | Regula publicării |
 |---|---|---|---|---|
 | Participantul ia decizii și poate încerca din nou | Ce vei face, greșeala | `INT-DEF-001`, `INT-ASSET-001`, `INT-PLAY-001` | Acoperit intern / Dovadă internă parțială | Se descrie experiența jocului, nu o transformare personală garantată. |
-| Programul explorează cei cinci Business Pillars | Ce vei descoperi | `INT-ECON-001`, `INT-CURR-001` | Acoperit intern / Ipoteză explicită | Business Pillars fac parte din modelul EZPLAY; curriculumul complet este în lucru. |
+| Programul explorează cei cinci Business Pillars | Ce vei descoperi | `INT-PILLAR-001`, `INT-PILLAR-002`, `INT-ECON-001`, `INT-CURR-001` | Acoperit intern / Ipoteză explicită | Business Pillars formează modelul de business predat în EZPLAY; curriculumul complet este în lucru. |
 | Tinerii pot participa acum | Cum poți participa | `INT-WEB-001` | De confirmat | CTA-ul se condiționează de existența unui adult, formular și proces operațional. |
 
 ## `/for/parents` — Pentru părinți

@@ -28,6 +28,7 @@ Nivelurile exprimă progresul competenței și sunt calibrate pentru vârste de 
 
 ## Documente de lucru
 
+- [Cei cinci Business Pillars](../../methods/business-pillars/README.md) — modelul de business predat în EZPLAY și sursa conceptuală comună pentru Strategy, Product, Market, Operations și Finance;
 - [Arhitectura curriculară](curriculum/architecture.md) — arhitectura curriculară, reconcilierea Level 1 și sistemul de progres;
 - [Spirala Finance](curriculum/finance-spiral.md) — progresia Finance și harta Round-urilor dezvoltate pentru fiecare nivel;
 - [Spirala Strategy](curriculum/strategy-spiral.md) — Strategy Level 1 și Round-urile propuse;

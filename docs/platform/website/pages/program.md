@@ -1,10 +1,11 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Programul EZPLAY pentru tineri
 route: /program
 evidence_map: ../content-evidence-map.md
+business_pillars_source: ../../../methods/business-pillars/README.md
 ---
 
 # Copywriting — Programul EZPLAY pentru tineri
@@ -132,6 +133,8 @@ evidence_map: ../content-evidence-map.md
 > **O companie este construită pe cinci piloni conectați.**
 
 ### Introducere
+
+> **Strategy, Product, Market, Operations și Finance formează modelul de business pe care îl predăm în EZPLAY. Folosim această împărțire pentru că se aplică unor companii foarte diferite și îi ajută pe participanți să înțeleagă atât fiecare perspectivă, cât și legăturile dintre ele.**
 
 > Fiecare perspectivă are propria progresie. Participantul poate avansa mai repede într-o zonă și poate avea nevoie de experiențe suplimentare în alta. Profilul rezultat nu este o notă generală, ci o hartă a lucrurilor explorate și aplicate.
 
