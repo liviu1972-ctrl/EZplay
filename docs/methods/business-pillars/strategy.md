@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - Strategy Business Pillar definition
@@ -248,20 +248,19 @@ Jocul nu numește automat fiecare alegere drept strategie.
 
 ### În lucru în curriculum
 
-[Strategy Level 1](../../products/educational-program/curriculum/strategy-spiral.md) propune fundații despre:
+[Spirala Strategy](../../products/educational-program/curriculum/strategy-spiral.md) păstrează Level 1 pentru clasele a II-a–a IV-a și propune progresia:
 
-- obiectiv;
-- priorități;
-- coerență;
-- renunțare;
-- adaptare;
-- învățarea din rezultate.
+- Level 2 — direcția unei firme simple;
+- Level 3 — poziționare și model de business;
+- Level 4 — avantaj și strategie de creștere;
+- Level 5 — portofoliu, leadership și transformare;
+- Mastery — strategie de enterprise, capital allocation și guvernanța transformării.
 
-Harta este Draft și nu reprezintă un curriculum validat.
+Harta este Draft și nu reprezintă un curriculum validat sau deja disponibil.
 
 ### Viziune
 
-Tableau Builder și experiențele avansate pot face Strategy mai explicită prin poziționare, modele de business, capabilități, portofolii și alocarea resurselor. Mecanica nu este încă validată.
+Jocurile, cazurile și simulările pentru Level 2–Mastery vor fi alese după competențele Strategy. Tableau Builder poate contribui, dar mecanica sa nu stabilește curriculumul și nu este încă validată pentru acest rol.
 
 ## Limbaj editorial
 

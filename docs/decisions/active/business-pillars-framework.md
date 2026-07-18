@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.1"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -111,15 +111,14 @@ Fiecare Founder Round are un Business Pillar principal, stabilit prin întrebare
 
 Un Round poate implica mai mulți piloni. XP secundar este justificat numai când rezultatul oferă o dovadă reală și observabilă în pilonul secundar.
 
-Hărțile curriculare pot evolua diferit. Nu este necesar ca cei cinci piloni să aibă:
+Hărțile curriculare folosesc structura comună Level 1–5 și contribuie la etapa terminală integrată Mastery. Progresiile pot evolua diferit în interiorul acestei arhitecturi. Nu este necesar ca cei cinci piloni să aibă:
 
-- același număr de niveluri;
 - același număr de Round-uri;
 - aceleași praguri;
 - aceeași ordine internă;
 - aceeași profunzime la aceeași vârstă.
 
-Coerența modelului nu cere simetrie artificială.
+Coerența modelului cere o bandă comună de dificultate, nu simetrie artificială a conținutului. Mastery nu este un al șaselea pilon și nu creează o progresie separată de tip `Founder XP`.
 
 ## Regula pentru comunicarea publică
 
@@ -178,7 +177,7 @@ Pentru a evita definițiile paralele:
 
 - formulările potrivite pentru fiecare grupă de vârstă;
 - gradul în care participanții disting și conectează pilonii;
-- progresiile dincolo de Level 1;
+- eficiența și încărcarea progresiilor Level 2–5 și Mastery;
 - competențele și dovezile pentru fiecare nivel;
 - reprezentarea vizuală a modelului și a Founder Profile;
 - locul exact și adâncimea conținutului Business Pillars pe site.

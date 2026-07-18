@@ -12,6 +12,8 @@ Aici pot fi documentate:
 - relația dintre Founder Rounds, Founder Skills, Founder Profile, Skills XP și niveluri;
 - adaptarea curriculumului pentru vârste și niveluri diferite.
 
+Structura comună decisă este Level 1 pentru clasele a II-a–a IV-a, Level 2 pentru V–VI, Level 3 pentru VII–VIII, Level 4 pentru IX–X, Level 5 pentru XI–XII și etapa terminală Mastery, independentă de vârstă.
+
 Founder Rounds complete se documentează în `../modules/`, iar formatele de livrare în `../formats/`. Cercetarea care susține deciziile curriculare se păstrează în `docs/research/`.
 
 Existența unui document în acest folder nu înseamnă că arhitectura descrisă este validată sau implementată.
@@ -21,10 +23,14 @@ Ordinea de dezvoltare și punctul recomandat pentru reluarea lucrului sunt păst
 ## Documente
 
 - `architecture.md` — sursa comună pentru arhitectura curriculară, regulile de acces, delimitarea suprapunerilor și sistemul de progres.
-- `finance-spiral.md` — sursa unică pentru progresia Finance, nivelurile sale și harta Round-urilor dezvoltate.
-- `strategy-spiral.md` — sursa de lucru pentru Strategy; în prezent dezvoltă numai Level 1.
-- `product-spiral.md` — sursa de lucru pentru Product; în prezent dezvoltă numai Level 1.
-- `market-spiral.md` — sursa de lucru pentru Market; în prezent dezvoltă numai Level 1.
-- `operations-spiral.md` — sursa de lucru pentru Operations; în prezent dezvoltă numai Level 1.
+- `progression-map.md` — harta integrată Level 1–5 și Mastery și standardul comun de complexitate.
+- `finance-spiral.md` — sursa unică pentru progresia Finance, de la Level 1 la contribuția în Mastery.
+- `strategy-spiral.md` — sursa unică pentru progresia Strategy.
+- `product-spiral.md` — sursa unică pentru progresia Product.
+- `market-spiral.md` — sursa unică pentru progresia Market.
+- `operations-spiral.md` — sursa unică pentru progresia Operations.
+- `mastery.md` — identitatea, accesul, ariile integrate și standardul terminal Mastery.
 
 Hărțile Level 1 au fost reconciliate comparativ. După onboardingul comun, Round-urile pot fi parcurse în orice ordine, cu excepția seriei `FIN 1.2.1 → FIN 1.2.2`; condițiile de caz și delimitările dintre piloni sunt definite în `architecture.md`.
+
+Level 2–5 și Mastery sunt hărți curriculum-first. Ele nu stabilesc încă Round-urile, Founder Loop-urile, jocurile sau pragurile XP. Acestea se proiectează după descompunerea capacităților în competențe și dovezi.

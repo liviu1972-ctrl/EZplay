@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - Finance Business Pillar definition
@@ -313,20 +313,19 @@ Jocul folosește o economie simplificată și nu reproduce contabilitatea comple
 
 ### În lucru în curriculum
 
-[Finance Level 1](../../products/educational-program/curriculum/finance-spiral.md) propune fundații despre:
+[Spirala Finance](../../products/educational-program/curriculum/finance-spiral.md) păstrează Level 1 pentru clasele a II-a–a IV-a și propune progresia:
 
-- banii firmei;
-- Vânzări, Cheltuieli și Profit;
-- Cash Flow și Cash;
-- rezultatul anual;
-- folosirea indicatorilor în decizie;
-- continuitate, faliment și restart.
+- Level 2 — Profit versus Cash, buget și continuitate;
+- Level 3 — situații financiare, marje, unit economics și Working Capital;
+- Level 4 — diagnostic, forecast și finanțarea creșterii;
+- Level 5 — valuation, capital structure, fundraising și investitori;
+- Mastery — corporate finance, ownership, tranzacții și pregătire pentru opțiuni publice.
 
-Spirala propune și niveluri ulterioare despre Profit versus Cash, situații financiare, diagnostic, planificare, finanțare și valoare. Harta este Draft și nu reprezintă un curriculum validat.
+Harta este Draft și nu reprezintă un curriculum validat sau deja disponibil.
 
 ### Viziune
 
-Experiențele avansate pot folosi situații financiare, foi de calcul, scenarii, negocieri și Tableau Builder. Rolul exact al instrumentelor trebuie prototipat.
+Jocurile, modelele, cazurile și simulările pentru Level 2–Mastery vor fi alese după competențele Finance. Foi de calcul, negocieri și Tableau Builder pot contribui, dar rolul exact trebuie prototipat.
 
 ## Limbaj editorial
 

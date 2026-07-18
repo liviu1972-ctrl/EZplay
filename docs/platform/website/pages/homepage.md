@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Acasă
 route: /
 evidence_map: ../content-evidence-map.md
@@ -177,7 +177,7 @@ Homepage-ul nu începe cu jocul, autentificarea sau funcțiile platformei.
 
 ### Pentru cine
 
-> Nucleul programului este proiectat pentru elevi din clasele a V-a–a X-a. Experiențele pot fi adaptate în timp pentru participanți mai mici sau mai mari, în funcție de nivel, motivație și context.
+> Programul pentru tineri este proiectat ca o progresie Level 1–5, de la clasele a II-a la a XII-a. Level 1 rămâne fundația pentru clasele a II-a–a IV-a, iar fiecare etapă revine asupra celor cinci Business Pillars cu mai multă autonomie și complexitate. Benzile de clase calibrează experiențele; competența, motivația și contextul contează în poziționare.
 
 ### CTA principal
 

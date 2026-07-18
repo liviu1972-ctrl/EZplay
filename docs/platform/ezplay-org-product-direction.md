@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.3"
+version: "0.4"
 updated: 2026-07-18
 ---
 
@@ -162,11 +162,16 @@ EZPLAY nu promite:
 
 ### Participantul
 
-Ipoteza de lucru pentru nucleul primului program este:
+Structura curriculară decisă pentru programul destinat tinerilor este:
 
-- clasele a V-a–a X-a ca interval principal;
-- extensii adaptate pentru clasele a II-a–a IV-a;
-- extensii sau experiențe mai avansate pentru clasele a XI-a–a XII-a.
+- Level 1 — clasele a II-a–a IV-a; fundația existentă a programului;
+- Level 2 — clasele a V-a–a VI-a;
+- Level 3 — clasele a VII-a–a VIII-a;
+- Level 4 — clasele a IX-a–a X-a;
+- Level 5 — clasele a XI-a–a XII-a; nivel foarte avansat;
+- Mastery — etapă terminală, independentă de vârstă, pentru participanți cu fundația necesară sau competențe echivalente.
+
+Benzile de clase calibrează dificultatea, limbajul și situațiile, dar nu sunt etichete rigide de acces. Existența hărții curriculare nu înseamnă că toate experiențele Level 2–Mastery sunt deja construite, testate sau disponibile.
 
 Nivelul educațional nu trebuie dedus rigid din vârstă. Experiența, motivația și competențele participantului pot produce diferențe mari în interiorul aceleiași grupe de vârstă.
 
@@ -557,7 +562,7 @@ Există însă o tensiune nerezolvată:
 - valorile, pragurile și regulile de Skills XP nu sunt încă validate;
 - roadmap-ul curricular recomandă reprezentarea pe platformă după validarea experienței.
 
-Recomandarea temporară este ca profilul să poată afișa cele cinci zone ca `neîncepute`, fără valori numerice și fără promisiunea unor niveluri definitive. Valorile apar numai după definirea și testarea sistemului.
+Recomandarea temporară este ca profilul să poată afișa cele cinci zone ca `neîncepute`, fără valori numerice și fără a transforma structura curriculară Level 1–5 într-un progres digital deja disponibil. Valorile, pragurile și reprezentarea nivelurilor apar numai după definirea și testarea sistemului.
 
 Această recomandare necesită confirmare ulterioară.
 

@@ -90,7 +90,6 @@ Aceste goluri sunt intenționate și sunt marcate în fișiere:
 - regulile de creare a conturilor, în special pentru minori;
 - textele juridice și fluxurile de consimțământ;
 - testimoniale, fotografii, logo-uri și rezultate cu permisiuni și surse;
-- termenul public final pentru cele cinci `perspective` — nu se schimbă în `piloni` înaintea unei decizii canonice.
 
 Absența acestor informații nu blochează designul. Se folosesc stările și variantele condiționate deja scrise, fără inventarea datelor.
 

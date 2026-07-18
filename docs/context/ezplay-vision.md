@@ -1,7 +1,7 @@
 ---
 status: Working
-version: "0.3"
-updated: 2026-07-17
+version: "0.4"
+updated: 2026-07-18
 ---
 
 # Viziunea EZPLAY
@@ -128,6 +128,19 @@ Formatele care se conturează sunt:
 - Founder Round;
 - Competiție sau Campionat EZPLAY;
 - alte experiențe care vor fi dezvoltate și validate în timp.
+
+Curriculumul este construit în jurul celor cinci Business Pillars și folosește o progresie spiralată:
+
+- Level 1 — clasele a II-a–a IV-a;
+- Level 2 — clasele a V-a–a VI-a;
+- Level 3 — clasele a VII-a–a VIII-a;
+- Level 4 — clasele a IX-a–a X-a;
+- Level 5 — clasele a XI-a–a XII-a;
+- Mastery — etapa terminală, independentă de vârstă.
+
+Level 1 rămâne fundația dezvoltată pornind de la Deckbuilder. Pentru Level 2–5 și Mastery, ordinea se inversează: stabilim mai întâi ce trebuie să înțeleagă și să poată decide participantul, apoi proiectăm jocurile, simulările și experiențele care servesc competențele.
+
+Level 5 trebuie să fie deja foarte avansat. Mastery presupune fundația anterioară sau competențe echivalente, integrează pilonii și nu repetă sistematic traseul. Mastery nu este un al șaselea pilon și nu este prezentat ca MBA ori calificare academică echivalentă.
 
 ### Platforma ezplay.org
 

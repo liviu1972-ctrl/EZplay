@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.3"
+version: "0.4"
 updated: 2026-07-18
 ---
 
@@ -14,93 +14,112 @@ Documentele de produs explică rezultatele fiecărei etape. Acest document arat�
 
 ## Principiul de lucru
 
-În prima etapă păstrăm sistemul simplu și ușor de modificat:
+Programul are două istorii de proiectare care trebuie păstrate explicit:
 
-- schițăm arhitectura suficient cât să vedem întregul sistem;
-- dezvoltăm în profunzime numai zona necesară următorului prototip;
-- evităm să definim toate perspectivele, nivelurile, competențele și pragurile XP înainte să avem dovezi din practică;
-- tratăm numărul nivelurilor, denumirile, competențele, prerechizitele și recompensele ca ipoteze `Draft`;
-- folosim primul Founder Round și playtest-urile pentru a corecta arhitectura înainte de extindere.
+- **Level 1** a pornit din configurația standard a EZPLAY Deckbuilder și rămâne fundația existentă pentru clasele a II-a–a IV-a;
+- **Level 2–5 și Mastery** pornesc din modelul celor cinci Business Pillars și din competențele pe care vrem să le dezvoltăm; jocurile și experiențele se proiectează ulterior.
 
-Finance a fost prima progresie detaliată. Hărțile Level 1 există acum în formă `Draft` pentru toți cei cinci Business Pillars și au fost reconciliate comparativ. Următoarea zonă de lucru este alegerea primului Round complet, nu dezvoltarea Level 2.
+Pentru noile niveluri, ordinea este:
+
+```text
+capacitate antreprenorială
+→ decizie și dovadă
+→ conținut și prerechizite
+→ experiență, joc sau simulare
+→ prototipare și validare
+```
+
+Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocul disponibil să limiteze curriculumul. Detalierea lor rămâne `Draft` până la revizuire de specialitate și validare.
+
+## Deciziile curriculare actuale
+
+1. Cei cinci Business Pillars formează modelul de business predat în EZPLAY.
+2. Level 1 rămâne cel construit și este calibrat pentru clasele a II-a–a IV-a.
+3. Level 2 este calibrat pentru clasele a V-a–a VI-a.
+4. Level 3 este calibrat pentru clasele a VII-a–a VIII-a.
+5. Level 4 este calibrat pentru clasele a IX-a–a X-a.
+6. Level 5 este calibrat pentru clasele a XI-a–a XII-a și este un nivel foarte avansat.
+7. Mastery este etapa terminală, independentă de vârstă și echivalentă numai structural cu un posibil Level 6.
+8. Mastery nu repetă sistematic Level 1–5 și nu este urmat de alt nivel.
+9. În faza curentă nu proiectăm Founder Loop-urile, Business Run-urile sau Challenge-urile noilor niveluri.
 
 ## Ordinea generală
 
 | Etapă | Întrebarea la care răspunde | Stare la 2026-07-18 |
 |---|---|---|
-| 1. Poziția programului | Ce este programul educațional și ce rol au jocurile? | Primul draft există |
-| 2. Fundamentul pedagogic | Cum se completează curriculumul spiral, competențele, mastery, problem-based și experiential learning? | Primul draft există |
-| 3. Arhitectura experienței | Ce sunt Founder Round și Founder Loop? | Primul draft există |
-| 4. Arhitectura progresului | Cum se leagă Founder Skills, Founder Profile, Skills XP, nivelurile, traseele și deblocările? | Terminologia este decisă; valorile nu sunt stabilite |
-| 5. Harta mare a curriculumului | Cum se raportează Strategy, Product, Market, Operations și Finance? | Hărțile Level 1 au fost comparate și delimitate |
-| 6. Spirala unei perspective | Cum evoluează gândirea Finance? | Primul draft există |
-| 7. Competențele Level 1 | Ce poate face concret participantul în fiecare Business Pillar? | Primul draft reconciliat există pentru toți cei cinci piloni |
-| 8. Alegerea primului Round complet | Care Round testează cel mai bine arhitectura programului? | Următorul pas |
-| 9. Primul Round complet | Cum arată cele cinci faze pentru Round-ul ales? | După etapele 7–8 |
-| 10. Progresul prototipului | Ce dovezi, sprijin, Skills XP și deblocări folosește primul Round? | Se definește local, odată cu Round-ul |
-| 11. Facilitarea și materialele | Ce primește facilitatorul și ce folosesc participanții? | După designul Round-ului |
-| 12. Playtest și revizie | Ce funcționează, ce este confuz și ce trebuie schimbat? | După pregătirea prototipului |
-| 13. Extinderea Finance | Ce păstrăm și cum dezvoltăm nivelurile următoare? | Numai după primul ciclu de testare |
-| 14. Nivelurile următoare ale celorlalte perspective | Cum continuă Strategy, Product, Market și Operations după Level 1? | Nu intră încă în lucru |
-| 15. Reprezentarea pe platformă | Cum sunt afișate traseele, XP-ul și deblocările pe `ezplay.org`? | După validarea experienței, nu înaintea ei |
+| 1. Poziția programului | Ce este programul și ce rol au jocurile? | Primul draft există |
+| 2. Fundamentul pedagogic | Cum se completează spirala, competențele, standardele de stăpânire și experiența? | Primul draft există |
+| 3. Modelul de business predat | Ce sunt cei cinci Business Pillars și care sunt granițele lor? | Documentat ca sursă Working și decizie Current |
+| 4. Reconcilierea Level 1 | Care este fundația comună pentru clasele a II-a–a IV-a? | Hărțile celor cinci piloni există și sunt reconciliate |
+| 5. Structura comună | Care sunt nivelurile și benzile lor? | Level 1–5 și Mastery sunt decise |
+| 6. Harta integrată | Cum crește complexitatea între niveluri? | Primul draft există |
+| 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Primul draft Level 1–Mastery există |
+| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Primul draft există |
+| 9. Audit vertical | Fiecare revenire adaugă complexitate reală? | Următorul pas |
+| 10. Audit orizontal | Nivelul este coerent ca încărcare și integrare între piloni? | După auditul vertical |
+| 11. Nucleu și extensii | Ce trebuie să știe orice participant și ce rămâne contextual? | După auditurile 9–10 |
+| 12. Competențe și dovezi | Ce poate face concret participantul și ce dovadă este suficientă? | După stabilizarea hărților |
+| 13. Expert review | Ce trebuie corectat pedagogic, economic, juridic sau profesional? | După primul set de competențe |
+| 14. Alegerea prototipului | Ce competență merită transformată prima într-o experiență? | După etapele 9–13 |
+| 15. Designul experienței | Ce joc, simulare, caz și Founder Loop servesc competența? | După alegerea prototipului |
+| 16. Playtest și revizie | Ce funcționează și ce trebuie schimbat în hartă și experiență? | După pregătirea prototipului |
+| 17. Skills XP și progres | Cum sunt recunoscute dovezile și deblocările? | După validarea unor experiențe reale |
+| 18. Reprezentarea pe platformă | Cum apar traseele și profilul pe `ezplay.org`? | După validarea modelului de utilizare |
 
 ## Fluxul imediat
 
 ```text
-Hărți Level 1 reconciliate pentru toți cei cinci Business Pillars
-→ alegerea Round-ului care va fi dezvoltat complet pentru prototip
-→ dezvoltarea Round-ului ales în cele cinci faze
-→ dovezi, sprijin, Skills XP și Level Up pentru prototip
-→ ghidul facilitatorului și materialele participanților
-→ playtest
-→ revizia curriculumului și a Round-ului
+harta comună și cele cinci spirale în primul draft
+→ audit vertical al revenirilor
+→ audit orizontal al fiecărui nivel
+→ separarea nucleului de extensii
+→ competențe și dovezi observabile
+→ expert review
+→ alegerea unei experiențe de prototipat
 ```
 
-## De ce competențele preced designul unui Round
+Prototiparea unui Round Level 1 poate continua ca fir separat de validare a metodei. Ea nu mai este o condiție care blochează proiectarea hărții Level 2–Mastery.
 
-Hărțile celor cinci Business Pillars descriu temele, întrebările fondatorului și competențele propuse pentru Level 1. Compararea lor este încheiată ca prim draft; competența fiecărui Round rămâne punctul de plecare pentru dezvoltarea experienței complete.
+## De ce competențele preced designul experienței
 
-O competență observabilă poate avea forma:
+O formulare curriculară suficient de clară poate avea forma:
 
-> Participantul poate identifica dacă Vânzările sunt limitate de Producție sau de Clienți și poate recomanda ce capacitate trebuie dezvoltată.
+> Participantul poate compara două surse de finanțare și poate explica efectele asupra Cash-ului, ownership-ului, controlului și strategiei.
 
-Această clarificare trebuie să preceadă designul complet al unui Founder Round deoarece determină:
+Această clarificare trebuie să preceadă jocul sau Founder Round-ul deoarece determină:
 
-- ce trebuie să se întâmple în Business Run;
-- ce urmărim în Founder Debrief;
-- ce trebuie să conțină Learning Input;
-- ce problemă primește echipa în Business Challenge;
+- ce variabile și informații sunt necesare;
+- ce trebuie să decidă participantul;
+- ce alternative trebuie să existe;
 - ce reprezintă o dovadă suficientă;
-- pentru ce acordăm Skills XP;
-- ce poate fi deblocat ulterior.
+- ce prerechizite sunt reale;
+- ce complexitate este potrivită nivelului;
+- ce mecanică, simulare sau caz poate face consecințele vizibile.
 
-`Observabil` nu înseamnă automat test individual sau reproducere academică. Dovada poate fi o decizie, o explicație, un model, folosirea potrivită a resurselor sau un rezultat de echipă, în funcție de competența urmărită.
+`Observabil` nu înseamnă automat test individual sau reproducere academică. Dovada poate fi o decizie, o explicație, un model, folosirea potrivită a resurselor, coordonarea unei echipe sau un rezultat comun, în funcție de competența urmărită.
 
 ## Punctul de reluare
 
-Reconcilierea comparativă a celor cinci hărți Level 1 este încheiată ca prim draft. Ea a stabilit:
+Primul draft al arhitecturii Level 1–5 și Mastery este complet la nivel de hartă. Reluăm cu:
 
-1. acces liber între Round-urile Level 1 după onboardingul comun;
-2. o singură serie obligatorie, `FIN 1.2.1 → FIN 1.2.2`, cu posibilitatea demonstrării competenței echivalente;
-3. diferența dintre prerechizite și condițiile de caz;
-4. delimitarea suprapunerilor dintre cei cinci Business Pillars;
-5. coduri Operations aliniate cu liniile curriculare.
+> **auditul vertical al fiecărei spirale, pentru a verifica dacă revenirea adaugă autonomie, variabile, incertitudine, integrare și responsabilitate, nu doar termeni noi.**
 
-La următoarea sesiune, reluăm cu:
+După auditul vertical urmează comparația orizontală a celor cinci piloni în fiecare bandă de clase.
 
-> **Alegerea primului Round complet care va fi dezvoltat pentru prototipare.**
-
-Nu trecem încă la Level 2.
+Nu proiectăm încă Founder Loop-urile nivelurilor 2–Mastery.
 
 ## Ce nu stabilim încă
 
-- numărul definitiv de Finance Levels;
-- competențele tuturor nivelurilor Finance;
-- nivelurile următoare din Strategy, Product, Market și Operations;
+- numărul și ordinea Founder Rounds din Level 2–Mastery;
+- jocurile și simulările folosite;
+- nucleul final și extensiile fiecărui nivel;
+- durata nivelurilor și a Mastery;
+- competențele granulare și rubricile de evaluare;
 - pragurile globale de Skills XP;
+- mecanismul final de poziționare și bridge;
+- forma de recunoaștere a finalizării Mastery;
 - toate prerechizitele și deblocările;
-- o regulă universală pentru recompensele fiecărui Founder Round;
 - implementarea completă pe platformă;
-- formulări publice care prezintă metoda ca validată.
+- formulări publice care prezintă hărțile Draft ca program deja disponibil sau validat.
 
-Aceste elemente vor fi dezvoltate când următoarea decizie sau următorul prototip are nevoie de ele.
+Aceste elemente sunt dezvoltate când următoarea decizie, revizuire sau prototip are nevoie de ele.

@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - Product Business Pillar definition
@@ -272,19 +272,19 @@ Product rămâne implicit. Aceasta descrie mecanica de bază, nu absența valori
 
 ### În lucru în curriculum
 
-[Product Level 1](../../products/educational-program/curriculum/product-spiral.md) propune fundații despre:
+[Spirala Product](../../products/educational-program/curriculum/product-spiral.md) păstrează Level 1 pentru clasele a II-a–a IV-a și propune progresia:
 
-- oferta firmei;
-- nevoia;
-- valoarea;
-- promisiunea;
-- îmbunătățirea.
+- Level 2 — ofertă testabilă și feedback;
+- Level 3 — validare, MVP și prioritizare;
+- Level 4 — strategie Product, Product–Market Fit și scalare;
+- Level 5 — portofoliu, inovare și product leadership;
+- Mastery — strategie de portofoliu și transformare Product la nivel de enterprise.
 
-Harta este Draft și nu reprezintă un curriculum validat.
+Harta este Draft și nu reprezintă un curriculum validat sau deja disponibil.
 
 ### Viziune
 
-Tableau Builder sau configurații speciale pot face Product explicit prin valoare, diferențiere, tehnologie, calitate, experiență sau putere de preț. Mecanica trebuie prototipată și testată.
+Jocurile, cercetările, prototipurile și simulările pentru Level 2–Mastery vor fi alese după competențele Product. Tableau Builder sau configurații speciale pot contribui, dar mecanica trebuie prototipată și testată.
 
 ## Limbaj editorial
 

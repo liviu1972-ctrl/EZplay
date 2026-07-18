@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Pentru părinți
 route: /for/parents
 evidence_map: ../content-evidence-map.md
@@ -101,7 +101,9 @@ evidence_map: ../content-evidence-map.md
 
 ### Text
 
-> Nucleul primului program este gândit pentru clasele a V-a–a X-a. Pot fi dezvoltate versiuni adaptate pentru clasele a II-a–a IV-a și experiențe mai avansate pentru clasele a XI-a–a XII-a.
+> Programul pentru tineri este structurat în cinci niveluri: Level 1 pentru clasele a II-a–a IV-a, Level 2 pentru V–VI, Level 3 pentru VII–VIII, Level 4 pentru IX–X și Level 5 pentru XI–XII. Level 1 rămâne fundația deja construită, iar experiențele următoare sunt dezvoltate și testate progresiv.
+
+> Benzile de clase calibrează limbajul, dificultatea și situațiile. Ele nu presupun că toți copiii de aceeași vârstă pornesc din același loc.
 
 > Nivelul de matematică necesar la început este redus: operații de bază, iar procentele și conceptele noi sunt introduse atunci când experiența le face relevante.
 

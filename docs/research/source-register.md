@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 canonical_for:
   - external research source register
@@ -61,6 +61,7 @@ Verificarea confirmă destinația și identitatea sursei, nu accesul gratuit la 
 | `SRC-EDU-010` | Învățare bazată pe probleme | Cindy E. Hmelo-Silver, „Problem-Based Learning: What and How Do Students Learn?”, 2004 | sinteză teoretică și de cercetare | [Springer Nature](https://doi.org/10.1023/B:EDPR.0000034022.16470.F3) | Verificat, 2026-07-16 | Parafrază și trimitere; nu stabilește formatul Founder Loop. |
 | `SRC-EDU-011` | Facilitare și scaffolding | Cindy E. Hmelo-Silver, Ravit Golan Duncan și Clark A. Chinn, „Scaffolding and Achievement in Problem-Based and Inquiry Learning”, 2007 | articol de poziție | [Rutgers University](https://scholarship.libraries.rutgers.edu/esploro/outputs/journalArticle/Scaffolding-and-Achievement-in-Problem-Based-and/991031758567904646) | Verificat, 2026-07-16 | Parafrază și trimitere; nu oferă o cantitate universală de sprijin. |
 | `SRC-EDU-012` | Învățare experiențială | Thomas Howard Morris, „Experiential Learning: A Systematic Review and Revision of Kolb's Model”, 2020 | review sistematic și revizuire conceptuală | [ERIC](https://eric.ed.gov/?id=EJ1277350) | Verificat, 2026-07-16 | Parafrază și trimitere; nu validează Founder Loop. |
+| `SRC-EDU-013` | Competențe financiare pentru copii și tineri | Comisia Europeană și OECD/INFE, „Financial competence framework for children and youth in the European Union”, 2023 | cadru instituțional de competențe | [Comisia Europeană](https://finance.ec.europa.eu/publications/commission-and-oecd-infe-publish-joint-framework-children-and-youth_en) | Verificat, 2026-07-18 | Reper pentru calibrarea pe etape; cadrul privește în principal finanțele personale și nu devine programa Finance a companiei. |
 | `SRC-BIZ-001` | Model de business | Strategyzer, „What is a Business Model?” | cadru conceptual și instrument de design | [Strategyzer](https://www.strategyzer.com/library/what-is-a-business-model) | Verificat, 2026-07-18 | Mapare și parafrază; cele nouă blocuri nu sunt reproduse vizual și nu validează împărțirea predată de EZPLAY. |
 | `SRC-BIZ-002` | Planificarea companiei | U.S. Small Business Administration, „Write your business plan”, actualizat 2025 | ghid instituțional pentru întreprinderi mici | [U.S. SBA](https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan) | Verificat, 2026-07-18 | Parafrază și comparație de acoperire; ghidul nu este tratat drept curriculum sau taxonomie universală. |
 | `SRC-BIZ-003` | Strategy | Michael E. Porter, „What Is Strategy?”, 1996 | articol conceptual | [Harvard Business Review](https://hbr.org/1996/11/what-is-strategy) | Verificat, 2026-07-18 | Parafrază scurtă a delimitării dintre strategie și eficacitate operațională; fără reproducerea articolului. |
@@ -70,6 +71,8 @@ Verificarea confirmă destinația și identitatea sursei, nu accesul gratuit la 
 | `SRC-BIZ-007` | Competență antreprenorială | Joint Research Centre, „EntreComp: The Entrepreneurship Competence Framework”, 2016 | cadru european de competențe | [Comisia Europeană — JRC](https://joint-research-centre.ec.europa.eu/entrecomp-entrepreneurship-competence-framework/competence-areas-and-learning-progress_en) | Verificat, 2026-07-18 | Comparație între competențele persoanei și perspectivele companiei; EntreComp nu validează Business Pillars sau Founder Skills. |
 | `SRC-BIZ-008` | Managementul performanței | Robert S. Kaplan și David P. Norton, „Using the Balanced Scorecard as a Strategic Management System”, 2007 | cadru conceptual și de management | [Harvard Business Review](https://hbr.org/2007/07/using-the-balanced-scorecard-as-a-strategic-management-system) | Verificat, 2026-07-18 | Parafrază scurtă a perspectivelor; cadrul nu este reprodus și nu este tratat drept alternativă curriculară directă. |
 | `SRC-BIZ-009` | Guvernanță și dimensiuni transversale | OECD, „G20/OECD Principles of Corporate Governance 2023” | principii internaționale | [OECD](https://www.oecd.org/en/publications/g20-oecd-principles-of-corporate-governance-2023_ed750b30-en/full-report/component-3.html) | Verificat, 2026-07-18 | Parafrază privind guvernanța, stakeholderii, sustenabilitatea și reziliența; aplicabilitatea la firme mici rămâne contextuală. |
+| `SRC-BIZ-010` | Acoperire general management avansată | Harvard Business School, „MBA Curriculum”, exemplul Required Curriculum 2025–2026 | reper instituțional de acoperire curriculară | [Harvard Business School](https://www.hbs.edu/mba/academic-experience/curriculum) | Verificat, 2026-07-18 | Comparație de acoperire și integrare; Mastery nu este prezentat ca MBA, diplomă sau echivalență academică. |
+| `SRC-BIZ-011` | Capital, investitori și listare publică | U.S. Securities and Exchange Commission, „Resources for Small Businesses” și „Going Public” | resurse instituționale despre atragerea capitalului | [SEC — resurse](https://www.sec.gov/resources-small-businesses), [SEC — Going Public](https://www.sec.gov/resources-small-businesses/going-public) | Verificat, 2026-07-18 | Reper pentru alternative, obligații și compromisuri; cadrul SUA nu devine consultanță juridică sau regulă universală. |
 
 ## Acoperirea curentă
 
@@ -84,12 +87,15 @@ Registrul acoperă în prezent:
 - învățarea experiențială;
 - comparația Business Pillars cu modele de business, planificare, strategie și managementul performanței;
 - delimitările conceptuale pentru Product, Market, Operations și Finance;
-- competența antreprenorială și dimensiunile transversale de guvernanță.
+- competența antreprenorială și dimensiunile transversale de guvernanță;
+- competențele financiare pentru copii și tineri ca reper de etapizare;
+- acoperirea general management pentru un program terminal avansat;
+- capitalul, investitorii și listarea publică drept decizii cu obligații și compromisuri.
 
 Nu acoperă încă în mod suficient:
 
 - educația antreprenorială pentru copii și adolescenți ca domeniu distinct;
-- educația financiară pe grupe de vârstă;
+- alinierea detaliată dintre educația financiară antreprenorială și curriculumurile școlare pe grupe de vârstă;
 - evaluarea competențelor antreprenoriale;
 - siguranța psihologică și competiția în grupuri de minori;
 - accesibilitatea și incluziunea experiențelor de joc;

@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.4"
+version: "0.5"
 updated: 2026-07-18
 ---
 
@@ -8,17 +8,17 @@ updated: 2026-07-18
 
 ## Rolul documentului
 
-Acest document este sursa de lucru pentru progresia curriculară Finance din Programul educațional EZPLAY. El păstrează într-un singur loc nivelurile, continuitatea curriculumului și harta Round-urilor dezvoltate pentru fiecare nivel.
+Acest document este sursa de lucru pentru progresia curriculară Finance din Programul educațional EZPLAY. Păstrează Finance Level 1 existent, dezvoltă capacitățile propuse pentru Level 2–5 și definește contribuția Finance la Mastery.
 
 Nu este încă:
 
 - curriculum complet;
-- programă completă pentru toate grupele de vârstă;
-- listă de Round-uri gata de livrare;
+- programă completă și validată pentru toate grupele de vârstă;
+- listă de Round-uri pentru Level 2–Mastery;
 - sistem validat de niveluri, competențe sau evaluare;
 - promisiune despre funcțiile platformei.
 
-Arhitectura comună a programului, inclusiv relația dintre spirală, Skills XP, niveluri și Founder Rounds, este definită în [arhitectura curriculară](architecture.md). Formulele și termenii economici canonici rămân în [modelul economic EZPLAY](../../../methods/economic-model.md) și nu sunt redefiniți aici.
+Arhitectura comună a programului, inclusiv relația dintre spirală, Skills XP, niveluri și Founder Rounds, este definită în [arhitectura curriculară](architecture.md). Standardul orizontal este în [harta Level 1–5 și Mastery](progression-map.md), definiția pilonului în [Business Pillar — Finance](../../../methods/business-pillars/finance.md), iar formulele și termenii economici canonici rămân în [modelul economic EZPLAY](../../../methods/economic-model.md).
 
 ## Finance pentru fondatori
 
@@ -47,18 +47,18 @@ Numărul identifică nivelul și continuitatea curriculară. El nu impune singur
 
 ## Deciziile de design ale draftului
 
-### O spirală, șase niveluri de lucru
+### O spirală, cinci niveluri și Mastery
 
-Draftul propune șase Finance Levels:
+Finance folosește structura comună decisă pentru program:
 
-1. Banii companiei;
-2. Profitul nu este Cash;
-3. Citim compania;
-4. Diagnosticăm compania;
-5. Planificăm și finanțăm;
-6. Construim valoare.
+1. Level 1 — banii și rezultatele de bază ale firmei, clasele a II-a–a IV-a;
+2. Level 2 — planificarea banilor și continuitatea, clasele a V-a–a VI-a;
+3. Level 3 — citirea companiei și economia ei, clasele a VII-a–a VIII-a;
+4. Level 4 — diagnostic, forecast și finanțarea creșterii, clasele a IX-a–a X-a;
+5. Level 5 — valoare, capital și investitori, clasele a XI-a–a XII-a;
+6. Mastery — corporate finance, ownership și tranzacții, independent de vârstă.
 
-Numărul șase nu este definitiv. Separarea dintre nivelurile 1 și 2 este însă intenționată: diferența dintre Profit și Cash este prea importantă pentru a fi ascunsă într-un nivel introductiv foarte larg sau amânată până la situațiile financiare formale.
+Mastery este echivalent numai structural cu vechiul draft de `Finance Level 6`. Nu se folosește ca nivel numeric al pilonului și nu se obține automat prin XP.
 
 ### Decizii la fiecare nivel
 
@@ -71,9 +71,9 @@ Finance nu evoluează de la „teorie” la „decizie” abia spre final. Parti
 - calitatea argumentării cerute;
 - consecințele și orizontul deciziei.
 
-### Nivelurile nu sunt grupe de vârstă
+### Nivelurile folosesc grupe de referință fără a deveni etichete rigide
 
-Finance Level exprimă poziția participantului în progresia competenței, nu vârsta sau clasa. Aceeași competență poate fi demonstrată prin contexte, vocabular, cifre și instrumente diferite.
+Finance Level exprimă poziția participantului în progresia competenței. Fiecare Level 1–5 are o bandă principală de clase care calibrează contextele, vocabularul, cifrele și instrumentele, fără să acorde automat nivelul.
 
 Un participant mai mic poate lucra cu bani concreți, jetoane și alegeri pe o singură rundă. Un adolescent sau adult poate demonstra aceeași idee cu termene de plată, un tabel de Cash Flow și justificarea ipotezelor. Cerința cognitivă și forma dovezii trebuie calibrate separat.
 
@@ -85,7 +85,7 @@ O listă `Money → Statements → Performance → Decisions → Leadership` ar 
 
 ### Finance Level 1
 
-Finance Level 1 este calibrat inițial pentru nivelul mediu al clasei a IV-a din România, aproximativ 9–10 ani. Poate fi accesibil participanților bine pregătiți din clasa a III-a și participanților mai mari care nu au încă această fundație financiară. Clasa de referință calibrează prezentarea, nu devine o etichetă rigidă de vârstă.
+Finance Level 1 este calibrat pentru clasele a II-a–a IV-a din România. Poate fi accesibil și participanților mai mari care nu au încă această fundație financiară. Banda de referință calibrează prezentarea, nu devine o etichetă rigidă de vârstă.
 
 EZPLAY Deckbuilder este instrumentul principal al nivelului. În joc, participantul calculează în fiecare trimestru Vânzările, Cheltuielile, Profitul, Cash Flow-ul și Cash-ul, iar la sfârșitul anului Cifra de afaceri anuală și Profitul anual. Acești indicatori nu sunt amânați pentru nivelurile avansate; revin în Round-uri cu întrebări și decizii diferite.
 
@@ -290,145 +290,286 @@ După onboardingul comun, Round-urile pot fi parcurse în orice ordine, cu o sin
 - bugete, prognoze, finanțare și valuation;
 - conturi contabile, debit, credit și evidență analitică.
 
-Diferența dintre Profit și Cash este întâlnită la Level 1 prin calculele Deckbuilder. Termenele de încasare și plată, decalajele dintre recunoașterea rezultatului și mișcarea banilor și Cash Flow Statement-ul formal apar ulterior. Ultima categorie rămâne în afara scopului implicit al programului, dacă nu devine necesară unei decizii antreprenoriale concrete.
+Diferența dintre Profit și Cash este întâlnită la Level 1 prin calculele Deckbuilder. Termenele de încasare și plată, decalajele dintre recunoașterea rezultatului și mișcarea banilor și Cash Flow Statement-ul formal apar ulterior. Conturile contabile, debitul, creditul și evidența analitică rămân în afara scopului implicit al programului, dacă nu devin necesare unei decizii antreprenoriale concrete.
 
-### Finance Level 2 — Profitul nu este Cash
+### Finance Level 2 — planificăm banii și continuitatea
 
-**Întrebarea fondatorului:** Cum poate o companie profitabilă să rămână fără bani?
+**Calibrare:** clasele a V-a–a VI-a.
 
-**Capacitate centrală:** Participantul poate anticipa efectul momentului încasărilor și plăților și poate evita o decizie profitabilă pe hârtie care produce o criză de Cash.
+#### Cele două registre editoriale ale nivelului
 
-**Concepte introduse sau aprofundate:**
+**Titlu pentru participant:** Cum planificăm banii ca firma să poată continua?
+
+**Descriere pentru participant:** Urmărești când vinde firma, când încasează, când plătește și ce rezervă îi trebuie. Compari prețul, costurile, Profitul și Cash-ul și construiești un plan simplu pentru mai multe perioade.
+
+**Titlu pedagogic:** Profit versus Cash, buget și continuitate
+
+**Descriere pedagogică:** Participantul diferențiază rezultatul economic de mișcarea banilor, construiește un buget simplu, estimează pragul de rentabilitate și alege un plan care protejează continuitatea.
+
+**Întrebarea fondatorului:** Cum poate firma să fie profitabilă și totuși să rămână fără bani și ce plan previne această situație?
+
+**Capacitate centrală:** Participantul poate planifica Revenue, costurile, Profitul și Cash-ul pe mai multe perioade și poate anticipa un blocaj de lichiditate.
+
+#### Arii curriculare
 
 - Profit versus Cash;
-- Cash Flow pe mai multe perioade;
-- încasări versus Revenue;
-- plăți versus Expenses;
-- termene și succesiunea evenimentelor;
-- rezervă de Cash și solvabilitate operațională.
+- Revenue versus încasare;
+- Expenses versus plată;
+- termene și cronologia banilor;
+- preț, volum și Revenue;
+- costuri fixe și variabile la nivel introductiv;
+- contribuție și break-even în formă simplă;
+- buget și comparația plan–realizat;
+- rezervă de Cash și runway simplu;
+- investiție versus cheltuială curentă la nivel de decizie;
+- surse simple de bani: contribuția fondatorului, împrumut și investiție;
+- obligații, rambursare și responsabilitatea față de bani.
 
-**Concepte revizitate:** Revenue, Expenses, Profit, Cash Flow, Cash, Cifra de afaceri și Profitul anual sunt urmărite în timp, nu numai ca total final.
+#### Participantul poate
 
-**Reveniri și decizii:** Participantul alege proiecte, termene, investiții sau rezerve; sacrifică uneori Profit teoretic pentru continuitatea companiei; explică ce eveniment produce blocajul de Cash.
+- construi o cronologie a încasărilor și plăților;
+- explica de ce Profitul și variația Cash-ului diferă;
+- calcula Revenue pentru combinații simple de preț și volum;
+- clasifica și compara costuri fixe și variabile;
+- estima câte unități trebuie vândute pentru break-even;
+- construi un buget pe câteva perioade;
+- compara bugetul cu rezultatul și identifica abaterea principală;
+- estima rezerva necesară pentru un scenariu simplu;
+- compara folosirea banilor pentru cheltuială, investiție sau rezervă;
+- distinge împrumutul de investiție la nivel de principiu;
+- recomanda o alternativă care evită o criză de Cash.
 
-**Dovezi posibile:** construiește o cronologie simplă a încasărilor și plăților; detectează o criză înainte să apară; propune o alternativă fezabilă și își argumentează decizia.
+#### Dovezi de nivel
 
-**Instrumente probabile:** Deckbuilder extins prin Learning Input și documente de lucru, Business Challenges cu tabele și timp, simulări simple pe mai multe perioade.
+Participantul poate construi un plan financiar simplu, detecta momentul în care apare lipsa de Cash și modifica prețul, volumul, costul, termenul sau investiția pentru a păstra continuitatea.
 
-### Finance Level 3 — Citim compania
+#### Granița spre Level 3
 
-**Întrebarea fondatorului:** Ce poveste spun situațiile financiare despre companie?
+Level 2 nu cere încă situații financiare complete, indicatori dezvoltați, Working Capital formal, cap table, valuation sau un proces de finanțare.
 
-**Capacitate centrală:** Participantul poate citi și conecta informația de bază din Profit & Loss, Cash Flow Statement și Balance Sheet, fără să confunde rolurile lor.
+### Finance Level 3 — citim compania și economia ei
 
-**Concepte introduse:**
+**Calibrare:** clasele a VII-a–a VIII-a.
 
-- Profit & Loss;
+#### Cele două registre editoriale ale nivelului
+
+**Titlu pentru participant:** Ce poveste spun cifrele despre companie?
+
+**Descriere pentru participant:** Citești rezultatul, banii și poziția firmei din trei perspective diferite. Urmărești o decizie prin P&L, Cash Flow și Balance Sheet și descoperi ce produs, client sau proces produce rezultatul.
+
+**Titlu pedagogic:** Situații financiare, marje, unit economics și Working Capital
+
+**Descriere pedagogică:** Participantul citește și conectează situații financiare simplificate, folosește marje, break-even, unit economics și Working Capital și compară finanțarea de bază prin datorie și Equity.
+
+**Întrebarea fondatorului:** Ce arată performanța, Cash-ul și poziția financiară împreună și care parte a modelului produce rezultatul?
+
+**Capacitate centrală:** Participantul poate citi și conecta P&L, Cash Flow Statement și Balance Sheet și poate folosi informația pentru a explica economia companiei și a lua o decizie.
+
+#### Arii curriculare
+
+- P&L / Profit & Loss;
 - Cash Flow Statement;
 - Balance Sheet;
-- Assets;
-- Liabilities;
-- Equity în sens economic;
-- relațiile de bază dintre cele trei situații.
+- Assets, Liabilities și Equity;
+- legăturile de bază dintre cele trei situații;
+- COGS, Gross Profit și Gross Margin;
+- costuri fixe, variabile și break-even;
+- unit economics;
+- creanțe, datorii comerciale, stoc și Working Capital;
+- Cash conversion la nivel introductiv;
+- buget versus actual și variații;
+- datorie, dobândă și rambursare;
+- Equity, ownership și diluție la nivel introductiv;
+- taxe și obligații ca elemente economice, fără consultanță fiscală;
+- controale simple și calitatea informației.
 
-**Concepte revizitate:** Revenue, Expenses, Profit și Cash sunt formalizate și localizate în documentele potrivite. O decizie întâlnită anterior este urmărită prin efectele ei în mai multe situații.
+#### Participantul poate
 
-**Reveniri și decizii:** Participantul identifică unde trebuie să caute răspunsul, reconstruiește o explicație din documente și evită concluziile bazate pe un singur indicator.
+- identifica situația financiară în care se află informația relevantă;
+- explica legătura dintre Profit și variația Cash-ului;
+- urmări efectul unei decizii prin cele trei situații;
+- calcula și interpreta Gross Margin;
+- construi o analiză simplă de unit economics;
+- explica efectul creanțelor, stocului și datoriilor asupra Cash-ului;
+- compara bugetul cu rezultatul și separa prețul, volumul și costul;
+- compara datoria și Equity prin rambursare, ownership, risc și control;
+- identifica o eroare sau informație lipsă;
+- lega simptomul financiar de Product, Market sau Operations.
 
-**Dovezi posibile:** explică de ce Profit și variația Cash-ului diferă; urmărește o tranzacție simplă; găsește informația relevantă pentru o decizie și justifică documentele folosite.
+#### Dovezi de nivel
 
-**Instrumente probabile:** situații simplificate, foi de lucru și simulări. Tableau Builder ar putea contribui în viitor, dar rolul său este încă la nivel de concept și trebuie prototipat.
+Participantul poate reconstrui povestea unei companii din situații financiare simplificate, poate identifica driverul principal și poate recomanda o intervenție justificată prin economie și Cash.
 
-### Finance Level 4 — Diagnosticăm compania
+#### Granița spre Level 4
 
-**Întrebarea fondatorului:** Este compania sănătoasă și unde se află problema reală?
+Level 3 citește și explică firma. Level 4 cere diagnostic comparativ, forecast, scenarii și proiectarea finanțării unei etape de creștere.
 
-**Capacitate centrală:** Participantul poate diagnostica performanța și sănătatea financiară folosind mai mulți indicatori în context, nu prin aplicarea izolată a unei formule.
+### Finance Level 4 — diagnostic, forecast și finanțarea creșterii
 
-**Concepte introduse:**
+**Calibrare:** clasele a IX-a–a X-a.
 
-- Gross Profit și Gross Margin;
-- EBITDA;
-- EBIT;
-- Net Profit;
-- Working Capital;
-- indicatori de lichiditate, eficiență și îndatorare selectați;
-- comparație în timp și cu repere relevante.
+#### Cele două registre editoriale ale nivelului
 
-**Concepte revizitate:** Profit și Cash sunt reinterpretate prin marje, capital de lucru, active, datorii și ritmul operațional. Situațiile financiare devin surse pentru diagnostic.
+**Titlu pentru participant:** Cum finanțăm creșterea fără să pierdem controlul asupra riscului?
 
-**Reveniri și decizii:** Participantul separă simptomul de cauză, compară explicații alternative și recomandă o intervenție. Trebuie să arate ce informație lipsește și câtă încredere are în concluzie.
+**Descriere pentru participant:** Diagnostichezi compania, construiești forecasturi și scenarii și compari investiții și surse de bani. Urmărești cum datoria sau Equity schimbă Cash-ul, riscul, ownership-ul și deciziile viitoare.
 
-**Dovezi posibile:** identifică principalul risc dintr-un caz; alege indicatorii relevanți; explică legătura dintre deciziile din Operations, Market sau Product și efectul financiar observat.
+**Titlu pedagogic:** Diagnostic financiar, scenarii, investiții și structură de finanțare
 
-**Instrumente probabile:** cazuri, seturi de situații financiare, foi de calcul și simulări cu mai multe variabile. Jocurile existente pot constitui contextul, dar nu trebuie forțate să predea toate conceptele.
+**Descriere pedagogică:** Participantul diagnostichează performanța și lichiditatea, construiește forecasturi și sensibilități, evaluează investiții și compară datoria și Equity, inclusiv efectul într-un cap table simplu.
 
-### Finance Level 5 — Planificăm și finanțăm
+**Întrebarea fondatorului:** De câți bani avem nevoie, pentru ce, din ce sursă și ce risc sau drepturi cedăm în schimb?
 
-**Întrebarea fondatorului:** Ce alegere financiară facem pentru următoarea etapă și cum o susținem?
+**Capacitate centrală:** Participantul poate construi și apăra un plan financiar de creștere, cu diagnostic, scenarii, investiție, finanțare și risc.
 
-**Capacitate centrală:** Participantul poate construi și compara scenarii, poate evalua o investiție sau o nevoie de finanțare și poate recomanda o decizie compatibilă cu riscul și obiectivele companiei.
+#### Arii curriculare
 
-**Concepte introduse:**
-
-- Budgeting;
-- Forecasting;
+- analiza integrată a situațiilor financiare;
+- Gross Margin, EBITDA, EBIT și Net Profit în context;
+- indicatori selectați de lichiditate, eficiență și îndatorare;
+- calitatea Revenue-ului și Profitului;
+- Working Capital și Cash conversion cycle;
+- budgeting, forecasting și rolling forecast la nivel de principiu;
 - scenarii și sensibilitate;
-- investiții;
-- finanțare prin datorie și Equity;
-- costul și constrângerile finanțării;
-- risc și incertitudine.
+- runway și necesar de finanțare;
+- evaluarea investițiilor prin payback, randament și risc la nivel potrivit;
+- datorie: cost, maturitate, garanții și constrângeri la nivel de business;
+- Equity: ownership, control și așteptarea investitorului;
+- cap table simplu și diluție;
+- valuation la nivel introductiv și limitele preciziei;
+- finanțare pe etape și milestone-uri;
+- control intern, raportare și responsabilitate.
 
-**Concepte revizitate:** Revenue, marjele, Cash Flow, Working Capital și Balance Sheet devin ipoteze și constrângeri ale viitorului. Diagnosticul alimentează planul.
+#### Participantul poate
 
-**Reveniri și decizii:** Participantul compară creșterea cu reziliența, estimează nevoia de Cash, testează ipoteze și explică ce ar schimba recomandarea.
+- selecta indicatorii potriviți unei întrebări;
+- diagnostica performanța, lichiditatea și riscul fără un singur raport;
+- construi un forecast cu ipoteze din Market și Operations;
+- testa sensibilitatea la preț, volum, cost, timp și investiție;
+- estima necesarul de Cash și momentul finanțării;
+- compara investiții prin efect, timp, risc și flexibilitate;
+- compara o ofertă de datorie cu o investiție Equity;
+- construi și explica un cap table simplu înainte și după investiție;
+- explica diluția și diferența dintre ownership și control;
+- folosi o estimare de valoare fără a o prezenta ca fapt;
+- recomanda o structură de finanțare și semnalele de revizuire.
 
-**Dovezi posibile:** construiește un scenariu coerent; selectează o sursă de finanțare și argumentează compromisurile; reacționează la schimbarea unei ipoteze fără să reconstruiască mecanic tot răspunsul.
+#### Dovezi de nivel
 
-**Instrumente probabile:** foi de calcul, simulări de scenarii, cazuri de investiție și negociere. Integrarea cu Strategy, Operations, Product și Market devine mai puternică.
+Participantul poate apăra un plan financiar de creștere prin model, ipoteze, scenarii, cap table, riscuri și legături cu ceilalți piloni și poate răspunde unei schimbări semnificative a contextului.
 
-### Finance Level 6 — Construim valoare
+#### Granița spre Level 5
 
-**Întrebarea fondatorului:** Cum alocăm capitalul pentru a construi valoare durabilă?
+Level 4 proiectează finanțarea unei etape. Level 5 cere leadership asupra valorii, structurii de capital, relației cu investitorii, rundelor succesive, guvernanței și căilor de transformare sau exit.
 
-**Capacitate centrală:** Participantul poate evalua alternative strategice din perspectiva valorii pe termen lung și poate integra performanța, riscul, finanțarea și interesele investitorilor într-o recomandare coerentă.
+### Finance Level 5 — valoare, capital și investitori
 
-**Concepte introduse:**
+**Calibrare:** clasele a XI-a–a XII-a.
 
-- valoarea companiei;
-- principii de valuation;
-- capital allocation;
+#### Cele două registre editoriale ale nivelului
+
+**Titlu pentru participant:** Cum atragem și alocăm capital fără să pierdem sensul companiei?
+
+**Descriere pentru participant:** Construiești un model multianual, estimezi valoarea, compari investitori și termeni și urmărești ownership-ul prin mai multe runde. Alegi cum aloci capitalul și cum răspunzi în fața investitorilor și board-ului.
+
+**Titlu pedagogic:** Valuation, capital structure, fundraising și guvernanță financiară
+
+**Descriere pedagogică:** Participantul integrează modelarea financiară, valuation-ul, capital allocation, cap table-ul, fundraisingul, due diligence-ul și guvernanța într-o recomandare avansată despre valoare și finanțare.
+
+**Întrebarea fondatorului:** Ce capital servește strategia, ce valoare și drepturi negociem și cum folosim banii responsabil după tranzacție?
+
+**Capacitate centrală:** Participantul poate conduce analiza financiară a unei decizii complexe de investiție sau finanțare și poate apăra efectele asupra valorii, ownership-ului, controlului, riscului și guvernanței.
+
+#### Arii curriculare
+
+- model financiar integrat și forecast multianual;
+- scenarii, probabilități și limitele modelului;
+- capital allocation și portofoliu de investiții;
 - Enterprise Value și Equity Value;
-- creștere versus randament și risc;
-- perspectivă de investitor;
-- planificare financiară pe termen lung.
+- valuation prin abordări multiple, la nivel de principiu;
+- structură de capital și costul capitalului la nivel de decizie;
+- cap table prin runde succesive;
+- option pool și stimulente Equity la nivel de principiu;
+- instrumente de finanțare și conversie la nivel conceptual;
+- term sheet: economie, control, protecții și guvernanță la nivel de principiu;
+- investor fit și strategia de fundraising;
+- pitch, financial story și limitele narațiunii;
+- due diligence și data room;
+- board reporting, controale și responsabilitate față de capital;
+- taxe, reglementare și jurisdicție ca domenii care cer specialiști;
+- vânzare, achiziție, restructurare și exit;
+- IPO ca opțiune strategică, cu costuri și obligații continue.
 
-**Concepte revizitate:** întregul traseu, de la Revenue și Cash până la scenarii și finanțare, este folosit pentru a explica de unde provine sau unde se distruge valoarea.
+#### Participantul poate
 
-**Reveniri și decizii:** Participantul compară investiții și direcții strategice, explică ipotezele unei evaluări și recunoaște limitele preciziei. Leadership nu înseamnă statut, ci responsabilitatea pentru coerența sistemului și consecințele pe termen lung.
+- construi și critica un model financiar multianual;
+- explica diferența dintre valoare și preț;
+- folosi mai multe abordări de valuation și declara limitele;
+- compara alocări de capital prin randament, risc și opțiuni;
+- construi un cap table prin mai multe runde;
+- explica efectul diluției, option pool-ului și drepturilor de control;
+- analiza un term sheet la nivelul deciziei de business și identifica întrebările pentru specialiști;
+- evalua potrivirea unui investitor dincolo de bani;
+- construi logica unui proces de fundraising și milestone-urile finanțate;
+- pregăti informația necesară due diligence-ului;
+- proiecta raportarea pentru management, board și investitori;
+- compara continuarea privată, vânzarea, achiziția, restructurarea și listarea la nivel de principiu;
+- susține recomandarea în fața unor stakeholderi cu interese diferite.
 
-**Dovezi posibile:** susține o decizie de alocare a capitalului; construiește o explicație de valoare cu scenarii; răspunde critic la o ofertă de investiție sau achiziție.
+#### Dovezi de nivel
 
-**Instrumente probabile:** cazuri integrate, modele financiare, simulări, informații incomplete și prezentări de decizie. Tableau Builder poate fi explorat ca parte a experienței, nu presupus ca soluție completă.
+Participantul poate apăra o decizie de finanțare sau investiție prin model, valoare, cap table, termeni, investor fit, utilizarea capitalului, guvernanță, scenarii și efecte în cei cinci piloni.
+
+#### Granița spre Mastery
+
+Level 5 oferă o decizie financiară complexă și cere o recomandare avansată. În Mastery, participantul formulează problema de capital sau tranzacție, conduce procesul cu specialiști și guvernează relația, execuția și adaptarea după decizie.
+
+### Finance în Mastery — corporate finance, ownership și tranzacții
+
+**Calibrare:** independentă de vârstă; fundație Level 5 sau echivalentă.
+
+**Întrebarea fondatorului:** Cum guvernăm capitalul, ownership-ul și valoarea companiei prin finanțare, transformare, tranzacții și schimbări de ciclu de viață?
+
+**Contribuția Finance la Mastery:** Participantul poate formula și conduce strategia financiară a unei companii sau a unui portofoliu, mobilizând expertiza necesară și răspunzând pentru capital allocation, ownership, control, risc și raportare.
+
+Finance Mastery poate include, când problema o cere:
+
+- corporate finance și strategie de capital pe ciclul de viață;
+- modele integrate, scenarii și decizii sub incertitudine;
+- valuation avansat și limitele lui;
+- structură de capital și instrumente complexe împreună cu specialiști;
+- negocierea economică și de control a finanțării;
+- relația fondator–management–board–investitori;
+- investor relations și comunicare financiară;
+- due diligence financiar și pregătirea tranzacției;
+- achiziții, vânzări, fuziuni și integrare;
+- restructurare, turnaround și insolvență la nivel de decizie;
+- succesiune și lichiditate pentru proprietari;
+- pregătirea pentru o posibilă listare publică;
+- raportare, controale și obligații ale companiei publice la nivel de leadership;
+- capital allocation între afaceri, produse și opțiuni;
+- risc, sustenabilitate și valoare pe termen lung.
+
+Mastery nu reia situațiile financiare, marjele sau cap table-ul ca noțiuni introductive. Le folosește critic într-o decizie cu miză și jurisdicție reală, alături de profesioniștii necesari.
 
 ## Matricea revenirilor
 
-Tabelul arată cum pot reveni aceleași fire conceptuale. Este o hartă de proiectare, nu o listă completă de competențe.
+Tabelul arată cum revin aceleași fire conceptuale. Este o hartă de proiectare, nu o listă completă de competențe.
 
-| Fir recurent | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 | Level 6 |
+| Fir recurent | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 | Mastery |
 |---|---|---|---|---|---|---|
-| Revenue, Expenses, Profit | urmărește și compară | separă totalul de momentul banilor | citește în P&L | analizează marje și calitatea Profitului | proiectează scenarii | leagă de valoare și randament |
-| Cash și Cash Flow | calculează Cash Flow-ul și Cash-ul | anticipează blocajul | conectează situațiile | explică lichiditatea și Working Capital | estimează nevoia de finanțare | evaluează reziliența și capitalul |
-| Assets, Liabilities, Equity | întâlnește resurse și obligații concrete | observă efectul angajamentelor | citește Balance Sheet | diagnostichează structură și risc | compară surse de finanțare | separă Enterprise Value de Equity Value |
-| Performanță | compară Cifra de afaceri, Profitul anual și Cash-ul | compară Profit cu supraviețuirea | folosește trei perspective contabile | selectează indicatori | proiectează ținte și scenarii | evaluează crearea de valoare |
-| Decizie | alege cu resurse limitate | gestionează timp și lichiditate | caută informația potrivită | intervine asupra cauzei | investește și finanțează | alocă capital pe termen lung |
-| Risc și incertitudine | observă consecințe | păstrează rezervă | identifică informație lipsă | compară explicații | testează sensibilități | explică limitele evaluării |
+| **Revenue, cost și Profit** | calculează și compară | leagă prețul, volumul și costul | citește P&L, marje și unit economics | diagnostichează și proiectează scenarii | modelează calitatea Revenue-ului și valoarea | conduce portofoliul și capital allocation |
+| **Cash și Cash Flow** | calculează Cash Flow-ul și Cash-ul | anticipează blocajul și bugetează | explică Working Capital | estimează runway și finanțare | integrează rundele și utilizarea capitalului | guvernează lichiditatea, tranzacțiile și reziliența |
+| **Assets, Liabilities, Equity** | întâlnește resurse și obligații | distinge surse simple de bani | citește Balance Sheet și finanțarea de bază | construiește cap table și compară datorie/Equity | gestionează structura de capital, diluția și controlul | conduce ownership-ul și instrumentele complexe |
+| **Performanță** | compară rezultatul anual | compară planul cu realizatul | folosește situații și indicatori | diagnostichează și face forecast | evaluează valoarea și randamentul | conduce raportarea și performanța de enterprise |
+| **Finanțare** | folosește responsabil banii firmei | distinge contribuția, împrumutul și investiția | compară datoria și Equity | proiectează finanțarea creșterii | conduce fundraisingul și relația cu investitorii | guvernează strategia de capital și tranzacțiile |
+| **Decizie și risc** | alege cu resurse limitate | protejează continuitatea | găsește driverul și informația lipsă | testează scenarii și sensibilități | negociază valoare, drepturi și risc | mobilizează specialiști și răspunde pentru decizie |
 
 ## Relația cu celelalte spirale
 
 Finance nu trebuie predat ca o insulă. Prerechizitele între perspective se introduc când problema financiară nu poate fi înțeleasă fără ele.
 
-Ipoteze de legătură care trebuie testate:
+Legături obligatorii de verificat:
 
 - Forecasting cere ipoteze din Market și Operations;
 - evaluarea unei investiții în produs cere Product și Strategy;
@@ -452,28 +593,31 @@ Fiecare capacitate centrală trebuie descompusă ulterior în competențe observ
 
 Un răspuns corect poate fi dovadă insuficientă dacă este obținut întâmplător. În același timp, o singură persoană nu trebuie examinată ca și cum ar lucra fără echipă sau resurse atunci când competența urmărită este o decizie antreprenorială colectivă. Fișa Round-ului trebuie să spună clar ce dovedește echipa și ce, dacă este necesar, trebuie observat individual.
 
-## Prima zonă de prototipare
+## Ordinea dezvoltării experiențelor
 
-Primul Round complet nu este încă ales. Tema istorică `Profit, Cash și Cash Flow` a fost desfăcută în Level 1 în Round-uri distincte despre Profit, Cash Flow, decizia financiară și continuitatea firmei. Alegerea prototipului trebuie făcută dintre Round-urile reconciliate, nu păstrată automat doar pentru că există exerciții mai vechi pe această temă.
+În această etapă, harta Finance stabilește ce trebuie să poată decide participantul. Nu proiectează Round-urile Level 2–Mastery.
 
-Pentru primul prototip trebuie clarificate:
+Ordinea ulterioară este:
 
-1. competența exactă urmărită, nu doar lista conceptelor;
-2. experiența minimă de onboarding necesară;
-3. ce parte este demonstrată individual în Business Run și Founder Debrief;
-4. ce parte este demonstrată de echipă în Business Challenge;
-5. ce sprijin este disponibil și cum se modifică provocarea;
-6. ce Skills XP poate fi acordat și de ce;
-7. ce observații din playtest pot confirma sau infirma poziționarea Round-ului în Level 1.
+1. descompunerea capacității centrale în competențe observabile;
+2. definirea dovezilor și a standardului de stăpânire;
+3. stabilirea prerechizitelor reale din ceilalți piloni;
+4. alegerea contextului, datelor și instrumentelor;
+5. proiectarea experienței și a sprijinului;
+6. calibrarea pentru banda de clase sau Mastery;
+7. prototiparea și revizuirea hărții.
+
+Round-urile Level 1 pot fi prototipate separat. Tema istorică `Profit, Cash și Cash Flow` nu stabilește automat ce experiență este dezvoltată prima.
 
 ## Întrebări deschise
 
-- Sunt necesare șase niveluri sau unele pot fi unite după prototipare?
 - Finance Level începe la 0 sau la 1?
 - Care sunt competențele obligatorii și care sunt extensii opționale în fiecare nivel?
-- Ce concepte avansate sunt potrivite pentru adolescenți și în ce formă?
+- Ce profunzime tehnică este potrivită pentru fiecare bandă fără să slăbească standardul deciziei?
 - Cât de multă precizie contabilă este necesară înainte ca formalismul să acopere gândirea antreprenorială?
 - Ce dovezi trebuie să fie individuale și ce dovezi pot aparține echipei?
 - Când este suficient pragul Finance XP și când este justificat un prerechizit specific?
 - Cum poate un participant intra în spirală cu experiență anterioară fără să refacă toate Founder Rounds?
-- Ce instrumente noi sunt necesare după ce Deckbuilder nu mai poate susține natural obiectivul curricular?
+- Care este nucleul obligatoriu Level 5 și ce poate rămâne extensie contextuală?
+- Ce jurisdicții și surse profesionale sunt necesare pentru aplicațiile despre Equity, taxe, tranzacții și IPO?
+- Cum devine vizibilă contribuția Finance la finalizarea integrată Mastery?

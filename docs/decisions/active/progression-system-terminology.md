@@ -1,13 +1,14 @@
 ---
 status: Current
-version: "1.0"
-updated: 2026-07-17
+version: "1.1"
+updated: 2026-07-18
 lifecycle: active
 canonical_for:
   - Business Pillars terminology
   - Founder Skills and Founder Profile terminology
   - Skills XP and pillar-specific XP terminology
   - Level Up and New Level terminology
+  - Mastery stage terminology
 ---
 
 # Terminologia sistemului de progres EZPLAY
@@ -86,6 +87,24 @@ Finance Level: 1 → 2
 
 `Level New` nu se folosește.
 
+### Level 1–5 și Mastery
+
+Fiecare Business Pillar folosește nivelurile numerice 1–5. **Mastery** este etapa curriculară terminală și integrată, independentă de vârstă.
+
+Mastery:
+
+- este echivalent numai structural cu un posibil Level 6;
+- nu se numește `Founder Level 6`;
+- nu este un nivel numeric separat în fiecare pilon;
+- nu creează `Founder XP`;
+- nu se obține automat numai prin atingerea unui prag XP;
+- presupune fundația Level 5 în cei cinci piloni sau competențe echivalente.
+
+Documentația păstrează diferența dintre:
+
+- **standard de mastery** sau **standard de stăpânire** — suficiența într-o competență de la orice nivel;
+- **Mastery** — numele propriu al programului terminal.
+
 ## Forme scurte permise
 
 După prima mențiune neambiguă într-un document, ecran sau conversație:
@@ -101,12 +120,12 @@ Formele scurte nu se folosesc când contextul le poate confunda cu skill-uri, pr
 Această decizie nu definește:
 
 - programa sau competențele fiecărui Business Pillar;
-- numărul nivelurilor;
 - valorile și pragurile Skills XP;
 - nivelul inițial;
 - regulile pentru rezultat parțial, sprijin sau replay;
 - condițiile concrete pentru acordarea XP;
 - Unlock-urile și prerechizitele;
+- mecanismul de acces, finalizare și reprezentare a Mastery în Founder Profile;
 - reprezentarea vizuală finală pe platformă.
 
 Aceste elemente se decid în taskuri separate. Terminologia stabilită aici rămâne însă baza comună pentru ele.

@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - conceptual Business Pillars framework
@@ -374,7 +374,9 @@ EZPLAY Tableau Builder poate face toți cei cinci piloni mai expliciți. Mecanic
 
 Business Pillars sunt domeniile majore ale curriculumului. Fiecare are propria progresie, iar participantul poate avansa asimetric.
 
-Arhitectura comună, Founder Loop, Founder Skills, Skills XP și prerechizitele sunt definite în [arhitectura curriculară](../../products/educational-program/curriculum/architecture.md). Documentele fiecărui pilon nu stabilesc singure niveluri sau recompense.
+Structura comună este Level 1 pentru clasele a II-a–a IV-a, Level 2 pentru V–VI, Level 3 pentru VII–VIII, Level 4 pentru IX–X, Level 5 pentru XI–XII și etapa terminală Mastery, independentă de vârstă. Level 5 este deja foarte avansat, iar Mastery integrează pilonii fără să repete sistematic nivelurile anterioare.
+
+Arhitectura comună, harta nivelurilor, Founder Loop, Founder Skills, Skills XP și prerechizitele sunt definite în [curriculumul programului](../../products/educational-program/curriculum/README.md). Documentele conceptuale ale pilonilor nu stabilesc singure recompense sau experiențe.
 
 ### Website-ul
 

@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 canonical_for:
   - website public claim evidence traceability
@@ -50,11 +50,13 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | `INT-PILLAR-001` | modelul de business predat în EZPLAY, relațiile și regulile editoriale generale | [`business-pillars/README.md`](../../methods/business-pillars/README.md) |
 | `INT-PILLAR-002` | definițiile și granițele fiecărui Business Pillar | [Strategy](../../methods/business-pillars/strategy.md), [Product](../../methods/business-pillars/product.md), [Market](../../methods/business-pillars/market.md), [Operations](../../methods/business-pillars/operations.md), [Finance](../../methods/business-pillars/finance.md) |
 | `INT-CURR-001` | arhitectura curriculumului și Founder Loop | [`architecture.md`](../../products/educational-program/curriculum/architecture.md) |
-| `INT-CURR-002` | spirala Finance și progresul propus | [`finance-spiral.md`](../../products/educational-program/curriculum/finance-spiral.md) |
+| `INT-CURR-002` | structura Level 1–5 și progresia celor cinci Business Pillars | [harta comună](../../products/educational-program/curriculum/progression-map.md), [Strategy](../../products/educational-program/curriculum/strategy-spiral.md), [Product](../../products/educational-program/curriculum/product-spiral.md), [Market](../../products/educational-program/curriculum/market-spiral.md), [Operations](../../products/educational-program/curriculum/operations-spiral.md), [Finance](../../products/educational-program/curriculum/finance-spiral.md) |
+| `INT-CURR-003` | identitatea, accesul și standardul terminal Mastery | [`mastery.md`](../../products/educational-program/curriculum/mastery.md) |
 | `INT-ASSET-001` | realitatea actuală a produselor și activelor | [`current-assets.md`](../../roadmap/current-assets.md) |
 | `INT-PLAY-001` | sinteza retrospectivă a sesiunilor cunoscute | [`historical-session-evidence.md`](../../research/playtests/historical-session-evidence.md) |
 | `INT-RES-001` | bibliografia comentată | [`curriculum-progression-and-gamification.md`](../../research/product/curriculum-progression-and-gamification.md) |
 | `INT-RES-002` | analiza comparativă și limitele împărțirii Business Pillars | [`business-pillars-framework-analysis.md`](../../research/product/business-pillars-framework-analysis.md) |
+| `INT-RES-003` | analiza progresiei Level 2–5 și Mastery | [`entrepreneurship-curriculum-levels-and-mastery.md`](../../research/product/entrepreneurship-curriculum-levels-and-mastery.md) |
 | `INT-SRC-001` | registrul surselor externe și starea linkurilor | [`source-register.md`](../../research/source-register.md) |
 | `INT-WEB-001` | direcția de produs pentru site | [`ezplay-org-product-direction.md`](../ezplay-org-product-direction.md) |
 | `INT-TECH-001` | continuitatea declarată a platformei existente | [`existing-platform-continuity.md`](existing-platform-continuity.md) |
@@ -67,7 +69,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 |---|---|---|---|---|
 | EZPLAY este educație antreprenorială prin experiență, decizii și consecințe | Hero, diferența EZPLAY, parcurs | `INT-DEF-001`, `INT-BRAND-001` | Acoperit intern | Se prezintă drept poziționare și principiu de design, nu rezultat măsurat. |
 | Founder Loop leagă experiența, reflecția, inputul și aplicarea | Parcurs, dincolo de joc | `INT-CURR-001`, `SRC-EDU-010`, `SRC-EDU-011`, `SRC-EDU-012` | Informat extern / Ipoteză explicită | Nu se numește metodă validată. |
-| Primul program este destinat tinerilor | Primul program, pentru cine construim | `INT-WEB-001`, `INT-CURR-001` | Ipoteză explicită | Numele, vârstele, durata și disponibilitatea rămân condiționate. |
+| Primul program include o progresie pentru tineri, de la clasele a II-a la a XII-a | Primul program, pentru cine construim | `INT-WEB-001`, `INT-CURR-001`, `INT-CURR-002` | Acoperit intern / Ipoteză explicită | Benzile sunt decizie curriculară; durata, experiențele și disponibilitatea rămân condiționate. |
 | Business Pillars | Ce dezvoltă, cei cinci piloni ai unei companii | `INT-PILLAR-001`, `INT-PILLAR-002`, `INT-ECON-001` | Acoperit intern | Se poate spune că aceștia formează modelul de business predat în EZPLAY; nu se revendică invenția sau singura taxonomie posibilă. |
 | Cercetarea informează dezvoltarea | Cercetare | `INT-RES-001`, `INT-SRC-001` | Acoperit intern | Linkul duce la `/research`; nu implică validarea EZPLAY. |
 | Deckbuilder și Tableau Builder sunt instrumente EZPLAY | Instrumentele | `INT-ASSET-001`, `INT-ECON-001` | Acoperit intern / Ipoteză explicită | Tableau Builder rămâne concept de produs; disponibilitatea digitală se verifică tehnic. |
@@ -79,7 +81,9 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 |---|---|---|---|---|
 | Programul folosește Founder Rounds și Founder Loop | Început, Founder Rounds | `INT-CURR-001`, `INT-ASSET-001` | Ipoteză explicită / Dovadă internă parțială | Formatul complet nu este prezentat ca standardizat sau validat. |
 | Strategy, Product, Market, Operations și Finance formează modelul de business predat în EZPLAY | Business Pillars | `INT-PILLAR-001`, `INT-PILLAR-002`, `INT-RES-002`, `SRC-BIZ-001`, `SRC-BIZ-002`, `SRC-BIZ-005`, `SRC-BIZ-007` | Acoperit intern / Informat extern | Împărțirea este prezentată ca larg aplicabilă și asumată de EZPLAY, nu ca invenție proprie, taxonomie exclusivă sau garanție de succes. |
-| Curriculumul revizitează ideile cu dificultate mai mare | Spirale | `INT-CURR-001`, `INT-CURR-002`, `SRC-EDU-007` | Informat extern | Este decizie de design în lucru. |
+| Curriculumul folosește Level 1 pentru II–IV, Level 2 pentru V–VI, Level 3 pentru VII–VIII, Level 4 pentru IX–X și Level 5 pentru XI–XII | Pentru cine, spirale, harta nivelurilor | `INT-CURR-001`, `INT-CURR-002`, `INT-RES-003`, `SRC-BIZ-007`, `SRC-EDU-013` | Acoperit intern / Informat extern | Benzile sunt decise; conținutul detaliat și experiențele sunt Draft și nu se prezintă ca disponibile sau validate. |
+| Mastery este etapa terminală, independentă de vârstă, și nu repetă sistematic Level 1–5 | Spirale, harta nivelurilor | `INT-CURR-003`, `INT-RES-003`, `SRC-BIZ-010`, `SRC-BIZ-011` | Acoperit intern / Informat extern | Nu se numește MBA, diplomă sau echivalență; accesul, durata, forma de finalizare și disponibilitatea rămân în lucru. |
+| Curriculumul revizitează ideile cu dificultate mai mare | Spirale | `INT-CURR-001`, `INT-CURR-002`, `INT-RES-003`, `SRC-EDU-007` | Informat extern | Este decizie de design; eficiența progresiei nu este încă validată. |
 | Progresul urmărește aplicarea și competențe observabile | Progres, traseu | `INT-CURR-001`, `SRC-EDU-008`, `SRC-EDU-009` | Informat extern / Ipoteză explicită | Skills XP și pragurile nu sunt validate. |
 | Participanții pot alege direcții și lucra individual și în echipă | Libertatea traseului, individ și echipă | `INT-CURR-001` | Ipoteză explicită | Nu se afirmă efecte asupra motivației înainte de testare. |
 
@@ -121,7 +125,7 @@ Agentul de implementare nu tratează simpla existență a copy-ului ca dovadă. 
 | Grup de afirmații | Secțiuni | Dovezi | Stare | Regula publicării |
 |---|---|---|---|---|
 | Programul pune cunoașterea în situații de decizie | De ce antreprenoriat, diferență | `INT-DEF-001`, `INT-CURR-001`, `SRC-EDU-010`, `SRC-EDU-012` | Informat extern | Nu se promite dezvoltarea sigură a unei competențe. |
-| Vârsta nu determină singură nivelul | Pentru ce vârste | `SRC-EDU-001`, `INT-CURR-001` | Informat extern / Ipoteză explicită | Grupele și adaptările concrete trebuie testate. |
+| Benzile de clase calibrează nivelurile, iar competența demonstrată permite poziționare flexibilă | Pentru ce vârste | `SRC-EDU-001`, `SRC-BIZ-007`, `SRC-EDU-013`, `INT-CURR-001`, `INT-CURR-002` | Acoperit intern / Informat extern | Nu se promite acces automat în afara benzii; mecanismul de poziționare trebuie încă proiectat și testat. |
 | Programul este construit cu cercetare | Cercetare | `INT-RES-001`, `INT-SRC-001` | Acoperit intern | Se păstrează limitele surselor. |
 | Datele și siguranța minorilor sunt protejate | Siguranță și date | `INT-WEB-001`, `INT-PERM-001` | Blocat | Nu se afirmă conformitate sau siguranță absolută înaintea politicilor și revizuirii juridice. |
 

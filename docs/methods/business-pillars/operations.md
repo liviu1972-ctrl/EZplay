@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - Operations Business Pillar definition
@@ -309,20 +309,19 @@ Jocul face vizibile:
 
 ### În lucru în curriculum
 
-[Operations Level 1](../../products/educational-program/curriculum/operations-spiral.md) propune fundații despre:
+[Spirala Operations](../../products/educational-program/curriculum/operations-spiral.md) păstrează Level 1 pentru clasele a II-a–a IV-a și propune progresia:
 
-- resurse;
-- capacitate;
-- costul funcționării;
-- stabilitate;
-- eficiență;
-- decizia Operations.
+- Level 2 — proces repetabil, roluri și calitate;
+- Level 3 — flux măsurat, furnizori și îmbunătățire;
+- Level 4 — operating model pentru scalare;
+- Level 5 — rețea complexă, leadership și enterprise resilience;
+- Mastery — transformarea și guvernanța operating model-ului de enterprise.
 
-Harta este Draft și nu reprezintă un curriculum validat.
+Harta este Draft și nu reprezintă un curriculum validat sau deja disponibil.
 
 ### Viziune
 
-Experiențele avansate pot include procese, productivitate, cost unitar, supply chain, stocuri, calitate, automatizare, scalare, organizare și reziliență. Ordinea și competențele nu sunt stabilite.
+Jocurile, cazurile și simulările pentru Level 2–Mastery vor fi alese după competențele Operations. Harta stabilește progresia înaintea mecanicilor; instrumentele rămân de prototipat.
 
 ## Limbaj editorial
 

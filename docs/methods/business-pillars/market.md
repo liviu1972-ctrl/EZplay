@@ -1,6 +1,6 @@
 ---
 status: Working
-version: "0.1"
+version: "0.2"
 updated: 2026-07-18
 canonical_for:
   - Market Business Pillar definition
@@ -274,19 +274,19 @@ Valoarea trimestrului arată capacitatea de a câștiga clienți. Vânzările su
 
 ### În lucru în curriculum
 
-[Market Level 1](../../products/educational-program/curriculum/market-spiral.md) propune fundații despre:
+[Spirala Market](../../products/educational-program/curriculum/market-spiral.md) păstrează Level 1 pentru clasele a II-a–a IV-a și propune progresia:
 
-- client;
-- ajungerea la client;
-- capacitatea Market;
-- echilibrul cu Operations;
-- decizia Market.
+- Level 2 — drumul către primii clienți;
+- Level 3 — segmentare, go-to-market și conversie;
+- Level 4 — motor de creștere și customer economics;
+- Level 5 — strategie comercială multi-segment și multi-piață;
+- Mastery — strategie Market de enterprise, category și ecosisteme.
 
-Harta este Draft și nu reprezintă un curriculum validat.
+Harta este Draft și nu reprezintă un curriculum validat sau deja disponibil.
 
 ### Viziune
 
-Experiențele avansate pot include cercetare, segmentare, poziționare, brand, funnel, Customer Acquisition Cost, canale, retenție, Lifetime Value și extindere. Ordinea și competențele nu sunt stabilite.
+Jocurile, cercetările, cazurile și simulările pentru Level 2–Mastery vor fi alese după competențele Market. Harta stabilește mai întâi progresia; instrumentele și formele de livrare rămân de prototipat.
 
 ## Limbaj editorial
 

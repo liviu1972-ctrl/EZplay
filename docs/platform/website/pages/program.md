@@ -1,11 +1,12 @@
 ---
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 page: Programul EZPLAY pentru tineri
 route: /program
 evidence_map: ../content-evidence-map.md
 business_pillars_source: ../../../methods/business-pillars/README.md
+curriculum_source: ../../../products/educational-program/curriculum/progression-map.md
 ---
 
 # Copywriting — Programul EZPLAY pentru tineri
@@ -44,7 +45,7 @@ business_pillars_source: ../../../methods/business-pillars/README.md
 
 ### Notă de stare
 
-> Programul este în dezvoltare. Arhitectura curriculară există ca direcție de lucru, iar primele experiențe și Founder Rounds sunt construite și testate progresiv.
+> Programul este în dezvoltare. Hărțile Level 1 există pentru cei cinci Business Pillars, iar progresia Level 2–5 și Mastery este documentată ca draft curricular. Experiențele și Founder Rounds vor fi construite și testate progresiv.
 
 ## Secțiunea 1 — Pentru cine este
 
@@ -54,9 +55,11 @@ business_pillars_source: ../../../methods/business-pillars/README.md
 
 ### Text
 
-> Nucleul programului este proiectat pentru elevi din clasele a V-a–a X-a. În timp, aceeași fundație poate susține experiențe adaptate pentru participanți mai mici sau mai mari.
+> Programul pentru tineri este proiectat ca o progresie de la clasele a II-a până la clasa a XII-a. Fiecare nivel are o bandă principală de clase și revine asupra celor cinci Business Pillars cu mai multă autonomie, complexitate și responsabilitate.
 
 > Vârsta contează, dar nu spune întreaga poveste. Doi participanți de aceeași vârstă pot avea niveluri diferite de experiență, autonomie, motivație și înțelegere. De aceea, programul urmărește ceea ce participantul poate face și explica, nu doar clasa în care se află.
+
+> După Level 5, traseul se poate continua prin Mastery, etapa terminală și independentă de vârstă. Mastery este pentru participanții care au fundația nivelurilor anterioare sau competențe echivalente și nu reia întregul traseu de la început.
 
 ### Cerințe de intrare
 
@@ -170,9 +173,27 @@ business_pillars_source: ../../../methods/business-pillars/README.md
 
 > Acesta este sensul progresiei spiralate: nu bifăm o temă și o abandonăm. O reîntâlnim în contexte mai complexe și o conectăm cu ceilalți piloni.
 
+### Harta nivelurilor
+
+> **Level 1 — clasele a II-a–a IV-a:** descoperim cum funcționează firma și observăm primele consecințe ale alegerilor.
+
+> **Level 2 — clasele a V-a–a VI-a:** construim o firmă simplă care poate funcționa pe mai multe perioade.
+
+> **Level 3 — clasele a VII-a–a VIII-a:** conectăm modelul de business, datele, alternativele și compromisurile.
+
+> **Level 4 — clasele a IX-a–a X-a:** gestionăm creșterea, echipele, procesele și finanțarea.
+
+> **Level 5 — clasele a XI-a–a XII-a:** conducem decizii avansate despre strategie, portofoliu, capital, leadership, investitori, guvernanță și risc.
+
+> **Mastery — independent de vârstă:** integrăm cei cinci piloni în decizii antreprenoriale complexe și cu miză ridicată. Mastery este etapa terminală; nu există un nivel ulterior.
+
+### Notă de stare
+
+> Benzile și direcția curriculară sunt stabilite. Conținutul detaliat, Founder Rounds, jocurile, criteriile de progres și disponibilitatea fiecărui nivel sunt încă în dezvoltare și validare.
+
 ### Mesaj evidențiat
 
-> **Nivelul nu este vârsta participantului. Nivelul arată cât de departe a ajuns într-o anumită perspectivă.**
+> **Clasa calibrează experiența. Nivelul arată ce poate înțelege, conecta și decide participantul într-o anumită perspectivă.**
 
 ## Secțiunea 6 — Libertatea traseului
 
@@ -212,7 +233,7 @@ business_pillars_source: ../../../methods/business-pillars/README.md
 
 > Founder Skills și Skills XP vor face vizibil progresul în Strategy, Product, Market, Operations și Finance. Ele nu vor recompensa simplul timp petrecut în platformă, numărul de clickuri sau finalizarea mecanică a unei activități.
 
-> Până la validarea Round-urilor, profilul poate arăta zonele care urmează să fie explorate, fără să pretindă că pragurile și nivelurile sunt deja definitive.
+> Până la validarea Round-urilor, profilul poate arăta zonele care urmează să fie explorate, fără să pretindă că pragurile XP și reprezentarea digitală a nivelurilor sunt deja validate.
 
 ### Notă publică de stare
 

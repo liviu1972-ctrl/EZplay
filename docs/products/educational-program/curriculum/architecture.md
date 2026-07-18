@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.7"
+version: "0.8"
 updated: 2026-07-18
 ---
 
@@ -8,18 +8,17 @@ updated: 2026-07-18
 
 ## Rolul documentului
 
-Acest document organizează prima ipoteză coerentă pentru curriculumul unui program educațional EZPLAY destinat tinerilor care învață cum funcționează o companie.
+Acest document organizează arhitectura comună a Programului educațional EZPLAY, de la fundația Level 1 pentru clasele a II-a–a IV-a până la etapa terminală Mastery, independentă de vârstă.
 
 Documentul nu definește încă:
 
 - curriculumul complet;
-- numărul nivelurilor;
 - pragurile de Skills XP;
-- toate competențele sau Founder Rounds;
+- toate competențele granulare sau Founder Rounds;
 - o metodă pedagogică validată;
 - funcțiile care trebuie implementate pe `ezplay.org`.
 
-Ideile provin din conversația de proiect și trebuie dezvoltate, cercetate și testate cu participanți reali.
+Structura Level 1–5 și Mastery este decisă. Conținutul hărților rămâne `Draft` și trebuie revizuit de specialiști, transformat ulterior în experiențe și testat cu participanți reali.
 
 ## Poziția programului în EZPLAY
 
@@ -33,11 +32,21 @@ EZPLAY creează programe și experiențe de educație antreprenorială, precum �
 - jocurile, simulările, materialele, studiile de caz și instrumentele digitale sunt mijloace educaționale;
 - platforma poate susține accesul, progresul, deblocările și facilitarea.
 
-Deckbuilder-ul este instrumentul disponibil și cel mai matur în prezent. Poate susține în special primele experiențe și primele trepte ale curriculumului. Tableau Builder poate deveni un instrument pentru experiențe mai avansate, dar acest rol rămâne o ipoteză până la prototipare și testare.
+Deckbuilder-ul este instrumentul disponibil și cel mai matur în prezent. Level 1 a fost construit pornind de la configurația sa standard și rămâne fundația existentă pentru clasele a II-a–a IV-a. Tableau Builder poate deveni un instrument pentru experiențe mai avansate, dar acest rol rămâne o ipoteză până la prototipare și testare.
 
 Programul nu trebuie limitat de mecanicile jocurilor existente. În același timp, nu trebuie să devină o bibliotecă de teorie separată de principiul central EZPLAY: participantul decide, observă consecințele, reflectează și aplică din nou.
 
 Deckbuilder este un instrument configurabil, nu o programă. Fiecare Round poate folosi o configurație construită special pentru competența urmărită, inclusiv selecții diferite de cărți, cărți noi, reguli speciale, condiții inițiale, Evenimente sau obiective proprii. Absența unui concept din jocul implicit nu justifică eliminarea lui din curriculum și nu înseamnă că Deckbuilder nu poate fi adaptat pentru a-l face vizibil.
+
+Pentru Level 2–5 și Mastery, ordinea de proiectare este explicit curriculum-first:
+
+```text
+capacitate și decizie antreprenorială
+→ concepte, date și dovezi necesare
+→ experiență, joc sau simulare potrivită
+```
+
+Această regulă nu rescrie Level 1. Ea stabilește modul în care sunt proiectate nivelurile noi.
 
 ## Fundamentul pedagogic de lucru
 
@@ -69,13 +78,14 @@ Aceasta este o corespondență de proiectare, nu afirmația că Founder Loop rep
 
 Problem-based nu înseamnă descoperire fără ghidaj. Facilitatorul, regulile experienței, întrebările de debrief, materialele și indiciile oferă sprijin intenționat. Cantitatea de sprijin poate scădea pe măsură ce participantul devine mai competent, dar nu dispare doar pentru a face provocarea mai dificilă.
 
-### Competență, XP și mastery nu sunt același lucru
+### Competență, XP, standard de mastery și Mastery nu sunt același lucru
 
 - **Competența** descrie o capacitate observabilă, de exemplu: participantul poate anticipa când o alegere profitabilă produce o criză de cash.
 - **Dovada** este comportamentul sau rezultatul prin care capacitatea devine vizibilă într-un context.
 - **Skills XP** înregistrează progresul recunoscut de program.
 - **Nivelul** sintetizează poziția participantului și controlează o parte din acces.
-- **Mastery** este standardul de suficiență pentru o anumită capacitate sau familie de capacități; nu rezultă automat numai din atingerea unui prag numeric.
+- **Standardul de mastery** sau **standardul de stăpânire** este pragul de suficiență pentru o anumită capacitate sau familie de capacități; nu rezultă automat numai din atingerea unui prag numeric.
+- **Mastery** este numele propriu al etapei curriculare terminale, independente de vârstă; nu este sinonim cu standardul atins într-o competență de Level 1–5.
 
 În consecință, un prag de XP poate debloca o zonă nouă, dar unele Founder Rounds pot cere și o dovadă sau o experiență specifică. Această excepție trebuie folosită numai când dependența educațională este reală, pentru a nu reconstrui un traseu rigid sub forma unei rețele aparent libere.
 
@@ -156,7 +166,7 @@ Founder Loop și etapele sale sunt încă ipoteze de lucru. Ele nu trebuie preze
 
 ## Harta curriculară
 
-Curriculumul folosește cei cinci **Business Pillars** definiți de modelul economic comun EZPLAY:
+Curriculumul folosește cei cinci **Business Pillars** definiți în [modelul de business predat de EZPLAY](../../../methods/business-pillars/README.md):
 
 1. Strategy;
 2. Product;
@@ -164,7 +174,7 @@ Curriculumul folosește cei cinci **Business Pillars** definiți de modelul econ
 4. Operations;
 5. Finance.
 
-Folosirea acestor Business Pillars ca domenii curriculare este o ipoteză de design compatibilă cu modelul EZPLAY, nu o concluzie deja validată.
+Folosirea acestor Business Pillars ca domenii majore ale curriculumului este o decizie de produs. Eficiența hărților și a experiențelor rezultate nu este încă validată.
 
 Modelul de lucru este ca fiecare Business Pillar să aibă o singură progresie spiralată. Participantul revine asupra conceptelor importante cu:
 
@@ -175,17 +185,19 @@ Modelul de lucru este ca fiecare Business Pillar să aibă o singură progresie 
 - contexte mai incerte;
 - cerințe mai puternice de analiză și argumentare.
 
-Cele cinci progresii sunt interconectate. Modelul este, provizoriu, o **rețea de spirale** și nu o succesiune unică de lecții.
+Cele cinci progresii sunt interconectate. Modelul este o **rețea de spirale** și nu o succesiune unică de lecții.
 
 Hărțile dezvoltate în prezent sunt:
 
-- [Spirala Strategy](strategy-spiral.md) — Strategy Level 1;
-- [Spirala Product](product-spiral.md) — Product Level 1;
-- [Spirala Market](market-spiral.md) — Market Level 1;
-- [Spirala Operations](operations-spiral.md) — Operations Level 1;
-- [Spirala Finance](finance-spiral.md) — Finance Level 1 și schița nivelurilor ulterioare existentă înaintea extinderii celorlalți piloni.
+- [Harta comună Level 1–5 și Mastery](progression-map.md) — progresia integrată și standardul comun de complexitate;
+- [Spirala Strategy](strategy-spiral.md) — progresia Strategy;
+- [Spirala Product](product-spiral.md) — progresia Product;
+- [Spirala Market](market-spiral.md) — progresia Market;
+- [Spirala Operations](operations-spiral.md) — progresia Operations;
+- [Spirala Finance](finance-spiral.md) — progresia Finance;
+- [Programul Mastery](mastery.md) — identitatea și rezultatele etapei terminale.
 
-Hărțile Level 1 folosesc aceeași gramatică curriculară, fără să oblige Business Pillars să aibă aceleași teme sau același număr de Round-uri.
+Level 1 păstrează hărțile de Round-uri existente. Level 2–5 și Mastery descriu mai întâi capacități, fire curriculare și granițe; Round-urile și instrumentele lor vor fi proiectate ulterior.
 
 ```text
 Strategy ─────┐
@@ -194,6 +206,34 @@ Market ───────┼── Founder Rounds și prerechizite interconec
 Operations ───┤
 Finance ──────┘
 ```
+
+### Structura comună Level 1–5 și Mastery
+
+| Etapă | Calibrare principală | Rol în progresie |
+|---|---|---|
+| **Level 1** | clasele a II-a–a IV-a | fundația existentă; alegeri simple și primele relații cauzale |
+| **Level 2** | clasele a V-a–a VI-a | firmă simplă, mai multe perioade și cauze conectate |
+| **Level 3** | clasele a VII-a–a VIII-a | model de business, date, alternative și compromisuri între piloni |
+| **Level 4** | clasele a IX-a–a X-a | managementul creșterii, scalare și organizare |
+| **Level 5** | clasele a XI-a–a XII-a | leadership avansat asupra unei companii complexe |
+| **Mastery** | independent de vârstă | etapă terminală integrată; decizii ambigue și cu miză ridicată |
+
+Nivelurile 1–5 există separat în fiecare Business Pillar și pot produce un Founder Profile asimetric. Mastery este o etapă integrată, echivalentă numai structural cu un posibil Level 6; nu creează un al șaselea pilon și nu introduce `Founder XP`.
+
+### Ce produce progresul spiral
+
+O revenire la un concept trebuie să crească în mod observabil cel puțin una dintre următoarele:
+
+- autonomia;
+- responsabilitatea;
+- numărul de perioade sau variabile;
+- incertitudinea și informația incompletă;
+- calitatea dovezilor;
+- integrarea dintre piloni;
+- consecințele asupra oamenilor, capitalului și stakeholderilor;
+- nevoia de a mobiliza echipe și specialiști.
+
+Repetarea aceleiași definiții cu un exemplu nou nu reprezintă o nouă treaptă a spiralei.
 
 ## Terminologia progresului
 
@@ -206,6 +246,8 @@ Terminologia de lucru este:
 | **Spirala Finance** | Întreaga progresie curriculară Finance, în care conceptele revin cu profunzime și complexitate mai mari |
 | **Finance XP** | Punctele acumulate de participant în Business Pillar-ul Finance |
 | **Finance Level** | Nivelul curricular din Spirala Finance și poziția participantului în această progresie; relația exactă dintre competențe, prerechizite și pragurile Finance XP rămâne de calibrat |
+| **Mastery** | Etapa curriculară terminală și integrată, independentă de vârstă; nu este un Business Pillar Level numeric și nu se obține automat printr-un singur prag de XP |
+| **Standard de mastery** | Pragul de suficiență pentru o competență sau familie de competențe, distinct de etapa Mastery |
 | **Founder Round** | Experiența educațională de aproximativ două ore |
 | **Finance Round** | Founder Round al cărui Business Pillar principal este Finance; aceeași regulă se aplică denumirilor specifice celorlalți piloni |
 | **Nivel minim pentru acces** | Nivelul sau combinația de niveluri necesare pentru participarea la un Founder Round |
@@ -218,6 +260,8 @@ Nu se folosesc, în această versiune, expresii precum `Spirala 2`. Fiecare Busi
 > `Finance Level 2`
 
 Un Founder Round poate fi descris informal drept `Round de Finance Level 2` atunci când Finance este Business Pillar-ul principal și nivelul minim necesar este 2. Fișa Round-ului trebuie să păstreze însă toate prerechizitele, inclusiv nivelurile necesare în ceilalți piloni.
+
+Convenția pentru identificarea experiențelor din Mastery nu este încă decisă. Ea nu trebuie inventată prin continuarea automată a codurilor cu cifra 6 înainte de stabilirea arhitecturii etapei.
 
 ### Identificarea și ordinea Round-urilor
 
@@ -294,24 +338,9 @@ Programul oferă:
 
 Poate exista un onboarding comun pentru Deckbuilder și pentru modul de lucru EZPLAY. Onboardingul nu înseamnă automat atingerea nivelului 1 în toți cei cinci Business Pillars.
 
-Un participant poate avansa mai mult în Finance decât în Operations. Pentru un Founder Round avansat de Finance poate avea însă nevoie de un nivel minim în Operations, Product sau Strategy.
+Un participant poate avansa mai mult în Finance decât în Operations. Pentru un Finance Round avansat poate avea însă nevoie de o fundație relevantă în Operations, Product, Market sau Strategy. Nivelurile minime vor fi stabilite din dependența reală a competenței, nu printr-o formulă universală.
 
-Exemplu inventat numai pentru ilustrarea structurii:
-
-```text
-Founder Round avansat de Finance
-
-Cerințe:
-- Finance Level 5
-- Operations Level 2
-- Strategy Level 1
-- Product Level 2
-
-Recompensă posibilă:
-- +3 Finance XP
-```
-
-Nivelurile și valorile din exemplu nu reprezintă o decizie curriculară.
+Mastery este excepția integratoare: presupune fundația Level 5 în cei cinci piloni sau competențe echivalente demonstrate. Un participant cu goluri punctuale poate folosi resurse-punte, fără să refacă mecanic întregul traseu.
 
 ## Founder Skills, Founder Profile, Skills XP și niveluri
 
@@ -326,6 +355,8 @@ Participantul are progres separat în fiecare Business Pillar:
 - Finance XP și Finance Level.
 
 Nivelurile diferite formează Founder Profile. Un participant poate avea, de exemplu, Finance Level 4, Operations Level 2 și Product Level 1, fără să existe obligația unui nivel general unic de antreprenor. Nu se folosește `Founder XP`.
+
+Mastery nu anulează această asimetrie și nu creează un `Founder Level 6`. El este un program terminal integrat, cu acces bazat pe fundația necesară. Modul în care finalizarea Mastery devine vizibilă în Founder Profile rămâne de decis.
 
 ### Variante la același nivel
 
@@ -406,7 +437,7 @@ Pentru a evita acumularea artificială, o ipoteză inițială este că același 
 
 ### Business Pillar Level
 
-Nivelul reprezintă pragul de progres atins într-un Business Pillar și este determinat de XP-ul acumulat în acel pilon.
+Nivelul reprezintă pragul de progres atins într-un Business Pillar. Skills XP face progresul vizibil, iar relația exactă dintre XP, dovezi și standardele de stăpânire rămâne de calibrat.
 
 Exemplu ilustrativ:
 
@@ -427,6 +458,8 @@ Când XP-ul unui Business Pillar ajunge la pragul necesar:
 - unele experiențe pot rămâne blocate până la îndeplinirea altor prerechizite relevante.
 
 Nivelul nu este un nivel general de „antreprenor”. Profilul poate fi asimetric și trebuie să facă vizibile atât specializările, cât și zonele încă puțin explorate.
+
+Mastery nu continuă automat exemplul cu un prag numeric `Finance Level 6`. Accesul și finalizarea etapei terminale cer dovezi integrate în cei cinci piloni; mecanismul exact nu este încă stabilit.
 
 ### Level Up
 
@@ -521,18 +554,27 @@ Principiile de lucru sunt:
 
 Programul poate fi destinat copiilor și adolescenților, dar nu trebuie proiectat pornind de la presupunerea că o generație are un singur stil de învățare.
 
-Publicul de bază al primei versiuni este format din participanți din clasele a IV-a–a X-a din România. Programul poate avea extensii pentru clasele a II-a–a III-a, destinate copiilor pregătiți pentru cerințele respective, și pentru clasele a XI-a–a XII-a, destinate participanților cu interes mai mare pentru antreprenoriat și educație financiară.
+Programul are următoarele benzi principale de proiectare:
 
-Finance Level 1 este calibrat inițial pentru nivelul mediu al clasei a IV-a și poate fi accesibil unor participanți bine pregătiți din clasa a III-a. Această calibrare nu stabilește automat aceeași relație între clasă și nivel pentru toate Business Pillars.
+- Level 1 — clasele a II-a–a IV-a;
+- Level 2 — clasele a V-a–a VI-a;
+- Level 3 — clasele a VII-a–a VIII-a;
+- Level 4 — clasele a IX-a–a X-a;
+- Level 5 — clasele a XI-a–a XII-a;
+- Mastery — independent de vârstă.
+
+Level 1 rămâne cel construit anterior. Formulările istorice care îl calibrau numai pentru clasa a IV-a descriau punctul inițial de lucru și nu mai reprezintă banda decisă.
 
 Vârsta, dezvoltarea cognitivă, experiența anterioară, accesul la tehnologie, interesele și contextul social pot influența experiența mai mult decât eticheta generațională.
 
-Curriculumul trebuie să separe cel puțin două dimensiuni:
+Curriculumul separă cel puțin două dimensiuni:
 
 - profunzimea competenței antreprenoriale;
 - forma de prezentare potrivită vârstei și participantului.
 
-Aceeași idee economică poate folosi Learn Language, exemple și Business Challenges diferite pentru un copil mai mic și pentru un adolescent. Relația exactă dintre vârstă, nivel și dovezile cerute rămâne de cercetat și testat.
+Aceeași idee economică poate folosi Learn Language, exemple și dovezi diferite pentru un copil mai mic și pentru un adolescent. Banda de clase calibrează designul, dar nu acordă automat nivelul și nu interzice accesul unui participant care demonstrează fundația necesară.
+
+Mastery elimină banda de vârstă, nu prerechizitele. Participanții intră prin Level 1–5 sau prin demonstrarea unor competențe echivalente și, dacă este necesar, prin bridge-uri țintite.
 
 ## Cele două registre editoriale
 
@@ -549,8 +591,8 @@ Cele două registre exprimă același produs și aceleași rezultate. Ele nu cre
 
 - numele public al hărții și al traseelor;
 - dacă termenul `Founder Path` este necesar;
-- numărul nivelurilor pentru fiecare Business Pillar;
-- harta competențelor pentru nivelurile următoare și criteriile de mastery pentru Level 1;
+- subtitlurile publice finale pentru Level 1–5 și Mastery;
+- competențele granulare și criteriile de stăpânire din fiecare nivel;
 - pragurile de Skills XP;
 - nivelul inițial al unui participant;
 - mecanismul de poziționare a participanților cu experiență anterioară;
@@ -566,22 +608,32 @@ Cele două registre exprimă același produs și aceleași rezultate. Ele nu cre
 - structura exactă a prerechizitelor pentru nivelurile următoare;
 - adaptarea exactă a conținutului și dovezilor pentru grupele de vârstă;
 - vizualizarea profilului participantului;
+- modul în care accesul și finalizarea Mastery devin vizibile în Founder Profile;
+- durata, nucleul obligatoriu, extensiile și forma de recunoaștere pentru Mastery;
 - rolul platformei în prima versiune testabilă.
 
-## Direcția imediată de prototipare
+## Direcția imediată de dezvoltare
 
-Arhitectura generală nu trebuie completată integral înainte de testarea primei experiențe.
+Level 1 este schițat și reconciliat pentru toți cei cinci Business Pillars. Structura comună Level 2–5 și Mastery este decisă, iar hărțile lor de conținut sunt primul draft.
 
-Level 1 este schițat pentru toți cei cinci Business Pillars, iar hărțile au fost reconciliate comparativ. Următorii pași sunt:
+În faza curentă nu proiectăm Founder Loop-urile nivelurilor noi. Următorii pași sunt:
 
-1. alegerea Round-ului care testează cel mai bine arhitectura programului;
-2. documentarea cerinței minime de onboarding necesare acelui Round;
-3. construirea Round-ului în cele cinci faze;
-4. definirea dovezilor, sprijinului, recompensei și etapei Level Up;
-5. testarea cu participanți și corectarea hărților înainte de dezvoltarea Level 2.
+1. verificarea verticală a revenirilor din fiecare spirală;
+2. verificarea orizontală a încărcării și integrării la fiecare nivel;
+3. separarea nucleului obligatoriu de extensiile posibile;
+4. descompunerea capacităților în competențe și dovezi observabile;
+5. revizuirea cu specialiști în antreprenoriat, educație și ariile reglementate relevante;
+6. alegerea competențelor care merită prototipate prin experiențe;
+7. proiectarea ulterioară a jocurilor, simulărilor și Founder Rounds;
+8. testarea și corectarea hărților pe baza dovezilor reale.
+
+Prototiparea unui Founder Round Level 1 poate continua în paralel ca validare a metodei. Ea nu mai blochează documentarea progresiei Level 2–Mastery și nu autorizează construirea tuturor experiențelor înaintea validării.
 
 ## Repere externe pentru cercetare
 
-Cercetarea care susține și limitează aceste ipoteze este rezumată separat în [reperele de cercetare pentru curriculum, progres și gamificare](../../../research/product/curriculum-progression-and-gamification.md).
+Cercetarea care susține și limitează aceste ipoteze este rezumată separat în:
+
+- [reperele pentru curriculum, progres și gamificare](../../../research/product/curriculum-progression-and-gamification.md);
+- [analiza progresiei Level 2–5 și Mastery](../../../research/product/entrepreneurship-curriculum-levels-and-mastery.md).
 
 Sursele externe nu validează automat modelul EZPLAY. Ele informează deciziile care trebuie apoi verificate prin prototipuri și playtest-uri cu participanți reali.
