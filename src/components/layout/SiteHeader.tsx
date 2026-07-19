@@ -6,6 +6,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Menu, LogOut, LayoutDashboard } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -114,6 +115,17 @@ export function SiteHeader({ dict, user }: SiteHeaderProps) {
         </Link>
         <Link href="/research" className={linkClass}>
           {dict.nav?.research || "Cercetare"}
+        </Link>
+        <Link 
+          href="/program/curriculum" 
+          className={cn(
+            mobile 
+              ? "flex items-center px-2 py-1.5 text-lg font-medium transition-colors hover:bg-[#0D2427]/10 rounded-md group"
+              : "flex items-center text-sm font-medium transition-colors px-3 py-0.5 -ml-3 rounded-md text-ink-muted hover:bg-[#0D2427]/10 hover:text-ink group"
+          )}
+        >
+          Atlas curricular
+          <span className="w-1.5 h-1.5 rounded-full bg-[#A68A64] ml-1.5 inline-block group-hover:scale-125 transition-transform"></span>
         </Link>
         <Link href="/about" className={linkClass}>
           {dict.nav?.aboutEzplay || "Despre EZPLAY"}

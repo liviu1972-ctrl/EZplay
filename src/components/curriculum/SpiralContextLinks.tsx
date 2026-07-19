@@ -12,8 +12,8 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
   }
 
   return (
-    <details className="group" open={defaultOpen}>
-      <summary className="flex items-center justify-between cursor-pointer list-none font-bold text-sm text-ink outline-none">
+    <details className="group bg-[#0D2427]/5 border border-[#0D2427]/10 rounded-xl p-4 transition-colors" open={defaultOpen}>
+      <summary className="flex items-center justify-between cursor-pointer list-none font-serif font-bold text-sm text-[#0D2427] outline-none">
         <span>Navigare contextuală</span>
         <span className="transition-transform group-open:rotate-180">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,19 +21,19 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
           </svg>
         </span>
       </summary>
-      <div className="flex flex-col gap-6 pt-4 mt-3 border-t border-line/40">
+      <div className="flex flex-col gap-6 pt-4 mt-3 border-t border-[#0D2427]/10">
         {/* Axis 3: Local TOC */}
       {toc && toc.length > 0 && (
         <div>
-          <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
+          <h3 className="text-xs font-serif font-bold tracking-wider text-[#0D2427]/70 uppercase mb-3">
             Cuprins
           </h3>
-          <div className="flex flex-col gap-1 border-l-2 border-line/40 ml-2 pl-3">
+          <div className="flex flex-col gap-1 border-l-2 border-[#0D2427]/10 ml-2 pl-3">
             {toc.map(item => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange"
+                className="text-sm font-medium py-1.5 transition-colors text-[#0D2427] hover:text-brand-orange"
               >
                 {item.title}
               </a>
@@ -45,10 +45,10 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
       {/* Axis 1: Same Level, Different Pillars */}
       {currentLevel && currentLevel !== 'MST' && (
         <div>
-          <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
+          <h3 className="text-xs font-serif font-bold tracking-wider text-[#0D2427]/70 uppercase mb-3">
             Level {currentLevel} în alți piloni
           </h3>
-          <div className="flex flex-col gap-1 border-l-2 border-line/40 ml-2 pl-3">
+          <div className="flex flex-col gap-1 border-l-2 border-[#0D2427]/10 ml-2 pl-3">
             {pillars.map(p => {
               const isActive = p.toLowerCase() === currentPillar?.toLowerCase();
               return (
@@ -57,7 +57,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
                   href={`/program/curriculum/levels/${currentLevel}/pillars/${p.toLowerCase()}`}
                   className={cn(
                     "text-sm font-medium py-1.5 transition-colors relative",
-                    isActive ? "text-brand-orange" : "text-ink hover:text-brand-orange"
+                    isActive ? "text-brand-orange" : "text-[#0D2427] hover:text-brand-orange"
                   )}
                 >
                   {isActive && (
@@ -74,10 +74,10 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
       {/* Axis 2: Same Pillar, Different Levels */}
       {currentPillar && currentLevel !== 'MST' && (
         <div>
-          <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
+          <h3 className="text-xs font-serif font-bold tracking-wider text-[#0D2427]/70 uppercase mb-3">
             Spirala {currentPillar}
           </h3>
-          <div className="flex flex-col gap-1 border-l-2 border-line/40 ml-2 pl-3">
+          <div className="flex flex-col gap-1 border-l-2 border-[#0D2427]/10 ml-2 pl-3">
             {levels.map(l => {
               const isActive = l === currentLevel;
               return (
@@ -86,7 +86,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
                   href={`/program/curriculum/levels/${l}/pillars/${currentPillar.toLowerCase()}`}
                   className={cn(
                     "text-sm font-medium py-1.5 transition-colors relative",
-                    isActive ? "text-brand-orange" : "text-ink hover:text-brand-orange"
+                    isActive ? "text-brand-orange" : "text-[#0D2427] hover:text-brand-orange"
                   )}
                 >
                   {isActive && (
@@ -98,7 +98,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
             })}
             <Link
               href={`/program/curriculum/mastery/lenses/${currentPillar.toLowerCase()}`}
-              className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange mt-2"
+              className="text-sm font-medium py-1.5 transition-colors text-[#0D2427] hover:text-brand-orange mt-2"
             >
               Lentila Mastery
             </Link>
@@ -108,13 +108,13 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
       {/* Mastery Context */}
       {currentLevel === 'MST' && (
         <div>
-          <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
+          <h3 className="text-xs font-serif font-bold tracking-wider text-[#0D2427]/70 uppercase mb-3">
             Nucleul Mastery
           </h3>
-          <div className="flex flex-col gap-1 border-l-2 border-line/40 ml-2 pl-3">
+          <div className="flex flex-col gap-1 border-l-2 border-[#0D2427]/10 ml-2 pl-3">
             <Link
               href="/program/curriculum/mastery"
-              className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange"
+              className="text-sm font-medium py-1.5 transition-colors text-[#0D2427] hover:text-brand-orange"
             >
               Înapoi la overview
             </Link>
@@ -130,7 +130,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
                   href={`/program/curriculum/rounds/${slug}`}
                   className={cn(
                     "text-sm font-medium py-1.5 transition-colors relative",
-                    isActive ? "text-brand-orange" : "text-ink hover:text-brand-orange"
+                    isActive ? "text-brand-orange" : "text-[#0D2427] hover:text-brand-orange"
                   )}
                 >
                   {isActive && (
@@ -145,7 +145,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, t
               <Link
                 key={p}
                 href={`/program/curriculum/mastery/lenses/${p.toLowerCase()}`}
-                className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange"
+                className="text-sm font-medium py-1.5 transition-colors text-[#0D2427] hover:text-brand-orange"
               >
                 Lentila {p}
               </Link>

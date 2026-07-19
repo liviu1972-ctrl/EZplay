@@ -9,7 +9,7 @@ import {
   ChevronRight, 
   ChevronLeft, 
   Compass, 
-  Map, 
+  Globe, 
   BookOpen, 
   Briefcase, 
   Building2, 
@@ -29,11 +29,11 @@ export function ExplorerRail({ dict }: ExplorerRailProps) {
 
   const navItems = [
     { href: "/program", label: "Prezentare", icon: Compass },
-    { href: "/program/curriculum", label: "Harta programului", icon: Map },
     { href: "/experiences/introduction", label: "Experiența introductivă", icon: Briefcase },
     { href: "/how-we-learn", label: "Cum învățăm", icon: BookOpen },
     { href: "/for/organizations", label: "Pentru organizații", icon: Building2 },
     { href: "/research", label: "Cercetare", icon: Beaker },
+    { href: "/program/curriculum", label: "Atlas curricular", icon: Globe },
   ]
 
   return (
@@ -62,7 +62,9 @@ export function ExplorerRail({ dict }: ExplorerRailProps) {
       
       <div className="flex-1 overflow-y-auto py-4 flex flex-col gap-2">
         {navItems.map((item) => {
-          const isActive = pathname?.startsWith(item.href)
+          const isActive = item.href === '/program' 
+            ? pathname === '/program'
+            : pathname?.startsWith(item.href)
           
           return (
             <Link
@@ -70,14 +72,16 @@ export function ExplorerRail({ dict }: ExplorerRailProps) {
               href={item.href}
               title={!isExpanded ? item.label : undefined}
               className={cn(
-                "flex items-center px-4 py-3 mx-2 rounded-md transition-colors",
+                "flex items-center px-4 py-3 mx-2 rounded-md transition-colors group",
                 isActive
                   ? "bg-brand-orange/10 text-brand-orange"
-                  : "text-ink-muted hover:bg-surface-soft hover:text-ink",
+                  : item.href === "/program/curriculum"
+                    ? "text-[#A68A64] hover:bg-brand-orange hover:text-white"
+                    : "text-ink-muted hover:bg-surface-soft hover:text-ink",
                 !isExpanded && "justify-center px-0"
               )}
             >
-              <item.icon className={cn("h-5 w-5 shrink-0", !isExpanded ? "mx-auto" : "mr-3")} />
+              <item.icon className={cn("h-5 w-5 shrink-0 transition-transform group-hover:scale-110", !isExpanded ? "mx-auto" : "mr-3")} />
               {isExpanded && (
                 <span className="truncate font-medium text-sm">
                   {item.label}

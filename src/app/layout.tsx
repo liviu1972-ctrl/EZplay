@@ -9,7 +9,7 @@
  */
 
 import type { Metadata } from "next";
-import { Manrope, Source_Sans_3 } from "next/font/google";
+import { Manrope, Source_Sans_3, Lora } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 
@@ -24,6 +24,11 @@ const manrope = Manrope({
 
 const sourceSans3 = Source_Sans_3({
   variable: "--font-source-sans-3",
+  subsets: ["latin", "latin-ext"],
+});
+
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin", "latin-ext"],
 });
 
@@ -61,7 +66,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${sourceSans3.variable} ${manrope.variable} font-sans h-full antialiased`}
+      className={`${sourceSans3.variable} ${manrope.variable} ${lora.variable} font-sans h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">

@@ -10,7 +10,6 @@ export function AtlasSidebar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'Despre program', href: '/program', icon: BookOpen },
     { name: 'Overview curricular', href: '/program/curriculum', icon: BookOpen, exact: true },
     { name: 'Niveluri', href: '/program/curriculum/levels', icon: Layers },
     { name: 'Business Pillars', href: '/program/curriculum/pillars', icon: Target },
@@ -21,9 +20,9 @@ export function AtlasSidebar() {
   ];
 
   return (
-    <aside className="w-[280px] shrink-0 border-r border-line/60 bg-surface h-[calc(100vh-64px)] overflow-y-auto sticky top-16 hidden md:flex flex-col py-6">
+    <aside className="w-[280px] shrink-0 border-r border-[#1A363A] bg-[#0B1E21] h-[calc(100vh-64px)] overflow-y-auto sticky top-16 hidden md:flex flex-col py-6 text-[#B2C0B8]">
       <div className="px-6 mb-4">
-        <h2 className="text-sm font-bold tracking-wider text-ink-muted uppercase">Atlas Curricular</h2>
+        <h2 className="text-sm font-serif font-bold tracking-wider text-white uppercase">Atlas curricular</h2>
       </div>
       <nav className="flex flex-col gap-1 px-4">
         {navItems.map((item) => {
@@ -39,17 +38,17 @@ export function AtlasSidebar() {
                 "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
                 isActive 
                   ? "bg-brand-orange/10 text-brand-orange" 
-                  : "text-ink hover:bg-black/5 dark:hover:bg-white/5"
+                  : "text-[#B2C0B8] hover:bg-white/5 hover:text-white"
               )}
             >
-              <item.icon className={cn("w-4 h-4", isActive ? "text-brand-orange" : "text-ink-muted")} />
+              <item.icon className={cn("w-4 h-4", isActive ? "text-brand-orange" : "text-[#B2C0B8]")} />
               {item.name}
             </Link>
           );
         })}
       </nav>
-      <div className="mt-auto px-6 pt-6 border-t border-line/60">
-        <Link href="/program" className="text-xs font-medium text-ink-muted hover:text-ink transition-colors flex items-center gap-2">
+      <div className="mt-auto px-6 pt-6 border-t border-[#1A363A]">
+        <Link href="/program" className="text-xs font-medium text-[#B2C0B8] hover:text-white transition-colors flex items-center gap-2">
           &larr; Înapoi la Programul EZPLAY
         </Link>
       </div>

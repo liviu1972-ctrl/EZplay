@@ -17,7 +17,7 @@ export default async function CurriculumLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <div className="min-h-screen w-full bg-surface dark:bg-[#121110] flex flex-col text-ink">
+    <div className="min-h-screen w-full bg-[#0D2427] flex flex-col text-white">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[100] bg-surface px-4 py-2 text-brand-orange font-bold rounded shadow-md border border-line">
         Sari la conținutul principal
       </a>
@@ -31,7 +31,7 @@ export default async function CurriculumLayout({
       <div className="flex flex-1 w-full pt-16 md:pt-16 mx-auto max-w-[1600px] relative">
         <AtlasSidebar />
         
-        <main id="main-content" className="flex-1 w-full flex flex-col bg-canvas shadow-sm border-x border-line/60">
+        <main id="main-content" className="flex-1 w-full flex flex-col bg-canvas shadow-sm border-x border-[#1A363A] font-serif text-ink">
           <div className="flex-1 px-4 md:px-12 lg:px-16 py-8">
             {children}
           </div>

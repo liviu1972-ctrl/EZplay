@@ -77,7 +77,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold font-heading text-ink leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold font-serif text-ink leading-tight mb-4">
             {round.titlu_participant || round.id}
           </h1>
         </header>
@@ -85,7 +85,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
         <div className="space-y-12">
           {/* Registrul Participant */}
           <section className="space-y-6">
-            <h2 className="text-2xl font-bold font-heading text-ink border-b border-black/10 pb-2">
+            <h2 className="text-2xl font-bold font-serif text-ink border-b border-black/10 pb-2">
               Perspectiva Participantului
             </h2>
             
@@ -101,7 +101,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
           {/* Registrul Pedagogic */}
           {hasPedagogic && (
           <section className="space-y-6">
-            <h2 className="text-2xl font-bold font-heading text-ink border-b border-black/10 pb-2">
+            <h2 className="text-2xl font-bold font-serif text-ink border-b border-black/10 pb-2">
               Registrul Pedagogic
             </h2>
             
@@ -130,7 +130,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
           {/* Atribute Structurale - Prezentare editoriala continua (nu grid/card) */}
           {hasStructural && (
           <section className="space-y-6">
-            <h2 className="text-2xl font-bold font-heading text-ink border-b border-black/10 pb-2">
+            <h2 className="text-2xl font-bold font-serif text-ink border-b border-black/10 pb-2">
               Atribute Structurale
             </h2>
             
