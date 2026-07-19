@@ -2,7 +2,7 @@ import { test, describe, before, after } from 'node:test';
 import assert from 'node:assert';
 import fs from 'fs';
 import path from 'path';
-import { getCurriculumGraph, generateSlug, getPublishedDetailedSlugs, mapToCatalogRound } from './content-engine';
+import { getCurriculumGraph, generateSlug, getPublishedDetailedSlugs, mapToCatalogRound, getRoundBySlug } from './content-engine';
 
 describe('Curriculum Content Engine', () => {
   const TEST_DIR = path.join(process.cwd(), '.test-curriculum-fixtures');
@@ -97,18 +97,24 @@ level: 1
     }
   });
 
-  test('Phase 2 subset: exactly 7 Finance L1 rounds are published', () => {
+  test('Phase 3A: all 191 rounds are published', () => {
     const published = getPublishedDetailedSlugs();
-    const expected = [
-      'fin-1-1',
-      'fin-1-2-1',
-      'fin-1-2-2',
-      'fin-1-3',
-      'fin-1-4',
-      'fin-1-5',
-      'fin-1-6'
-    ];
-    assert.deepStrictEqual(published.sort(), expected.sort());
+    assert.strictEqual(published.length, 191);
+
+    // Verify MST rounds are published
+    const graph = getCurriculumGraph();
+    const mst = graph.rounds.filter(r => r.level === 'MST');
+    for (const r of mst) {
+      assert.ok(published.includes(r.slug));
+    }
+  });
+
+  test('Unknown slug is not published and would return 404', () => {
+    const slug = 'fake-1-1';
+    assert.strictEqual(getRoundBySlug(slug), undefined);
+    // Since it's undefined, it's not eligible
+    const published = getPublishedDetailedSlugs();
+    assert.ok(!published.includes(slug));
   });
 
   test('FIN 1.2.1 identity and sales topic is strictly validated', () => {
@@ -129,11 +135,11 @@ level: 1
     const published = catalog.find(r => r.slug === 'fin-1-1');
     assert.strictEqual(published?.destination, '/program/curriculum/rounds/fin-1-1');
     
-    const unpublishedL1To5 = catalog.find(r => r.slug === 'str-1-1');
-    assert.strictEqual(unpublishedL1To5?.destination, '/program/curriculum/levels/1/pillars/strategy#str-1-1');
+    const str11 = catalog.find(r => r.slug === 'str-1-1');
+    assert.strictEqual(str11?.destination, '/program/curriculum/rounds/str-1-1');
     
     const mastery = catalog.find(r => r.level === 'MST');
-    assert.strictEqual(mastery?.destination, `/program/curriculum/mastery#${mastery?.slug}`);
+    assert.strictEqual(mastery?.destination, `/program/curriculum/rounds/${mastery?.slug}`);
     
     // Status should be the PUBLIC_STATUS for everyone
     assert.ok(catalog.every(r => r.status === 'Hartă curriculară'));

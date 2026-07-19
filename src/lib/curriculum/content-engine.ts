@@ -204,28 +204,19 @@ export function getAllEligibleSlugs(): string[] {
     .map(r => r.slug);
 }
 
-export const PUBLISHED_DETAILED_SLUGS = [
-  'fin-1-1',
-  'fin-1-2-1',
-  'fin-1-2-2',
-  'fin-1-3',
-  'fin-1-4',
-  'fin-1-5',
-  'fin-1-6'
-];
-
 export function isPublishedDetailedRound(slug: string): boolean {
-  return PUBLISHED_DETAILED_SLUGS.includes(slug);
+  const round = getRoundBySlug(slug);
+  if (!round) return false;
+  return isEligibleForDetailedPage(round);
 }
 
 export function getPublishedDetailedSlugs(): string[] {
-  const allEligible = getAllEligibleSlugs();
-  return allEligible.filter(slug => isPublishedDetailedRound(slug));
+  return getAllEligibleSlugs();
 }
 
 export function mapToCatalogRound(round: Round): CatalogRound {
   let destination = '';
-  if (isPublishedDetailedRound(round.slug)) {
+  if (isEligibleForDetailedPage(round)) {
     destination = `/program/curriculum/rounds/${round.slug}`;
   } else if (round.level === 'MST') {
     destination = `/program/curriculum/mastery#${round.slug}`;

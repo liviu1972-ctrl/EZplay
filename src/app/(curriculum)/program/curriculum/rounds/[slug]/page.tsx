@@ -46,7 +46,9 @@ export default async function RoundPage({ params }: RoundPageProps) {
     ? 'Mastery' 
     : `L${round.level} × ${round.pillar.charAt(0).toUpperCase() + round.pillar.slice(1)}`;
 
-  const currentLevelNum = round.level === 'MST' ? undefined : Number(round.level);
+  const currentLevelNum = round.level === 'MST' ? 'MST' : Number(round.level);
+  const hasPedagogic = !!(round.titlu_pedagogic || round.descriere_pedagogica);
+  const hasStructural = !!(round.intrebare || round.competenta || round.prerechizite || round.continuitate);
 
   return (
     <div className="w-full flex flex-col xl:flex-row gap-8 lg:gap-12 relative items-start">
@@ -97,6 +99,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
           </section>
 
           {/* Registrul Pedagogic */}
+          {hasPedagogic && (
           <section className="space-y-6">
             <h2 className="text-2xl font-bold font-heading text-ink border-b border-black/10 pb-2">
               Registrul Pedagogic
@@ -122,8 +125,10 @@ export default async function RoundPage({ params }: RoundPageProps) {
               )}
             </div>
           </section>
+          )}
 
           {/* Atribute Structurale - Prezentare editoriala continua (nu grid/card) */}
+          {hasStructural && (
           <section className="space-y-6">
             <h2 className="text-2xl font-bold font-heading text-ink border-b border-black/10 pb-2">
               Atribute Structurale
@@ -167,6 +172,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
               )}
             </div>
           </section>
+          )}
         </div>
       </article>
 
@@ -175,6 +181,7 @@ export default async function RoundPage({ params }: RoundPageProps) {
         <SpiralContextLinks 
           currentLevel={currentLevelNum} 
           currentPillar={round.pillar} 
+          currentSlug={round.slug}
         />
       </aside>
 

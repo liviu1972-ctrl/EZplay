@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { TocItem } from './SpiralSidebar';
 
-export function SpiralContextLinks({ currentLevel, currentPillar, toc, defaultOpen = false }: { currentLevel?: number, currentPillar?: string, toc?: TocItem[], defaultOpen?: boolean }) {
+export function SpiralContextLinks({ currentLevel, currentPillar, currentSlug, toc, defaultOpen = false }: { currentLevel?: number | 'MST', currentPillar?: string, currentSlug?: string, toc?: TocItem[], defaultOpen?: boolean }) {
   const pillars = ['Strategy', 'Product', 'Market', 'Operations', 'Finance'];
   const levels = [1, 2, 3, 4, 5];
 
@@ -43,7 +43,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, toc, defaultOp
       )}
 
       {/* Axis 1: Same Level, Different Pillars */}
-      {currentLevel && (
+      {currentLevel && currentLevel !== 'MST' && (
         <div>
           <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
             Level {currentLevel} în alți piloni
@@ -72,7 +72,7 @@ export function SpiralContextLinks({ currentLevel, currentPillar, toc, defaultOp
       )}
 
       {/* Axis 2: Same Pillar, Different Levels */}
-      {currentPillar && (
+      {currentPillar && currentLevel !== 'MST' && (
         <div>
           <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
             Spirala {currentPillar}
@@ -102,6 +102,54 @@ export function SpiralContextLinks({ currentLevel, currentPillar, toc, defaultOp
             >
               Lentila Mastery
             </Link>
+          </div>
+        </div>
+      )}
+      {/* Mastery Context */}
+      {currentLevel === 'MST' && (
+        <div>
+          <h3 className="text-xs font-bold tracking-wider text-ink-muted uppercase mb-3">
+            Nucleul Mastery
+          </h3>
+          <div className="flex flex-col gap-1 border-l-2 border-line/40 ml-2 pl-3">
+            <Link
+              href="/program/curriculum/mastery"
+              className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange"
+            >
+              Înapoi la overview
+            </Link>
+            <div className="h-2" />
+            {Array.from({ length: 13 }, (_, i) => i + 1).map(num => {
+              const strNum = num.toString().padStart(2, '0');
+              const id = `MST ${strNum}`;
+              const slug = `mst-${strNum}`;
+              const isActive = currentSlug === slug;
+              return (
+                <Link
+                  key={slug}
+                  href={`/program/curriculum/rounds/${slug}`}
+                  className={cn(
+                    "text-sm font-medium py-1.5 transition-colors relative",
+                    isActive ? "text-brand-orange" : "text-ink hover:text-brand-orange"
+                  )}
+                >
+                  {isActive && (
+                    <div className="absolute -left-[15px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-brand-orange" />
+                  )}
+                  {id}
+                </Link>
+              );
+            })}
+            <div className="h-2" />
+            {pillars.map(p => (
+              <Link
+                key={p}
+                href={`/program/curriculum/mastery/lenses/${p.toLowerCase()}`}
+                className="text-sm font-medium py-1.5 transition-colors text-ink hover:text-brand-orange"
+              >
+                Lentila {p}
+              </Link>
+            ))}
           </div>
         </div>
       )}
