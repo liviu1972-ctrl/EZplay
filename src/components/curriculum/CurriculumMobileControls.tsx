@@ -29,7 +29,7 @@ export function CurriculumMobileControls() {
   ];
 
   return (
-    <div className="md:hidden sticky top-16 z-40 bg-[#0B1E21] border-b border-[#1A363A] px-4 py-3 flex items-center justify-between text-white">
+    <div className="md:hidden landscape:hidden sticky top-16 z-40 bg-[#0B1E21] border-b border-[#1A363A] px-4 py-3 flex items-center justify-between text-white">
       <div className="text-sm font-serif font-bold uppercase tracking-wider">Atlas curricular</div>
       
       <Sheet open={open} onOpenChange={setOpen}>

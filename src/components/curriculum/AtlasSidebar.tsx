@@ -20,7 +20,7 @@ export function AtlasSidebar() {
   ];
 
   return (
-    <aside className="w-[280px] shrink-0 border-r border-[#1A363A] bg-[#0B1E21] h-[calc(100vh-64px)] overflow-y-auto sticky top-16 hidden md:flex flex-col py-6 text-[#B2C0B8]">
+    <aside className="w-[280px] shrink-0 border-r border-[#1A363A] bg-[#0B1E21] h-[calc(100vh-64px)] overflow-y-auto sticky top-16 hidden md:flex landscape:flex flex-col py-6 text-[#B2C0B8]">
       <div className="px-6 mb-4">
         <h2 className="text-sm font-serif font-bold tracking-wider text-white uppercase">Atlas curricular</h2>
       </div>
