@@ -17,6 +17,14 @@ Poate include:
 
 Inventarul experienței și activelor existente rămâne în `docs/roadmap/current-assets.md`. Definițiile curriculare și hărțile Level 1–Mastery sunt întreținute aici, fără o copie paralelă în inventar.
 
+## Reprezentarea pe ezplay.org
+
+Atlasul curricular v1 este implementat ca suprafață publică stabilă pentru explorarea Programului educațional. El face vizibile arhitectura Level 1–5 și Mastery, cei cinci Business Pillars și paginile canonice ale celor 191 de Founder Rounds.
+
+Pe filiera de dezvoltare a website-ului, următorul obiectiv pentru Programul educațional este aprofundarea editorială a fiecărui Round în pagina canonică existentă. Conținutul se dezvoltă progresiv și pornește din sursele curriculare aprobate; câmpurile lipsă nu sunt completate prin presupuneri.
+
+Această aprofundare publică nu înlocuiește auditul curricular, expert review-ul, designul experienței sau playtest-ul și nu înseamnă că toate Round-urile sunt deja disponibile participanților.
+
 ## Structura curriculară și benzile de referință
 
 Programul folosește următoarele benzi principale:

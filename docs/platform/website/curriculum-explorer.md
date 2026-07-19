@@ -1,8 +1,8 @@
 ---
 title: "Curriculum Explorer — specificație de produs și experiență"
 status: Working
-version: "1.3"
-updated: 2026-07-18
+version: "1.4"
+updated: 2026-07-19
 canonical_for:
   - website information architecture for the public curriculum area
   - curriculum navigation and page types
@@ -329,6 +329,14 @@ Nu folosește:
 - materiale publice numai după aprobarea și verificarea lor.
 
 Publicarea tuturor Round-urilor nu este criteriu de acceptare pentru Faza 1.
+
+### Starea curentă și continuarea editorială
+
+La 2026-07-19, infrastructura publică a Atlasului curricular este implementată și acceptată: shell propriu, explorare Level × Business Pillar, catalogul complet și pagini canonice pentru toate cele 191 de Founder Rounds, inclusiv nucleul Mastery.
+
+Următoarea etapă pe filiera `ezplay.org` nu este o nouă arhitectură a Atlasului, ci aprofundarea editorială a fiecărui Round în pagina existentă. Lucrul se face progresiv, în loturi coerente, pe baza conținutului curricular aprobat.
+
+O pagină poate deveni mai bogată prin problema și decizia participantului, concepte și instrumente, dovezi observabile, prerechizite, continuitate și relații curriculare numai când aceste elemente sunt susținute de sursă. Materialele de participant, ghidurile de facilitator, jocurile și simulările rămân produse editoriale și experiențiale distincte, nu sunt deduse automat din harta publică.
 
 ## 12. Criterii de acceptare de produs
 

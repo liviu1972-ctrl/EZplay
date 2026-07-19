@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.6"
-updated: 2026-07-18
+version: "0.7"
+updated: 2026-07-19
 ---
 
 # Ordinea de lucru pentru programul educațional EZPLAY
@@ -56,7 +56,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 | 6. Harta integrată | Cum crește complexitatea între niveluri? | Versiunea Working există; urmează auditul curricular |
 | 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Indexurile verticale și matricile sunt Working |
 | 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea, arhitectura hibridă, cinci lentile și 13 decizii integrate sunt Working și nevalidate încă prin experiențe |
-| 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și 178 Round-uri Level 1–5 sunt Working; publicarea și disponibilitatea se decid separat |
+| 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și inventarul complet de 191 de Round-uri sunt Working; proiecția lor publică există în Atlasul curricular, iar aprofundarea editorială urmează separat |
 | 10. Audit structural | Sunt complete fișierele, codurile, câmpurile și legăturile? | Verificare automată și editorială inițială realizată |
 | 11. Audit vertical și orizontal | Fiecare revenire adaugă complexitate și fiecare nivel este coerent? | Următorul pas de revizuire curriculară |
 | 12. Nucleu și extensii | Ce trebuie să știe orice participant și ce rămâne contextual? | După auditul curricular |
@@ -67,7 +67,31 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 | 17. Skills XP și progres | Cum sunt recunoscute dovezile și deblocările? | După validarea unor experiențe reale |
 | 18. Reprezentarea pe platformă | Cum apar traseele și profilul pe `ezplay.org`? | După validarea modelului de utilizare |
 
+## Cele două fire de continuare
+
+Atlasul curricular v1 este implementat pe `ezplay.org` ca infrastructură publică de orientare și studiu. El include Level 1–5 și Mastery, cei cinci Business Pillars, cele 25 de intersecții și pagini canonice pentru toate cele 191 de Founder Rounds. Acest milestone nu declară Round-urile testate, disponibile sau dezvoltate ca experiențe complete.
+
+De aici, Programul educațional continuă pe două fire distincte:
+
+### Filiera curriculară internă
+
+- audit vertical și orizontal al celor 191 de Round-uri;
+- verificarea prerechizitelor, dovezilor și progresului real;
+- separarea nucleului de extensii;
+- expert review, prototipare și validare.
+
+### Filiera publică `ezplay.org`
+
+- aprofundarea editorială a fiecărui Founder Round în Atlasul curricular;
+- publicarea progresivă, în loturi coerente, numai a câmpurilor aprobate;
+- completarea paginii publice cu problema participantului, decizia, conceptele și instrumentele, dovezile, prerechizitele, continuitatea și relațiile curriculare atunci când sursele le susțin;
+- păstrarea Atlasului ca arhitectură stabilă, fără redesenarea lui la fiecare lot de conținut.
+
+Filiera website-ului nu inventează conținut pentru a umple un șablon și nu transformă harta curriculară într-o promisiune de disponibilitate. Proiectarea jocurilor, simulărilor, fișelor și experiențelor complete rămâne o etapă distinctă.
+
 ## Fluxul imediat
+
+Pe filiera curriculară internă:
 
 ```text
 harta comună, spiralele, cele 191 de Round-uri și matricea lentilelor Mastery în stare Working
@@ -77,6 +101,16 @@ harta comună, spiralele, cele 191 de Round-uri și matricea lentilelor Mastery 
 → separarea nucleului de extensii
 → expert review
 → alegerea unui Round de prototipat
+```
+
+Pe filiera `ezplay.org`:
+
+```text
+Atlas curricular v1 implementat și acceptat
+→ definirea profunzimii editoriale publice comune
+→ detalierea Round-urilor în loturi coerente
+→ review editorial și curricular
+→ publicarea progresivă în paginile canonice existente
 ```
 
 Prototiparea unui Round Level 1 poate continua ca fir separat de validare a metodei. Ea nu mai este o condiție care blochează proiectarea hărții Level 2–Mastery.
@@ -106,6 +140,10 @@ Arhitectura Level 1–5 și Mastery este `Working` până la granularitatea Foun
 > **auditul curricular al celor 191 de Round-uri și al celor cinci corpuri de dovezi Mastery, pentru a verifica suprapunerile, încărcarea pe vârstă, prerechizitele, calitatea dovezilor și progresul real între niveluri.**
 
 Auditul trebuie realizat atât vertical, în interiorul fiecărei spirale, cât și orizontal, între cei cinci piloni ai aceleiași benzi.
+
+Pe filiera de dezvoltare a `ezplay.org`, reluăm din Atlasul curricular deja implementat și acceptat. Următorul obiectiv este:
+
+> **dezvoltarea editorială aprofundată a fiecărui Founder Round în pagina sa canonică, în loturi controlate și fără redeschiderea arhitecturii Atlasului.**
 
 Nu proiectăm încă Founder Loop-urile nivelurilor 2–Mastery.
 
