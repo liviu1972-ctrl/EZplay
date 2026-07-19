@@ -29,7 +29,7 @@ capacitate antreprenorială
 → prototipare și validare
 ```
 
-Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocul disponibil să limiteze curriculumul. Detalierea lor rămâne `Draft` până la revizuire de specialitate și validare.
+Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocul disponibil să limiteze curriculumul. Detalierea lor este `Working`: suficient de coerentă pentru audit și dezvoltare, dar încă dependentă de revizuire de specialitate și validare.
 
 ## Deciziile curriculare actuale
 
@@ -42,7 +42,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 7. Mastery este etapa terminală, independentă de vârstă și echivalentă numai structural cu un posibil Level 6.
 8. Mastery nu repetă sistematic Level 1–5 și nu este urmat de alt nivel.
 9. În faza curentă nu proiectăm Founder Loop-urile, Business Run-urile sau Challenge-urile noilor niveluri.
-10. Level 1–5 au 25 de hărți canonice de nivel, iar Mastery are o singură hartă integrată și cinci lentile terminale; lentilele nu adaugă Round-uri, iar codurile și inventarul rămân Draft până la validare.
+10. Level 1–5 au 25 de hărți canonice de nivel, iar Mastery are o singură hartă integrată și cinci lentile terminale; lentilele nu adaugă Round-uri, inventarul este Working, iar codurile de lucru rămân provizorii până la validare.
 
 ## Ordinea generală
 
@@ -53,10 +53,10 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 | 3. Modelul de business predat | Ce sunt cei cinci Business Pillars și care sunt granițele lor? | Documentat ca sursă Working și decizie Current |
 | 4. Reconcilierea Level 1 | Care este fundația comună pentru clasele a II-a–a IV-a? | Hărțile celor cinci piloni există și sunt reconciliate |
 | 5. Structura comună | Care sunt nivelurile și benzile lor? | Level 1–5 și Mastery sunt decise |
-| 6. Harta integrată | Cum crește complexitatea între niveluri? | Primul draft există |
-| 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Indexurile verticale și matricile există |
-| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea, arhitectura hibridă, cinci lentile și 13 decizii integrate sunt definite Draft |
-| 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și 178 Round-uri Level 1–5 sunt definite Draft |
+| 6. Harta integrată | Cum crește complexitatea între niveluri? | Versiunea Working există; urmează auditul curricular |
+| 7. Spiralele celor cinci piloni | Cum revine fiecare fir Strategy, Product, Market, Operations și Finance? | Indexurile verticale și matricile sunt Working |
+| 8. Identitatea Mastery | Ce face etapa terminală completă și nerepetitivă? | Identitatea, arhitectura hibridă, cinci lentile și 13 decizii integrate sunt Working și nevalidate încă prin experiențe |
+| 9. Hărțile de Round-uri | Ce lecții formează fiecare pilon și nivel? | 25 de hărți și 178 Round-uri Level 1–5 sunt Working; publicarea și disponibilitatea se decid separat |
 | 10. Audit structural | Sunt complete fișierele, codurile, câmpurile și legăturile? | Verificare automată și editorială inițială realizată |
 | 11. Audit vertical și orizontal | Fiecare revenire adaugă complexitate și fiecare nivel este coerent? | Următorul pas de revizuire curriculară |
 | 12. Nucleu și extensii | Ce trebuie să știe orice participant și ce rămâne contextual? | După auditul curricular |
@@ -70,7 +70,7 @@ Hărțile mari pot fi proiectate înaintea experiențelor pentru a evita ca jocu
 ## Fluxul imediat
 
 ```text
-harta comună, spiralele, cele 191 de Round-uri și matricea lentilelor Mastery în primul draft
+harta comună, spiralele, cele 191 de Round-uri și matricea lentilelor Mastery în stare Working
 → audit vertical și orizontal la granularitate de Round
 → auditul corpurilor de dovezi pentru cele cinci lentile Mastery
 → revizuirea prerechizitelor și dovezilor
@@ -101,7 +101,7 @@ Această clarificare trebuie să preceadă jocul sau Founder Round-ul deoarece d
 
 ## Punctul de reluare
 
-Primul draft al arhitecturii Level 1–5 și Mastery este complet până la granularitatea Founder Round-urilor, iar profunzimea Mastery este mapată prin cinci lentile terminale. Constatările inițiale sunt în [analiza transversală a inventarului](../products/educational-program/curriculum/round-inventory-analysis.md). Reluăm cu:
+Arhitectura Level 1–5 și Mastery este `Working` până la granularitatea Founder Round-urilor, iar profunzimea Mastery este mapată prin cinci lentile terminale. Starea permite auditul, dezvoltarea și reprezentarea controlată pe site, fără să declare Round-urile validate sau disponibile. Constatările inițiale sunt în [analiza transversală a inventarului](../products/educational-program/curriculum/round-inventory-analysis.md). Reluăm cu:
 
 > **auditul curricular al celor 191 de Round-uri și al celor cinci corpuri de dovezi Mastery, pentru a verifica suprapunerile, încărcarea pe vârstă, prerechizitele, calitatea dovezilor și progresul real între niveluri.**
 
@@ -122,6 +122,8 @@ Nu proiectăm încă Founder Loop-urile nivelurilor 2–Mastery.
 - forma de recunoaștere a finalizării Mastery;
 - toate prerechizitele și deblocările;
 - implementarea completă pe platformă;
-- formulări publice care prezintă hărțile Draft ca program deja disponibil sau validat.
+- formulări publice care prezintă hărțile Working ca program deja disponibil sau validat.
+
+Curriculum Explorer poate fi construit etapizat ca instrument de orientare înaintea implementării complete pe platformă. El folosește stări publice explicite și nu transformă automat hărțile Working în experiențe disponibile.
 
 Aceste elemente sunt dezvoltate când următoarea decizie, revizuire sau prototip are nevoie de ele.

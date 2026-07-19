@@ -2,6 +2,8 @@
 
 Acest folder documentează programul care dezvoltă înțelegerea și decizia antreprenorială prin cei cinci Business Pillars, experiență, reflecție și aplicare. Jocurile, simulările, cazurile și provocările sunt instrumente ale curriculumului, nu punctul lui de plecare pentru Level 2–Mastery.
 
+Hărțile curriculare sunt `Working`: formează o bază coerentă pentru audit, dezvoltarea experiențelor și reprezentarea controlată în Curriculum Explorer. Această stare nu înseamnă că toate Founder Rounds sunt validate, testate sau disponibile public. Website-ul folosește un strat editorial public și nu publică automat documentele interne.
+
 Poate include:
 
 - public și obiective;

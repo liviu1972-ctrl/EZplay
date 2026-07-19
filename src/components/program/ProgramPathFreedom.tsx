@@ -33,7 +33,7 @@ export function ProgramPathFreedom() {
               </h3>
             </div>
             <p className="text-ink-muted leading-relaxed mb-8">
-              Un participant poate fi atras de Finance, dar poate descoperi că o provocare avansată are nevoie și de Operations sau Product. Harta programului trebuie să facă aceste legături vizibile și ușor de înțeles.
+              Un participant poate fi atras de Finance, dar poate descoperi că o provocare avansată are nevoie și de Operations sau Product. Atlasul curricular trebuie să facă aceste legături vizibile și ușor de înțeles.
             </p>
             
             {/* Visual map abstract */}

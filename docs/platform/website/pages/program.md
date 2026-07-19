@@ -207,6 +207,14 @@ curriculum_source: ../../../products/educational-program/curriculum/progression-
 
 > Programul poate recomanda un traseu fără să transforme recomandarea într-o obligație arbitrară.
 
+### Cale către harta detaliată
+
+> **Explorează harta programului**
+
+Destinație: `/program/curriculum`.
+
+Această cale deschide Curriculum Explorer, zona structurată pentru niveluri, Business Pillars și Founder Rounds. Nu înlocuiește CTA-ul principal către experiența introductivă și nu prezintă hărțile Working drept experiențe deja disponibile.
+
 ### Exemplu public
 
 > Un participant poate fi atras de Finance, dar poate descoperi că o provocare avansată are nevoie și de Operations sau Product. Harta programului trebuie să facă aceste legături vizibile și ușor de înțeles.

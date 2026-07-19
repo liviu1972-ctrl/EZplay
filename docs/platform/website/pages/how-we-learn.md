@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Cum învățăm
 route: /how-we-learn
 evidence_map: ../content-evidence-map.md
@@ -210,6 +210,12 @@ Experiență
 ### CTA
 
 > Vezi sursele și întrebările noastre
+
+### Cale contextuală către curriculum
+
+> Vezi cum metoda devine curriculum
+
+Destinație: `/program/curriculum`. Este o legătură secundară și nu înlocuiește CTA-ul secțiunii către cercetare.
 
 ## Secțiunea 9 — CTA final
 

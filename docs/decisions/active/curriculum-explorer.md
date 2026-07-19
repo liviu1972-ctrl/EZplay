@@ -28,11 +28,13 @@ Relația dintre cele două suprafețe este:
 
 Pagina `/program` rămâne intrarea principală pentru publicul larg. Curriculum Explorer este destinația pentru utilizatorii care vor să înțeleagă în profunzime arhitectura și conținutul programului.
 
+După publicarea inventarului curricular complet, destinația primește eticheta publică **`Atlas curricular`** și este accesibilă direct atât din header-ul global orizontal, cât și din Explorer Rail-ul vertical. `Programul` rămâne intrarea de prezentare; `Atlas curricular` este intrarea de studiu și explorare în profunzime. Header-ul expune numai această destinație, nu substructura celor 191 de Round-uri.
+
 ## Motivul separării
 
 Navigarea website-ului public răspunde întrebării „Ce este EZPLAY și unde pot merge?”. Navigarea curriculară răspunde întrebărilor „Unde sunt în program?”, „Cum se leagă această pagină de nivel, pilon și celelalte Round-uri?” și „Ce pot studia în continuare?”.
 
-Programul are 25 de hărți Level × Business Pillar, o etapă Mastery integrată, cinci lentile Mastery și un inventar Working de 191 de Founder Rounds. Această profunzime nu trebuie înghesuită în header-ul global sau în Explorer Rail-ul website-ului.
+Programul are 25 de hărți Level × Business Pillar, o etapă Mastery integrată, cinci lentile Mastery și un inventar Working de 191 de Founder Rounds. Această profunzime nu trebuie înghesuită în header-ul global sau în Explorer Rail-ul website-ului; cele două suprafețe oferă numai intrarea directă `Atlas curricular`, iar explorarea detaliată rămâne în shell-ul curricular.
 
 ## Arhitectura informației
 

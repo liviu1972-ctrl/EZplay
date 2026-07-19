@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -63,6 +63,9 @@ Auditul raportează conflictele înainte să proiecteze soluția.
 10. Sistemul nu combină fragmente generate din mai multe lentile și nu generează copy în runtime.
 11. Controlul discret nu este modal, toast repetat sau CTA dominant și nu afișează clasificări ori scoruri.
 12. Defectarea sau dezactivarea mecanismului păstrează conținutul, navigarea și CTA-urile comune.
+13. În prima versiune, lentilele nu mută, nu ascund și nu combină secțiunile unei pagini; ordinea rămâne cea a paginii comune.
+14. Curriculum Explorer și rutele `/program/curriculum/**` nu primesc variante, nu produc semnale și nu afișează controlul discret de perspectivă.
+15. `Mastery Lenses` sunt concepte curriculare distincte și nu se folosesc drept lentile editoriale ale vizitatorului.
 
 ## Date și limite
 
@@ -107,7 +110,9 @@ Planul propune cel puțin:
 7. QA pentru română, engleză, accesibilitate, hidratare și lipsa persistenței;
 8. extinderea progresivă numai după validarea prototipului.
 
-Paginile recomandate pentru prioritizare sunt homepage, program, experiența introductivă, cum învățăm și experiențe. Agentul poate propune o ordine tehnică diferită după audit, fără să schimbe prioritățile de produs.
+Primul pilot vizibil este limitat la Hero-ul homepage și la variantele aprobate pentru tânăr și părinte. Restul homepage-ului și celelalte pagini rămân comune. După validarea pilotului, prioritățile de extindere rămân homepage, program, experiența introductivă, cum învățăm și experiențe.
+
+Reordonarea cardurilor dintr-un bloc poate fi explorată ulterior. Reordonarea secțiunilor întregi nu intră în pilot și necesită o decizie separată înainte de implementare.
 
 ## Criterii de acceptare pentru plan
 
@@ -140,7 +145,7 @@ Navigarea coerentă între pagina părinților, vârstă, progres și participar
 
 ### Traseu educator
 
-Navigarea coerentă între metodă, curriculum, Founder Rounds și facilitare poate activa lentila educatorului fără să presupună existența unei rute dedicate.
+Navigarea coerentă între paginile editoriale despre metodă, facilitare și structura programului poate activa lentila educatorului fără să presupună existența unei rute dedicate. Vizitarea Curriculum Explorer sau a unui Founder Round curricular este neutră și nu actualizează lentila.
 
 ### Traseu organizație
 

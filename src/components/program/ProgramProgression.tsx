@@ -45,7 +45,7 @@ export function ProgramProgression() {
               href="/program/curriculum"
               className="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange text-white rounded-lg hover:bg-brand-orange/90 transition-colors font-semibold"
             >
-              Explorează harta programului
+              Explorează atlasul curricular
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

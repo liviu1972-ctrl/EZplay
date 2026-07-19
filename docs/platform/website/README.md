@@ -19,6 +19,8 @@ Ele nu înlocuiesc sursele canonice ale proiectului și nu prescriu o rescriere 
 
 Blueprint-ul, copywriting-ul și specificația UX/UI sunt complete ca prim draft pentru toate cele 14 pagini din sitemap-ul v1.
 
+Extinderea aprobată [`Curriculum Explorer`](curriculum-explorer.md) adaugă sub `/program` o zonă structurată cu navigare proprie. Ea nu schimbă rolul celor 14 pagini inițiale și nu transformă documentația curriculară internă în copy public automat.
+
 Pachetul este referința editorială și UX/UI pentru implementarea din acest repository. Agentul trebuie să citească `existing-platform-continuity.md` și să inspecteze `src/`, `package.json` și configurația existentă înainte de instalări, reorganizări sau decizii privind framework-ul.
 
 Copywriting-ul nu trebuie regenerat de agentul care scrie codul. Dacă un text nu încape în componenta propusă, se ajustează mai întâi componenta sau se propune explicit o variantă editorială, fără schimbarea sensului.
@@ -58,6 +60,7 @@ Agentul nu inventează statistici, testimoniale, parteneri, prețuri, certifică
 - `existing-platform-continuity.md` — ce se păstrează, adaptează, înlocuiește sau elimină din platforma actuală;
 - `copy-rules.md` — voce, terminologie, reguli editoriale și microcopy comun;
 - `content-evidence-map.md` — legătura dintre afirmațiile publice, sursele interne, cercetarea externă, dovezile proprii și blocajele de publicare;
+- `curriculum-explorer.md` — arhitectura informației, navigarea, tipurile de pagină și regulile de reprezentare publică pentru curriculum;
 - `pages/homepage.md` — copywriting-ul complet al homepage-ului;
 - `pages/program.md` — programul educațional pentru tineri;
 - `pages/how-we-learn.md` — metoda și modul de învățare;

@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.1"
-updated: 2026-07-16
+version: "0.2"
+updated: 2026-07-18
 page: Pentru organizații
 route: /for/organizations
 evidence_map: ../content-evidence-map.md
@@ -387,6 +387,12 @@ Opțiuni:
 ### Stare de eroare
 
 > Mesajul nu a putut fi trimis. Verifică datele și încearcă din nou sau folosește datele de contact afișate în pagină.
+
+### Cale contextuală către curriculum
+
+> Vezi structura programului
+
+Destinație: `/program/curriculum`. Legătura este secundară față de conversația despre participare și nu promite disponibilitatea tuturor nivelurilor.
 
 ## CTA final
 

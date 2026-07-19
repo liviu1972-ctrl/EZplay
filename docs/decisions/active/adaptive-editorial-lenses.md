@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -28,8 +28,11 @@ Comportamentul complet, regulile semnalelor și conservarea copy-ului sunt defin
 
 - sitemap-ul public rămâne unic;
 - rutele pentru tineri, părinți și organizații rămân porți de intrare și pagini cu voce proprie;
-- paginile comune pot adapta introducerea, exemplele, ordinea blocurilor și CTA-urile;
+- în prima versiune, paginile comune pot adapta introducerea, exemplele și CTA-urile, dar păstrează structura și ordinea comună a secțiunilor;
+- reordonarea cardurilor dintr-un bloc sau a secțiunilor întregi rămâne o posibilă extensie ulterioară și necesită o decizie separată înainte de implementare;
 - faptele, dovezile, starea produsului, curriculumul, siguranța, accesul și informațiile juridice nu se schimbă prin lentilă;
+- Curriculum Explorer și toate rutele `/program/curriculum/**` sunt în afara sistemului adaptiv: nu primesc variante, nu afișează controlul de perspectivă și nu produc semnale de lentilă în prima versiune;
+- cele cinci `Mastery Lenses` sunt structuri pedagogice ale curriculumului și nu au nicio legătură tehnică sau semantică cu lentilele editoriale ale vizitatorului;
 - un singur semnal slab nu activează sau schimbă o lentilă;
 - două intenții apropiate păstrează copy-ul comun sau lentila stabilă;
 - schimbarea apare la navigarea următoare, nu în timpul lecturii;
@@ -48,7 +51,7 @@ Documentele actuale din `docs/platform/website/pages/` nu sunt înlocuite și nu
 
 - paginile comune rămân copy-ul implicit și fallback-ul;
 - `for-young-people.md`, `for-parents.md` și `for-organizations.md` rămân pagini canonice și surse pentru trei lentile;
-- perspectiva educatorului se dezvoltă din documentele despre metodă, curriculum, Founder Rounds, cercetare și facilitare, fără aprobarea automată a unei rute noi;
+- perspectiva educatorului se dezvoltă editorial din documentele despre metodă, curriculum, Founder Rounds, cercetare și facilitare, fără aprobarea automată a unei rute noi; aceste documente sunt surse de redactare, nu transformă rutele Curriculum Explorer în semnale;
 - curriculumul și documentația internă rămân surse riguroase și nu se rescriu în patru voci;
 - adoptarea variantelor este progresivă și nu condiționează funcționarea paginilor existente.
 

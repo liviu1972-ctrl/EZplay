@@ -43,13 +43,14 @@ Curriculum Explorer este profunzimea Programului, nu o destinație globală conc
 | Loc | Etichetă | Destinație și rol |
 |---|---|---|
 | header global | `Programul` | `/program`, intrarea publică principală |
+| header global, imediat după `Programul` | `Atlas curricular` | `/program/curriculum`, intrarea directă de studiu și explorare |
 | Explorer Rail extins, sub Program | `Prezentare` | `/program` |
-| Explorer Rail extins, sub Program | `Harta programului` | `/program/curriculum` |
+| Explorer Rail extins, sub Program | `Atlas curricular` | `/program/curriculum` |
 | Explorer Rail extins, sub Program | `Experiența introductivă` | `/experiences/introduction` |
-| pagina `/program`, după Business Pillars și progresie | `Explorează harta programului` | `/program/curriculum` |
-| footer, grupul `Descoperă` | `Harta programului` | `/program/curriculum` |
+| pagina `/program`, după Business Pillars și progresie | `Explorează atlasul curricular` | `/program/curriculum` |
+| footer, grupul `Descoperă` | `Atlas curricular` | `/program/curriculum` |
 
-Curriculumul nu primește un item principal separat în header. `Programul` rămâne destinația globală, iar Harta programului este dezvăluită contextual și în footer pentru utilizatorii care o caută direct.
+`Programul` și `Atlas curricular` au roluri complementare și apar separat în navigarea globală. `Programul` prezintă oferta educațională și primul pas; `Atlas curricular` deschide direct structura completă pentru utilizatorii care vor să o studieze. Substructura Atlasului nu este duplicată în header sau în Explorer Rail.
 
 În interiorul Curriculum Explorer:
 

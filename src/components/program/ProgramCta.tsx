@@ -22,7 +22,7 @@ export function ProgramCta() {
             Descoperă experiența introductivă
           </Button>
           <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-white/30 text-white hover:bg-white/10" render={<Link href="/program/curriculum" />}>
-            Explorează harta programului
+            Explorează atlasul curricular
           </Button>
           <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-base h-14 px-8 border-white/30 text-white hover:bg-white/10" render={<Link href="/for/organizations" />}>
             Adu Programul în organizația ta

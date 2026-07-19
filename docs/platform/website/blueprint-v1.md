@@ -1,6 +1,6 @@
 ---
 status: Draft
-version: "0.2"
+version: "0.3"
 updated: 2026-07-18
 ---
 
@@ -184,6 +184,7 @@ Specificația completă este în `ux-ui/navigation-system.md`.
 
 ### Din pagina Programului
 
+- Curriculum Explorer — harta detaliată a programului;
 - Cum învățăm;
 - Experiențe;
 - Pentru tineri;
@@ -193,6 +194,7 @@ Specificația completă este în `ux-ui/navigation-system.md`.
 ### Din pagina Cum învățăm
 
 - Programul;
+- Curriculum Explorer — `Vezi cum metoda devine curriculum`;
 - Cercetare;
 - Instrumente și simulări;
 - Experiențe.
@@ -211,11 +213,25 @@ Specificația completă este în `ux-ui/navigation-system.md`.
 - Experiența introductivă;
 - platforma autentificată, doar când există un motiv real.
 
+### Din pagina Cercetare
+
+- Curriculum Explorer — `Explorează arhitectura curriculară`;
+- Cum învățăm;
+- Dezvoltare;
+
+### Din pagina Pentru organizații
+
+- Curriculum Explorer — `Vezi structura programului`;
+- Programul;
+- Experiența introductivă;
+- Contact.
+
 ## Footer
 
 ### Descoperă
 
 - Programul;
+- Harta programului;
 - Cum învățăm;
 - Experiențe;
 - Instrumente și simulări.
@@ -249,6 +265,7 @@ Paginile juridice rămân indisponibile public până când textele sunt verific
 |---|---|---|
 | Acasă | `/` | poziționare și orientare |
 | Programul | `/program` | oferta educațională principală |
+| Curriculum Explorer | `/program/curriculum` | explorarea structurată a nivelurilor, Business Pillars și Founder Rounds |
 | Cum învățăm | `/how-we-learn` | metoda și experiența |
 | Experiențe | `/experiences` | formatele de participare |
 | Experiența introductivă | `/experiences/introduction` | oferta inițială concretă |
@@ -263,6 +280,8 @@ Paginile juridice rămân indisponibile public până când textele sunt verific
 | Platformă | `/platform` | intrarea în zona autentificată |
 
 Identificatorii sunt independenți de mecanismul tehnic de localizare. Versiunea engleză va folosi echivalentele stabilite după aprobarea copywriting-ului românesc.
+
+`/program/curriculum` este rădăcina unei zone extensibile, nu o singură pagină editorială. Subrutele ei sunt definite în [`curriculum-explorer.md`](curriculum-explorer.md) și folosesc un shell curricular propriu.
 
 Lentilele editoriale sunt independente de identificatorii rutelor și de localizare. Ele nu produc variante de sitemap sau URL-uri separate pe public.
 

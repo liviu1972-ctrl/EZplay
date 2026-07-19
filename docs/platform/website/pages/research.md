@@ -1,7 +1,7 @@
 ---
 status: Draft
-version: "0.2"
-updated: 2026-07-16
+version: "0.3"
+updated: 2026-07-18
 page: Cercetare
 route: /research
 evidence_map: ../content-evidence-map.md
@@ -628,6 +628,12 @@ Nu este un decor academic și nu folosește citate sau cifre pentru autoritate s
 ### Încheiere
 
 > Aceste limite nu opresc dezvoltarea. Ele ne spun ce trebuie proiectat cu grijă, observat și verificat înainte să devină promisiune.
+
+### Cale contextuală către curriculum
+
+> Explorează arhitectura curriculară
+
+Destinație: `/program/curriculum`. Legătura arată unde principiile devin o structură Working și nu prezintă curriculumul drept validat de sursele externe.
 
 ## Secțiunea 7 — Invitație
 

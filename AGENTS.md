@@ -32,12 +32,37 @@ Instrucțiunile tehnice sunt definite aici după responsabilitate, nu după furn
 - nu schimbă viziunea, strategia, copy-ul sau cerințele de produs și nu completează golurile prin presupuneri;
 - se oprește pentru clarificare când documentația aprobată și implementarea intră în conflict.
 
+### Convergența review-urilor Codex–planning
+
+Codex și agentul de planning nu transformă diferențele minore de preferință arhitecturală într-o polemică sau într-o succesiune de versiuni ale planului. Review-ul urmărește convergența rapidă către un rezultat implementabil.
+
+- O corecție obligatorie se cere numai pentru un conflict material cu produsul aprobat, siguranța, integritatea datelor, securitatea, compatibilitatea, mentenabilitatea semnificativă sau un criteriu verificabil de acceptare.
+- Soluțiile tehnice echivalente, denumirile interne, organizarea locală a fișierelor și preferințele de stil arhitectural rămân la alegerea agentului tehnic sau de implementare.
+- Review-ul se face complet într-o singură trecere atunci când este posibil; nu se trimit observații mărunte succesiv.
+- Când riscurile materiale sunt închise, planul este aprobat chiar dacă reviewerul ar fi ales personal o altă soluție validă.
+- O preferință neblocantă poate fi notată ca observație, dar nu oprește implementarea și nu cere rescrierea planului.
+
 **Agentul de implementare:**
 
 - execută scope-ul și planul aprobate prin cod, componente, stilizare, integrare, Supabase, teste și build;
 - nu inventează funcții, copy, CTA-uri, roluri sau comportamente;
 - nu extinde taskul prin redesign, refactoring ori schimbări de infrastructură neaprobate;
 - raportează rezultatele verificărilor și diferențele dintre implementare și documentația aprobată.
+
+### Handoff direct către agentul de implementare
+
+Când agentul de planning și arhitectură tehnică nu este disponibil, iar utilizatorul cere Codex să pregătească direct instrucțiunile pentru agentul de implementare, handoff-ul rămâne orientat spre rezultat și criterii de acceptare, nu spre micro-managementul codului.
+
+Agentul de implementare este tratat ca un profesionist competent, capabil să inspecteze proiectul, să aleagă soluția tehnică și să își organizeze singur verificările. Promptul direct este în mod normal scurt și conține numai obiectivul, contextul relevant și limitele nenegociabile.
+
+- Codex indică rezultatul care trebuie să fie adevărat la final, sursele canonice, criteriile verificabile și limitele de scope.
+- Agentul de implementare inspectează mai întâi toate fișierele relevante și alege singur soluția tehnică în interiorul planului și deciziilor aprobate.
+- Codex nu enumeră pași tehnici de rutină, comenzi, fișiere, teste sau verificări pe care un implementator competent le poate deduce singur, decât dacă sunt esențiale pentru siguranță, produs, un risc deja demonstrat sau sunt cerute explicit de utilizator.
+- Promptul direct nu repetă în detaliu handoff-ul ori review-ul; face trimitere la sursa relevantă și subliniază numai rezultatul și excepțiile importante.
+- Implementarea se organizează în loturi logice și coerente. Verificările complete se rulează la finalul fiecărui lot relevant, nu automat după fiecare editare minoră.
+- Review-ul detaliat rămâne sursa problemelor și a dovezilor; promptul direct face trimitere la el fără să transforme fiecare constatare într-o succesiune rigidă de comenzi.
+- Handoff-ul precizează explicit interdicțiile relevante, inclusiv extinderea fazei, dependențele noi, refactorizările străine taskului și schimbarea deciziilor de produs.
+- Agentul se oprește după implementare și raportarea verificărilor pentru review independent; nu declară unilateral acceptarea fazei și nu continuă automat în etapa următoare.
 
 Pentru ambele roluri, ordinea de citire este:
 

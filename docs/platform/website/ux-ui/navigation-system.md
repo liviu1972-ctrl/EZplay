@@ -1,7 +1,7 @@
 ---
 title: "EZPLAY.org — sistemul de navigare"
 status: Draft
-version: "0.3"
+version: "0.4"
 updated: 2026-07-18
 scope:
   - header global
@@ -182,6 +182,14 @@ După selectarea unei zone sau pe o pagină lungă, panoul extins arată:
 
 Nivelul contextual are prioritate față de repetarea integrală a meniului global.
 
+Pe `/program`, grupul contextual al destinației `Programul` include:
+
+- `Prezentare` → `/program`;
+- `Harta programului` → `/program/curriculum`;
+- `Experiența introductivă` → `/experiences/introduction`.
+
+Aceeași structură este disponibilă în `MobileNavigationSheet`. `Harta programului` nu devine item principal separat în header-ul global.
+
 ## 7. Corectarea discretă a perspectivei
 
 Navigarea oferă o cale secundară prin care utilizatorul poate ajunge la perspectiva potrivită fără să fie întrerupt și fără să i se afișeze o clasificare.
@@ -200,6 +208,12 @@ Controlul:
 Până la aprobarea unei rute pentru educatori, legătura folosește destinația comună relevantă, fără să introducă o rută nouă în sitemap.
 
 ## 8. Unde apare
+
+### Suprafață cu shell curricular propriu
+
+`/program/curriculum` și descendentele sale folosesc navigarea proprie definită în [`../curriculum-explorer.md`](../curriculum-explorer.md). Ele păstrează un header EZPLAY compact în care logo-ul conduce la `/`, `Programul EZPLAY` conduce la `/program`, iar `Meniu` deschide navigarea globală. Breadcrumb-ul începe cu `Programul → Curriculum`, iar Atlasul începe cu `Despre program`. Zona nu afișează simultan Explorer Rail-ul global și Atlasul curricular.
+
+Route group-ul Next.js este o opțiune de implementare pentru această graniță de layout; numele lui nu apare în URL și nu justifică o identitate vizuală separată.
 
 ### Explorer Rail complet
 

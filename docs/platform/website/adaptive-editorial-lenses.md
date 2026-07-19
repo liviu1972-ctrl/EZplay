@@ -1,6 +1,6 @@
 ---
 status: Current
-version: "1.0"
+version: "1.2"
 updated: 2026-07-18
 lifecycle: active
 canonical_for:
@@ -14,7 +14,7 @@ canonical_for:
 
 ## Rolul documentului
 
-Acest document definește felul în care website-ul public EZPLAY își poate adapta vocea, ordinea editorială și următorul pas la intenția observată în sesiunea curentă, fără să creeze site-uri paralele și fără să schimbe adevărul despre produs.
+Acest document definește felul în care website-ul public EZPLAY își poate adapta vocea și următorul pas la intenția observată în sesiunea curentă, fără să creeze site-uri paralele și fără să schimbe adevărul despre produs. Ordinea secțiunilor rămâne stabilă în prima versiune; reordonarea este păstrată numai ca posibilă extensie ulterioară.
 
 Decizia de produs este consemnată în [decizia privind lentilele editoriale adaptive](../../decisions/active/adaptive-editorial-lenses.md). Acest document este sursa canonică pentru comportamentul editorial, inventarul inițial, limitele personalizării și regulile pe care trebuie să le urmeze viitoarele variante de copy.
 
@@ -57,7 +57,7 @@ Copy-ul actual al paginilor comune este experiența completă și sigură folosi
 
 ### Lentilă editorială
 
-O perspectivă controlată care poate modifica introducerea, accentul, exemplele, ordinea unor blocuri și formularea acțiunilor, fără să schimbe faptele, promisiunile sau regulile produsului.
+O perspectivă controlată care poate modifica introducerea, accentul, exemplele și formularea acțiunilor, fără să schimbe faptele, promisiunile, regulile produsului sau ordinea secțiunilor în prima versiune.
 
 ### Semnal
 
@@ -126,7 +126,7 @@ Pot construi o intenție când apar împreună:
 
 - navigarea repetată între joc, reguli și experiența introductivă;
 - navigarea între informații despre copil, vârstă, progres și participare;
-- navigarea între curriculum, Founder Rounds, facilitare și metodă;
+- navigarea între paginile editoriale despre metodă, facilitare și structura programului; Curriculum Explorer nu este semnal;
 - navigarea între cercetare, implementare, colaborare și condițiile organizaționale;
 - selectarea mai multor CTA-uri compatibile cu aceeași perspectivă.
 
@@ -160,7 +160,7 @@ Stările conceptuale sunt:
 |---|---|
 | **Fără intenție suficientă** | copy comun, navigare comună și CTA-uri comune |
 | **Intenție probabilă** | CTA, recomandare următoare, subtitlu ori exemplu aprobat |
-| **Intenție coerentă** | introducere, ordine de blocuri, exemple și CTA-uri ale unei singure lentile |
+| **Intenție coerentă** | introducere, exemple și CTA-uri ale unei singure lentile, în structura comună a paginii |
 | **Intenție schimbată coerent** | noua lentilă se aplică la următoarea navigare, cu inerție împotriva oscilațiilor |
 
 ## Rutele și lentilele
@@ -200,6 +200,18 @@ Lentila educator există editorial înaintea unei rute dedicate. Până la aprob
 
 Autentificarea, formularele, paginile juridice, siguranța minorilor, stările produsului și suprafețele aplicative pot folosi contextul numai pentru orientare sau preselectarea sigură a unei intenții. Regulile, câmpurile obligatorii, consimțământul și informațiile juridice nu se schimbă prin lentilă.
 
+### Granița Curriculum Explorer
+
+Curriculum Explorer și întregul arbore `/program/curriculum/**` reprezintă o suprafață pedagogică canonică, nu o pagină editorială adaptivă. În prima versiune:
+
+- copy-ul, titlurile, descrierile, terminologia, ordinea, filtrele și traseele curriculare nu se schimbă după lentila vizitatorului;
+- rutele curriculare nu emit semnale pentru tânăr, părinte, educator sau organizație;
+- controlul discret de perspectivă nu apare în shell-ul curricular;
+- intrarea dintr-un CTA adaptat poate conduce către curriculum, dar după intrare utilizatorii primesc aceeași reprezentare curriculară;
+- `Mastery Lenses` rămân cele cinci structuri pedagogice definite de curriculum și nu sunt mapate la lentilele editoriale adaptive.
+
+O eventuală introducere orientată pentru un public se construiește înaintea intrării în Curriculum Explorer, pe o pagină editorială eligibilă. Nu rescrie și nu reordonează curriculumul însuși.
+
 ## Ierarhia editorială
 
 Pentru orice bloc public se aplică ordinea:
@@ -219,10 +231,15 @@ Pe o rută comună, o variantă aprobată poate schimba:
 - introducerea unei secțiuni;
 - persoana gramaticală și explicația;
 - exemplele, fără inventarea unor funcții sau rezultate;
-- ordinea blocurilor independente;
 - CTA-ul și descrierea destinației;
 - `RelatedPaths` și următoarea pagină recomandată;
 - densitatea și ritmul, în limitele sistemului vizual.
+
+### Ordinea secțiunilor
+
+În prima versiune, lentilele nu mută, nu ascund și nu combină secțiunile unei pagini. Toate lentilele folosesc aceeași structură și aceeași ordine ca pagina comună.
+
+O extensie viitoare poate testa ordinea cardurilor sau a opțiunilor din interiorul unui singur bloc. Reordonarea secțiunilor întregi nu face parte din sistemul de bază și necesită o decizie separată, o pagină concretă și o justificare verificabilă înainte de implementare.
 
 Două CTA-uri pot avea etichete diferite și aceeași destinație dacă ambele descriu corect pasul. Destinația diferă numai când acțiunea utilizatorului este realmente diferită.
 
